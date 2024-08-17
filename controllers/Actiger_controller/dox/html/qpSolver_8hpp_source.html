@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Actiger: controller/qpSolver/qpSolver.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Actiger
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><a class="el" href="dir_27d3f3786d6ef87d25db162f45f246c8.html">qpSolver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">qpSolver.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="qpSolver_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef QPSOLVER_HPP</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define QPSOLVER_HPP</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;osqp.h&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span> </div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cppTypes_8h.html">cppTypes.h</a>&quot;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacequadruped.html">quadruped</a></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classquadruped_1_1QpSolver.html">   26</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classquadruped_1_1QpSolver.html">QpSolver</a></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> Free(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> CalculateDataH(<a class="code" href="cppTypes_8h.html#a5db6bfb25afa103db1fb6bb6287ae9d7">DMat&lt;double&gt;</a> H_matrix);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> CalculateDataG(<a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> G_vector);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> CalculateDataA(<a class="code" href="cppTypes_8h.html#a5db6bfb25afa103db1fb6bb6287ae9d7">DMat&lt;double&gt;</a> A_matrix);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> CalculateDataLandU(<a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> L_vector, <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> U_vector);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        c_float* h_data;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        c_int* h_indices;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        c_int* h_indptr;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        c_float* a_data;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        c_int* a_indices;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        c_int* a_indptr;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        c_float* q_data;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        c_float* l_data;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        c_float* u_data;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        c_int size_H = 0;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        c_int size_A = 0;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">protected</span>:</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classquadruped_1_1QpSolver.html#a5d922f96db12999e83b877dfc3847acf">QpSolver</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classquadruped_1_1QpSolver.html#af6171cfe493ce1f01b1a901d4d9c88e0">~QpSolver</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> <a class="code" href="classquadruped_1_1QpSolver.html#a85fdc322c59b234ce39d4ec381eadf35">Solve</a>(<a class="code" href="cppTypes_8h.html#a5db6bfb25afa103db1fb6bb6287ae9d7">DMat&lt;double&gt;</a> H_matrix, <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> G_vector,</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                           <a class="code" href="cppTypes_8h.html#a5db6bfb25afa103db1fb6bb6287ae9d7">DMat&lt;double&gt;</a> A_matrix, <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> L_vector, <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> U_vector);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;uint8_t <a class="code" href="qpSolver_8hpp.html#a4e1e4434f442d83680b13a41c3a6a64e">NearZero</a>(<span class="keywordtype">double</span> val);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // !QPSOLVER_HPP</span></div><div class="ttc" id="cppTypes_8h_html_adad69baca3c77d5f991be5d3c063fea7"><div class="ttname"><a href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec</a></div><div class="ttdeci">Eigen::Matrix&lt; T, Eigen::Dynamic, 1 &gt; DVec</div><div class="ttdoc">动态向量 </div><div class="ttdef"><b>Definition:</b> cppTypes.h:89</div></div>
+<div class="ttc" id="classquadruped_1_1QpSolver_html_af6171cfe493ce1f01b1a901d4d9c88e0"><div class="ttname"><a href="classquadruped_1_1QpSolver.html#af6171cfe493ce1f01b1a901d4d9c88e0">quadruped::QpSolver::~QpSolver</a></div><div class="ttdeci">virtual ~QpSolver()</div><div class="ttdoc">QpSolver类的析构函数 </div><div class="ttdef"><b>Definition:</b> qpSolver.cpp:39</div></div>
+<div class="ttc" id="classquadruped_1_1QpSolver_html_a85fdc322c59b234ce39d4ec381eadf35"><div class="ttname"><a href="classquadruped_1_1QpSolver.html#a85fdc322c59b234ce39d4ec381eadf35">quadruped::QpSolver::Solve</a></div><div class="ttdeci">DVec&lt; double &gt; Solve(DMat&lt; double &gt; H_matrix, DVec&lt; double &gt; G_vector, DMat&lt; double &gt; A_matrix, DVec&lt; double &gt; L_vector, DVec&lt; double &gt; U_vector)</div><div class="ttdoc">OSQP接口函数 </div><div class="ttdef"><b>Definition:</b> qpSolver.cpp:217</div></div>
+<div class="ttc" id="qpSolver_8hpp_html_a4e1e4434f442d83680b13a41c3a6a64e"><div class="ttname"><a href="qpSolver_8hpp.html#a4e1e4434f442d83680b13a41c3a6a64e">NearZero</a></div><div class="ttdeci">uint8_t NearZero(double val)</div><div class="ttdoc">判断输入的参数是否可以认为约等于0 </div><div class="ttdef"><b>Definition:</b> qpSolver.cpp:23</div></div>
+<div class="ttc" id="namespacequadruped_html"><div class="ttname"><a href="namespacequadruped.html">quadruped</a></div><div class="ttdef"><b>Definition:</b> commonFunction.hpp:44</div></div>
+<div class="ttc" id="cppTypes_8h_html"><div class="ttname"><a href="cppTypes_8h.html">cppTypes.h</a></div><div class="ttdoc">Actiger工程中的多维变量类型模板的定义 </div></div>
+<div class="ttc" id="classquadruped_1_1QpSolver_html_a5d922f96db12999e83b877dfc3847acf"><div class="ttname"><a href="classquadruped_1_1QpSolver.html#a5d922f96db12999e83b877dfc3847acf">quadruped::QpSolver::QpSolver</a></div><div class="ttdeci">QpSolver(void)</div><div class="ttdoc">QpSolver类的构造函数 </div><div class="ttdef"><b>Definition:</b> qpSolver.cpp:31</div></div>
+<div class="ttc" id="classquadruped_1_1QpSolver_html"><div class="ttname"><a href="classquadruped_1_1QpSolver.html">quadruped::QpSolver</a></div><div class="ttdoc">Actiger二次规划求解器 </div><div class="ttdef"><b>Definition:</b> qpSolver.hpp:26</div></div>
+<div class="ttc" id="cppTypes_8h_html_a5db6bfb25afa103db1fb6bb6287ae9d7"><div class="ttname"><a href="cppTypes_8h.html#a5db6bfb25afa103db1fb6bb6287ae9d7">DMat</a></div><div class="ttdeci">Eigen::Matrix&lt; T, Eigen::Dynamic, Eigen::Dynamic &gt; DMat</div><div class="ttdoc">动态矩阵 </div><div class="ttdef"><b>Definition:</b> cppTypes.h:166</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

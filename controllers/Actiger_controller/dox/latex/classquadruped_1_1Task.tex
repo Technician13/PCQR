@@ -1,0 +1,91 @@
+\hypertarget{classquadruped_1_1Task}{}\section{quadruped\+:\+:Task类 参考}
+\label{classquadruped_1_1Task}\index{quadruped\+::\+Task@{quadruped\+::\+Task}}
+类 quadruped\+:\+:Task 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classquadruped_1_1Task}
+\end{center}
+\end{figure}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a613c1f3369686563c55aff12749f319e}\label{classquadruped_1_1Task_a613c1f3369686563c55aff12749f319e}} 
+{\bfseries Task} (size\+\_\+t dim)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a6e083e753f2f0d6c7cbcb1cbfc21c561}\label{classquadruped_1_1Task_a6e083e753f2f0d6c7cbcb1cbfc21c561}} 
+void {\bfseries Get\+Command} (\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+acc\+\_\+cmd)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a0215eff9e1ee48600e3c74c177fbebb8}\label{classquadruped_1_1Task_a0215eff9e1ee48600e3c74c177fbebb8}} 
+void {\bfseries Get\+Task\+Jacobian} (\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ \&p\+\_\+\+Jt)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a03389dcd6fa90066f8fdf295263f5eb1}\label{classquadruped_1_1Task_a03389dcd6fa90066f8fdf295263f5eb1}} 
+void {\bfseries Get\+Task\+Jacobian\+Dot\+Qdot} (\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+\+Jt\+Dot\+Qdot)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a7124a97e1f935fc9c4faf66284c06343}\label{classquadruped_1_1Task_a7124a97e1f935fc9c4faf66284c06343}} 
+bool {\bfseries Update\+Task} (const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+pos\+\_\+des, const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+vel\+\_\+des, const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+acc\+\_\+des)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a6a3beb33871582c7ca9e9df169e0bd7d}\label{classquadruped_1_1Task_a6a3beb33871582c7ca9e9df169e0bd7d}} 
+bool {\bfseries Is\+Task\+Set} ()
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a1cb8eace23a5221ad65c9d89cb7d679e}\label{classquadruped_1_1Task_a1cb8eace23a5221ad65c9d89cb7d679e}} 
+size\+\_\+t {\bfseries Get\+Dim} ()
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a76f4fc058fcc5300d1cb894656ffb180}\label{classquadruped_1_1Task_a76f4fc058fcc5300d1cb894656ffb180}} 
+void {\bfseries Unset\+Task} ()
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a8728dd3f97ef1119690bf1497d7210ad}\label{classquadruped_1_1Task_a8728dd3f97ef1119690bf1497d7210ad}} 
+const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \& {\bfseries Get\+Pos\+Error} ()
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a3ea78c46b815e0761f39aae7863c4ec0}\label{classquadruped_1_1Task_a3ea78c46b815e0761f39aae7863c4ec0}} 
+const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \& {\bfseries Get\+Des\+Vel} ()
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a7ec90dfce229f16c453f2b7d5c930a41}\label{classquadruped_1_1Task_a7ec90dfce229f16c453f2b7d5c930a41}} 
+const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \& {\bfseries Get\+Des\+Acc} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_ae35ff689655939445b43f819539b028d}\label{classquadruped_1_1Task_ae35ff689655939445b43f819539b028d}} 
+virtual bool {\bfseries Update\+Command} (const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+pos\+\_\+des, const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+vel\+\_\+des, const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+acc\+\_\+des)=0
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_adcb39e5aa2daffbb72baabad7a414ae2}\label{classquadruped_1_1Task_adcb39e5aa2daffbb72baabad7a414ae2}} 
+virtual bool {\bfseries Update\+Task\+Jacobian} ()=0
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_ae818a2d7e013929563a859144cf050bb}\label{classquadruped_1_1Task_ae818a2d7e013929563a859144cf050bb}} 
+virtual bool {\bfseries Update\+Task\+J\+Dot\+Qdot} ()=0
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_aa6e18f427f6a31fb9a5d9267cc707550}\label{classquadruped_1_1Task_aa6e18f427f6a31fb9a5d9267cc707550}} 
+virtual bool {\bfseries Additional\+Update} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a70287d1a65e0ea275c1495776e6a4b98}\label{classquadruped_1_1Task_a70287d1a65e0ea275c1495776e6a4b98}} 
+bool {\bfseries b\+\_\+set\+\_\+task}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a6e52946ddee1c043fd46c8e0369caed1}\label{classquadruped_1_1Task_a6e52946ddee1c043fd46c8e0369caed1}} 
+size\+\_\+t {\bfseries dim\+\_\+task}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_adee90b42eaf44c394939a2a60f3abb47}\label{classquadruped_1_1Task_adee90b42eaf44c394939a2a60f3abb47}} 
+\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ {\bfseries acc\+\_\+cmd}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_afd7cdc7374425c08638589b6d0628344}\label{classquadruped_1_1Task_afd7cdc7374425c08638589b6d0628344}} 
+\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ {\bfseries Jt\+Dot\+Qdot}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a5127c2483fca6045c7636dc70ecea8c5}\label{classquadruped_1_1Task_a5127c2483fca6045c7636dc70ecea8c5}} 
+\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ {\bfseries Jt}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a4a3561457b67406e2801a5f9d73ca3e7}\label{classquadruped_1_1Task_a4a3561457b67406e2801a5f9d73ca3e7}} 
+\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ {\bfseries pos\+\_\+err}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_ac750af3351815900cc14bbdee1925ef7}\label{classquadruped_1_1Task_ac750af3351815900cc14bbdee1925ef7}} 
+\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ {\bfseries vel\+\_\+des}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Task_a73d69db6f8d512b10e00a99a77d38b48}\label{classquadruped_1_1Task_a73d69db6f8d512b10e00a99a77d38b48}} 
+\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ {\bfseries acc\+\_\+des}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/wbc/task\+Set/task.\+hpp\end{DoxyCompactItemize}

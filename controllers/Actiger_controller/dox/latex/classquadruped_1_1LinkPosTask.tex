@@ -1,0 +1,56 @@
+\hypertarget{classquadruped_1_1LinkPosTask}{}\section{quadruped\+:\+:Link\+Pos\+Task类 参考}
+\label{classquadruped_1_1LinkPosTask}\index{quadruped\+::\+Link\+Pos\+Task@{quadruped\+::\+Link\+Pos\+Task}}
+类 quadruped\+:\+:Link\+Pos\+Task 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classquadruped_1_1LinkPosTask}
+\end{center}
+\end{figure}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_abac0cf41a4cf13010f0cea1ca943810b}\label{classquadruped_1_1LinkPosTask_abac0cf41a4cf13010f0cea1ca943810b}} 
+{\bfseries Link\+Pos\+Task} (\hyperlink{classquadruped_1_1RobotModel}{Robot\+Model} $\ast$p\+\_\+robot\+Model, const int p\+\_\+link\+Id)
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_a60e45231e0abc56aefd89ccb795d1f1c}\label{classquadruped_1_1LinkPosTask_a60e45231e0abc56aefd89ccb795d1f1c}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries kp\+\_\+kin}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_a7e662f1f8940c52337886ed33bb179e4}\label{classquadruped_1_1LinkPosTask_a7e662f1f8940c52337886ed33bb179e4}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries kp}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_a4407ff2792b938d8375393cc5812832a}\label{classquadruped_1_1LinkPosTask_a4407ff2792b938d8375393cc5812832a}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries kd}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_ac4ece1b22022feb35b20156363b11fc4}\label{classquadruped_1_1LinkPosTask_ac4ece1b22022feb35b20156363b11fc4}} 
+int {\bfseries link\+Id}
+\end{DoxyCompactItemize}
+\subsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_a24daaf2d9cfdfb2198f4a7aba29f8efc}\label{classquadruped_1_1LinkPosTask_a24daaf2d9cfdfb2198f4a7aba29f8efc}} 
+virtual bool {\bfseries Update\+Command} (const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+pos\+\_\+des, const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+vel\+\_\+des, const \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ \&p\+\_\+acc\+\_\+des)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_ab5a6df13f20dc557b91ecaf870e134f6}\label{classquadruped_1_1LinkPosTask_ab5a6df13f20dc557b91ecaf870e134f6}} 
+virtual bool {\bfseries Update\+Task\+Jacobian} (void)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_a09dfd84a3acdb8b1d083a7e62b5e562a}\label{classquadruped_1_1LinkPosTask_a09dfd84a3acdb8b1d083a7e62b5e562a}} 
+virtual bool {\bfseries Update\+Task\+J\+Dot\+Qdot} (void)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_a6bbd706b0575f0fc586e96ccca4ebbcc}\label{classquadruped_1_1LinkPosTask_a6bbd706b0575f0fc586e96ccca4ebbcc}} 
+virtual bool {\bfseries Additional\+Update} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LinkPosTask_a69cf63b4e9b9e8c290b0fe56f75a80f5}\label{classquadruped_1_1LinkPosTask_a69cf63b4e9b9e8c290b0fe56f75a80f5}} 
+\hyperlink{classquadruped_1_1RobotModel}{Robot\+Model} $\ast$ {\bfseries robot\+Model}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/wbc/task\+Set/link\+Pos\+Task.\+hpp\item 
+controller/wbc/task\+Set/\hyperlink{linkPosTask_8cpp}{link\+Pos\+Task.\+cpp}\end{DoxyCompactItemize}

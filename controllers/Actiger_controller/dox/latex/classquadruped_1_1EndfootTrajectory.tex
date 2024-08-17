@@ -1,0 +1,166 @@
+\hypertarget{classquadruped_1_1EndfootTrajectory}{}\section{quadruped\+:\+:Endfoot\+Trajectory类 参考}
+\label{classquadruped_1_1EndfootTrajectory}\index{quadruped\+::\+Endfoot\+Trajectory@{quadruped\+::\+Endfoot\+Trajectory}}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a4163640cae45e8c3dedd6869c3c1eff6}\label{classquadruped_1_1EndfootTrajectory_a4163640cae45e8c3dedd6869c3c1eff6}} 
+{\bfseries Endfoot\+Trajectory} (\hyperlink{classquadruped_1_1Parameters}{Parameters} $\ast$p\+\_\+para, \hyperlink{classquadruped_1_1Terrain}{Terrain} $\ast$p\+\_\+terrain\+\_\+now)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a87bfadf8ed778c1b6a9a23225da0f080}\label{classquadruped_1_1EndfootTrajectory_a87bfadf8ed778c1b6a9a23225da0f080}} 
+double {\bfseries Calcu\+OvalX} (double p\+\_\+z, \hyperlink{structoval__t}{oval\+\_\+t} p\+\_\+oval)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a0701c295f3a4e8c9df697255f69d1cc8}\label{classquadruped_1_1EndfootTrajectory_a0701c295f3a4e8c9df697255f69d1cc8}} 
+double {\bfseries Calcu\+OvalZ} (double p\+\_\+x, \hyperlink{structoval__t}{oval\+\_\+t} p\+\_\+oval)
+\item 
+double \hyperlink{classquadruped_1_1EndfootTrajectory_ae5ae8428e6a555fbcd5b1fb212966821}{Get\+OvalB} (double pointX, double pointZ, \hyperlink{structoval__t}{oval\+\_\+t} oval)
+\item 
+void \hyperlink{classquadruped_1_1EndfootTrajectory_afd7f3ba204c58ec5cb23b0a3e09e269d}{Get\+Oval\+Fuction} (\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ start\+Point, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ end\+Point, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ another\+Point, \hyperlink{structoval__t}{oval\+\_\+t} $\ast$ovall)
+\begin{DoxyCompactList}\small\item\em 构建\+Actiger摆动腿足端轨迹方程 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a8efd46aefe9b2a959d8ea8944c437db7}\label{classquadruped_1_1EndfootTrajectory_a8efd46aefe9b2a959d8ea8944c437db7}} 
+void {\bfseries Get\+Beeline\+Fuction} (\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ start\+Point, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ end\+Point, \hyperlink{structbeeline__t}{beeline\+\_\+t} $\ast$beeline)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_ad2728987b4fee1ef4f234ce8c8faad73}\label{classquadruped_1_1EndfootTrajectory_ad2728987b4fee1ef4f234ce8c8faad73}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries Select\+Another\+Point} (\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ start\+Point, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ end\+Point)
+\item 
+void \hyperlink{classquadruped_1_1EndfootTrajectory_a1fa9a93f47cd777141b592f461218865}{Get\+Endfoot\+Trajectory} (int p\+\_\+grid, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+front\+\_\+start\+Point, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+rear\+\_\+start\+Point, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+front\+\_\+end\+Point, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+rear\+\_\+end\+Point, \hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ p\+\_\+spatial\+\_\+list)
+\begin{DoxyCompactList}\small\item\em 获取摆动腿足端轨迹 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_ade502af2e3ace368246480dd23402e8e}\label{classquadruped_1_1EndfootTrajectory_ade502af2e3ace368246480dd23402e8e}} 
+int {\bfseries grid}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a9f51d4eeb6d666f4e8fb9d876451b1fc}\label{classquadruped_1_1EndfootTrajectory_a9f51d4eeb6d666f4e8fb9d876451b1fc}} 
+\hyperlink{structoval__t}{oval\+\_\+t} {\bfseries front\+Oval} =\{0\}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a267a97a8f91ad125d2830057015aa57a}\label{classquadruped_1_1EndfootTrajectory_a267a97a8f91ad125d2830057015aa57a}} 
+\hyperlink{structoval__t}{oval\+\_\+t} {\bfseries rear\+Oval} =\{0\}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_aa6daa3b91d35e3fc8d57fd2f48db6384}\label{classquadruped_1_1EndfootTrajectory_aa6daa3b91d35e3fc8d57fd2f48db6384}} 
+double {\bfseries height}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a40ef1a8b6ca2b1d823e316824c202324}\label{classquadruped_1_1EndfootTrajectory_a40ef1a8b6ca2b1d823e316824c202324}} 
+\hyperlink{classquadruped_1_1Terrain}{Terrain} $\ast$ {\bfseries terrain\+\_\+now}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a80317eb8170d41eb95be495dc016b24c}\label{classquadruped_1_1EndfootTrajectory_a80317eb8170d41eb95be495dc016b24c}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries front\+\_\+start\+Point}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a724bfaedd5236538228beb0fef75fdb5}\label{classquadruped_1_1EndfootTrajectory_a724bfaedd5236538228beb0fef75fdb5}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries front\+\_\+end\+Point}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_ae48f247a0ff54fc6b4c8616b73264cd1}\label{classquadruped_1_1EndfootTrajectory_ae48f247a0ff54fc6b4c8616b73264cd1}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries front\+\_\+middle\+Point}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a32dd6be5dea4d14d64e90bad3423d291}\label{classquadruped_1_1EndfootTrajectory_a32dd6be5dea4d14d64e90bad3423d291}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries rear\+\_\+start\+Point}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_ae5799b6b24ac0d12d22d650af700b88e}\label{classquadruped_1_1EndfootTrajectory_ae5799b6b24ac0d12d22d650af700b88e}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries rear\+\_\+end\+Point}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a27af70ef6d4ef5ff79fe74796554555a}\label{classquadruped_1_1EndfootTrajectory_a27af70ef6d4ef5ff79fe74796554555a}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries rear\+\_\+middle\+Point}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_afe0b09fe7aa5420f86071480a6145cab}\label{classquadruped_1_1EndfootTrajectory_afe0b09fe7aa5420f86071480a6145cab}} 
+\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ {\bfseries body\+\_\+spatial}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_aa70aacd0bf618d1d5718ff716f3e609f}\label{classquadruped_1_1EndfootTrajectory_aa70aacd0bf618d1d5718ff716f3e609f}} 
+\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ {\bfseries endfoot\+\_\+pos\+\_\+front\+\_\+list}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_ab429ec6f45de88f6f735cc202dba6fee}\label{classquadruped_1_1EndfootTrajectory_ab429ec6f45de88f6f735cc202dba6fee}} 
+\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ {\bfseries endfoot\+\_\+vel\+\_\+front\+\_\+list}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a13e802c72a0201a9008b2694d40a8ab1}\label{classquadruped_1_1EndfootTrajectory_a13e802c72a0201a9008b2694d40a8ab1}} 
+\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ {\bfseries endfoot\+\_\+pos\+\_\+rear\+\_\+list}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a1f19d84b9d57dd20b252cdc82773a94a}\label{classquadruped_1_1EndfootTrajectory_a1f19d84b9d57dd20b252cdc82773a94a}} 
+\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ {\bfseries endfoot\+\_\+vel\+\_\+rear\+\_\+list}
+\end{DoxyCompactItemize}
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_a1fa9a93f47cd777141b592f461218865}\label{classquadruped_1_1EndfootTrajectory_a1fa9a93f47cd777141b592f461218865}} 
+\index{quadruped\+::\+Endfoot\+Trajectory@{quadruped\+::\+Endfoot\+Trajectory}!Get\+Endfoot\+Trajectory@{Get\+Endfoot\+Trajectory}}
+\index{Get\+Endfoot\+Trajectory@{Get\+Endfoot\+Trajectory}!quadruped\+::\+Endfoot\+Trajectory@{quadruped\+::\+Endfoot\+Trajectory}}
+\subsubsection{\texorpdfstring{Get\+Endfoot\+Trajectory()}{GetEndfootTrajectory()}}
+{\footnotesize\ttfamily void Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+grid,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+front\+\_\+start\+Point,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+rear\+\_\+start\+Point,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+front\+\_\+end\+Point,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+rear\+\_\+end\+Point,  }\item[{\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$}]{p\+\_\+spatial\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+获取摆动腿足端轨迹 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+grid} & \\
+\hline
+{\em p\+\_\+front\+\_\+start\+Point} & \\
+\hline
+{\em p\+\_\+rear\+\_\+start\+Point} & \\
+\hline
+{\em p\+\_\+front\+\_\+end\+Point} & \\
+\hline
+{\em p\+\_\+rear\+\_\+end\+Point} & \\
+\hline
+{\em p\+\_\+spatial\+\_\+list} & \\
+\hline
+\end{DoxyParams}
+
+
+参考 C\+A\+L\+A\+N\+D\+R\+IA, quadruped\+::dim\+\_\+floating, Get\+Oval\+Fuction(), H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA, H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE, I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT, M\+P\+C\+\_\+\+P\+E\+R\+I\+OD, PI, S\+T\+A\+GE, S\+T\+A\+I\+RS , 以及 quadruped\+::\+Terrain\+::terrain\+\_\+id.
+
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_ae5ae8428e6a555fbcd5b1fb212966821}\label{classquadruped_1_1EndfootTrajectory_ae5ae8428e6a555fbcd5b1fb212966821}} 
+\index{quadruped\+::\+Endfoot\+Trajectory@{quadruped\+::\+Endfoot\+Trajectory}!Get\+OvalB@{Get\+OvalB}}
+\index{Get\+OvalB@{Get\+OvalB}!quadruped\+::\+Endfoot\+Trajectory@{quadruped\+::\+Endfoot\+Trajectory}}
+\subsubsection{\texorpdfstring{Get\+Oval\+B()}{GetOvalB()}}
+{\footnotesize\ttfamily double Endfoot\+Trajectory\+::\+Get\+OvalB (\begin{DoxyParamCaption}\item[{double}]{pointX,  }\item[{double}]{pointZ,  }\item[{\hyperlink{structoval__t}{oval\+\_\+t}}]{oval }\end{DoxyParamCaption})}
+
+\+: 获取摆动腿足端轨迹的短轴长度 
+\begin{DoxyParams}{参数}
+{\em \{double\}} & pointX \\
+\hline
+{\em \{double\}} & pointZ \\
+\hline
+{\em \{oval\+\_\+t\}} & oval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考自 Get\+Oval\+Fuction().
+
+\mbox{\Hypertarget{classquadruped_1_1EndfootTrajectory_afd7f3ba204c58ec5cb23b0a3e09e269d}\label{classquadruped_1_1EndfootTrajectory_afd7f3ba204c58ec5cb23b0a3e09e269d}} 
+\index{quadruped\+::\+Endfoot\+Trajectory@{quadruped\+::\+Endfoot\+Trajectory}!Get\+Oval\+Fuction@{Get\+Oval\+Fuction}}
+\index{Get\+Oval\+Fuction@{Get\+Oval\+Fuction}!quadruped\+::\+Endfoot\+Trajectory@{quadruped\+::\+Endfoot\+Trajectory}}
+\subsubsection{\texorpdfstring{Get\+Oval\+Fuction()}{GetOvalFuction()}}
+{\footnotesize\ttfamily void Endfoot\+Trajectory\+::\+Get\+Oval\+Fuction (\begin{DoxyParamCaption}\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{start\+Point,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{end\+Point,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{another\+Point,  }\item[{\hyperlink{structoval__t}{oval\+\_\+t} $\ast$}]{oval }\end{DoxyParamCaption})}
+
+
+
+构建\+Actiger摆动腿足端轨迹方程 
+
+
+\begin{DoxyParams}{参数}
+{\em start\+Point} & 摆动腿起始点 \\
+\hline
+{\em end\+Point} & 摆动腿落足点 \\
+\hline
+{\em another\+Point} & 摆动腿第三点 \\
+\hline
+{\em oval} & 摆动腿足端轨迹结构体 \\
+\hline
+\end{DoxyParams}
+
+
+参考 Get\+Oval\+B().
+
+
+
+参考自 Get\+Endfoot\+Trajectory().
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/motion\+Plan/endfoot\+Trajectory/endfoot\+Trajectory.\+hpp\item 
+controller/motion\+Plan/endfoot\+Trajectory/endfoot\+Trajectory.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,209 @@
+\hypertarget{classquadruped_1_1MotionPlan}{}\section{quadruped\+:\+:Motion\+Plan类 参考}
+\label{classquadruped_1_1MotionPlan}\index{quadruped\+::\+Motion\+Plan@{quadruped\+::\+Motion\+Plan}}
+
+
+Actiger规划器  
+
+
+
+
+{\ttfamily \#include $<$motion\+Plan.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classquadruped_1_1MotionPlan_af79f137bc037fa02681bded5c26b3a98}{Motion\+Plan} (\hyperlink{classquadruped_1_1RobotModel}{Robot\+Model} $\ast$p\+\_\+robot\+Model, \hyperlink{classquadruped_1_1Parameters}{Parameters} $\ast$p\+\_\+para)
+\begin{DoxyCompactList}\small\item\em Motion\+Plan类的构造函数，完成所有对象成员的内存分配及数据成员的初值装载 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a0b9fd05864416d513ef8fc144b2ce4c5}\label{classquadruped_1_1MotionPlan_a0b9fd05864416d513ef8fc144b2ce4c5}} 
+virtual \hyperlink{classquadruped_1_1MotionPlan_a0b9fd05864416d513ef8fc144b2ce4c5}{$\sim$\+Motion\+Plan} (void)
+\begin{DoxyCompactList}\small\item\em Motion\+Plan类的析构函数，释放申请的内存 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ab8e8aa634d2bc8cc8d10ae16d8e4b928}\label{classquadruped_1_1MotionPlan_ab8e8aa634d2bc8cc8d10ae16d8e4b928}} 
+void \hyperlink{classquadruped_1_1MotionPlan_ab8e8aa634d2bc8cc8d10ae16d8e4b928}{Robot\+Motion\+Plan} (void)
+\begin{DoxyCompactList}\small\item\em Actiger核心规划函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a4aab89067581b6c44636eed8e71fb8c2}\label{classquadruped_1_1MotionPlan_a4aab89067581b6c44636eed8e71fb8c2}} 
+void \hyperlink{classquadruped_1_1MotionPlan_a4aab89067581b6c44636eed8e71fb8c2}{Set\+Cmd} (void)
+\begin{DoxyCompactList}\small\item\em 将\+Actiger规划器求得的期望序列写入队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ac9ab5a55e108b3ca024a61de0402328a}\label{classquadruped_1_1MotionPlan_ac9ab5a55e108b3ca024a61de0402328a}} 
+void \hyperlink{classquadruped_1_1MotionPlan_ac9ab5a55e108b3ca024a61de0402328a}{Updata\+Info} (void)
+\begin{DoxyCompactList}\small\item\em 更新\+Actiger规划信息 \end{DoxyCompactList}\item 
+void \hyperlink{classquadruped_1_1MotionPlan_a46f0f22ad97c07959a86eb055778455e}{Set\+Terrain} (uint8\+\_\+t p\+\_\+terrain\+Type)
+\begin{DoxyCompactList}\small\item\em 根据形参p\+\_\+terrain\+Type设置当前地形 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a67cb0a9de47d8692a7f771f53ded75d7}\label{classquadruped_1_1MotionPlan_a67cb0a9de47d8692a7f771f53ded75d7}} 
+void \hyperlink{classquadruped_1_1MotionPlan_a67cb0a9de47d8692a7f771f53ded75d7}{Start} (void)
+\begin{DoxyCompactList}\small\item\em Actiger规划标志位处理函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ace34ba5ac538bf888557f3ce018b13aa}\label{classquadruped_1_1MotionPlan_ace34ba5ac538bf888557f3ce018b13aa}} 
+void \hyperlink{classquadruped_1_1MotionPlan_ace34ba5ac538bf888557f3ce018b13aa}{Display\+Body\+Traj} (void)
+\begin{DoxyCompactList}\small\item\em 机体轨迹可视化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_afdaeeb4026e7d7b1addf141ff6cc3eb3}\label{classquadruped_1_1MotionPlan_afdaeeb4026e7d7b1addf141ff6cc3eb3}} 
+void \hyperlink{classquadruped_1_1MotionPlan_afdaeeb4026e7d7b1addf141ff6cc3eb3}{Display\+L\+F\+Traj} (void)
+\begin{DoxyCompactList}\small\item\em 左前腿足端轨迹可视化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a7d7a02f70830250460259f8d4c19f3d4}\label{classquadruped_1_1MotionPlan_a7d7a02f70830250460259f8d4c19f3d4}} 
+void \hyperlink{classquadruped_1_1MotionPlan_a7d7a02f70830250460259f8d4c19f3d4}{Display\+L\+R\+Traj} (void)
+\begin{DoxyCompactList}\small\item\em 左后腿足端轨迹可视化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_aac565c83a33285acaef89043f1c4ff84}\label{classquadruped_1_1MotionPlan_aac565c83a33285acaef89043f1c4ff84}} 
+void \hyperlink{classquadruped_1_1MotionPlan_aac565c83a33285acaef89043f1c4ff84}{Display\+R\+F\+Traj} (void)
+\begin{DoxyCompactList}\small\item\em 右前腿足端轨迹可视化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a1744cc35523b9978cab9077ab1f7fa7f}\label{classquadruped_1_1MotionPlan_a1744cc35523b9978cab9077ab1f7fa7f}} 
+void \hyperlink{classquadruped_1_1MotionPlan_a1744cc35523b9978cab9077ab1f7fa7f}{Display\+R\+R\+Traj} (void)
+\begin{DoxyCompactList}\small\item\em 右后腿足端轨迹可视化 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a4d6a1024fc5a2612dca34af18fe5998d}\label{classquadruped_1_1MotionPlan_a4d6a1024fc5a2612dca34af18fe5998d}} 
+double \hyperlink{classquadruped_1_1MotionPlan_a4d6a1024fc5a2612dca34af18fe5998d}{Ts}
+\begin{DoxyCompactList}\small\item\em 一个完整步态周期中的支撑相所占时间 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a7d5ada02315ce7346bd441c92c5156a5}\label{classquadruped_1_1MotionPlan_a7d5ada02315ce7346bd441c92c5156a5}} 
+int \hyperlink{classquadruped_1_1MotionPlan_a7d5ada02315ce7346bd441c92c5156a5}{grid}
+\begin{DoxyCompactList}\small\item\em 把一个\+Ts时间跨度分割成grid个\+M\+P\+C周期 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_af5ed3b39ee344757263733bed5731f7e}\label{classquadruped_1_1MotionPlan_af5ed3b39ee344757263733bed5731f7e}} 
+bool \hyperlink{classquadruped_1_1MotionPlan_af5ed3b39ee344757263733bed5731f7e}{is\+\_\+lf\+\_\+rr\+\_\+stand}
+\begin{DoxyCompactList}\small\item\em 表示支撑腿组合的标志位 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ad994c500c74ec400b375115edda79ce5}\label{classquadruped_1_1MotionPlan_ad994c500c74ec400b375115edda79ce5}} 
+bool \hyperlink{classquadruped_1_1MotionPlan_ad994c500c74ec400b375115edda79ce5}{plan\+Flag} = 0
+\begin{DoxyCompactList}\small\item\em 判断是否进行一次规划的标志位 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ad0e16c69f420367d4d05140b15db2342}\label{classquadruped_1_1MotionPlan_ad0e16c69f420367d4d05140b15db2342}} 
+uint8\+\_\+t \hyperlink{classquadruped_1_1MotionPlan_ad0e16c69f420367d4d05140b15db2342}{gait\+Now}
+\begin{DoxyCompactList}\small\item\em Actiger当前步态 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ac5ae4970fcfccaa355ee23d0638c3914}\label{classquadruped_1_1MotionPlan_ac5ae4970fcfccaa355ee23d0638c3914}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ac5ae4970fcfccaa355ee23d0638c3914}{p\+Body\+\_\+euler\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 期望的机体欧拉角队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ae04b0144696e2aeefc63839c31405ebc}\label{classquadruped_1_1MotionPlan_ae04b0144696e2aeefc63839c31405ebc}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ae04b0144696e2aeefc63839c31405ebc}{v\+Body\+\_\+euler\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 期望的机体欧拉角速度队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a069f14762dbb266d0aadfa10ae31de07}\label{classquadruped_1_1MotionPlan_a069f14762dbb266d0aadfa10ae31de07}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a069f14762dbb266d0aadfa10ae31de07}{p\+Body\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 期望的机体位置队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a3fa85fe450feebd7e92d2ac44120716d}\label{classquadruped_1_1MotionPlan_a3fa85fe450feebd7e92d2ac44120716d}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a3fa85fe450feebd7e92d2ac44120716d}{v\+Body\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 期望的机体速度队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a76ba519765eb863905ba1010e69bbb01}\label{classquadruped_1_1MotionPlan_a76ba519765eb863905ba1010e69bbb01}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a76ba519765eb863905ba1010e69bbb01}{a\+Body\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 期望的机体加速度队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a9de493b6d7cfeb7820cfbcbfc75a7664}\label{classquadruped_1_1MotionPlan_a9de493b6d7cfeb7820cfbcbfc75a7664}} 
+\hyperlink{classquadruped_1_1Gamepad}{Gamepad} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a9de493b6d7cfeb7820cfbcbfc75a7664}{gamepad}
+\begin{DoxyCompactList}\small\item\em Gamepad类的实例化对象，\+Actiger遥控器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a55aa8bfff1dc59cf60459d3e110218c1}\label{classquadruped_1_1MotionPlan_a55aa8bfff1dc59cf60459d3e110218c1}} 
+\hyperlink{classquadruped_1_1StateMachine}{State\+Machine} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a55aa8bfff1dc59cf60459d3e110218c1}{state\+Machine}
+\begin{DoxyCompactList}\small\item\em State\+Machine类的实例化对象，\+Actiger状态机 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_aa1bc9af0d38eb216f38f5a522e299b65}\label{classquadruped_1_1MotionPlan_aa1bc9af0d38eb216f38f5a522e299b65}} 
+\hyperlink{classquadruped_1_1RobotModel}{Robot\+Model} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_aa1bc9af0d38eb216f38f5a522e299b65}{robot\+Model}
+\begin{DoxyCompactList}\small\item\em Robot\+Model类的实例化对象，存储机器人模型信息 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a89e7b9a6130d9fc312a407c97017c56f}\label{classquadruped_1_1MotionPlan_a89e7b9a6130d9fc312a407c97017c56f}} 
+\hyperlink{classquadruped_1_1Parameters}{Parameters} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a89e7b9a6130d9fc312a407c97017c56f}{para}
+\begin{DoxyCompactList}\small\item\em Parameters类的实例化对象，存储一些被频繁使用的参数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a7ea20a7cfb4c72e7f37be61676840705}\label{classquadruped_1_1MotionPlan_a7ea20a7cfb4c72e7f37be61676840705}} 
+\hyperlink{classquadruped_1_1Foothold}{Foothold} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a7ea20a7cfb4c72e7f37be61676840705}{foothold}
+\begin{DoxyCompactList}\small\item\em Foothold类的实例化对象，\+Actiger落足点规划器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a4aefeb143bd9bb2e0e0460b90dc3b43f}\label{classquadruped_1_1MotionPlan_a4aefeb143bd9bb2e0e0460b90dc3b43f}} 
+\hyperlink{classquadruped_1_1BodyTrajectory}{Body\+Trajectory} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a4aefeb143bd9bb2e0e0460b90dc3b43f}{body\+Trajectory}
+\begin{DoxyCompactList}\small\item\em Body\+Trajectory类的实例化对象，\+Actiger机体轨迹规划器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ab2272c920c3b4311023fb4c1103436ad}\label{classquadruped_1_1MotionPlan_ab2272c920c3b4311023fb4c1103436ad}} 
+\hyperlink{classquadruped_1_1EndfootTrajectory}{Endfoot\+Trajectory} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ab2272c920c3b4311023fb4c1103436ad}{endfoot\+Trajectory}
+\begin{DoxyCompactList}\small\item\em Endfoot\+Trajectory类的实例化对象，\+Actiger摆动腿足端轨迹规划器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a58280188cf51d2e936d6dc4aa7520859}\label{classquadruped_1_1MotionPlan_a58280188cf51d2e936d6dc4aa7520859}} 
+std\+::vector$<$ \hyperlink{classquadruped_1_1LegPlan}{Leg\+Plan} $\ast$ $>$ \hyperlink{classquadruped_1_1MotionPlan_a58280188cf51d2e936d6dc4aa7520859}{leg\+Plan}
+\begin{DoxyCompactList}\small\item\em Leg\+Plan类的实例化对象向量，存储\+Actiger腿部的规划结果 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a8efab4af4a0c1264204a0d12baeb5494}\label{classquadruped_1_1MotionPlan_a8efab4af4a0c1264204a0d12baeb5494}} 
+\hyperlink{classquadruped_1_1LegPlan}{Leg\+Plan} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a8efab4af4a0c1264204a0d12baeb5494}{lf}
+\begin{DoxyCompactList}\small\item\em Leg\+Plan类的实例化对象，存储\+Actiger左前腿的规划结果 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a05dd0137376852bb6feee04f6193c5f6}\label{classquadruped_1_1MotionPlan_a05dd0137376852bb6feee04f6193c5f6}} 
+\hyperlink{classquadruped_1_1LegPlan}{Leg\+Plan} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a05dd0137376852bb6feee04f6193c5f6}{lr}
+\begin{DoxyCompactList}\small\item\em Leg\+Plan类的实例化对象，存储\+Actiger左后腿的规划结果 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a0b4b74a58595e74bd8a1407ef8e82edf}\label{classquadruped_1_1MotionPlan_a0b4b74a58595e74bd8a1407ef8e82edf}} 
+\hyperlink{classquadruped_1_1LegPlan}{Leg\+Plan} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a0b4b74a58595e74bd8a1407ef8e82edf}{rf}
+\begin{DoxyCompactList}\small\item\em Leg\+Plan类的实例化对象，存储\+Actiger右前腿的规划结果 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_aa634067d342c0ec0bdf71c5333f84d11}\label{classquadruped_1_1MotionPlan_aa634067d342c0ec0bdf71c5333f84d11}} 
+\hyperlink{classquadruped_1_1LegPlan}{Leg\+Plan} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_aa634067d342c0ec0bdf71c5333f84d11}{rr}
+\begin{DoxyCompactList}\small\item\em Leg\+Plan类的实例化对象，存储\+Actiger右后腿的规划结果 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ac27061731dfc05e5f2ab3b8b29404a35}\label{classquadruped_1_1MotionPlan_ac27061731dfc05e5f2ab3b8b29404a35}} 
+\hyperlink{classquadruped_1_1Terrain}{Terrain} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ac27061731dfc05e5f2ab3b8b29404a35}{terrain\+\_\+now}
+\begin{DoxyCompactList}\small\item\em Terrain类的实例化对象，表示当前的地形 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ab985d804440413e397e2e166fd1bb190}\label{classquadruped_1_1MotionPlan_ab985d804440413e397e2e166fd1bb190}} 
+\hyperlink{classquadruped_1_1FlatGround}{Flat\+Ground} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ab985d804440413e397e2e166fd1bb190}{flat\+Ground}
+\begin{DoxyCompactList}\small\item\em Flat\+Ground类的实例化对象，表示平地 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a12274c307b46b1b6e04385095427e46c}\label{classquadruped_1_1MotionPlan_a12274c307b46b1b6e04385095427e46c}} 
+\hyperlink{classquadruped_1_1Slope}{Slope} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a12274c307b46b1b6e04385095427e46c}{slope}
+\begin{DoxyCompactList}\small\item\em Slope类的实例化对象，表示坡面 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_aa8bbab60ae1b26742398d8e7dadd81ff}\label{classquadruped_1_1MotionPlan_aa8bbab60ae1b26742398d8e7dadd81ff}} 
+\hyperlink{classquadruped_1_1Stage}{Stage} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_aa8bbab60ae1b26742398d8e7dadd81ff}{stage}
+\begin{DoxyCompactList}\small\item\em Stage类的实例化对象，表示平台 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a5273d32d1cd281eff55aa996c461d800}\label{classquadruped_1_1MotionPlan_a5273d32d1cd281eff55aa996c461d800}} 
+\hyperlink{classquadruped_1_1Sill}{Sill} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a5273d32d1cd281eff55aa996c461d800}{sill}
+\begin{DoxyCompactList}\small\item\em Sill类的实例化对象，表示门槛 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a4ac430012abb35e9051bead7b7c4b864}\label{classquadruped_1_1MotionPlan_a4ac430012abb35e9051bead7b7c4b864}} 
+\hyperlink{classquadruped_1_1Stairs}{Stairs} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a4ac430012abb35e9051bead7b7c4b864}{stairs}
+\begin{DoxyCompactList}\small\item\em Stairs类的实例化对象，表示阶梯 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ac870f7f2c75f6cdf4a367303565e793a}\label{classquadruped_1_1MotionPlan_ac870f7f2c75f6cdf4a367303565e793a}} 
+\hyperlink{classquadruped_1_1Calandria}{Calandria} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ac870f7f2c75f6cdf4a367303565e793a}{calandria}
+\begin{DoxyCompactList}\small\item\em Calandria类的实例化对象，表示排管 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a0e6e197d5f0601600c4a05c36168cbcb}\label{classquadruped_1_1MotionPlan_a0e6e197d5f0601600c4a05c36168cbcb}} 
+\hyperlink{classquadruped_1_1Hurdles}{Hurdles} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_a0e6e197d5f0601600c4a05c36168cbcb}{hurdles}
+\begin{DoxyCompactList}\small\item\em Hurdles类的实例化对象，表示横杆 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ad5b9d0be05dcdf97ee22816146112e88}\label{classquadruped_1_1MotionPlan_ad5b9d0be05dcdf97ee22816146112e88}} 
+\hyperlink{classquadruped_1_1Ballpool}{Ballpool} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ad5b9d0be05dcdf97ee22816146112e88}{ballpool}
+\begin{DoxyCompactList}\small\item\em Ballpool类的实例化对象，表示球池 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_ad297ad596a1a813b45c4e28f11304a32}\label{classquadruped_1_1MotionPlan_ad297ad596a1a813b45c4e28f11304a32}} 
+\hyperlink{classquadruped_1_1Seesaw}{Seesaw} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_ad297ad596a1a813b45c4e28f11304a32}{seesaw}
+\begin{DoxyCompactList}\small\item\em Seesaw类的实例化对象，表示跷跷板 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_acbac0999d3d2cb246734b0eba01a01b9}\label{classquadruped_1_1MotionPlan_acbac0999d3d2cb246734b0eba01a01b9}} 
+\hyperlink{classquadruped_1_1Bridge}{Bridge} $\ast$ \hyperlink{classquadruped_1_1MotionPlan_acbac0999d3d2cb246734b0eba01a01b9}{bridge}
+\begin{DoxyCompactList}\small\item\em Bridge类的实例化对象，表示双木桥 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger规划器 
+
+\subsection{构造及析构函数说明}
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_af79f137bc037fa02681bded5c26b3a98}\label{classquadruped_1_1MotionPlan_af79f137bc037fa02681bded5c26b3a98}} 
+\index{quadruped\+::\+Motion\+Plan@{quadruped\+::\+Motion\+Plan}!Motion\+Plan@{Motion\+Plan}}
+\index{Motion\+Plan@{Motion\+Plan}!quadruped\+::\+Motion\+Plan@{quadruped\+::\+Motion\+Plan}}
+\subsubsection{\texorpdfstring{Motion\+Plan()}{MotionPlan()}}
+{\footnotesize\ttfamily Motion\+Plan\+::\+Motion\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classquadruped_1_1RobotModel}{Robot\+Model} $\ast$}]{p\+\_\+robot\+Model,  }\item[{\hyperlink{classquadruped_1_1Parameters}{Parameters} $\ast$}]{p\+\_\+para }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Motion\+Plan类的构造函数，完成所有对象成员的内存分配及数据成员的初值装载 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+robot\+Model} & Robot\+Model类的实例化对象，存储机器人模型信息，用来初始化对象成员robot\+Model \\
+\hline
+{\em p\+\_\+para} & Parameters类的实例化对象，存储一些被频繁使用的参数，用来初始化对象成员para \\
+\hline
+\end{DoxyParams}
+
+
+参考 a\+Body\+\_\+des, ballpool, body\+Trajectory, bridge, calandria, endfoot\+Trajectory, flat\+Ground, foothold, gait\+Now, gamepad, grid, hurdles, I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT, is\+\_\+lf\+\_\+rr\+\_\+stand, leg\+Plan, lf, lr, p\+Body\+\_\+des, p\+Body\+\_\+euler\+\_\+des, plan\+Flag, rf, rr, seesaw, sill, slope, stage, stairs, state\+Machine, terrain\+\_\+now, Ts, v\+Body\+\_\+des , 以及 v\+Body\+\_\+euler\+\_\+des.
+
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classquadruped_1_1MotionPlan_a46f0f22ad97c07959a86eb055778455e}\label{classquadruped_1_1MotionPlan_a46f0f22ad97c07959a86eb055778455e}} 
+\index{quadruped\+::\+Motion\+Plan@{quadruped\+::\+Motion\+Plan}!Set\+Terrain@{Set\+Terrain}}
+\index{Set\+Terrain@{Set\+Terrain}!quadruped\+::\+Motion\+Plan@{quadruped\+::\+Motion\+Plan}}
+\subsubsection{\texorpdfstring{Set\+Terrain()}{SetTerrain()}}
+{\footnotesize\ttfamily void Motion\+Plan\+::\+Set\+Terrain (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p\+\_\+terrain\+Type }\end{DoxyParamCaption})}
+
+
+
+根据形参p\+\_\+terrain\+Type设置当前地形 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+terrain\+Type} & 当前地形，配合感知得到 \\
+\hline
+\end{DoxyParams}
+
+
+参考 B\+A\+L\+L\+\_\+\+P\+O\+OL, ballpool, B\+R\+I\+D\+GE, bridge, C\+A\+L\+A\+N\+D\+R\+IA, calandria, endfoot\+Trajectory, F\+L\+AT, flat\+Ground, foothold, H\+U\+R\+D\+L\+ES, hurdles, S\+E\+E\+S\+AW, seesaw, S\+I\+LL, sill, S\+L\+O\+PE, slope, S\+T\+A\+GE, stage, S\+T\+A\+I\+RS, stairs , 以及 terrain\+\_\+now.
+
+
+
+参考自 Start().
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/motion\+Plan/\hyperlink{motionPlan_8hpp}{motion\+Plan.\+hpp}\item 
+controller/motion\+Plan/\hyperlink{motionPlan_8cpp}{motion\+Plan.\+cpp}\end{DoxyCompactItemize}

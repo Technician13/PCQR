@@ -1,0 +1,95 @@
+\hypertarget{classquadruped_1_1KinModel}{}\section{quadruped\+:\+:Kin\+Model类 参考}
+\label{classquadruped_1_1KinModel}\index{quadruped\+::\+Kin\+Model@{quadruped\+::\+Kin\+Model}}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a48cec7c90d4d2d49e84ca9fcc119e509}\label{classquadruped_1_1KinModel_a48cec7c90d4d2d49e84ca9fcc119e509}} 
+{\bfseries Kin\+Model} (Rigid\+Body\+Dynamics\+::\+Model $\ast$model)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a40a0a563a135087742a0d387b31c0f6c}\label{classquadruped_1_1KinModel_a40a0a563a135087742a0d387b31c0f6c}} 
+void {\bfseries get\+Pos} (int link\+\_\+id, dynacore\+::\+Vect3 \&pos)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_aeefc583e956d96d681a8627705628f56}\label{classquadruped_1_1KinModel_aeefc583e956d96d681a8627705628f56}} 
+void {\bfseries get\+Ori} (int link\+\_\+id, dynacore\+::\+Vect3 \&rpy)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_aebe2419f9e178a4ffa0fb77dae2634cb}\label{classquadruped_1_1KinModel_aebe2419f9e178a4ffa0fb77dae2634cb}} 
+void {\bfseries get\+Linear\+Vel} (int link\+\_\+id, dynacore\+::\+Vect3 \&vel)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a9bd700110c74e15854b6b43facb3cc7d}\label{classquadruped_1_1KinModel_a9bd700110c74e15854b6b43facb3cc7d}} 
+void {\bfseries get\+Angular\+Vel} (int link\+\_\+id, dynacore\+::\+Vect3 \&ang\+\_\+vel)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_abe11f12a6caac107d27b87e860e8b658}\label{classquadruped_1_1KinModel_abe11f12a6caac107d27b87e860e8b658}} 
+void {\bfseries get\+Jacobian} (int link\+\_\+id, dynacore\+::\+Matrix \&J)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a34d6bc52e8c03ff9d4e615221bd6d54f}\label{classquadruped_1_1KinModel_a34d6bc52e8c03ff9d4e615221bd6d54f}} 
+void {\bfseries get\+J\+Dot\+Qdot} (int link\+\_\+id, dynacore\+::\+Vector \&J\+Dot\+Qdot)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a7cecc8108a04e9decbad378e60aef654}\label{classquadruped_1_1KinModel_a7cecc8108a04e9decbad378e60aef654}} 
+void {\bfseries get\+Co\+M\+Jacobian} (dynacore\+::\+Matrix \&J) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a661bb6db781ce959b0605694d90e929c}\label{classquadruped_1_1KinModel_a661bb6db781ce959b0605694d90e929c}} 
+void {\bfseries get\+Co\+M\+Pos} (dynacore\+::\+Vect3 \&com\+\_\+pos) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a686063155c2170cab5f9e1a81d21815f}\label{classquadruped_1_1KinModel_a686063155c2170cab5f9e1a81d21815f}} 
+void {\bfseries get\+Co\+M\+Vel} (dynacore\+::\+Vect3 \&com\+\_\+vel) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_abf2c9fca9e57796ffd6e37d57e50c7da}\label{classquadruped_1_1KinModel_abf2c9fca9e57796ffd6e37d57e50c7da}} 
+void {\bfseries get\+Centroid\+Inertia} (dynacore\+::\+Matrix \&Icent)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a41604c389d60e72f034de9751037fc07}\label{classquadruped_1_1KinModel_a41604c389d60e72f034de9751037fc07}} 
+void {\bfseries get\+Centroid\+Jacobian} (dynacore\+::\+Matrix \&Jcent)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a6c29b49bed4c5e43bec0acf29202aca1}\label{classquadruped_1_1KinModel_a6c29b49bed4c5e43bec0acf29202aca1}} 
+void {\bfseries get\+Centroid\+Velocity} (dynacore\+::\+Vector \&centroid\+\_\+vel)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_af3aad76f02bdcd895c26834af4e105b5}\label{classquadruped_1_1KinModel_af3aad76f02bdcd895c26834af4e105b5}} 
+void {\bfseries get\+World\+To\+Body\+Matrix} (\hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{dynacore\+::\+Mat3} \&Body\+Matrix)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a6c4408d0ebf6d12c7d47a6e16f6c36f8}\label{classquadruped_1_1KinModel_a6c4408d0ebf6d12c7d47a6e16f6c36f8}} 
+void {\bfseries Update\+Kinematics} (const dynacore\+::\+Vector \&q, const dynacore\+::\+Vector \&qdot)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a6f79faa74c7973c02c3b1b5b0ce5d2d7}\label{classquadruped_1_1KinModel_a6f79faa74c7973c02c3b1b5b0ce5d2d7}} 
+unsigned int {\bfseries \+\_\+find\+\_\+body\+\_\+idx} (int id) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a707f290777fe1fd2db59269a34b88c87}\label{classquadruped_1_1KinModel_a707f290777fe1fd2db59269a34b88c87}} 
+unsigned int {\bfseries find\+\_\+body\+\_\+id} (const char $\ast$link\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a44b631b0a7ec2c0398622fbb56039f07}\label{classquadruped_1_1KinModel_a44b631b0a7ec2c0398622fbb56039f07}} 
+void {\bfseries displaylinks} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_ad68d2a66e974b49e4eef5a7711ea21ec}\label{classquadruped_1_1KinModel_ad68d2a66e974b49e4eef5a7711ea21ec}} 
+dynacore\+::\+Vect3 {\bfseries com\+\_\+pos\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a36cf1910dab85ceae45132caaa7b2311}\label{classquadruped_1_1KinModel_a36cf1910dab85ceae45132caaa7b2311}} 
+dynacore\+::\+Vector {\bfseries centroid\+\_\+vel\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_adc0f8aae34d180782693a3cb153040bf}\label{classquadruped_1_1KinModel_adc0f8aae34d180782693a3cb153040bf}} 
+void {\bfseries \+\_\+\+Update\+Centroid\+Frame} (const dynacore\+::\+Vector \&q, const dynacore\+::\+Vector \&qdot)
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a58cbea050656719f6e53d1d42e18d0e9}\label{classquadruped_1_1KinModel_a58cbea050656719f6e53d1d42e18d0e9}} 
+double {\bfseries gravity\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a5fb7ebc997f0ba3074da8405c487da48}\label{classquadruped_1_1KinModel_a5fb7ebc997f0ba3074da8405c487da48}} 
+dynacore\+::\+Matrix {\bfseries Ig\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a580c0ce1458f5ce3afef017619295126}\label{classquadruped_1_1KinModel_a580c0ce1458f5ce3afef017619295126}} 
+dynacore\+::\+Matrix {\bfseries Jg\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1KinModel_a2549c56534d720926cab2abf7f85572c}\label{classquadruped_1_1KinModel_a2549c56534d720926cab2abf7f85572c}} 
+Rigid\+Body\+Dynamics\+::\+Model $\ast$ {\bfseries model\+\_\+}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/model/Kin\+Model.\+hpp\item 
+controller/model/Kin\+Model.\+cpp\end{DoxyCompactItemize}

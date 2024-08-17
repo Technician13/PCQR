@@ -1,0 +1,56 @@
+\hypertarget{classquadruped_1_1LocomotionCtrl}{}\section{quadruped\+:\+:Locomotion\+Ctrl类 参考}
+\label{classquadruped_1_1LocomotionCtrl}\index{quadruped\+::\+Locomotion\+Ctrl@{quadruped\+::\+Locomotion\+Ctrl}}
+
+
+Actiger运动控制类  
+
+
+
+
+{\ttfamily \#include $<$locomotion\+Controller.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_a233d4539571e8970451e1bf800a5eeb8}\label{classquadruped_1_1LocomotionCtrl_a233d4539571e8970451e1bf800a5eeb8}} 
+\hyperlink{classquadruped_1_1LocomotionCtrl_a233d4539571e8970451e1bf800a5eeb8}{Locomotion\+Ctrl} (void)
+\begin{DoxyCompactList}\small\item\em Locomotion\+Ctrl类的构造函数，完成所有对象成员的内存分配 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_a94ec7af0dc2d159e91bdc541c00e34fd}\label{classquadruped_1_1LocomotionCtrl_a94ec7af0dc2d159e91bdc541c00e34fd}} 
+virtual \hyperlink{classquadruped_1_1LocomotionCtrl_a94ec7af0dc2d159e91bdc541c00e34fd}{$\sim$\+Locomotion\+Ctrl} (void)
+\begin{DoxyCompactList}\small\item\em Locomotion\+Ctrl类的析构函数，释放申请的内存 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_ae1ea49db9859d92fb33a4959dadfeeee}\label{classquadruped_1_1LocomotionCtrl_ae1ea49db9859d92fb33a4959dadfeeee}} 
+void \hyperlink{classquadruped_1_1LocomotionCtrl_ae1ea49db9859d92fb33a4959dadfeeee}{Robot\+Control} (void)
+\begin{DoxyCompactList}\small\item\em 机器人控制函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_af2e5cc2d85c00e73c580aebf5b6db19f}\label{classquadruped_1_1LocomotionCtrl_af2e5cc2d85c00e73c580aebf5b6db19f}} 
+\hyperlink{classquadruped_1_1Mpc}{Mpc} $\ast$ \hyperlink{classquadruped_1_1LocomotionCtrl_af2e5cc2d85c00e73c580aebf5b6db19f}{mpc}
+\begin{DoxyCompactList}\small\item\em Mpc类的实例化对象，\+Actiger模型预测控制器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_afb4fdfa9aeafca4990b964be1760a291}\label{classquadruped_1_1LocomotionCtrl_afb4fdfa9aeafca4990b964be1760a291}} 
+\hyperlink{classquadruped_1_1RobotModel}{Robot\+Model} $\ast$ \hyperlink{classquadruped_1_1LocomotionCtrl_afb4fdfa9aeafca4990b964be1760a291}{robot\+Model}
+\begin{DoxyCompactList}\small\item\em Robot\+Model类的实例化对象，存储机器人模型信息 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_a77f83342b1327735db2ce184d032b697}\label{classquadruped_1_1LocomotionCtrl_a77f83342b1327735db2ce184d032b697}} 
+\hyperlink{classquadruped_1_1Parameters}{Parameters} $\ast$ \hyperlink{classquadruped_1_1LocomotionCtrl_a77f83342b1327735db2ce184d032b697}{para}
+\begin{DoxyCompactList}\small\item\em Parameters类的实例化对象，存储一些被频繁使用的参数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_a27b80b6c14c2153e3c3ad367d4411805}\label{classquadruped_1_1LocomotionCtrl_a27b80b6c14c2153e3c3ad367d4411805}} 
+\hyperlink{classquadruped_1_1MotionPlan}{Motion\+Plan} $\ast$ \hyperlink{classquadruped_1_1LocomotionCtrl_a27b80b6c14c2153e3c3ad367d4411805}{motion\+Plan}
+\begin{DoxyCompactList}\small\item\em Motion\+Plan类的实例化对象，\+Actiger规划器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_a46951dff3fd3eb4b0d050bf831b05a4e}\label{classquadruped_1_1LocomotionCtrl_a46951dff3fd3eb4b0d050bf831b05a4e}} 
+\hyperlink{classquadruped_1_1LegControl}{Leg\+Control} $\ast$ \hyperlink{classquadruped_1_1LocomotionCtrl_a46951dff3fd3eb4b0d050bf831b05a4e}{leg\+Control}
+\begin{DoxyCompactList}\small\item\em Leg\+Control类的实例化对象，\+Actiger腿部控制器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_a972cced6a5cac9fbfc8a324cad41c04d}\label{classquadruped_1_1LocomotionCtrl_a972cced6a5cac9fbfc8a324cad41c04d}} 
+\hyperlink{cppTypes_8h_a87f228860242acc66da2e58086d18cec}{Vec12}$<$ double $>$ {\bfseries mpc\+\_\+pre\+\_\+force} = \hyperlink{cppTypes_8h_a87f228860242acc66da2e58086d18cec}{Vec12}$<$double$>$\+::Zero()
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LocomotionCtrl_a8dede580a59c915af67d01f4e82fab42}\label{classquadruped_1_1LocomotionCtrl_a8dede580a59c915af67d01f4e82fab42}} 
+\hyperlink{cppTypes_8h_a87f228860242acc66da2e58086d18cec}{Vec12}$<$ double $>$ {\bfseries mpc\+\_\+pre\+\_\+pre\+\_\+force} = \hyperlink{cppTypes_8h_a87f228860242acc66da2e58086d18cec}{Vec12}$<$double$>$\+::Zero()
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger运动控制类 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{locomotionController_8hpp}{locomotion\+Controller.\+hpp}\item 
+\hyperlink{locomotionController_8cpp}{locomotion\+Controller.\+cpp}\end{DoxyCompactItemize}

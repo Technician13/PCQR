@@ -1,0 +1,248 @@
+\hypertarget{classquadruped_1_1FH__nlp}{}\section{quadruped\+:\+:F\+H\+\_\+nlp类 参考}
+\label{classquadruped_1_1FH__nlp}\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+类 quadruped\+:\+:F\+H\+\_\+nlp 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classquadruped_1_1FH__nlp}
+\end{center}
+\end{figure}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classquadruped_1_1FH__nlp_a2681be275f98fa7ca224ac7d03cf822e}{F\+H\+\_\+nlp} (\hyperlink{classquadruped_1_1FH__updataInfo}{F\+H\+\_\+updata\+Info} $\ast$p\+\_\+updata\+Info)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_a2a7f67c823cce5ba75b8ba14a4beccfa}{get\+\_\+nlp\+\_\+info} (Index \&n, Index \&m, Index \&nnz\+\_\+jac\+\_\+g, Index \&nnz\+\_\+h\+\_\+lag, Index\+Style\+Enum \&index\+\_\+style)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_a8f2ccc29742196f79b90ffd597b63927}{get\+\_\+bounds\+\_\+info} (Index n, Number $\ast$x\+\_\+l, Number $\ast$x\+\_\+u, Index m, Number $\ast$g\+\_\+l, Number $\ast$g\+\_\+u)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_a97e90c5109ca64c20b27f767d5665df4}{get\+\_\+starting\+\_\+point} (Index n, bool init\+\_\+x, Number $\ast$x, bool init\+\_\+z, Number $\ast$z\+\_\+L, Number $\ast$z\+\_\+U, Index m, bool init\+\_\+lambda, Number $\ast$lambda)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_a1c50f2e5601d9cfadf569d7dae7ba787}{eval\+\_\+f} (Index n, const Number $\ast$x, bool new\+\_\+x, Number \&obj\+\_\+value)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_aace436330eee6fd6e4e86ec2221a8a35}{eval\+\_\+grad\+\_\+f} (Index n, const Number $\ast$x, bool new\+\_\+x, Number $\ast$grad\+\_\+f)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_a6451ea1ebe787cc94fe34199193c7acd}{eval\+\_\+g} (Index n, const Number $\ast$x, bool new\+\_\+x, Index m, Number $\ast$g)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_adc432f17a942b28d5cd9ac261361692d}{eval\+\_\+jac\+\_\+g} (Index n, const Number $\ast$x, bool new\+\_\+x, Index m, Index nele\+\_\+jac, Index $\ast$i\+Row, Index $\ast$j\+Col, Number $\ast$values)
+\item 
+virtual bool \hyperlink{classquadruped_1_1FH__nlp_a19a232662e043d038b3184ccac74e679}{eval\+\_\+h} (Index n, const Number $\ast$x, bool new\+\_\+x, Number obj\+\_\+factor, Index m, const Number $\ast$lambda, bool new\+\_\+lambda, Index nele\+\_\+hess, Index $\ast$i\+Row, Index $\ast$j\+Col, Number $\ast$values)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Solution Methods}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classquadruped_1_1FH__nlp_aae99a7bb4a2e1eb7fee96440583fae95}{finalize\+\_\+solution} (Solver\+Return status, Index n, const Number $\ast$x, const Number $\ast$z\+\_\+L, const Number $\ast$z\+\_\+U, Index m, const Number $\ast$g, const Number $\ast$lambda, Number obj\+\_\+value, const Ipopt\+Data $\ast$ip\+\_\+data, Ipopt\+Calculated\+Quantities $\ast$ip\+\_\+cq)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a4344579b63950206ce985d234a3266fd}\label{classquadruped_1_1FH__nlp_a4344579b63950206ce985d234a3266fd}} 
+int {\bfseries var\+\_\+num}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_abb85add767802a38175db2a34323cae3}\label{classquadruped_1_1FH__nlp_abb85add767802a38175db2a34323cae3}} 
+int {\bfseries cst\+\_\+num}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a975ab9034fd3d5cb9c22d7afbd6929cf}\label{classquadruped_1_1FH__nlp_a975ab9034fd3d5cb9c22d7afbd6929cf}} 
+int {\bfseries cst\+\_\+jac\+\_\+num}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a9a73d743c633605649b0664ab7a8a488}\label{classquadruped_1_1FH__nlp_a9a73d743c633605649b0664ab7a8a488}} 
+int {\bfseries cst\+\_\+hes\+\_\+num}
+\end{DoxyCompactItemize}
+
+
+\subsection{构造及析构函数说明}
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a2681be275f98fa7ca224ac7d03cf822e}\label{classquadruped_1_1FH__nlp_a2681be275f98fa7ca224ac7d03cf822e}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!F\+H\+\_\+nlp@{F\+H\+\_\+nlp}}
+\index{F\+H\+\_\+nlp@{F\+H\+\_\+nlp}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{F\+H\+\_\+nlp()}{FH\_nlp()}}
+{\footnotesize\ttfamily F\+H\+\_\+nlp\+::\+F\+H\+\_\+nlp (\begin{DoxyParamCaption}\item[{\hyperlink{classquadruped_1_1FH__updataInfo}{F\+H\+\_\+updata\+Info} $\ast$}]{p\+\_\+updata\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\+: 非线性规划问题参数设置 
+\begin{DoxyParams}{参数}
+{\em \{\+F\+H\+\_\+updata\+Info$\ast$\}} & p\+\_\+updata\+Info 落足点规划的信息更新对象 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考 F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE.
+
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a1c50f2e5601d9cfadf569d7dae7ba787}\label{classquadruped_1_1FH__nlp_a1c50f2e5601d9cfadf569d7dae7ba787}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!eval\+\_\+f@{eval\+\_\+f}}
+\index{eval\+\_\+f@{eval\+\_\+f}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{eval\+\_\+f()}{eval\_f()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::eval\+\_\+f (\begin{DoxyParamCaption}\item[{Index}]{n,  }\item[{const Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Number \&}]{obj\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to return the objective value
+
+\+: 目标函数，这里为常数0 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a6451ea1ebe787cc94fe34199193c7acd}\label{classquadruped_1_1FH__nlp_a6451ea1ebe787cc94fe34199193c7acd}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!eval\+\_\+g@{eval\+\_\+g}}
+\index{eval\+\_\+g@{eval\+\_\+g}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{eval\+\_\+g()}{eval\_g()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::eval\+\_\+g (\begin{DoxyParamCaption}\item[{Index}]{n,  }\item[{const Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Index}]{m,  }\item[{Number $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to return the constraint residuals
+
+\+: 计算约束的值 
+\begin{DoxyParams}{参数}
+{\em \{\+Index\}} & n \\
+\hline
+{\em \{const} & Number$\ast$\} x \\
+\hline
+{\em \{bool\}} & new\+\_\+x \\
+\hline
+{\em \{\+Index\}} & m \\
+\hline
+{\em \{\+Number$\ast$\}} & g \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考 quadruped\+::\+F\+H\+\_\+constraints\+::\+Get\+Kinematics\+Cst() , 以及 quadruped\+::\+F\+H\+\_\+constraints\+::\+Get\+Other\+Cst().
+
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_aace436330eee6fd6e4e86ec2221a8a35}\label{classquadruped_1_1FH__nlp_aace436330eee6fd6e4e86ec2221a8a35}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!eval\+\_\+grad\+\_\+f@{eval\+\_\+grad\+\_\+f}}
+\index{eval\+\_\+grad\+\_\+f@{eval\+\_\+grad\+\_\+f}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{eval\+\_\+grad\+\_\+f()}{eval\_grad\_f()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::eval\+\_\+grad\+\_\+f (\begin{DoxyParamCaption}\item[{Index}]{n,  }\item[{const Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Number $\ast$}]{grad\+\_\+f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to return the gradient of the objective
+
+\+: 目标函数的梯度 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a19a232662e043d038b3184ccac74e679}\label{classquadruped_1_1FH__nlp_a19a232662e043d038b3184ccac74e679}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!eval\+\_\+h@{eval\+\_\+h}}
+\index{eval\+\_\+h@{eval\+\_\+h}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{eval\+\_\+h()}{eval\_h()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::eval\+\_\+h (\begin{DoxyParamCaption}\item[{Index}]{n,  }\item[{const Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Number}]{obj\+\_\+factor,  }\item[{Index}]{m,  }\item[{const Number $\ast$}]{lambda,  }\item[{bool}]{new\+\_\+lambda,  }\item[{Index}]{nele\+\_\+hess,  }\item[{Index $\ast$}]{i\+Row,  }\item[{Index $\ast$}]{j\+Col,  }\item[{Number $\ast$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to return\+: 1) The structure of the hessian of the lagrangian (if \char`\"{}values\char`\"{} is N\+U\+LL) 2) The values of the hessian of the lagrangian (if \char`\"{}values\char`\"{} is not N\+U\+LL)
+
+\+: 目标函数和约束的海森矩阵 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考 F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE.
+
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_adc432f17a942b28d5cd9ac261361692d}\label{classquadruped_1_1FH__nlp_adc432f17a942b28d5cd9ac261361692d}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!eval\+\_\+jac\+\_\+g@{eval\+\_\+jac\+\_\+g}}
+\index{eval\+\_\+jac\+\_\+g@{eval\+\_\+jac\+\_\+g}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{eval\+\_\+jac\+\_\+g()}{eval\_jac\_g()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::eval\+\_\+jac\+\_\+g (\begin{DoxyParamCaption}\item[{Index}]{n,  }\item[{const Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Index}]{m,  }\item[{Index}]{nele\+\_\+jac,  }\item[{Index $\ast$}]{i\+Row,  }\item[{Index $\ast$}]{j\+Col,  }\item[{Number $\ast$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to return\+: 1) The structure of the jacobian (if \char`\"{}values\char`\"{} is N\+U\+LL) 2) The values of the jacobian (if \char`\"{}values\char`\"{} is not N\+U\+LL)
+
+\+: 约束的雅可比矩阵 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_aae99a7bb4a2e1eb7fee96440583fae95}\label{classquadruped_1_1FH__nlp_aae99a7bb4a2e1eb7fee96440583fae95}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!finalize\+\_\+solution@{finalize\+\_\+solution}}
+\index{finalize\+\_\+solution@{finalize\+\_\+solution}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{finalize\+\_\+solution()}{finalize\_solution()}}
+{\footnotesize\ttfamily void F\+H\+\_\+nlp\+::finalize\+\_\+solution (\begin{DoxyParamCaption}\item[{Solver\+Return}]{status,  }\item[{Index}]{n,  }\item[{const Number $\ast$}]{x,  }\item[{const Number $\ast$}]{z\+\_\+L,  }\item[{const Number $\ast$}]{z\+\_\+U,  }\item[{Index}]{m,  }\item[{const Number $\ast$}]{g,  }\item[{const Number $\ast$}]{lambda,  }\item[{Number}]{obj\+\_\+value,  }\item[{const Ipopt\+Data $\ast$}]{ip\+\_\+data,  }\item[{Ipopt\+Calculated\+Quantities $\ast$}]{ip\+\_\+cq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method is called when the algorithm is complete so the T\+N\+LP can store/write the solution
+
+\+: 优化结果 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a8f2ccc29742196f79b90ffd597b63927}\label{classquadruped_1_1FH__nlp_a8f2ccc29742196f79b90ffd597b63927}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!get\+\_\+bounds\+\_\+info@{get\+\_\+bounds\+\_\+info}}
+\index{get\+\_\+bounds\+\_\+info@{get\+\_\+bounds\+\_\+info}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{get\+\_\+bounds\+\_\+info()}{get\_bounds\_info()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::get\+\_\+bounds\+\_\+info (\begin{DoxyParamCaption}\item[{Index}]{n,  }\item[{Number $\ast$}]{x\+\_\+l,  }\item[{Number $\ast$}]{x\+\_\+u,  }\item[{Index}]{m,  }\item[{Number $\ast$}]{g\+\_\+l,  }\item[{Number $\ast$}]{g\+\_\+u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to return the bounds for my problem
+
+\+: 设置边界 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考 F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Get\+X\+Bound().
+
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a2a7f67c823cce5ba75b8ba14a4beccfa}\label{classquadruped_1_1FH__nlp_a2a7f67c823cce5ba75b8ba14a4beccfa}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!get\+\_\+nlp\+\_\+info@{get\+\_\+nlp\+\_\+info}}
+\index{get\+\_\+nlp\+\_\+info@{get\+\_\+nlp\+\_\+info}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{get\+\_\+nlp\+\_\+info()}{get\_nlp\_info()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::get\+\_\+nlp\+\_\+info (\begin{DoxyParamCaption}\item[{Index \&}]{n,  }\item[{Index \&}]{m,  }\item[{Index \&}]{nnz\+\_\+jac\+\_\+g,  }\item[{Index \&}]{nnz\+\_\+h\+\_\+lag,  }\item[{Index\+Style\+Enum \&}]{index\+\_\+style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+ipopt function Method to return some info about the nlp
+
+\+: 非线性规划问题参数设置 
+\begin{DoxyParams}{参数}
+{\em \{\+F\+H\+\_\+updata\+Info$\ast$\}} & p\+\_\+updata\+Info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classquadruped_1_1FH__nlp_a97e90c5109ca64c20b27f767d5665df4}\label{classquadruped_1_1FH__nlp_a97e90c5109ca64c20b27f767d5665df4}} 
+\index{quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}!get\+\_\+starting\+\_\+point@{get\+\_\+starting\+\_\+point}}
+\index{get\+\_\+starting\+\_\+point@{get\+\_\+starting\+\_\+point}!quadruped\+::\+F\+H\+\_\+nlp@{quadruped\+::\+F\+H\+\_\+nlp}}
+\subsubsection{\texorpdfstring{get\+\_\+starting\+\_\+point()}{get\_starting\_point()}}
+{\footnotesize\ttfamily bool F\+H\+\_\+nlp\+::get\+\_\+starting\+\_\+point (\begin{DoxyParamCaption}\item[{Index}]{n,  }\item[{bool}]{init\+\_\+x,  }\item[{Number $\ast$}]{x,  }\item[{bool}]{init\+\_\+z,  }\item[{Number $\ast$}]{z\+\_\+L,  }\item[{Number $\ast$}]{z\+\_\+U,  }\item[{Index}]{m,  }\item[{bool}]{init\+\_\+lambda,  }\item[{Number $\ast$}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to return the starting point for the algorithm
+
+\+: 配置初始点 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Get\+X\+Inital().
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/motion\+Plan/foothold/f\+H\+\_\+nlp.\+hpp\item 
+controller/motion\+Plan/foothold/\hyperlink{fH__nlp_8cpp}{f\+H\+\_\+nlp.\+cpp}\end{DoxyCompactItemize}

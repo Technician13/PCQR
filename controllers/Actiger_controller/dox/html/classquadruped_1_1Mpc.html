@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Actiger: quadruped::Mpc类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Actiger
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>quadruped</b></li><li class="navelem"><a class="el" href="classquadruped_1_1Mpc.html">Mpc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classquadruped_1_1Mpc-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">quadruped::Mpc类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Actiger模型预测控制器  
+ <a href="classquadruped_1_1Mpc.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mpc_8hpp_source.html">mpc.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4bc02766e7c00d69044af00b9c451802"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classquadruped_1_1Mpc.html#a4bc02766e7c00d69044af00b9c451802">Mpc</a> (<a class="el" href="classquadruped_1_1RobotModel.html">RobotModel</a> *p_robotModel, <a class="el" href="classquadruped_1_1MotionPlan.html">MotionPlan</a> *p_ref, <a class="el" href="classquadruped_1_1Parameters.html">Parameters</a> *p_para)</td></tr>
+<tr class="memdesc:a4bc02766e7c00d69044af00b9c451802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actiger模型预测控制器的构造函数，完成对象成员以及部分数据成员的初始化  <a href="#a4bc02766e7c00d69044af00b9c451802">更多...</a><br /></td></tr>
+<tr class="separator:a4bc02766e7c00d69044af00b9c451802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e96389912459abc9b7ec45741c9ce9"><td class="memItemLeft" align="right" valign="top"><a id="a54e96389912459abc9b7ec45741c9ce9"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classquadruped_1_1Mpc.html#a54e96389912459abc9b7ec45741c9ce9">~Mpc</a> ()</td></tr>
+<tr class="memdesc:a54e96389912459abc9b7ec45741c9ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actiger模型预测控制器的析构函数 <br /></td></tr>
+<tr class="separator:a54e96389912459abc9b7ec45741c9ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f15737db0a0c201de83d5733d1f20f3"><td class="memItemLeft" align="right" valign="top"><a id="a3f15737db0a0c201de83d5733d1f20f3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classquadruped_1_1Mpc.html#a3f15737db0a0c201de83d5733d1f20f3">GetReactForce</a> (void)</td></tr>
+<tr class="memdesc:a3f15737db0a0c201de83d5733d1f20f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建模型预测控制器，求解二次问题，得到足端力等成员函数的封装 <br /></td></tr>
+<tr class="separator:a3f15737db0a0c201de83d5733d1f20f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Actiger模型预测控制器 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4bc02766e7c00d69044af00b9c451802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc02766e7c00d69044af00b9c451802">&#9670;&nbsp;</a></span>Mpc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mpc::Mpc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classquadruped_1_1RobotModel.html">RobotModel</a> *&#160;</td>
+          <td class="paramname"><em>p_robotModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classquadruped_1_1MotionPlan.html">MotionPlan</a> *&#160;</td>
+          <td class="paramname"><em>p_ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classquadruped_1_1Parameters.html">Parameters</a> *&#160;</td>
+          <td class="paramname"><em>p_para</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actiger模型预测控制器的构造函数，完成对象成员以及部分数据成员的初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_robotModel</td><td>RobotModel类的实例化对象，存储机器人模型信息，用来初始化对象成员robotModel </td></tr>
+    <tr><td class="paramname">p_ref</td><td>MotionPlan类的实例化对象，Actiger规划器，用来初始化对象成员ref </td></tr>
+    <tr><td class="paramname">p_para</td><td>Parameters类的实例化对象，存储一些被频繁使用的参数，用来初始化对象成员para </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">参考 <a class="el" href="commonFunction_8hpp.html#a6d2b3239fccbaf60068cfb5925bac9b7">quadruped::num_leg</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>controller/mpc/<a class="el" href="mpc_8hpp_source.html">mpc.hpp</a></li>
+<li>controller/mpc/<a class="el" href="mpc_8cpp.html">mpc.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Actiger: controller/motionPlan/foothold/fH_nlp.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Actiger
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><a class="el" href="dir_4a8d44b456c956a22f3978600669e0a3.html">motionPlan</a></li><li class="navelem"><a class="el" href="dir_df72b7cad457384c18b8f209d603aca1.html">foothold</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fH_nlp.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef FOOTHOLD_NLP_HPP</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define FOOTHOLD_NLP_HPP</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;IpTNLP.hpp&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;fH_constraints.hpp&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceIpopt.html">Ipopt</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacequadruped.html">quadruped</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classquadruped_1_1FH__nlp.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classquadruped_1_1FH__nlp.html">FH_nlp</a> : <span class="keyword">public</span> TNLP</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classquadruped_1_1FH__updataInfo.html">FH_updataInfo</a>* updataInfo;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classquadruped_1_1FH__constraints.html">FH_constraints</a>* cst;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classquadruped_1_1FH__nlp.html">FH_nlp</a>(<a class="code" href="classquadruped_1_1FH__updataInfo.html">FH_updataInfo</a>* p_updataInfo);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classquadruped_1_1FH__nlp.html">FH_nlp</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> var_num;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">int</span> cst_num ;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">int</span> cst_jac_num;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">int</span> cst_hes_num;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_nlp_info(Index&amp; n, Index&amp; m, Index&amp; nnz_jac_g,</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            Index&amp; nnz_h_lag, IndexStyleEnum&amp; index_style);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_bounds_info(Index n, Number* x_l, Number* x_u,</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            Index m, Number* g_l, Number* g_u);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_starting_point(Index n, <span class="keywordtype">bool</span> init_x, Number* x,</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">bool</span> init_z, Number* z_L, Number* z_U,</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            Index m, <span class="keywordtype">bool</span> init_lambda,</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            Number* lambda);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eval_f(Index n, <span class="keyword">const</span> Number* x, <span class="keywordtype">bool</span> new_x, Number&amp; obj_value);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eval_grad_f(Index n, <span class="keyword">const</span> Number* x, <span class="keywordtype">bool</span> new_x, Number* grad_f);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eval_g(Index n, <span class="keyword">const</span> Number* x, <span class="keywordtype">bool</span> new_x, Index m, Number* g);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eval_jac_g(Index n, <span class="keyword">const</span> Number* x, <span class="keywordtype">bool</span> new_x,</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            Index m, Index nele_jac, Index* iRow, Index* jCol,</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            Number* values);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eval_h(Index n, <span class="keyword">const</span> Number* x, <span class="keywordtype">bool</span> new_x,</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            Number obj_factor, Index m, <span class="keyword">const</span> Number* lambda,</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">bool</span> new_lambda, Index nele_hess, Index* iRow,</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            Index* jCol, Number* values);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> finalize_solution(SolverReturn status,Index n, <span class="keyword">const</span> Number* x, <span class="keyword">const</span> Number* z_L, <span class="keyword">const</span> Number* z_U,</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                       Index m, <span class="keyword">const</span> Number* g, <span class="keyword">const</span> Number* lambda,Number obj_value,<span class="keyword">const</span> IpoptData* ip_data,</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                       IpoptCalculatedQuantities* ip_cq);    </div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classquadruped_1_1FH__constraints_html"><div class="ttname"><a href="classquadruped_1_1FH__constraints.html">quadruped::FH_constraints</a></div><div class="ttdef"><b>Definition:</b> fH_constraints.hpp:10</div></div>
+<div class="ttc" id="namespacequadruped_html"><div class="ttname"><a href="namespacequadruped.html">quadruped</a></div><div class="ttdef"><b>Definition:</b> commonFunction.hpp:44</div></div>
+<div class="ttc" id="namespaceIpopt_html"><div class="ttname"><a href="namespaceIpopt.html">Ipopt</a></div></div>
+<div class="ttc" id="classquadruped_1_1FH__nlp_html"><div class="ttname"><a href="classquadruped_1_1FH__nlp.html">quadruped::FH_nlp</a></div><div class="ttdef"><b>Definition:</b> fH_nlp.hpp:15</div></div>
+<div class="ttc" id="classquadruped_1_1FH__updataInfo_html"><div class="ttname"><a href="classquadruped_1_1FH__updataInfo.html">quadruped::FH_updataInfo</a></div><div class="ttdoc">Actiger落足点规划信息更新类 </div><div class="ttdef"><b>Definition:</b> fH_updataInfo.hpp:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,71 @@
+\hypertarget{classquadruped_1_1BodyStateEstimate}{}\section{quadruped\+:\+:Body\+State\+Estimate类 参考}
+\label{classquadruped_1_1BodyStateEstimate}\index{quadruped\+::\+Body\+State\+Estimate@{quadruped\+::\+Body\+State\+Estimate}}
+
+
+Actiger机体状态信息类  
+
+
+
+
+{\ttfamily \#include $<$body\+State\+Estimate.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a3b0db8c7b7cf21b040f3fbe15dd02b7e}\label{classquadruped_1_1BodyStateEstimate_a3b0db8c7b7cf21b040f3fbe15dd02b7e}} 
+\hyperlink{classquadruped_1_1BodyStateEstimate_a3b0db8c7b7cf21b040f3fbe15dd02b7e}{Body\+State\+Estimate} (void)
+\begin{DoxyCompactList}\small\item\em Body\+State\+Estimate类的构造函数，完成所有对象成员的内存分配以及数据成员的初值装载 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_ae223eff98ecc03c171df9c97db54a0d0}\label{classquadruped_1_1BodyStateEstimate_ae223eff98ecc03c171df9c97db54a0d0}} 
+virtual \hyperlink{classquadruped_1_1BodyStateEstimate_ae223eff98ecc03c171df9c97db54a0d0}{$\sim$\+Body\+State\+Estimate} (void)
+\begin{DoxyCompactList}\small\item\em Body\+State\+Estimate类的析构函数，释放申请的内存 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_ab731b3e8b88e419328d057a90df7819d}\label{classquadruped_1_1BodyStateEstimate_ab731b3e8b88e419328d057a90df7819d}} 
+void {\bfseries Get\+Robot\+Msg} (\hyperlink{classquadruped_1_1LegStateEstimate}{Leg\+State\+Estimate} $\ast$p\+\_\+lf\+\_\+leg\+State, \hyperlink{classquadruped_1_1LegStateEstimate}{Leg\+State\+Estimate} $\ast$p\+\_\+lr\+\_\+leg\+State, \hyperlink{classquadruped_1_1LegStateEstimate}{Leg\+State\+Estimate} $\ast$p\+\_\+rf\+\_\+leg\+State, \hyperlink{classquadruped_1_1LegStateEstimate}{Leg\+State\+Estimate} $\ast$p\+\_\+rr\+\_\+leg\+State, \hyperlink{cppTypes_8h_a87f228860242acc66da2e58086d18cec}{Vec12}$<$ double $>$ p\+\_\+f\+\_\+k, \hyperlink{cppTypes_8h_a87f228860242acc66da2e58086d18cec}{Vec12}$<$ double $>$ p\+\_\+f\+\_\+k\+\_\+1, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+actul\+\_\+body\+\_\+acc)
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_aa35c4d3cccbe97d87b67f905a053e511}\label{classquadruped_1_1BodyStateEstimate_aa35c4d3cccbe97d87b67f905a053e511}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1BodyStateEstimate_aa35c4d3cccbe97d87b67f905a053e511}{actul\+\_\+body\+\_\+pos}
+\begin{DoxyCompactList}\small\item\em Actiger在全局坐标系下的实际位置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_ac1876f2fe4e195c02503fc226df19739}\label{classquadruped_1_1BodyStateEstimate_ac1876f2fe4e195c02503fc226df19739}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1BodyStateEstimate_ac1876f2fe4e195c02503fc226df19739}{actul\+\_\+body\+\_\+vel}
+\begin{DoxyCompactList}\small\item\em Actiger在惯性坐标系下的实际速度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a89d1158f1e3d79c258a16c04b6e8462e}\label{classquadruped_1_1BodyStateEstimate_a89d1158f1e3d79c258a16c04b6e8462e}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1BodyStateEstimate_a89d1158f1e3d79c258a16c04b6e8462e}{actul\+\_\+body\+\_\+angle}
+\begin{DoxyCompactList}\small\item\em Actiger在惯性坐标系下的实际欧拉角 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a7529e7a4536cbed8f25b28ca61f038dc}\label{classquadruped_1_1BodyStateEstimate_a7529e7a4536cbed8f25b28ca61f038dc}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1BodyStateEstimate_a7529e7a4536cbed8f25b28ca61f038dc}{actul\+\_\+body\+\_\+angular\+Vel}
+\begin{DoxyCompactList}\small\item\em Actiger在惯性坐标系下的实际欧拉角速度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_aefe6bd47e63f09418b59581b057fb59c}\label{classquadruped_1_1BodyStateEstimate_aefe6bd47e63f09418b59581b057fb59c}} 
+\hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ \hyperlink{classquadruped_1_1BodyStateEstimate_aefe6bd47e63f09418b59581b057fb59c}{rotation}
+\begin{DoxyCompactList}\small\item\em Actiger从机体到世界的旋转矩阵 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a2970e450281c6c3c292f374d0ba270dd}\label{classquadruped_1_1BodyStateEstimate_a2970e450281c6c3c292f374d0ba270dd}} 
+double {\bfseries z\+\_\+offset}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a33cb43c18bb3321dc8dd4ce73c806ad6}\label{classquadruped_1_1BodyStateEstimate_a33cb43c18bb3321dc8dd4ce73c806ad6}} 
+double {\bfseries position\+\_\+x\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_ab9f2b9c71c9f7b534b88a5c32a822048}\label{classquadruped_1_1BodyStateEstimate_ab9f2b9c71c9f7b534b88a5c32a822048}} 
+double {\bfseries position\+\_\+y\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a4dc9b7e4c4728fafb92b9b3542617b99}\label{classquadruped_1_1BodyStateEstimate_a4dc9b7e4c4728fafb92b9b3542617b99}} 
+double {\bfseries position\+\_\+z\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a6ec290fad3636ce035b5f77cc8776cc6}\label{classquadruped_1_1BodyStateEstimate_a6ec290fad3636ce035b5f77cc8776cc6}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries body\+Pos\+World}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a5e504f77a67dad88923a1c366227437b}\label{classquadruped_1_1BodyStateEstimate_a5e504f77a67dad88923a1c366227437b}} 
+int {\bfseries cnt}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1BodyStateEstimate_a81bd0b9aa8dce20696856eefb5431b1c}\label{classquadruped_1_1BodyStateEstimate_a81bd0b9aa8dce20696856eefb5431b1c}} 
+\hyperlink{classVelocityEstimate}{Velocity\+Estimate} $\ast$ {\bfseries velocity\+Estimate}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger机体状态信息类 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/model/\hyperlink{bodyStateEstimate_8hpp}{body\+State\+Estimate.\+hpp}\item 
+controller/model/\hyperlink{bodyStateEstimate_8cpp}{body\+State\+Estimate.\+cpp}\end{DoxyCompactItemize}

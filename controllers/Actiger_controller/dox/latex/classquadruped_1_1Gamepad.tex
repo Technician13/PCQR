@@ -1,0 +1,126 @@
+\hypertarget{classquadruped_1_1Gamepad}{}\section{quadruped\+:\+:Gamepad类 参考}
+\label{classquadruped_1_1Gamepad}\index{quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}}
+
+
+Actiger遥控器类  
+
+
+
+
+{\ttfamily \#include $<$gamepad.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Gamepad_a299e3657b0c2a2d0252d307808e1b5d5}\label{classquadruped_1_1Gamepad_a299e3657b0c2a2d0252d307808e1b5d5}} 
+\hyperlink{classquadruped_1_1Gamepad_a299e3657b0c2a2d0252d307808e1b5d5}{Gamepad} (void)
+\begin{DoxyCompactList}\small\item\em Gamepad类的构造函数，完成硬件的读取 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1Gamepad_afde709704acc2d1219758ed25004adfd}\label{classquadruped_1_1Gamepad_afde709704acc2d1219758ed25004adfd}} 
+virtual \hyperlink{classquadruped_1_1Gamepad_afde709704acc2d1219758ed25004adfd}{$\sim$\+Gamepad} (void)
+\begin{DoxyCompactList}\small\item\em Gamepad类的析构函数 \end{DoxyCompactList}\item 
+int \hyperlink{classquadruped_1_1Gamepad_a45193124f6e45a794fff7770d48bb1c4}{xbox\+\_\+open} (const char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 打开遥控器 \end{DoxyCompactList}\item 
+int \hyperlink{classquadruped_1_1Gamepad_a0a3c2f9e2e580af60d3d961cd7c961f5}{xbox\+\_\+map\+\_\+read} (int xbox\+\_\+fd, \hyperlink{structxbox__map__t}{xbox\+\_\+map\+\_\+t} $\ast$p\+\_\+map)
+\begin{DoxyCompactList}\small\item\em 读取遥控器按键状态并完成键值映射 \end{DoxyCompactList}\item 
+void \hyperlink{classquadruped_1_1Gamepad_aedbe5a93bd4af4b3fb22137ae1549612}{xbox\+\_\+close} (int xbox\+\_\+fd)
+\begin{DoxyCompactList}\small\item\em 关闭遥控器 \end{DoxyCompactList}\item 
+void \hyperlink{classquadruped_1_1Gamepad_a2231f881a5ce074c07520781b01bf364}{Get\+Key} (uint8\+\_\+t $\ast$p\+\_\+gait\+Now)
+\begin{DoxyCompactList}\small\item\em 根据遥控器映射的键值完成状态标志位的转换 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Gamepad_a1c1056b8a615214ad8e4d4e03ffb1962}\label{classquadruped_1_1Gamepad_a1c1056b8a615214ad8e4d4e03ffb1962}} 
+\hyperlink{structxbox__map__t}{xbox\+\_\+map\+\_\+t} \hyperlink{classquadruped_1_1Gamepad_a1c1056b8a615214ad8e4d4e03ffb1962}{map}
+\begin{DoxyCompactList}\small\item\em 遥控器键值映射结构体成员 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger遥控器类 
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classquadruped_1_1Gamepad_a2231f881a5ce074c07520781b01bf364}\label{classquadruped_1_1Gamepad_a2231f881a5ce074c07520781b01bf364}} 
+\index{quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}!Get\+Key@{Get\+Key}}
+\index{Get\+Key@{Get\+Key}!quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{Get\+Key()}{GetKey()}}
+{\footnotesize\ttfamily void Gamepad\+::\+Get\+Key (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+\_\+gait\+Now }\end{DoxyParamCaption})}
+
+
+
+根据遥控器映射的键值完成状态标志位的转换 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+gait\+Now} & Actiger当前的步态 \\
+\hline
+\end{DoxyParams}
+
+
+参考 handle, I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT, handle\+\_\+t\+::stand\+Ready , 以及 handle\+\_\+t\+::step\+Over.
+
+
+
+参考自 Motion\+Plan\+Run().
+
+\mbox{\Hypertarget{classquadruped_1_1Gamepad_aedbe5a93bd4af4b3fb22137ae1549612}\label{classquadruped_1_1Gamepad_aedbe5a93bd4af4b3fb22137ae1549612}} 
+\index{quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}!xbox\+\_\+close@{xbox\+\_\+close}}
+\index{xbox\+\_\+close@{xbox\+\_\+close}!quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{xbox\+\_\+close()}{xbox\_close()}}
+{\footnotesize\ttfamily void Gamepad\+::xbox\+\_\+close (\begin{DoxyParamCaption}\item[{int}]{xbox\+\_\+fd }\end{DoxyParamCaption})}
+
+
+
+关闭遥控器 
+
+
+\begin{DoxyParams}{参数}
+{\em xbox\+\_\+fd} & 设备文件 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classquadruped_1_1Gamepad_a0a3c2f9e2e580af60d3d961cd7c961f5}\label{classquadruped_1_1Gamepad_a0a3c2f9e2e580af60d3d961cd7c961f5}} 
+\index{quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}!xbox\+\_\+map\+\_\+read@{xbox\+\_\+map\+\_\+read}}
+\index{xbox\+\_\+map\+\_\+read@{xbox\+\_\+map\+\_\+read}!quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{xbox\+\_\+map\+\_\+read()}{xbox\_map\_read()}}
+{\footnotesize\ttfamily int Gamepad\+::xbox\+\_\+map\+\_\+read (\begin{DoxyParamCaption}\item[{int}]{xbox\+\_\+fd,  }\item[{\hyperlink{structxbox__map__t}{xbox\+\_\+map\+\_\+t} $\ast$}]{p\+\_\+map }\end{DoxyParamCaption})}
+
+
+
+读取遥控器按键状态并完成键值映射 
+
+
+\begin{DoxyParams}{参数}
+{\em xbox\+\_\+fd} & 设备文件 \\
+\hline
+{\em p\+\_\+map} & 键值映射结构体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+
+
+参考 X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX, X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY, X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX, X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP, X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X , 以及 X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y.
+
+\mbox{\Hypertarget{classquadruped_1_1Gamepad_a45193124f6e45a794fff7770d48bb1c4}\label{classquadruped_1_1Gamepad_a45193124f6e45a794fff7770d48bb1c4}} 
+\index{quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}!xbox\+\_\+open@{xbox\+\_\+open}}
+\index{xbox\+\_\+open@{xbox\+\_\+open}!quadruped\+::\+Gamepad@{quadruped\+::\+Gamepad}}
+\subsubsection{\texorpdfstring{xbox\+\_\+open()}{xbox\_open()}}
+{\footnotesize\ttfamily int Gamepad\+::xbox\+\_\+open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+打开遥控器 
+
+
+\begin{DoxyParams}{参数}
+{\em file\+\_\+name} & 设备文件 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/motion\+Plan/\hyperlink{gamepad_8hpp}{gamepad.\+hpp}\item 
+controller/motion\+Plan/gamepad.\+cpp\end{DoxyCompactItemize}

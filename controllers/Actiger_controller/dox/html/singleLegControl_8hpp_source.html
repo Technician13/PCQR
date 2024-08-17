@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Actiger: controller/legController/singleLegControl.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Actiger
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><a class="el" href="dir_3724ebeb6ce0f9e000dafad1153a6075.html">legController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">singleLegControl.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="singleLegControl_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef SINGLELEGCONTROL_HPP</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define SINGLELEGCONTROL_HPP</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cppTypes_8h.html">cppTypes.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="robotModel_8hpp.html">robotModel.hpp</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacequadruped.html">quadruped</a> </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classquadruped_1_1SingleLeg.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classquadruped_1_1SingleLeg.html">SingleLeg</a></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">protected</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classquadruped_1_1SingleLeg.html#a3517b91ff7317237d4e7e6713ef31d83">SingleLeg</a>(<a class="code" href="classquadruped_1_1LegStateEstimate.html">LegStateEstimate</a>* p_legStste, <a class="code" href="classquadruped_1_1Parameters.html">Parameters</a>* p_para);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classquadruped_1_1SingleLeg.html#af7d1589824b4714abbd3bcfa11099056">~SingleLeg</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="structlegTorque__t.html">legTorque_t</a> <a class="code" href="classquadruped_1_1SingleLeg.html#a2162ecb433c3583bf3c3ca1289dc9472">SingleStanceControl</a>(<a class="code" href="cppTypes_8h.html#adb7d462b35d31f0b2583b3e230a2a2c3">Mat3&lt;double&gt;</a> p_rotation, <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> p_grav, <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> coriolis, <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> p_reactForce);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="structlegTorque__t.html">legTorque_t</a> <a class="code" href="classquadruped_1_1SingleLeg.html#a222857a901318676d20d34581fd7504a">SingleSwingControl</a>(<a class="code" href="cppTypes_8h.html#adb7d462b35d31f0b2583b3e230a2a2c3">Mat3&lt;double&gt;</a> p_rotation,<a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> p_grav, <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> coriolis, <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> p_desPos,<a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> p_desVel);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classquadruped_1_1SingleLeg.html#aaf4f8f8686ef952a15236892e7eacfd2">   37</a></span>&#160;        <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> <a class="code" href="classquadruped_1_1SingleLeg.html#aaf4f8f8686ef952a15236892e7eacfd2">torqueFeedForward</a>;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classquadruped_1_1SingleLeg.html#a7463a742fbf6923728c4761393aa68e0">   39</a></span>&#160;        <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> <a class="code" href="classquadruped_1_1SingleLeg.html#a7463a742fbf6923728c4761393aa68e0">qDes</a>;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classquadruped_1_1SingleLeg.html#a086eb6cdde5bf9583a244d1fd2f7d803">   41</a></span>&#160;        <a class="code" href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3&lt;double&gt;</a> <a class="code" href="classquadruped_1_1SingleLeg.html#a086eb6cdde5bf9583a244d1fd2f7d803">qdDes</a>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classquadruped_1_1SingleLeg.html#a2166770aa38c23e6ae2d07e1b8fc5aca">   44</a></span>&#160;        <a class="code" href="classquadruped_1_1LegStateEstimate.html">LegStateEstimate</a>* <a class="code" href="classquadruped_1_1SingleLeg.html#a2166770aa38c23e6ae2d07e1b8fc5aca">legStste</a>;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classquadruped_1_1SingleLeg.html#ab3d1405314c2206d8b76413e7dd9268a">   46</a></span>&#160;        <a class="code" href="classquadruped_1_1Parameters.html">Parameters</a>* <a class="code" href="classquadruped_1_1SingleLeg.html#ab3d1405314c2206d8b76413e7dd9268a">para</a>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // !SINGLELEGCONTROL_HPP</span></div><div class="ttc" id="classquadruped_1_1LegStateEstimate_html"><div class="ttname"><a href="classquadruped_1_1LegStateEstimate.html">quadruped::LegStateEstimate</a></div><div class="ttdoc">Actiger单腿状态信息类LegStateEstimate </div><div class="ttdef"><b>Definition:</b> legStateEstimate.hpp:31</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_ab3d1405314c2206d8b76413e7dd9268a"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#ab3d1405314c2206d8b76413e7dd9268a">quadruped::SingleLeg::para</a></div><div class="ttdeci">Parameters * para</div><div class="ttdoc">Parameters类的实例化对象，存储一些被频繁使用的参数 </div><div class="ttdef"><b>Definition:</b> singleLegControl.hpp:46</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_a222857a901318676d20d34581fd7504a"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#a222857a901318676d20d34581fd7504a">quadruped::SingleLeg::SingleSwingControl</a></div><div class="ttdeci">legTorque_t SingleSwingControl(Mat3&lt; double &gt; p_rotation, Vec3&lt; double &gt; p_grav, Vec3&lt; double &gt; coriolis, Vec3&lt; double &gt; p_desPos, Vec3&lt; double &gt; p_desVel)</div><div class="ttdoc">Actiger摆动腿控制函数 </div><div class="ttdef"><b>Definition:</b> singleLegControl.cpp:106</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_a3517b91ff7317237d4e7e6713ef31d83"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#a3517b91ff7317237d4e7e6713ef31d83">quadruped::SingleLeg::SingleLeg</a></div><div class="ttdeci">SingleLeg(LegStateEstimate *p_legStste, Parameters *p_para)</div><div class="ttdoc">SingleLeg类的构造函数，完成所有对象成员的初始化 </div><div class="ttdef"><b>Definition:</b> singleLegControl.cpp:22</div></div>
+<div class="ttc" id="cppTypes_8h_html_a65c27bf97693676535dd0b30ea0ad399"><div class="ttname"><a href="cppTypes_8h.html#a65c27bf97693676535dd0b30ea0ad399">Vec3</a></div><div class="ttdeci">Eigen::Matrix&lt; T, 3, 1 &gt; Vec3</div><div class="ttdoc">3 x 1 向量 </div><div class="ttdef"><b>Definition:</b> cppTypes.h:25</div></div>
+<div class="ttc" id="namespacequadruped_html"><div class="ttname"><a href="namespacequadruped.html">quadruped</a></div><div class="ttdef"><b>Definition:</b> commonFunction.hpp:44</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_af7d1589824b4714abbd3bcfa11099056"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#af7d1589824b4714abbd3bcfa11099056">quadruped::SingleLeg::~SingleLeg</a></div><div class="ttdeci">virtual ~SingleLeg(void)</div><div class="ttdoc">SingleLeg类的析构函数 </div><div class="ttdef"><b>Definition:</b> singleLegControl.cpp:33</div></div>
+<div class="ttc" id="cppTypes_8h_html"><div class="ttname"><a href="cppTypes_8h.html">cppTypes.h</a></div><div class="ttdoc">Actiger工程中的多维变量类型模板的定义 </div></div>
+<div class="ttc" id="classquadruped_1_1Parameters_html"><div class="ttname"><a href="classquadruped_1_1Parameters.html">quadruped::Parameters</a></div><div class="ttdoc">Actiger参数类 </div><div class="ttdef"><b>Definition:</b> parameters.hpp:33</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_a086eb6cdde5bf9583a244d1fd2f7d803"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#a086eb6cdde5bf9583a244d1fd2f7d803">quadruped::SingleLeg::qdDes</a></div><div class="ttdeci">Vec3&lt; double &gt; qdDes</div><div class="ttdoc">WBC预留接口 </div><div class="ttdef"><b>Definition:</b> singleLegControl.hpp:41</div></div>
+<div class="ttc" id="structlegTorque__t_html"><div class="ttname"><a href="structlegTorque__t.html">legTorque_t</a></div><div class="ttdoc">单腿扭矩输出结构体：关节扭矩 </div><div class="ttdef"><b>Definition:</b> cppStruct.h:60</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_a2166770aa38c23e6ae2d07e1b8fc5aca"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#a2166770aa38c23e6ae2d07e1b8fc5aca">quadruped::SingleLeg::legStste</a></div><div class="ttdeci">LegStateEstimate * legStste</div><div class="ttdoc">LegStateEstimate类的实例化对象，存储机器人单腿状态信息 </div><div class="ttdef"><b>Definition:</b> singleLegControl.hpp:44</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_aaf4f8f8686ef952a15236892e7eacfd2"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#aaf4f8f8686ef952a15236892e7eacfd2">quadruped::SingleLeg::torqueFeedForward</a></div><div class="ttdeci">Vec3&lt; double &gt; torqueFeedForward</div><div class="ttdoc">WBC预留接口 </div><div class="ttdef"><b>Definition:</b> singleLegControl.hpp:37</div></div>
+<div class="ttc" id="robotModel_8hpp_html"><div class="ttname"><a href="robotModel_8hpp.html">robotModel.hpp</a></div><div class="ttdoc">Actiger机体模型类RobotModel头文件 </div></div>
+<div class="ttc" id="cppTypes_8h_html_adb7d462b35d31f0b2583b3e230a2a2c3"><div class="ttname"><a href="cppTypes_8h.html#adb7d462b35d31f0b2583b3e230a2a2c3">Mat3</a></div><div class="ttdeci">Eigen::Matrix&lt; T, 3, 3 &gt; Mat3</div><div class="ttdoc">3 x 3 矩阵 </div><div class="ttdef"><b>Definition:</b> cppTypes.h:102</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_a2162ecb433c3583bf3c3ca1289dc9472"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#a2162ecb433c3583bf3c3ca1289dc9472">quadruped::SingleLeg::SingleStanceControl</a></div><div class="ttdeci">legTorque_t SingleStanceControl(Mat3&lt; double &gt; p_rotation, Vec3&lt; double &gt; p_grav, Vec3&lt; double &gt; coriolis, Vec3&lt; double &gt; p_reactForce)</div><div class="ttdoc">Actiger支撑腿控制函数 </div><div class="ttdef"><b>Definition:</b> singleLegControl.cpp:43</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html">quadruped::SingleLeg</a></div><div class="ttdoc">Actiger单腿控制器 </div><div class="ttdef"><b>Definition:</b> singleLegControl.hpp:23</div></div>
+<div class="ttc" id="classquadruped_1_1SingleLeg_html_a7463a742fbf6923728c4761393aa68e0"><div class="ttname"><a href="classquadruped_1_1SingleLeg.html#a7463a742fbf6923728c4761393aa68e0">quadruped::SingleLeg::qDes</a></div><div class="ttdeci">Vec3&lt; double &gt; qDes</div><div class="ttdoc">WBC预留接口 </div><div class="ttdef"><b>Definition:</b> singleLegControl.hpp:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

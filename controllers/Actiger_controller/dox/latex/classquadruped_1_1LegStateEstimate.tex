@@ -1,0 +1,150 @@
+\hypertarget{classquadruped_1_1LegStateEstimate}{}\section{quadruped\+:\+:Leg\+State\+Estimate类 参考}
+\label{classquadruped_1_1LegStateEstimate}\index{quadruped\+::\+Leg\+State\+Estimate@{quadruped\+::\+Leg\+State\+Estimate}}
+
+
+Actiger单腿状态信息类\+Leg\+State\+Estimate  
+
+
+
+
+{\ttfamily \#include $<$leg\+State\+Estimate.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classquadruped_1_1LegStateEstimate_ab66c4db78288cf0c25d4c2477e8c0a7b}{Leg\+State\+Estimate} (int p\+\_\+leg\+Num)
+\begin{DoxyCompactList}\small\item\em Leg\+State\+Estimate类的构造函数，完成所有数据成员的初始化 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_ad8c57206ac03f20ec601b38b0c3f593c}\label{classquadruped_1_1LegStateEstimate_ad8c57206ac03f20ec601b38b0c3f593c}} 
+virtual \hyperlink{classquadruped_1_1LegStateEstimate_ad8c57206ac03f20ec601b38b0c3f593c}{$\sim$\+Leg\+State\+Estimate} (void)
+\begin{DoxyCompactList}\small\item\em Leg\+State\+Estimate类的析构函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_acb65dbf36f5042cd5e257fec9264075f}\label{classquadruped_1_1LegStateEstimate_acb65dbf36f5042cd5e257fec9264075f}} 
+void \hyperlink{classquadruped_1_1LegStateEstimate_acb65dbf36f5042cd5e257fec9264075f}{Resize} (void)
+\begin{DoxyCompactList}\small\item\em 所有中间变量置零 \end{DoxyCompactList}\item 
+void \hyperlink{classquadruped_1_1LegStateEstimate_ab6c64146d3ea706ed1556b1896c6fa05}{Get\+Joint\+Msg} (\hyperlink{structlegMsg__t}{leg\+Msg\+\_\+t} p\+\_\+leg\+Msg)
+\begin{DoxyCompactList}\small\item\em 获取所有关节信息和足端触地信息 \end{DoxyCompactList}\item 
+void \hyperlink{classquadruped_1_1LegStateEstimate_a145521c0273b7f45c3a48e1a268ce6c7}{Get\+Leg\+Msg} (\hyperlink{structlegMsg__t}{leg\+Msg\+\_\+t} p\+\_\+leg\+Msg)
+\begin{DoxyCompactList}\small\item\em 利用形参中的数据完成腿部状态信息的计算\mbox{[}雅可比、足端运动学信息\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a52454c0e1a587e73e1bab0187e925c35}\label{classquadruped_1_1LegStateEstimate_a52454c0e1a587e73e1bab0187e925c35}} 
+void \hyperlink{classquadruped_1_1LegStateEstimate_a52454c0e1a587e73e1bab0187e925c35}{Calu\+Endfoot\+Msg} (void)
+\begin{DoxyCompactList}\small\item\em 计算足端相对于髋关节根部的位置和速度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_ae5d15d8588c3b2aa7e5b8c40d17be99a}\label{classquadruped_1_1LegStateEstimate_ae5d15d8588c3b2aa7e5b8c40d17be99a}} 
+void \hyperlink{classquadruped_1_1LegStateEstimate_ae5d15d8588c3b2aa7e5b8c40d17be99a}{Get\+Jacobian} (void)
+\begin{DoxyCompactList}\small\item\em 计算雅可比矩阵 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a7937d68ab5083c1325cfff39cee33680}\label{classquadruped_1_1LegStateEstimate_a7937d68ab5083c1325cfff39cee33680}} 
+void \hyperlink{classquadruped_1_1LegStateEstimate_a7937d68ab5083c1325cfff39cee33680}{Get\+Jdot} (void)
+\begin{DoxyCompactList}\small\item\em W\+B\+C预留接口 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a2253667ee3b7a404046614c428b4db00}\label{classquadruped_1_1LegStateEstimate_a2253667ee3b7a404046614c428b4db00}} 
+int \hyperlink{classquadruped_1_1LegStateEstimate_a2253667ee3b7a404046614c428b4db00}{leg\+Num}
+\begin{DoxyCompactList}\small\item\em 腿部索引 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a30b1f199449aa4fb84bc68b394f576d4}\label{classquadruped_1_1LegStateEstimate_a30b1f199449aa4fb84bc68b394f576d4}} 
+double \hyperlink{classquadruped_1_1LegStateEstimate_a30b1f199449aa4fb84bc68b394f576d4}{L0}
+\begin{DoxyCompactList}\small\item\em 腿部第一段连杆 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a8d3688cdf62b3cae23288a3cb0901b9b}\label{classquadruped_1_1LegStateEstimate_a8d3688cdf62b3cae23288a3cb0901b9b}} 
+bool \hyperlink{classquadruped_1_1LegStateEstimate_a8d3688cdf62b3cae23288a3cb0901b9b}{contact\+\_\+state}
+\begin{DoxyCompactList}\small\item\em 足端触地状态 ： 1 -\/ 触地 $\vert$ 0 -\/ 离地 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_af940e4216d921c6d158e7f70a69d3648}\label{classquadruped_1_1LegStateEstimate_af940e4216d921c6d158e7f70a69d3648}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_af940e4216d921c6d158e7f70a69d3648}{jdqd}
+\begin{DoxyCompactList}\small\item\em W\+B\+C预留接口 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a6fdaea219ec49a57a256ba497f2d7e42}\label{classquadruped_1_1LegStateEstimate_a6fdaea219ec49a57a256ba497f2d7e42}} 
+\hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_a6fdaea219ec49a57a256ba497f2d7e42}{jacobian}
+\begin{DoxyCompactList}\small\item\em 雅可比矩阵 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_aceda0fa493cf027ad0f433624143603e}\label{classquadruped_1_1LegStateEstimate_aceda0fa493cf027ad0f433624143603e}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_aceda0fa493cf027ad0f433624143603e}{endfoot\+\_\+hip}
+\begin{DoxyCompactList}\small\item\em 足端相对于髋关节根部的位置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_ad9c8c2fe319057f43eb00b739090be2b}\label{classquadruped_1_1LegStateEstimate_ad9c8c2fe319057f43eb00b739090be2b}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_ad9c8c2fe319057f43eb00b739090be2b}{endfoot\+\_\+vel\+\_\+hip}
+\begin{DoxyCompactList}\small\item\em 足端相对于髋关节根部的速度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a011e231f9e48935806770418fd8ef15b}\label{classquadruped_1_1LegStateEstimate_a011e231f9e48935806770418fd8ef15b}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_a011e231f9e48935806770418fd8ef15b}{endfoot\+\_\+world}
+\begin{DoxyCompactList}\small\item\em 足端在惯性坐标系下的位置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_ab8ba3e3af71046fa0342c5ad4e7d2f0a}\label{classquadruped_1_1LegStateEstimate_ab8ba3e3af71046fa0342c5ad4e7d2f0a}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_ab8ba3e3af71046fa0342c5ad4e7d2f0a}{endfoot\+\_\+vel\+\_\+world}
+\begin{DoxyCompactList}\small\item\em 足端在惯性坐标系下的速度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a8bfbd35bd4ee16e05dc01a62e5e05650}\label{classquadruped_1_1LegStateEstimate_a8bfbd35bd4ee16e05dc01a62e5e05650}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_a8bfbd35bd4ee16e05dc01a62e5e05650}{joint\+\_\+angle}
+\begin{DoxyCompactList}\small\item\em 所有关节角度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a595e8e970d727fe1bbdfd78bda4207e5}\label{classquadruped_1_1LegStateEstimate_a595e8e970d727fe1bbdfd78bda4207e5}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_a595e8e970d727fe1bbdfd78bda4207e5}{joint\+\_\+anglular\+Vel}
+\begin{DoxyCompactList}\small\item\em 所有关节角速度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a2c25cea6340a9ce2183684979dc0c58e}\label{classquadruped_1_1LegStateEstimate_a2c25cea6340a9ce2183684979dc0c58e}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegStateEstimate_a2c25cea6340a9ce2183684979dc0c58e}{hip\+\_\+pos\+\_\+body}
+\begin{DoxyCompactList}\small\item\em 髋关节在机体坐标系下的位置 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger单腿状态信息类\+Leg\+State\+Estimate 
+
+\subsection{构造及析构函数说明}
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_ab66c4db78288cf0c25d4c2477e8c0a7b}\label{classquadruped_1_1LegStateEstimate_ab66c4db78288cf0c25d4c2477e8c0a7b}} 
+\index{quadruped\+::\+Leg\+State\+Estimate@{quadruped\+::\+Leg\+State\+Estimate}!Leg\+State\+Estimate@{Leg\+State\+Estimate}}
+\index{Leg\+State\+Estimate@{Leg\+State\+Estimate}!quadruped\+::\+Leg\+State\+Estimate@{quadruped\+::\+Leg\+State\+Estimate}}
+\subsubsection{\texorpdfstring{Leg\+State\+Estimate()}{LegStateEstimate()}}
+{\footnotesize\ttfamily Leg\+State\+Estimate\+::\+Leg\+State\+Estimate (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+leg\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Leg\+State\+Estimate类的构造函数，完成所有数据成员的初始化 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+leg\+Num} & \\
+\hline
+\end{DoxyParams}
+
+
+参考 contact\+\_\+state, hip\+\_\+pos\+\_\+body, L0, L0\+\_\+L, L0\+\_\+R, leg\+Num, quadruped\+::\+LF, quadruped\+::\+LR, quadruped\+::\+RF , 以及 quadruped\+::\+RR.
+
+
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_ab6c64146d3ea706ed1556b1896c6fa05}\label{classquadruped_1_1LegStateEstimate_ab6c64146d3ea706ed1556b1896c6fa05}} 
+\index{quadruped\+::\+Leg\+State\+Estimate@{quadruped\+::\+Leg\+State\+Estimate}!Get\+Joint\+Msg@{Get\+Joint\+Msg}}
+\index{Get\+Joint\+Msg@{Get\+Joint\+Msg}!quadruped\+::\+Leg\+State\+Estimate@{quadruped\+::\+Leg\+State\+Estimate}}
+\subsubsection{\texorpdfstring{Get\+Joint\+Msg()}{GetJointMsg()}}
+{\footnotesize\ttfamily void Leg\+State\+Estimate\+::\+Get\+Joint\+Msg (\begin{DoxyParamCaption}\item[{\hyperlink{structlegMsg__t}{leg\+Msg\+\_\+t}}]{p\+\_\+leg\+Msg }\end{DoxyParamCaption})}
+
+
+
+获取所有关节信息和足端触地信息 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+leg\+Msg} & 单腿信息结构体 \\
+\hline
+\end{DoxyParams}
+
+
+参考 contact\+\_\+state, handle, handle\+\_\+t\+::is\+\_\+lf\+\_\+rr\+\_\+stand, joint\+\_\+angle, joint\+\_\+anglular\+Vel, leg\+Num, handle\+\_\+t\+::stand\+Ready , 以及 handle\+\_\+t\+::step\+Over.
+
+
+
+参考自 Get\+Leg\+Msg().
+
+\mbox{\Hypertarget{classquadruped_1_1LegStateEstimate_a145521c0273b7f45c3a48e1a268ce6c7}\label{classquadruped_1_1LegStateEstimate_a145521c0273b7f45c3a48e1a268ce6c7}} 
+\index{quadruped\+::\+Leg\+State\+Estimate@{quadruped\+::\+Leg\+State\+Estimate}!Get\+Leg\+Msg@{Get\+Leg\+Msg}}
+\index{Get\+Leg\+Msg@{Get\+Leg\+Msg}!quadruped\+::\+Leg\+State\+Estimate@{quadruped\+::\+Leg\+State\+Estimate}}
+\subsubsection{\texorpdfstring{Get\+Leg\+Msg()}{GetLegMsg()}}
+{\footnotesize\ttfamily void Leg\+State\+Estimate\+::\+Get\+Leg\+Msg (\begin{DoxyParamCaption}\item[{\hyperlink{structlegMsg__t}{leg\+Msg\+\_\+t}}]{p\+\_\+leg\+Msg }\end{DoxyParamCaption})}
+
+
+
+利用形参中的数据完成腿部状态信息的计算\mbox{[}雅可比、足端运动学信息\mbox{]} 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+leg\+Msg} & 单腿信息结构体 \\
+\hline
+\end{DoxyParams}
+
+
+参考 Calu\+Endfoot\+Msg(), Get\+Jacobian(), Get\+Joint\+Msg() , 以及 Resize().
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/model/\hyperlink{legStateEstimate_8hpp}{leg\+State\+Estimate.\+hpp}\item 
+controller/model/\hyperlink{legStateEstimate_8cpp}{leg\+State\+Estimate.\+cpp}\end{DoxyCompactItemize}

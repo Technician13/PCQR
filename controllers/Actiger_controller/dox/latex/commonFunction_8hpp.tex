@@ -1,0 +1,1340 @@
+\hypertarget{commonFunction_8hpp}{}\section{common\+Function.\+hpp 文件参考}
+\label{commonFunction_8hpp}\index{common\+Function.\+hpp@{common\+Function.\+hpp}}
+
+
+Actiger通用函数类\+Common以及一些通用的函数和变量头文件  
+
+
+{\ttfamily \#include \char`\"{}cpp\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpp\+Struct.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classquadruped_1_1Common}{quadruped\+::\+Common}
+\begin{DoxyCompactList}\small\item\em Actiger通用函数类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{commonFunction_8hpp_aac8b20f6912b2feb0f061d4f4f4b3bbf}{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+D\+OT}~(500)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a34cca4f4d8b6c58b031fe7a7b25d931f}{V\+I\+S\+I\+B\+L\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+R\+AJ}~(0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aaba09ab14e0271b4a344ec5e14f59ccf}{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+F\+\_\+\+T\+R\+AJ}~(0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a0e69426750442f2ef18a09b93cbcc442}{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+R\+\_\+\+T\+R\+AJ}~(0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a7f5fb00ea8206bd5ce6339437498439f}{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+F\+\_\+\+T\+R\+AJ}~(0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a2ae19a7d47c36e66c50b1f8167380e25}{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+R\+\_\+\+T\+R\+AJ}~(0)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ac403c64700c46ecd546f7bc6d8292be9}\label{commonFunction_8hpp_ac403c64700c46ecd546f7bc6d8292be9}} 
+\#define {\bfseries F\+O\+R\+W\+A\+R\+D\+\_\+\+D\+E\+A\+D\+Z\+O\+NE}~(0.\+1)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ab70ee995cc71cf182a1a3345e6e40612}\label{commonFunction_8hpp_ab70ee995cc71cf182a1a3345e6e40612}} 
+\#define {\bfseries B\+A\+C\+K\+W\+A\+R\+D\+\_\+\+D\+E\+A\+D\+Z\+O\+NE}~(0.\+1)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a5c336ff8ac4622d6558d13fc7366a547}\label{commonFunction_8hpp_a5c336ff8ac4622d6558d13fc7366a547}} 
+\#define {\bfseries E\+R\+R\+\_\+\+H\+I\+G\+HT}~(-\/5.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a23eb011294bf11a53a701d0f6f540530}{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+L\+E\+N\+G\+TH}~(3.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a1650b520d8df5eb1516e777f71c279b0}{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}~(0.\+3)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a780e3b8018df2424c856549b66fd70d5}{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+L\+E\+N\+G\+TH}~(1.\+2)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a3aac9be187c3f1798a8ac7be403a55f3}{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+L\+E\+N\+G\+TH}~(1.\+2)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a523272074eea842e6cb45df11ca7b1c9}{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}~(-\/0.\+2527)
+\item 
+\#define \hyperlink{commonFunction_8hpp_af0be3eabdaa4e96c4aea3c6fe19beb0a}{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}~(0.\+2527)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a38376d615cf60c53b61e42d81b1496d1}{S\+T\+A\+G\+E\+\_\+\+H\+E\+I\+G\+HT}~(0.\+1)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a0320c3d31cf05f1da4f9b9872cf2a83b}{S\+T\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}~(2.\+5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a480b5375121121aeeec3471c0de34c70}{S\+I\+L\+L\+\_\+\+H\+E\+I\+G\+HT}~(0.\+05)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aec31a58c1f4702caad3c013c461467c6}{S\+I\+L\+L\+\_\+\+W\+I\+D\+TH}~(0.\+05)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a522116f13037d506aa83278cbf956527}{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+H\+E\+I\+G\+HT}~(0.\+05)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a38848d6ca386c416ddb0e989985983b4}{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+W\+I\+D\+TH}~(0.\+05)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a4ee7deaf98f91f34a9b70c28248eb423}{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+D\+I\+S\+T\+A\+N\+CE}~(0.\+4)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aa3f5f001eead7dfbf1301003b5c587d0}{S\+T\+A\+I\+R\+S\+\_\+\+H\+E\+I\+G\+HT}~(0.\+1)
+\item 
+\#define \hyperlink{commonFunction_8hpp_af582e0a4b0a8c54f39c8006eb552e14b}{S\+T\+A\+I\+R\+S\+\_\+\+D\+E\+P\+TH}~(0.\+3)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a3af8fd5b1f964a0e676242ad6187403f}{B\+R\+I\+D\+G\+E\+\_\+\+H\+E\+I\+G\+HT}~(0.\+1)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aed7146610824555e66621b21dc7b0a92}{B\+R\+I\+D\+G\+E\+\_\+\+W\+I\+D\+TH}~(0.\+2)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a6937911ca4624d0a8b996bdb434777d1}{B\+R\+I\+D\+G\+E\+\_\+\+L\+E\+N\+G\+TH}~(2.\+5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a559a10cb2bdeac0bd77e0bf20b189d1a}{S\+E\+E\+S\+A\+W\+\_\+\+L\+E\+N\+G\+TH}~(2.\+4)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a6b705c832c88aaad07888b43bd401e75}{S\+E\+E\+S\+A\+W\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}~(0.\+3)
+\item 
+\#define \hyperlink{commonFunction_8hpp_add6b4ed603b293df4141f116f152d1c5}{S\+E\+E\+S\+A\+W\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}~(-\/0.\+2527)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a80dea4a6a3216aec9f724576c4e1fc06}{S\+E\+E\+S\+A\+W\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}~(0.\+2527)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI}~(3.\+14159265358979323846)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a09bc9e6a44f0291cfcf578f2efcddfab}{MU}~(0.\+5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a65fd90f232757535f02c46a885e49012}{T\+I\+M\+E\+\_\+\+S\+T\+EP}~(0.\+005)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aba86b0c0d0f5628498506ee46b74536b}{M\+P\+C\+\_\+\+P\+E\+R\+I\+OD}~(0.\+005)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a6801baa546c6112d19eb095111d24720}{G\+R\+A\+V\+I\+TY}~(9.\+8)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a846c10c10f6b91f46ac35d8a76903d36}{M\+A\+X\+\_\+\+A\+C\+C\+\_\+X}~(0.\+5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_adb54fb5be23c598f4e63c5d4f9688d52}{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y}~(0.\+2)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a241db25f73e004aa6fb1406d312d17e7}{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z}~(1.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a87338fd74450cc5f4e8759bb8e3c868c}{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+X}~(1.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a38013df080a790b325e4a1026ca7c138}{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+Y}~(0.\+25)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a12eb499a35513868fd34ca2db695785f}{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}~(0.\+53)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a39a72feef51273b0b92d5446f1eca267}{M\+I\+N\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}~(0.\+35)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aac68c445ad4454179a4cbb5f3247ab6b}{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+O\+M\+E\+G\+A\+\_\+\+Y\+AW}~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a0bb7b636a6394bb79381cce1a0a99adf}{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+R\+O\+LL}~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a116598876a13887f888cc4fbb6b5b44d}{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+P\+I\+T\+CH}~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a834cc6eaf7371e7935b08c690cb1db1d}{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+Y\+AW}~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ab885128b7b692f19c79a22cd0644af28}{I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT}~(0.\+2)
+\item 
+\#define \hyperlink{commonFunction_8hpp_acd7e35d0c6cca5b5b665b77b5377c4a0}{I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT}~(0.\+5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a6abe116aeef35af1c1864a7e1310bf5b}{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE}~(0.\+4)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a897e13a6c4b27a57c6eebb3051c4393d}{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE}~(0.\+5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a4f33ad511b51029d451bc854455b6a27}{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}~(0.\+3)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a09cce96d91ad073b5d8b7d0b3156a6ef}{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS}~(0.\+25)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a55fe3114f1062a4b32ccf377546e1731}{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW}~(0.\+2)
+\item 
+\#define \hyperlink{commonFunction_8hpp_af8b7029f672a3d5f1077e2b05ea0042e}{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE}~(0.\+1)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a020c0f49ae1f71623ebeb75c4ff8b974}{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE}~(0.\+8)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aa0dce35e004d0f866dd26812778ca79b}{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}~(1.\+25)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a3b7ef5dee9967c77514c0ec001ce92ca}\label{commonFunction_8hpp_a3b7ef5dee9967c77514c0ec001ce92ca}} 
+\#define {\bfseries L\+Y\+I\+NG}~(0)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a820565834deccca70277d1977a978a92}\label{commonFunction_8hpp_a820565834deccca70277d1977a978a92}} 
+\#define {\bfseries S\+T\+A\+ND}~(1)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a4083fcbe80d42575b0336ddbf4ebc622}\label{commonFunction_8hpp_a4083fcbe80d42575b0336ddbf4ebc622}} 
+\#define {\bfseries W\+A\+LK}~(2)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ab2f2555651f2f46b625096ad8dffa7b7}\label{commonFunction_8hpp_ab2f2555651f2f46b625096ad8dffa7b7}} 
+\#define {\bfseries T\+R\+OT}~(3)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_adfb5a022f4b1fda80545bb7a64444baa}\label{commonFunction_8hpp_adfb5a022f4b1fda80545bb7a64444baa}} 
+\#define {\bfseries F\+L\+Y\+I\+N\+F\+\_\+\+T\+R\+OT}~(4)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ae19b6bb2940d2fbe0a79852b070eeafd}\label{commonFunction_8hpp_ae19b6bb2940d2fbe0a79852b070eeafd}} 
+\#define {\bfseries S\+T\+OP}~(5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aa2b164f2ef0d00aa909301200cd49d56}{F\+L\+AT}~(0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a41bc3687e849cfb7c4486c66e2130ef1}{S\+L\+O\+PE}~(1)
+\item 
+\#define \hyperlink{commonFunction_8hpp_abc2db671bb181e94015954f77984a811}{S\+T\+A\+GE}~(2)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a03ac189435d005bd60bce42564842a37}{S\+I\+LL}~(3)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a66ad6c2458f8c44fb963fc835932c102}{C\+A\+L\+A\+N\+D\+R\+IA}~(4)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a814976bdce7e0d26e78d426fdb6f1b22}{S\+T\+A\+I\+RS}~(5)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aac495e944cab2597e7d21f9677a07a73}{B\+R\+I\+D\+GE}~(6)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a75d1c7e19026fe83705a08fb20cb09bc}{H\+U\+R\+D\+L\+ES}~(7)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a53a62f8c4d794e94c7e6b4e30874862f}{B\+A\+L\+L\+\_\+\+P\+O\+OL}~(8)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a124a2a6f4dfe7a87e9a03372e33a3013}{S\+E\+E\+S\+AW}~(9)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aab9d67eefbc9ebf36f9d3cfc73e04b5c}{B\+O\+D\+Y\+\_\+L}~(0.\+66)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aac170586ca7fa6bdeb896cb93469a4fe}{B\+O\+D\+Y\+\_\+\+W\+\_\+F}~(0.\+14)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ab34ed36b34302ac7c2e492439db64821}{B\+O\+D\+Y\+\_\+\+W\+\_\+R}~(0.\+11)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aac50eea90996008b81c25dc35d1eccc9}{B\+O\+D\+Y\+\_\+\+M\+A\+SS}~(29.\+4)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a956aee494cc9ac129aff39b35ce0cfdb}{L0\+\_\+L}~(0.\+096)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aa66e592943fc4f6a4f468d30904b57c0}{L0\+\_\+R}~(-\/0.\+096)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a1ce864b284ac751ffd8a0d98d5ccab55}{L1}~(0.\+34)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ab983f03862f557a786ccc43b26522e16}{L2}~(0.\+34)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aa1bdbfb602e7609a6a6e7a3c3e5644f3}{M0}~(1.\+67)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ac597abe7cf610f262f7aaec53ed1d413}{M1}~(2.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a2a187ef3afced0eb4c4cb99515e5429c}{M2}~(0.\+5)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ab8b701b8b1b86481f1108a9e897b9384}\label{commonFunction_8hpp_ab8b701b8b1b86481f1108a9e897b9384}} 
+\#define {\bfseries M\+M0}~(0.\+0)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a821b84c4ce783ce78e2da46291597504}\label{commonFunction_8hpp_a821b84c4ce783ce78e2da46291597504}} 
+\#define {\bfseries M\+M1}~(0.\+0)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a65fbdeb44850a4de7d4b3f421f277557}\label{commonFunction_8hpp_a65fbdeb44850a4de7d4b3f421f277557}} 
+\#define {\bfseries M\+M2}~(0.\+0)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a2bbff8acb135b403ce3fe383f1148ebd}\label{commonFunction_8hpp_a2bbff8acb135b403ce3fe383f1148ebd}} 
+\#define {\bfseries K\+R0}~(1)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ae95297fc3acbb06d35a057e1c76d76d3}\label{commonFunction_8hpp_ae95297fc3acbb06d35a057e1c76d76d3}} 
+\#define {\bfseries K\+R1}~(1)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a47128869773abeb2ffc75774a0f1027f}\label{commonFunction_8hpp_a47128869773abeb2ffc75774a0f1027f}} 
+\#define {\bfseries K\+R2}~(1)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a7ebc9a785e5ab85457c98595aac81589}\label{commonFunction_8hpp_a7ebc9a785e5ab85457c98595aac81589}} 
+\#define {\bfseries Y\+ES}~(1)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a996bde01ecac342918f0a2c4e7ce7bd5}\label{commonFunction_8hpp_a996bde01ecac342918f0a2c4e7ce7bd5}} 
+\#define {\bfseries NO}~(0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a55d98a9f98156e917bc5cd8eb3f199a3}{L\+I\+M\+I\+T\+\_\+0}~(0.\+000001)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a0da379bb50439fd7530cd70c59cdd8ba}{L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+I\+N\+I\+TE}~(100000.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a55b15900835a96fdbb65c42e6357a10c}{F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE}~(12)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_afc4f14ddd7a31615016c2c8f8f67822c}\label{commonFunction_8hpp_afc4f14ddd7a31615016c2c8f8f67822c}} 
+\#define {\bfseries F\+H\+\_\+\+K\+I\+N\+\_\+\+C\+S\+T\+\_\+\+N\+UM}~(18)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_aaaf4feea0b8841db32386bb85c09023e}\label{commonFunction_8hpp_aaaf4feea0b8841db32386bb85c09023e}} 
+\#define {\bfseries F\+H\+\_\+\+O\+T\+H\+\_\+\+C\+S\+T\+\_\+\+N\+UM}~(23)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ab6f1bb1e637f4a022d951b23927dad17}\label{commonFunction_8hpp_ab6f1bb1e637f4a022d951b23927dad17}} 
+\#define {\bfseries F\+H\+\_\+\+K\+I\+N\+\_\+\+C\+S\+T\+\_\+\+J\+A\+C\+\_\+\+N\+UM}~(62)
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a8777d8ae4f15be914bb8197a7235f9fd}\label{commonFunction_8hpp_a8777d8ae4f15be914bb8197a7235f9fd}} 
+\#define {\bfseries F\+H\+\_\+\+O\+T\+H\+\_\+\+C\+S\+T\+\_\+\+J\+A\+C\+\_\+\+N\+UM}~(33)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a82ae308dfad34cff7de3656a4b2909fc}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A}~(0x00)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a44e6dacc013b1b2d3b6221eb3da11e0d}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B}~(0x01)
+\item 
+\#define \hyperlink{commonFunction_8hpp_af6eed218d2e50ff248ee6b5a111fc9b9}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y}~(0x02)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a6e7f496a65c620962536c63d967fe57e}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X}~(0x03)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ad0ea30c0e6a72e8f7bc92fe101b8a6fa}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L}~(0x04)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ae6a95645989f2d69ccac7c9eff4717b3}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R}~(0x05)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a5dceeb24b2812481c60b977ee33b75a2}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ}~(0x06)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a4343bd9b2fb4172a0c0a2e9976b46861}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ}~(0x07)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a88f766581a57c09990fbdf30c63c345f}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP}~(0x0d)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a08fa9f8ed4339c79c69db53efd881962}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN}~(0x0e)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a353d040b6f90f6a8f342e6336597903d}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}~(0x0f)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ac783f7f0ef6f08e58d11e9e78bc7bcba}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}~(0x10)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a71e0f0aa1db0eaaa34eef03ceda547da}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US}~(0x08)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a988a7df0b3732290a5b404c22dcd6d6f}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US}~(0x09)
+\item 
+\#define \hyperlink{commonFunction_8hpp_ac5c24b9c0b0f39f0d2ab5c851241f8bd}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME}~(0x0a)
+\item 
+\#define \hyperlink{commonFunction_8hpp_af24182119b4d22bab4bb8e28c174d427}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO}~(0x0b)
+\item 
+\#define \hyperlink{commonFunction_8hpp_aeb856330cbd5500b762e5d3dc0479a09}{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO}~(0x0c)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a2a8a96e4c53232539aa8eab8bde13dde}{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX}~(0x00)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a9f549a09e43fce3ae0e3e7691fbb1e4f}{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY}~(0x01)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a5c00b69d8b558b0874e729c7a1613352}{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX}~(0x03)
+\item 
+\#define \hyperlink{commonFunction_8hpp_adb029d44745c52fae05c78afa1673bef}{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY}~(0x04)
+\item 
+\#define \hyperlink{commonFunction_8hpp_af5bdac4ea1b8c062aa8ef3fb64855b4e}{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+IN}~(-\/32767.\+0)
+\item 
+\#define \hyperlink{commonFunction_8hpp_a2b082dbfece3c761efb3227cdec7b1cd}{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+AX}~(32767.\+0)
+\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a0e30d83ef8179f17e2172c1178b4691c}\label{commonFunction_8hpp_a0e30d83ef8179f17e2172c1178b4691c}} 
+constexpr int {\bfseries robot\+\_\+dim\+::num\+\_\+q} = 19
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a29cde4044fdfdf88fd6c91a7d588b5f0}\label{commonFunction_8hpp_a29cde4044fdfdf88fd6c91a7d588b5f0}} 
+constexpr int {\bfseries robot\+\_\+dim\+::num\+\_\+qdot} = 18
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a0f980a62fedb9e23f912515b03cb8e8c}\label{commonFunction_8hpp_a0f980a62fedb9e23f912515b03cb8e8c}} 
+constexpr int {\bfseries robot\+\_\+dim\+::num\+\_\+act\+\_\+joint} = 12
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ad9d712489ab407146310b244cc917a98}\label{commonFunction_8hpp_ad9d712489ab407146310b244cc917a98}} 
+constexpr int {\bfseries robot\+\_\+dim\+::num\+\_\+virtual} = 6
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ab751188f226664461425ee9e7aa3971d}\label{commonFunction_8hpp_ab751188f226664461425ee9e7aa3971d}} 
+constexpr int {\bfseries robot\+\_\+link\+::body} = 0
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_ab1b280d35683eeb0e89c5e092b970721}\label{commonFunction_8hpp_ab1b280d35683eeb0e89c5e092b970721}} 
+constexpr int {\bfseries robot\+\_\+link\+::\+L\+F\+\_\+foot} = 1
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a942131d81b233d9abcd8060d449a1be7}\label{commonFunction_8hpp_a942131d81b233d9abcd8060d449a1be7}} 
+constexpr int {\bfseries robot\+\_\+link\+::\+L\+R\+\_\+foot} = 2
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_a3795e2827fcbed2aaf0fcc9b1f278fe4}\label{commonFunction_8hpp_a3795e2827fcbed2aaf0fcc9b1f278fe4}} 
+constexpr int {\bfseries robot\+\_\+link\+::\+R\+F\+\_\+foot} = 3
+\item 
+\mbox{\Hypertarget{commonFunction_8hpp_adb50237a3b1874a734605ee8bf795f67}\label{commonFunction_8hpp_adb50237a3b1874a734605ee8bf795f67}} 
+constexpr int {\bfseries robot\+\_\+link\+::\+R\+R\+\_\+foot} = 4
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_aa10be68acd0e302c76a6b65175065c1e}{quadruped\+::dim\+\_\+floating} = 6
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_a7181a5fa810a4c6d29d28b6c2f3507bc}{quadruped\+::dim\+\_\+config} = 18
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_a6d2b3239fccbaf60068cfb5925bac9b7}{quadruped\+::num\+\_\+leg} = 4
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_a470accfbc2a550d3b2167c673fb328ac}{quadruped\+::num\+\_\+leg\+\_\+joint} = 3
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_af86ec7a31bd2c82c0530d121ca69c1df}{quadruped\+::\+LF} = 0
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_a74916951f77a0e405d59827cdfa485a2}{quadruped\+::\+LR} = 1
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_a59453328759357a91f34854700ed227e}{quadruped\+::\+RF} = 2
+\item 
+constexpr size\+\_\+t \hyperlink{commonFunction_8hpp_abe9c932ea8b057edd452b431990dc1ca}{quadruped\+::\+RR} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger通用函数类\+Common以及一些通用的函数和变量头文件 
+
+\begin{DoxyAuthor}{作者}
+Bin \& Tech13 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2021-\/08-\/19
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2021 Action 
+\end{DoxyCopyright}
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{commonFunction_8hpp_a53a62f8c4d794e94c7e6b4e30874862f}\label{commonFunction_8hpp_a53a62f8c4d794e94c7e6b4e30874862f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+A\+L\+L\+\_\+\+P\+O\+OL@{B\+A\+L\+L\+\_\+\+P\+O\+OL}}
+\index{B\+A\+L\+L\+\_\+\+P\+O\+OL@{B\+A\+L\+L\+\_\+\+P\+O\+OL}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+A\+L\+L\+\_\+\+P\+O\+OL}{BALL\_POOL}}
+{\footnotesize\ttfamily \#define B\+A\+L\+L\+\_\+\+P\+O\+OL~(8)}
+
+球池 
+
+参考自 quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aab9d67eefbc9ebf36f9d3cfc73e04b5c}\label{commonFunction_8hpp_aab9d67eefbc9ebf36f9d3cfc73e04b5c}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+O\+D\+Y\+\_\+L@{B\+O\+D\+Y\+\_\+L}}
+\index{B\+O\+D\+Y\+\_\+L@{B\+O\+D\+Y\+\_\+L}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+O\+D\+Y\+\_\+L}{BODY\_L}}
+{\footnotesize\ttfamily \#define B\+O\+D\+Y\+\_\+L~(0.\+66)}
+
+机体长度 
+
+参考自 quadruped\+::\+Body\+State\+Estimate\+::$\sim$\+Body\+State\+Estimate().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aac50eea90996008b81c25dc35d1eccc9}\label{commonFunction_8hpp_aac50eea90996008b81c25dc35d1eccc9}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+O\+D\+Y\+\_\+\+M\+A\+SS@{B\+O\+D\+Y\+\_\+\+M\+A\+SS}}
+\index{B\+O\+D\+Y\+\_\+\+M\+A\+SS@{B\+O\+D\+Y\+\_\+\+M\+A\+SS}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+O\+D\+Y\+\_\+\+M\+A\+SS}{BODY\_MASS}}
+{\footnotesize\ttfamily \#define B\+O\+D\+Y\+\_\+\+M\+A\+SS~(29.\+4)}
+
+机体质量 
+
+参考自 quadruped\+::\+Mpc\+::$\sim$\+Mpc().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aac170586ca7fa6bdeb896cb93469a4fe}\label{commonFunction_8hpp_aac170586ca7fa6bdeb896cb93469a4fe}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+O\+D\+Y\+\_\+\+W\+\_\+F@{B\+O\+D\+Y\+\_\+\+W\+\_\+F}}
+\index{B\+O\+D\+Y\+\_\+\+W\+\_\+F@{B\+O\+D\+Y\+\_\+\+W\+\_\+F}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+O\+D\+Y\+\_\+\+W\+\_\+F}{BODY\_W\_F}}
+{\footnotesize\ttfamily \#define B\+O\+D\+Y\+\_\+\+W\+\_\+F~(0.\+14)}
+
+机体前宽 
+
+参考自 quadruped\+::\+Body\+State\+Estimate\+::$\sim$\+Body\+State\+Estimate().
+
+\mbox{\Hypertarget{commonFunction_8hpp_ab34ed36b34302ac7c2e492439db64821}\label{commonFunction_8hpp_ab34ed36b34302ac7c2e492439db64821}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+O\+D\+Y\+\_\+\+W\+\_\+R@{B\+O\+D\+Y\+\_\+\+W\+\_\+R}}
+\index{B\+O\+D\+Y\+\_\+\+W\+\_\+R@{B\+O\+D\+Y\+\_\+\+W\+\_\+R}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+O\+D\+Y\+\_\+\+W\+\_\+R}{BODY\_W\_R}}
+{\footnotesize\ttfamily \#define B\+O\+D\+Y\+\_\+\+W\+\_\+R~(0.\+11)}
+
+机体后宽 
+
+参考自 quadruped\+::\+Body\+State\+Estimate\+::$\sim$\+Body\+State\+Estimate().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aac495e944cab2597e7d21f9677a07a73}\label{commonFunction_8hpp_aac495e944cab2597e7d21f9677a07a73}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+R\+I\+D\+GE@{B\+R\+I\+D\+GE}}
+\index{B\+R\+I\+D\+GE@{B\+R\+I\+D\+GE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+R\+I\+D\+GE}{BRIDGE}}
+{\footnotesize\ttfamily \#define B\+R\+I\+D\+GE~(6)}
+
+双木桥 
+
+参考自 quadruped\+::\+Bridge\+::\+Bridge(), quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a3af8fd5b1f964a0e676242ad6187403f}\label{commonFunction_8hpp_a3af8fd5b1f964a0e676242ad6187403f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+R\+I\+D\+G\+E\+\_\+\+H\+E\+I\+G\+HT@{B\+R\+I\+D\+G\+E\+\_\+\+H\+E\+I\+G\+HT}}
+\index{B\+R\+I\+D\+G\+E\+\_\+\+H\+E\+I\+G\+HT@{B\+R\+I\+D\+G\+E\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+R\+I\+D\+G\+E\+\_\+\+H\+E\+I\+G\+HT}{BRIDGE\_HEIGHT}}
+{\footnotesize\ttfamily \#define B\+R\+I\+D\+G\+E\+\_\+\+H\+E\+I\+G\+HT~(0.\+1)}
+
+双木桥高度 
+
+参考自 quadruped\+::\+Bridge\+::\+Bridge(), quadruped\+::\+Bridge\+::\+Get\+Hight() , 以及 quadruped\+::\+Bridge\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a6937911ca4624d0a8b996bdb434777d1}\label{commonFunction_8hpp_a6937911ca4624d0a8b996bdb434777d1}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+R\+I\+D\+G\+E\+\_\+\+L\+E\+N\+G\+TH@{B\+R\+I\+D\+G\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{B\+R\+I\+D\+G\+E\+\_\+\+L\+E\+N\+G\+TH@{B\+R\+I\+D\+G\+E\+\_\+\+L\+E\+N\+G\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+R\+I\+D\+G\+E\+\_\+\+L\+E\+N\+G\+TH}{BRIDGE\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+R\+I\+D\+G\+E\+\_\+\+L\+E\+N\+G\+TH~(2.\+5)}
+
+双木桥长度 
+
+参考自 quadruped\+::\+Bridge\+::\+Get\+Hight() , 以及 quadruped\+::\+Bridge\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aed7146610824555e66621b21dc7b0a92}\label{commonFunction_8hpp_aed7146610824555e66621b21dc7b0a92}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!B\+R\+I\+D\+G\+E\+\_\+\+W\+I\+D\+TH@{B\+R\+I\+D\+G\+E\+\_\+\+W\+I\+D\+TH}}
+\index{B\+R\+I\+D\+G\+E\+\_\+\+W\+I\+D\+TH@{B\+R\+I\+D\+G\+E\+\_\+\+W\+I\+D\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{B\+R\+I\+D\+G\+E\+\_\+\+W\+I\+D\+TH}{BRIDGE\_WIDTH}}
+{\footnotesize\ttfamily \#define B\+R\+I\+D\+G\+E\+\_\+\+W\+I\+D\+TH~(0.\+2)}
+
+双木桥宽度 \mbox{\Hypertarget{commonFunction_8hpp_a66ad6c2458f8c44fb963fc835932c102}\label{commonFunction_8hpp_a66ad6c2458f8c44fb963fc835932c102}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!C\+A\+L\+A\+N\+D\+R\+IA@{C\+A\+L\+A\+N\+D\+R\+IA}}
+\index{C\+A\+L\+A\+N\+D\+R\+IA@{C\+A\+L\+A\+N\+D\+R\+IA}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{C\+A\+L\+A\+N\+D\+R\+IA}{CALANDRIA}}
+{\footnotesize\ttfamily \#define C\+A\+L\+A\+N\+D\+R\+IA~(4)}
+
+排管 
+
+参考自 quadruped\+::\+Calandria\+::\+Calandria(), quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory(), quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a4ee7deaf98f91f34a9b70c28248eb423}\label{commonFunction_8hpp_a4ee7deaf98f91f34a9b70c28248eb423}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+D\+I\+S\+T\+A\+N\+CE}}
+\index{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+D\+I\+S\+T\+A\+N\+CE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+D\+I\+S\+T\+A\+N\+CE}{CALANDRIA\_DISTANCE}}
+{\footnotesize\ttfamily \#define C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+D\+I\+S\+T\+A\+N\+CE~(0.\+4)}
+
+排管轴线间距 
+
+参考自 quadruped\+::\+Calandria\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a522116f13037d506aa83278cbf956527}\label{commonFunction_8hpp_a522116f13037d506aa83278cbf956527}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+H\+E\+I\+G\+HT@{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+H\+E\+I\+G\+HT}}
+\index{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+H\+E\+I\+G\+HT@{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+H\+E\+I\+G\+HT}{CALANDRIA\_HEIGHT}}
+{\footnotesize\ttfamily \#define C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+H\+E\+I\+G\+HT~(0.\+05)}
+
+排管高度 
+
+参考自 quadruped\+::\+Calandria\+::\+Calandria().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a38848d6ca386c416ddb0e989985983b4}\label{commonFunction_8hpp_a38848d6ca386c416ddb0e989985983b4}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+W\+I\+D\+TH@{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+W\+I\+D\+TH}}
+\index{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+W\+I\+D\+TH@{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+W\+I\+D\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+W\+I\+D\+TH}{CALANDRIA\_WIDTH}}
+{\footnotesize\ttfamily \#define C\+A\+L\+A\+N\+D\+R\+I\+A\+\_\+\+W\+I\+D\+TH~(0.\+05)}
+
+排管宽度 \mbox{\Hypertarget{commonFunction_8hpp_a55b15900835a96fdbb65c42e6357a10c}\label{commonFunction_8hpp_a55b15900835a96fdbb65c42e6357a10c}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE@{F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE}}
+\index{F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE@{F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE}{FH\_VAR\_NUM\_SINGLE}}
+{\footnotesize\ttfamily \#define F\+H\+\_\+\+V\+A\+R\+\_\+\+N\+U\+M\+\_\+\+S\+I\+N\+G\+LE~(12)}
+
+落足点规划中决策变量的数目 
+
+参考自 quadruped\+::\+F\+H\+\_\+nlp\+::eval\+\_\+h(), quadruped\+::\+F\+H\+\_\+nlp\+::\+F\+H\+\_\+nlp() , 以及 quadruped\+::\+F\+H\+\_\+nlp\+::get\+\_\+bounds\+\_\+info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aa2b164f2ef0d00aa909301200cd49d56}\label{commonFunction_8hpp_aa2b164f2ef0d00aa909301200cd49d56}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!F\+L\+AT@{F\+L\+AT}}
+\index{F\+L\+AT@{F\+L\+AT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{F\+L\+AT}{FLAT}}
+{\footnotesize\ttfamily \#define F\+L\+AT~(0)}
+
+平地 
+
+参考自 quadruped\+::\+Flat\+Ground\+::\+Flat\+Ground(), quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a6801baa546c6112d19eb095111d24720}\label{commonFunction_8hpp_a6801baa546c6112d19eb095111d24720}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!G\+R\+A\+V\+I\+TY@{G\+R\+A\+V\+I\+TY}}
+\index{G\+R\+A\+V\+I\+TY@{G\+R\+A\+V\+I\+TY}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{G\+R\+A\+V\+I\+TY}{GRAVITY}}
+{\footnotesize\ttfamily \#define G\+R\+A\+V\+I\+TY~(9.\+8)}
+
+重力加速度数值 
+
+参考自 quadruped\+::\+F\+H\+\_\+constraints\+::\+Get\+Other\+Cst(), quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info() , 以及 quadruped\+::\+Mpc\+::$\sim$\+Mpc().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aa0dce35e004d0f866dd26812778ca79b}\label{commonFunction_8hpp_aa0dce35e004d0f866dd26812778ca79b}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA@{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}}
+\index{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA@{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}{HEIGHT\_FACTOR\_CALANDRIA}}
+{\footnotesize\ttfamily \#define H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA~(1.\+25)}
+
+排管障碍下机体抬腿高度占正常情况下的比例 
+
+参考自 quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a020c0f49ae1f71623ebeb75c4ff8b974}\label{commonFunction_8hpp_a020c0f49ae1f71623ebeb75c4ff8b974}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE@{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE}}
+\index{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE@{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE}{HEIGHT\_FACTOR\_STAIRS\_STAGE}}
+{\footnotesize\ttfamily \#define H\+E\+I\+G\+H\+T\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+R\+S\+\_\+\+S\+T\+A\+GE~(0.\+8)}
+
+阶梯和平台障碍下机体抬腿高度占正常情况下的比例 
+
+参考自 quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a75d1c7e19026fe83705a08fb20cb09bc}\label{commonFunction_8hpp_a75d1c7e19026fe83705a08fb20cb09bc}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!H\+U\+R\+D\+L\+ES@{H\+U\+R\+D\+L\+ES}}
+\index{H\+U\+R\+D\+L\+ES@{H\+U\+R\+D\+L\+ES}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{H\+U\+R\+D\+L\+ES}{HURDLES}}
+{\footnotesize\ttfamily \#define H\+U\+R\+D\+L\+ES~(7)}
+
+横杆 
+
+参考自 quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain().
+
+\mbox{\Hypertarget{commonFunction_8hpp_acd7e35d0c6cca5b5b665b77b5377c4a0}\label{commonFunction_8hpp_acd7e35d0c6cca5b5b665b77b5377c4a0}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT@{I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT}}
+\index{I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT@{I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT}{INIT\_HEIGHT}}
+{\footnotesize\ttfamily \#define I\+N\+I\+T\+\_\+\+H\+E\+I\+G\+HT~(0.\+5)}
+
+机体默认站立高度 
+
+参考自 quadruped\+::\+Gamepad\+::\+Get\+Key(), quadruped\+::\+Motion\+Plan\+::\+Motion\+Plan() , 以及 quadruped\+::\+Motion\+Plan\+::\+Start().
+
+\mbox{\Hypertarget{commonFunction_8hpp_ab885128b7b692f19c79a22cd0644af28}\label{commonFunction_8hpp_ab885128b7b692f19c79a22cd0644af28}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT@{I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT}}
+\index{I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT@{I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT}{INIT\_SWING\_HEIGHT}}
+{\footnotesize\ttfamily \#define I\+N\+I\+T\+\_\+\+S\+W\+I\+N\+G\+\_\+\+H\+E\+I\+G\+HT~(0.\+2)}
+
+摆动腿默认抬腿高度 
+
+参考自 quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a956aee494cc9ac129aff39b35ce0cfdb}\label{commonFunction_8hpp_a956aee494cc9ac129aff39b35ce0cfdb}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!L0\+\_\+L@{L0\+\_\+L}}
+\index{L0\+\_\+L@{L0\+\_\+L}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{L0\+\_\+L}{L0\_L}}
+{\footnotesize\ttfamily \#define L0\+\_\+L~(0.\+096)}
+
+机体左侧第一段连杆 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Leg\+State\+Estimate().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aa66e592943fc4f6a4f468d30904b57c0}\label{commonFunction_8hpp_aa66e592943fc4f6a4f468d30904b57c0}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!L0\+\_\+R@{L0\+\_\+R}}
+\index{L0\+\_\+R@{L0\+\_\+R}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{L0\+\_\+R}{L0\_R}}
+{\footnotesize\ttfamily \#define L0\+\_\+R~(-\/0.\+096)}
+
+机体右侧第一段连杆 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Leg\+State\+Estimate().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a1ce864b284ac751ffd8a0d98d5ccab55}\label{commonFunction_8hpp_a1ce864b284ac751ffd8a0d98d5ccab55}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!L1@{L1}}
+\index{L1@{L1}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{L1}{L1}}
+{\footnotesize\ttfamily \#define L1~(0.\+34)}
+
+大腿长度 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Calu\+Endfoot\+Msg(), quadruped\+::\+Leg\+State\+Estimate\+::\+Get\+Jacobian() , 以及 quadruped\+::\+Leg\+State\+Estimate\+::\+Get\+Jdot().
+
+\mbox{\Hypertarget{commonFunction_8hpp_ab983f03862f557a786ccc43b26522e16}\label{commonFunction_8hpp_ab983f03862f557a786ccc43b26522e16}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!L2@{L2}}
+\index{L2@{L2}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{L2}{L2}}
+{\footnotesize\ttfamily \#define L2~(0.\+34)}
+
+小腿长度 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Calu\+Endfoot\+Msg(), quadruped\+::\+Leg\+State\+Estimate\+::\+Get\+Jacobian() , 以及 quadruped\+::\+Leg\+State\+Estimate\+::\+Get\+Jdot().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a55d98a9f98156e917bc5cd8eb3f199a3}\label{commonFunction_8hpp_a55d98a9f98156e917bc5cd8eb3f199a3}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!L\+I\+M\+I\+T\+\_\+0@{L\+I\+M\+I\+T\+\_\+0}}
+\index{L\+I\+M\+I\+T\+\_\+0@{L\+I\+M\+I\+T\+\_\+0}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{L\+I\+M\+I\+T\+\_\+0}{LIMIT\_0}}
+{\footnotesize\ttfamily \#define L\+I\+M\+I\+T\+\_\+0~(0.\+000001)}
+
+无穷小 \mbox{\Hypertarget{commonFunction_8hpp_a0da379bb50439fd7530cd70c59cdd8ba}\label{commonFunction_8hpp_a0da379bb50439fd7530cd70c59cdd8ba}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+I\+N\+I\+TE@{L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+I\+N\+I\+TE}}
+\index{L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+I\+N\+I\+TE@{L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+I\+N\+I\+TE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+I\+N\+I\+TE}{LIMIT\_INFINITE}}
+{\footnotesize\ttfamily \#define L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+I\+N\+I\+TE~(100000.\+0)}
+
+无穷大 
+
+参考自 quadruped\+::\+F\+H\+\_\+constraints\+::\+Get\+Other\+Cst\+Bound(), quadruped\+::\+Stage\+::\+Updata\+Edge(), quadruped\+::\+Sill\+::\+Updata\+Edge(), quadruped\+::\+Calandria\+::\+Updata\+Edge(), quadruped\+::\+Stairs\+::\+Updata\+Edge(), quadruped\+::\+Bridge\+::\+Updata\+Edge() , 以及 quadruped\+::\+Mpc\+::$\sim$\+Mpc().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aa1bdbfb602e7609a6a6e7a3c3e5644f3}\label{commonFunction_8hpp_aa1bdbfb602e7609a6a6e7a3c3e5644f3}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M0@{M0}}
+\index{M0@{M0}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M0}{M0}}
+{\footnotesize\ttfamily \#define M0~(1.\+67)}
+
+第一段连杆质量 \mbox{\Hypertarget{commonFunction_8hpp_ac597abe7cf610f262f7aaec53ed1d413}\label{commonFunction_8hpp_ac597abe7cf610f262f7aaec53ed1d413}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M1@{M1}}
+\index{M1@{M1}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M1}{M1}}
+{\footnotesize\ttfamily \#define M1~(2.\+0)}
+
+大腿质量 \mbox{\Hypertarget{commonFunction_8hpp_a2a187ef3afced0eb4c4cb99515e5429c}\label{commonFunction_8hpp_a2a187ef3afced0eb4c4cb99515e5429c}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M2@{M2}}
+\index{M2@{M2}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M2}{M2}}
+{\footnotesize\ttfamily \#define M2~(0.\+5)}
+
+小腿质量 \mbox{\Hypertarget{commonFunction_8hpp_a846c10c10f6b91f46ac35d8a76903d36}\label{commonFunction_8hpp_a846c10c10f6b91f46ac35d8a76903d36}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+A\+C\+C\+\_\+X@{M\+A\+X\+\_\+\+A\+C\+C\+\_\+X}}
+\index{M\+A\+X\+\_\+\+A\+C\+C\+\_\+X@{M\+A\+X\+\_\+\+A\+C\+C\+\_\+X}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+A\+C\+C\+\_\+X}{MAX\_ACC\_X}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+A\+C\+C\+\_\+X~(0.\+5)}
+
+机体\+X方向最大加速度 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_adb54fb5be23c598f4e63c5d4f9688d52}\label{commonFunction_8hpp_adb54fb5be23c598f4e63c5d4f9688d52}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y@{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y}}
+\index{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y@{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y}{MAX\_ACC\_Y}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y~(0.\+2)}
+
+机体\+Y方向最大加速度 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a241db25f73e004aa6fb1406d312d17e7}\label{commonFunction_8hpp_a241db25f73e004aa6fb1406d312d17e7}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z@{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z}}
+\index{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z@{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z}{MAX\_ACC\_Z}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z~(1.\+0)}
+
+机体\+Z方向最大加速度 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a12eb499a35513868fd34ca2db695785f}\label{commonFunction_8hpp_a12eb499a35513868fd34ca2db695785f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}}
+\index{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}{MAX\_CMD\_HEIGHT\_Z}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z~(0.\+53)}
+
+机体\+Z方向最大高度 \mbox{\Hypertarget{commonFunction_8hpp_aac68c445ad4454179a4cbb5f3247ab6b}\label{commonFunction_8hpp_aac68c445ad4454179a4cbb5f3247ab6b}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+O\+M\+E\+G\+A\+\_\+\+Y\+AW@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+O\+M\+E\+G\+A\+\_\+\+Y\+AW}}
+\index{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+O\+M\+E\+G\+A\+\_\+\+Y\+AW@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+O\+M\+E\+G\+A\+\_\+\+Y\+AW}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+O\+M\+E\+G\+A\+\_\+\+Y\+AW}{MAX\_CMD\_OMEGA\_YAW}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+O\+M\+E\+G\+A\+\_\+\+Y\+AW~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)}
+
+机体偏航角最大转速 \mbox{\Hypertarget{commonFunction_8hpp_a116598876a13887f888cc4fbb6b5b44d}\label{commonFunction_8hpp_a116598876a13887f888cc4fbb6b5b44d}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+P\+I\+T\+CH@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+P\+I\+T\+CH}}
+\index{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+P\+I\+T\+CH@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+P\+I\+T\+CH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+P\+I\+T\+CH}{MAX\_CMD\_STANCE\_PITCH}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+P\+I\+T\+CH~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)}
+
+机体静态调整姿态时最大俯仰角 \mbox{\Hypertarget{commonFunction_8hpp_a0bb7b636a6394bb79381cce1a0a99adf}\label{commonFunction_8hpp_a0bb7b636a6394bb79381cce1a0a99adf}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+R\+O\+LL@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+R\+O\+LL}}
+\index{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+R\+O\+LL@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+R\+O\+LL}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+R\+O\+LL}{MAX\_CMD\_STANCE\_ROLL}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+R\+O\+LL~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)}
+
+机体静态调整姿态时最大横滚角 \mbox{\Hypertarget{commonFunction_8hpp_a834cc6eaf7371e7935b08c690cb1db1d}\label{commonFunction_8hpp_a834cc6eaf7371e7935b08c690cb1db1d}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+Y\+AW@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+Y\+AW}}
+\index{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+Y\+AW@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+Y\+AW}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+Y\+AW}{MAX\_CMD\_STANCE\_YAW}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+S\+T\+A\+N\+C\+E\+\_\+\+Y\+AW~(\hyperlink{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}{PI} / 6.\+0)}
+
+机体静态调整姿态时最大偏航角 \mbox{\Hypertarget{commonFunction_8hpp_a87338fd74450cc5f4e8759bb8e3c868c}\label{commonFunction_8hpp_a87338fd74450cc5f4e8759bb8e3c868c}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+X@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+X}}
+\index{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+X@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+X}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+X}{MAX\_CMD\_VEL\_X}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+X~(1.\+0)}
+
+机体\+X方向最大速度 \mbox{\Hypertarget{commonFunction_8hpp_a38013df080a790b325e4a1026ca7c138}\label{commonFunction_8hpp_a38013df080a790b325e4a1026ca7c138}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+Y@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+Y}}
+\index{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+Y@{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+Y}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+Y}{MAX\_CMD\_VEL\_Y}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+M\+D\+\_\+\+V\+E\+L\+\_\+Y~(0.\+25)}
+
+机体\+Y方向最大速度 \mbox{\Hypertarget{commonFunction_8hpp_aac8b20f6912b2feb0f061d4f4f4b3bbf}\label{commonFunction_8hpp_aac8b20f6912b2feb0f061d4f4f4b3bbf}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+D\+OT@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+D\+OT}}
+\index{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+D\+OT@{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+D\+OT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+D\+OT}{MAX\_NUM\_DISPLAY\_DOT}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+D\+OT~(500)}
+
+webots中显示轨迹点的最大数目 \mbox{\Hypertarget{commonFunction_8hpp_a39a72feef51273b0b92d5446f1eca267}\label{commonFunction_8hpp_a39a72feef51273b0b92d5446f1eca267}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+I\+N\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z@{M\+I\+N\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}}
+\index{M\+I\+N\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z@{M\+I\+N\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z}{MIN\_CMD\_HEIGHT\_Z}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+C\+M\+D\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+Z~(0.\+35)}
+
+机体\+X方向最小高度 \mbox{\Hypertarget{commonFunction_8hpp_aba86b0c0d0f5628498506ee46b74536b}\label{commonFunction_8hpp_aba86b0c0d0f5628498506ee46b74536b}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!M\+P\+C\+\_\+\+P\+E\+R\+I\+OD@{M\+P\+C\+\_\+\+P\+E\+R\+I\+OD}}
+\index{M\+P\+C\+\_\+\+P\+E\+R\+I\+OD@{M\+P\+C\+\_\+\+P\+E\+R\+I\+OD}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{M\+P\+C\+\_\+\+P\+E\+R\+I\+OD}{MPC\_PERIOD}}
+{\footnotesize\ttfamily \#define M\+P\+C\+\_\+\+P\+E\+R\+I\+OD~(0.\+005)}
+
+M\+P\+C周期 
+
+参考自 quadruped\+::\+Body\+Trajectory\+::\+Get\+Body\+Trajectory(), quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory() , 以及 quadruped\+::\+Body\+Trajectory\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a09bc9e6a44f0291cfcf578f2efcddfab}\label{commonFunction_8hpp_a09bc9e6a44f0291cfcf578f2efcddfab}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!MU@{MU}}
+\index{MU@{MU}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{MU}{MU}}
+{\footnotesize\ttfamily \#define MU~(0.\+5)}
+
+摩擦系数 
+
+参考自 quadruped\+::\+Mpc\+::$\sim$\+Mpc().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}\label{commonFunction_8hpp_a598a3330b3c21701223ee0ca14316eca}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!PI@{PI}}
+\index{PI@{PI}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#define PI~(3.\+14159265358979323846)}
+
+圆周率 
+
+参考自 quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory() , 以及 quadruped\+::\+Parameters\+::\+Set\+Motion\+Plan\+Para().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a124a2a6f4dfe7a87e9a03372e33a3013}\label{commonFunction_8hpp_a124a2a6f4dfe7a87e9a03372e33a3013}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+E\+E\+S\+AW@{S\+E\+E\+S\+AW}}
+\index{S\+E\+E\+S\+AW@{S\+E\+E\+S\+AW}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+S\+AW}{SEESAW}}
+{\footnotesize\ttfamily \#define S\+E\+E\+S\+AW~(9)}
+
+跷跷板 
+
+参考自 quadruped\+::\+Seesaw\+::\+Seesaw(), quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a80dea4a6a3216aec9f724576c4e1fc06}\label{commonFunction_8hpp_a80dea4a6a3216aec9f724576c4e1fc06}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+E\+E\+S\+A\+W\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE@{S\+E\+E\+S\+A\+W\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}}
+\index{S\+E\+E\+S\+A\+W\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE@{S\+E\+E\+S\+A\+W\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+S\+A\+W\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}{SEESAW\_DOWN\_ANGLE}}
+{\footnotesize\ttfamily \#define S\+E\+E\+S\+A\+W\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE~(0.\+2527)}
+
+跷跷板下降角度 \mbox{\Hypertarget{commonFunction_8hpp_a559a10cb2bdeac0bd77e0bf20b189d1a}\label{commonFunction_8hpp_a559a10cb2bdeac0bd77e0bf20b189d1a}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+E\+E\+S\+A\+W\+\_\+\+L\+E\+N\+G\+TH@{S\+E\+E\+S\+A\+W\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+E\+E\+S\+A\+W\+\_\+\+L\+E\+N\+G\+TH@{S\+E\+E\+S\+A\+W\+\_\+\+L\+E\+N\+G\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+S\+A\+W\+\_\+\+L\+E\+N\+G\+TH}{SEESAW\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+E\+E\+S\+A\+W\+\_\+\+L\+E\+N\+G\+TH~(2.\+4)}
+
+跷跷板长度 \mbox{\Hypertarget{commonFunction_8hpp_a6b705c832c88aaad07888b43bd401e75}\label{commonFunction_8hpp_a6b705c832c88aaad07888b43bd401e75}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+E\+E\+S\+A\+W\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT@{S\+E\+E\+S\+A\+W\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+E\+E\+S\+A\+W\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT@{S\+E\+E\+S\+A\+W\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+S\+A\+W\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}{SEESAW\_MID\_HEIGHT}}
+{\footnotesize\ttfamily \#define S\+E\+E\+S\+A\+W\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT~(0.\+3)}
+
+跷跷板中点高度 \mbox{\Hypertarget{commonFunction_8hpp_add6b4ed603b293df4141f116f152d1c5}\label{commonFunction_8hpp_add6b4ed603b293df4141f116f152d1c5}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+E\+E\+S\+A\+W\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE@{S\+E\+E\+S\+A\+W\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}}
+\index{S\+E\+E\+S\+A\+W\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE@{S\+E\+E\+S\+A\+W\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+S\+A\+W\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}{SEESAW\_UP\_ANGLE}}
+{\footnotesize\ttfamily \#define S\+E\+E\+S\+A\+W\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE~(-\/0.\+2527)}
+
+跷跷板上升角度 \mbox{\Hypertarget{commonFunction_8hpp_a03ac189435d005bd60bce42564842a37}\label{commonFunction_8hpp_a03ac189435d005bd60bce42564842a37}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+I\+LL@{S\+I\+LL}}
+\index{S\+I\+LL@{S\+I\+LL}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+I\+LL}{SILL}}
+{\footnotesize\ttfamily \#define S\+I\+LL~(3)}
+
+门槛 
+
+参考自 quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain(), quadruped\+::\+Sill\+::\+Sill() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a480b5375121121aeeec3471c0de34c70}\label{commonFunction_8hpp_a480b5375121121aeeec3471c0de34c70}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+I\+L\+L\+\_\+\+H\+E\+I\+G\+HT@{S\+I\+L\+L\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+I\+L\+L\+\_\+\+H\+E\+I\+G\+HT@{S\+I\+L\+L\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+I\+L\+L\+\_\+\+H\+E\+I\+G\+HT}{SILL\_HEIGHT}}
+{\footnotesize\ttfamily \#define S\+I\+L\+L\+\_\+\+H\+E\+I\+G\+HT~(0.\+05)}
+
+门槛高度 
+
+参考自 quadruped\+::\+Sill\+::\+Sill().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aec31a58c1f4702caad3c013c461467c6}\label{commonFunction_8hpp_aec31a58c1f4702caad3c013c461467c6}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+I\+L\+L\+\_\+\+W\+I\+D\+TH@{S\+I\+L\+L\+\_\+\+W\+I\+D\+TH}}
+\index{S\+I\+L\+L\+\_\+\+W\+I\+D\+TH@{S\+I\+L\+L\+\_\+\+W\+I\+D\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+I\+L\+L\+\_\+\+W\+I\+D\+TH}{SILL\_WIDTH}}
+{\footnotesize\ttfamily \#define S\+I\+L\+L\+\_\+\+W\+I\+D\+TH~(0.\+05)}
+
+门槛宽度 
+
+参考自 quadruped\+::\+Sill\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a41bc3687e849cfb7c4486c66e2130ef1}\label{commonFunction_8hpp_a41bc3687e849cfb7c4486c66e2130ef1}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+L\+O\+PE@{S\+L\+O\+PE}}
+\index{S\+L\+O\+PE@{S\+L\+O\+PE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+L\+O\+PE}{SLOPE}}
+{\footnotesize\ttfamily \#define S\+L\+O\+PE~(1)}
+
+坡面 
+
+参考自 quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain(), quadruped\+::\+Slope\+::\+Slope() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_af0be3eabdaa4e96c4aea3c6fe19beb0a}\label{commonFunction_8hpp_af0be3eabdaa4e96c4aea3c6fe19beb0a}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE@{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}}
+\index{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE@{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE}{SLOPE\_DOWN\_ANGLE}}
+{\footnotesize\ttfamily \#define S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+A\+N\+G\+LE~(0.\+2527)}
+
+坡面下降段角度 
+
+参考自 quadruped\+::\+Slope\+::\+Get\+Hight().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a3aac9be187c3f1798a8ac7be403a55f3}\label{commonFunction_8hpp_a3aac9be187c3f1798a8ac7be403a55f3}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+L\+E\+N\+G\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+L\+E\+N\+G\+TH}{SLOPE\_DOWN\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+L\+O\+P\+E\+\_\+\+D\+O\+W\+N\+\_\+\+L\+E\+N\+G\+TH~(1.\+2)}
+
+坡面下降段长度 
+
+参考自 quadruped\+::\+Slope\+::\+Get\+Hight().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a1650b520d8df5eb1516e777f71c279b0}\label{commonFunction_8hpp_a1650b520d8df5eb1516e777f71c279b0}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT@{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT@{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT}{SLOPE\_MID\_HEIGHT}}
+{\footnotesize\ttfamily \#define S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+H\+E\+I\+G\+HT~(0.\+3)}
+
+坡面中段高度 
+
+参考自 quadruped\+::\+Slope\+::\+Get\+Hight().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a23eb011294bf11a53a701d0f6f540530}\label{commonFunction_8hpp_a23eb011294bf11a53a701d0f6f540530}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+L\+E\+N\+G\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+L\+E\+N\+G\+TH}{SLOPE\_MID\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+L\+O\+P\+E\+\_\+\+M\+I\+D\+\_\+\+L\+E\+N\+G\+TH~(3.\+0)}
+
+坡面中段长度 
+
+参考自 quadruped\+::\+Slope\+::\+Get\+Hight().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a523272074eea842e6cb45df11ca7b1c9}\label{commonFunction_8hpp_a523272074eea842e6cb45df11ca7b1c9}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE@{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}}
+\index{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE@{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE}{SLOPE\_UP\_ANGLE}}
+{\footnotesize\ttfamily \#define S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+A\+N\+G\+LE~(-\/0.\+2527)}
+
+坡面上升段角度 
+
+参考自 quadruped\+::\+Slope\+::\+Get\+Hight().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a780e3b8018df2424c856549b66fd70d5}\label{commonFunction_8hpp_a780e3b8018df2424c856549b66fd70d5}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+L\+E\+N\+G\+TH@{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+L\+E\+N\+G\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+L\+E\+N\+G\+TH}{SLOPE\_UP\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+L\+O\+P\+E\+\_\+\+U\+P\+\_\+\+L\+E\+N\+G\+TH~(1.\+2)}
+
+坡面上升段长度 
+
+参考自 quadruped\+::\+Slope\+::\+Get\+Hight().
+
+\mbox{\Hypertarget{commonFunction_8hpp_abc2db671bb181e94015954f77984a811}\label{commonFunction_8hpp_abc2db671bb181e94015954f77984a811}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+T\+A\+GE@{S\+T\+A\+GE}}
+\index{S\+T\+A\+GE@{S\+T\+A\+GE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+T\+A\+GE}{STAGE}}
+{\footnotesize\ttfamily \#define S\+T\+A\+GE~(2)}
+
+平台 
+
+参考自 quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory(), quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain(), quadruped\+::\+Stage\+::\+Stage() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a38376d615cf60c53b61e42d81b1496d1}\label{commonFunction_8hpp_a38376d615cf60c53b61e42d81b1496d1}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+T\+A\+G\+E\+\_\+\+H\+E\+I\+G\+HT@{S\+T\+A\+G\+E\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+T\+A\+G\+E\+\_\+\+H\+E\+I\+G\+HT@{S\+T\+A\+G\+E\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+T\+A\+G\+E\+\_\+\+H\+E\+I\+G\+HT}{STAGE\_HEIGHT}}
+{\footnotesize\ttfamily \#define S\+T\+A\+G\+E\+\_\+\+H\+E\+I\+G\+HT~(0.\+1)}
+
+平台高度 
+
+参考自 quadruped\+::\+Stage\+::\+Get\+Hight(), quadruped\+::\+Stage\+::\+Stage() , 以及 quadruped\+::\+Stage\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a0320c3d31cf05f1da4f9b9872cf2a83b}\label{commonFunction_8hpp_a0320c3d31cf05f1da4f9b9872cf2a83b}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+T\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}}
+\index{S\+T\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH@{S\+T\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+T\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}{STAGE\_LENGTH}}
+{\footnotesize\ttfamily \#define S\+T\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH~(2.\+5)}
+
+平台长度 
+
+参考自 quadruped\+::\+Stage\+::\+Get\+Hight() , 以及 quadruped\+::\+Stage\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a814976bdce7e0d26e78d426fdb6f1b22}\label{commonFunction_8hpp_a814976bdce7e0d26e78d426fdb6f1b22}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+T\+A\+I\+RS@{S\+T\+A\+I\+RS}}
+\index{S\+T\+A\+I\+RS@{S\+T\+A\+I\+RS}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+T\+A\+I\+RS}{STAIRS}}
+{\footnotesize\ttfamily \#define S\+T\+A\+I\+RS~(5)}
+
+阶梯 
+
+参考自 quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory(), quadruped\+::\+Motion\+Plan\+::\+Set\+Terrain(), quadruped\+::\+Stairs\+::\+Stairs() , 以及 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_af582e0a4b0a8c54f39c8006eb552e14b}\label{commonFunction_8hpp_af582e0a4b0a8c54f39c8006eb552e14b}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+T\+A\+I\+R\+S\+\_\+\+D\+E\+P\+TH@{S\+T\+A\+I\+R\+S\+\_\+\+D\+E\+P\+TH}}
+\index{S\+T\+A\+I\+R\+S\+\_\+\+D\+E\+P\+TH@{S\+T\+A\+I\+R\+S\+\_\+\+D\+E\+P\+TH}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+T\+A\+I\+R\+S\+\_\+\+D\+E\+P\+TH}{STAIRS\_DEPTH}}
+{\footnotesize\ttfamily \#define S\+T\+A\+I\+R\+S\+\_\+\+D\+E\+P\+TH~(0.\+3)}
+
+每一级阶梯深度 
+
+参考自 quadruped\+::\+Stairs\+::\+Get\+Hight() , 以及 quadruped\+::\+Stairs\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aa3f5f001eead7dfbf1301003b5c587d0}\label{commonFunction_8hpp_aa3f5f001eead7dfbf1301003b5c587d0}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!S\+T\+A\+I\+R\+S\+\_\+\+H\+E\+I\+G\+HT@{S\+T\+A\+I\+R\+S\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+T\+A\+I\+R\+S\+\_\+\+H\+E\+I\+G\+HT@{S\+T\+A\+I\+R\+S\+\_\+\+H\+E\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{S\+T\+A\+I\+R\+S\+\_\+\+H\+E\+I\+G\+HT}{STAIRS\_HEIGHT}}
+{\footnotesize\ttfamily \#define S\+T\+A\+I\+R\+S\+\_\+\+H\+E\+I\+G\+HT~(0.\+1)}
+
+每一级阶梯高度 
+
+参考自 quadruped\+::\+Stairs\+::\+Get\+Hight(), quadruped\+::\+Stairs\+::\+Stairs() , 以及 quadruped\+::\+Stairs\+::\+Updata\+Edge().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a65fd90f232757535f02c46a885e49012}\label{commonFunction_8hpp_a65fd90f232757535f02c46a885e49012}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!T\+I\+M\+E\+\_\+\+S\+T\+EP@{T\+I\+M\+E\+\_\+\+S\+T\+EP}}
+\index{T\+I\+M\+E\+\_\+\+S\+T\+EP@{T\+I\+M\+E\+\_\+\+S\+T\+EP}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+\_\+\+S\+T\+EP}{TIME\_STEP}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+\_\+\+S\+T\+EP~(0.\+005)}
+
+一次主循环时间 \mbox{\Hypertarget{commonFunction_8hpp_a34cca4f4d8b6c58b031fe7a7b25d931f}\label{commonFunction_8hpp_a34cca4f4d8b6c58b031fe7a7b25d931f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!V\+I\+S\+I\+B\+L\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+R\+AJ}}
+\index{V\+I\+S\+I\+B\+L\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+R\+AJ}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{V\+I\+S\+I\+B\+L\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+R\+AJ}{VISIBLE\_BODY\_TRAJ}}
+{\footnotesize\ttfamily \#define V\+I\+S\+I\+B\+L\+E\+\_\+\+B\+O\+D\+Y\+\_\+\+T\+R\+AJ~(0)}
+
+是否在webots中显示机体轨迹 \mbox{\Hypertarget{commonFunction_8hpp_aaba09ab14e0271b4a344ec5e14f59ccf}\label{commonFunction_8hpp_aaba09ab14e0271b4a344ec5e14f59ccf}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+F\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+F\+\_\+\+T\+R\+AJ}}
+\index{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+F\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+F\+\_\+\+T\+R\+AJ}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+F\+\_\+\+T\+R\+AJ}{VISIBLE\_LF\_TRAJ}}
+{\footnotesize\ttfamily \#define V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+F\+\_\+\+T\+R\+AJ~(0)}
+
+是否在webots中显示左前腿足端轨迹 \mbox{\Hypertarget{commonFunction_8hpp_a0e69426750442f2ef18a09b93cbcc442}\label{commonFunction_8hpp_a0e69426750442f2ef18a09b93cbcc442}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+R\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+R\+\_\+\+T\+R\+AJ}}
+\index{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+R\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+R\+\_\+\+T\+R\+AJ}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+R\+\_\+\+T\+R\+AJ}{VISIBLE\_LR\_TRAJ}}
+{\footnotesize\ttfamily \#define V\+I\+S\+I\+B\+L\+E\+\_\+\+L\+R\+\_\+\+T\+R\+AJ~(0)}
+
+是否在webots中显示左后腿足端轨迹 \mbox{\Hypertarget{commonFunction_8hpp_a7f5fb00ea8206bd5ce6339437498439f}\label{commonFunction_8hpp_a7f5fb00ea8206bd5ce6339437498439f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+F\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+F\+\_\+\+T\+R\+AJ}}
+\index{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+F\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+F\+\_\+\+T\+R\+AJ}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+F\+\_\+\+T\+R\+AJ}{VISIBLE\_RF\_TRAJ}}
+{\footnotesize\ttfamily \#define V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+F\+\_\+\+T\+R\+AJ~(0)}
+
+是否在webots中显示右前腿足端轨迹 \mbox{\Hypertarget{commonFunction_8hpp_a2ae19a7d47c36e66c50b1f8167380e25}\label{commonFunction_8hpp_a2ae19a7d47c36e66c50b1f8167380e25}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+R\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+R\+\_\+\+T\+R\+AJ}}
+\index{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+R\+\_\+\+T\+R\+AJ@{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+R\+\_\+\+T\+R\+AJ}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+R\+\_\+\+T\+R\+AJ}{VISIBLE\_RR\_TRAJ}}
+{\footnotesize\ttfamily \#define V\+I\+S\+I\+B\+L\+E\+\_\+\+R\+R\+\_\+\+T\+R\+AJ~(0)}
+
+是否在webots中显示右后腿足端轨迹 \mbox{\Hypertarget{commonFunction_8hpp_a2a8a96e4c53232539aa8eab8bde13dde}\label{commonFunction_8hpp_a2a8a96e4c53232539aa8eab8bde13dde}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX}}
+\index{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX}{XBOX\_AXIS\_LX}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LX~(0x00)}
+
+左摇杆\+X轴 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a9f549a09e43fce3ae0e3e7691fbb1e4f}\label{commonFunction_8hpp_a9f549a09e43fce3ae0e3e7691fbb1e4f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY}}
+\index{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY}{XBOX\_AXIS\_LY}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+LY~(0x01)}
+
+左摇杆\+Y轴 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a5c00b69d8b558b0874e729c7a1613352}\label{commonFunction_8hpp_a5c00b69d8b558b0874e729c7a1613352}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX}}
+\index{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX}{XBOX\_AXIS\_RX}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RX~(0x03)}
+
+右摇杆\+X轴 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_adb029d44745c52fae05c78afa1673bef}\label{commonFunction_8hpp_adb029d44745c52fae05c78afa1673bef}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY}}
+\index{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY}{XBOX\_AXIS\_RY}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+RY~(0x04)}
+
+右摇杆\+Y轴 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a2b082dbfece3c761efb3227cdec7b1cd}\label{commonFunction_8hpp_a2b082dbfece3c761efb3227cdec7b1cd}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+AX@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+AX}}
+\index{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+AX@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+AX}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+AX}{XBOX\_AXIS\_VAL\_MAX}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+AX~(32767.\+0)}
+
+摇杆的上限 \mbox{\Hypertarget{commonFunction_8hpp_af5bdac4ea1b8c062aa8ef3fb64855b4e}\label{commonFunction_8hpp_af5bdac4ea1b8c062aa8ef3fb64855b4e}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+IN@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+IN}}
+\index{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+IN@{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+IN}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+IN}{XBOX\_AXIS\_VAL\_MIN}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+A\+X\+I\+S\+\_\+\+V\+A\+L\+\_\+\+M\+IN~(-\/32767.\+0)}
+
+摇杆的下限 \mbox{\Hypertarget{commonFunction_8hpp_a82ae308dfad34cff7de3656a4b2909fc}\label{commonFunction_8hpp_a82ae308dfad34cff7de3656a4b2909fc}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A}{XBOX\_BUTTON\_A}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+A~(0x00)}
+
+按键A 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a44e6dacc013b1b2d3b6221eb3da11e0d}\label{commonFunction_8hpp_a44e6dacc013b1b2d3b6221eb3da11e0d}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B}{XBOX\_BUTTON\_B}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+B~(0x01)}
+
+按键B 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a08fa9f8ed4339c79c69db53efd881962}\label{commonFunction_8hpp_a08fa9f8ed4339c79c69db53efd881962}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN}{XBOX\_BUTTON\_DOWN}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+D\+O\+WN~(0x0e)}
+
+方向键下 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_ac5c24b9c0b0f39f0d2ab5c851241f8bd}\label{commonFunction_8hpp_ac5c24b9c0b0f39f0d2ab5c851241f8bd}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME}{XBOX\_BUTTON\_HOME}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+H\+O\+ME~(0x0a)}
+
+home键 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_ad0ea30c0e6a72e8f7bc92fe101b8a6fa}\label{commonFunction_8hpp_ad0ea30c0e6a72e8f7bc92fe101b8a6fa}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L}{XBOX\_BUTTON\_L}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+L~(0x04)}
+
+L 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a353d040b6f90f6a8f342e6336597903d}\label{commonFunction_8hpp_a353d040b6f90f6a8f342e6336597903d}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}{XBOX\_BUTTON\_LEFT}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT~(0x0f)}
+
+方向键左 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_af24182119b4d22bab4bb8e28c174d427}\label{commonFunction_8hpp_af24182119b4d22bab4bb8e28c174d427}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO}{XBOX\_BUTTON\_LO}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LO~(0x0b)}
+
+左摇杆按键 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a5dceeb24b2812481c60b977ee33b75a2}\label{commonFunction_8hpp_a5dceeb24b2812481c60b977ee33b75a2}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ}{XBOX\_BUTTON\_LZ}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+LZ~(0x06)}
+
+LZ 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a71e0f0aa1db0eaaa34eef03ceda547da}\label{commonFunction_8hpp_a71e0f0aa1db0eaaa34eef03ceda547da}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US}{XBOX\_BUTTON\_MINUS}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+N\+US~(0x08)}
+
+减号 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a988a7df0b3732290a5b404c22dcd6d6f}\label{commonFunction_8hpp_a988a7df0b3732290a5b404c22dcd6d6f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US}{XBOX\_BUTTON\_PLUS}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+P\+L\+US~(0x09)}
+
+加号 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_ae6a95645989f2d69ccac7c9eff4717b3}\label{commonFunction_8hpp_ae6a95645989f2d69ccac7c9eff4717b3}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R}{XBOX\_BUTTON\_R}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+R~(0x05)}
+
+R 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_ac783f7f0ef6f08e58d11e9e78bc7bcba}\label{commonFunction_8hpp_ac783f7f0ef6f08e58d11e9e78bc7bcba}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}{XBOX\_BUTTON\_RIGHT}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT~(0x10)}
+
+方向键右 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_aeb856330cbd5500b762e5d3dc0479a09}\label{commonFunction_8hpp_aeb856330cbd5500b762e5d3dc0479a09}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO}{XBOX\_BUTTON\_RO}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RO~(0x0c)}
+
+右摇杆按键 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a4343bd9b2fb4172a0c0a2e9976b46861}\label{commonFunction_8hpp_a4343bd9b2fb4172a0c0a2e9976b46861}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ}{XBOX\_BUTTON\_RZ}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+RZ~(0x07)}
+
+RZ 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a88f766581a57c09990fbdf30c63c345f}\label{commonFunction_8hpp_a88f766581a57c09990fbdf30c63c345f}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP}{XBOX\_BUTTON\_UP}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+UP~(0x0d)}
+
+方向键上 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a6e7f496a65c620962536c63d967fe57e}\label{commonFunction_8hpp_a6e7f496a65c620962536c63d967fe57e}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X}{XBOX\_BUTTON\_X}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+X~(0x03)}
+
+x 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_af6eed218d2e50ff248ee6b5a111fc9b9}\label{commonFunction_8hpp_af6eed218d2e50ff248ee6b5a111fc9b9}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y}}
+\index{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y@{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y}{XBOX\_BUTTON\_Y}}
+{\footnotesize\ttfamily \#define X\+B\+O\+X\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+Y~(0x02)}
+
+Y 
+
+参考自 quadruped\+::\+Gamepad\+::xbox\+\_\+map\+\_\+read().
+
+\mbox{\Hypertarget{commonFunction_8hpp_af8b7029f672a3d5f1077e2b05ea0042e}\label{commonFunction_8hpp_af8b7029f672a3d5f1077e2b05ea0042e}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE}}
+\index{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE}{ZOOM\_FACTOR\_BRIDGE}}
+{\footnotesize\ttfamily \#define Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE~(0.\+1)}
+
+双木桥障碍下机体的满速占正常情况下的比例 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a4f33ad511b51029d451bc854455b6a27}\label{commonFunction_8hpp_a4f33ad511b51029d451bc854455b6a27}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}}
+\index{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA}{ZOOM\_FACTOR\_CALANDRIA}}
+{\footnotesize\ttfamily \#define Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA~(0.\+3)}
+
+排管障碍下机体的满速占正常情况下的比例 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a55fe3114f1062a4b32ccf377546e1731}\label{commonFunction_8hpp_a55fe3114f1062a4b32ccf377546e1731}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW}}
+\index{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW}{ZOOM\_FACTOR\_SEESAW}}
+{\footnotesize\ttfamily \#define Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW~(0.\+2)}
+
+跷跷板障碍下机体的满速占正常情况下的比例 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a6abe116aeef35af1c1864a7e1310bf5b}\label{commonFunction_8hpp_a6abe116aeef35af1c1864a7e1310bf5b}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE}}
+\index{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE}{ZOOM\_FACTOR\_SILL\_STAGE}}
+{\footnotesize\ttfamily \#define Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE~(0.\+4)}
+
+门槛和平台障碍下机体的满速占正常情况下的比例 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a897e13a6c4b27a57c6eebb3051c4393d}\label{commonFunction_8hpp_a897e13a6c4b27a57c6eebb3051c4393d}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE}}
+\index{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE}{ZOOM\_FACTOR\_SLOPE}}
+{\footnotesize\ttfamily \#define Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE~(0.\+5)}
+
+坡面障碍下机体的满速占正常情况下的比例 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{commonFunction_8hpp_a09cce96d91ad073b5d8b7d0b3156a6ef}\label{commonFunction_8hpp_a09cce96d91ad073b5d8b7d0b3156a6ef}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS}}
+\index{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS@{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS}{ZOOM\_FACTOR\_STAIRS}}
+{\footnotesize\ttfamily \#define Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS~(0.\+25)}
+
+阶梯障碍下机体的满速占正常情况下的比例 
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+
+
+\subsection{变量说明}
+\mbox{\Hypertarget{commonFunction_8hpp_file_a7181a5fa810a4c6d29d28b6c2f3507bc}\label{commonFunction_8hpp_file_a7181a5fa810a4c6d29d28b6c2f3507bc}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!dim\+\_\+config@{dim\+\_\+config}}
+\index{dim\+\_\+config@{dim\+\_\+config}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{dim\+\_\+config}{dim\_config}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::dim\+\_\+config = 18}
+
+Actiger整体的自由度 
+
+参考自 quadruped\+::\+W\+B\+C\+\_\+\+Ctrl\+::\+Compute\+W\+B\+C() , 以及 quadruped\+::\+W\+B\+C\+\_\+\+Ctrl\+::\+W\+B\+C\+\_\+\+Ctrl().
+
+\mbox{\Hypertarget{commonFunction_8hpp_file_aa10be68acd0e302c76a6b65175065c1e}\label{commonFunction_8hpp_file_aa10be68acd0e302c76a6b65175065c1e}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!dim\+\_\+floating@{dim\+\_\+floating}}
+\index{dim\+\_\+floating@{dim\+\_\+floating}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{dim\+\_\+floating}{dim\_floating}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::dim\+\_\+floating = 6}
+
+Actiger浮动基座的自由度 
+
+参考自 quadruped\+::\+Body\+Trajectory\+::\+Get\+Body\+Trajectory(), quadruped\+::\+Endfoot\+Trajectory\+::\+Get\+Endfoot\+Trajectory() , 以及 quadruped\+::\+Mpc\+::$\sim$\+Mpc().
+
+\mbox{\Hypertarget{commonFunction_8hpp_file_af86ec7a31bd2c82c0530d121ca69c1df}\label{commonFunction_8hpp_file_af86ec7a31bd2c82c0530d121ca69c1df}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!LF@{LF}}
+\index{LF@{LF}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{LF}{LF}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::\+LF = 0}
+
+左前腿索引 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Leg\+State\+Estimate(), quadruped\+::\+Robot\+Model\+::\+Robot\+Model(), quadruped\+::\+Robot\+Model\+::\+Updata\+Model() , 以及 quadruped\+::\+W\+B\+C\+\_\+\+Ctrl\+::\+W\+B\+C\+\_\+\+Ctrl().
+
+\mbox{\Hypertarget{commonFunction_8hpp_file_a74916951f77a0e405d59827cdfa485a2}\label{commonFunction_8hpp_file_a74916951f77a0e405d59827cdfa485a2}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!LR@{LR}}
+\index{LR@{LR}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{LR}{LR}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::\+LR = 1}
+
+左后腿索引 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Leg\+State\+Estimate(), quadruped\+::\+Robot\+Model\+::\+Robot\+Model(), quadruped\+::\+Robot\+Model\+::\+Updata\+Model() , 以及 quadruped\+::\+W\+B\+C\+\_\+\+Ctrl\+::\+W\+B\+C\+\_\+\+Ctrl().
+
+\mbox{\Hypertarget{commonFunction_8hpp_file_a6d2b3239fccbaf60068cfb5925bac9b7}\label{commonFunction_8hpp_file_a6d2b3239fccbaf60068cfb5925bac9b7}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!num\+\_\+leg@{num\+\_\+leg}}
+\index{num\+\_\+leg@{num\+\_\+leg}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{num\+\_\+leg}{num\_leg}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::num\+\_\+leg = 4}
+
+Actiger腿的数目 
+
+参考自 quadruped\+::\+Mpc\+::\+Mpc().
+
+\mbox{\Hypertarget{commonFunction_8hpp_file_a470accfbc2a550d3b2167c673fb328ac}\label{commonFunction_8hpp_file_a470accfbc2a550d3b2167c673fb328ac}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!num\+\_\+leg\+\_\+joint@{num\+\_\+leg\+\_\+joint}}
+\index{num\+\_\+leg\+\_\+joint@{num\+\_\+leg\+\_\+joint}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{num\+\_\+leg\+\_\+joint}{num\_leg\_joint}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::num\+\_\+leg\+\_\+joint = 3}
+
+Actiger单腿关节的数目 
+
+参考自 quadruped\+::\+W\+B\+C\+\_\+\+Ctrl\+::\+Update\+Leg\+C\+M\+D() , 以及 quadruped\+::\+Mpc\+::$\sim$\+Mpc().
+
+\mbox{\Hypertarget{commonFunction_8hpp_file_a59453328759357a91f34854700ed227e}\label{commonFunction_8hpp_file_a59453328759357a91f34854700ed227e}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!RF@{RF}}
+\index{RF@{RF}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{RF}{RF}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::\+RF = 2}
+
+右前腿索引 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Leg\+State\+Estimate(), quadruped\+::\+Robot\+Model\+::\+Robot\+Model(), quadruped\+::\+Robot\+Model\+::\+Updata\+Model() , 以及 quadruped\+::\+W\+B\+C\+\_\+\+Ctrl\+::\+W\+B\+C\+\_\+\+Ctrl().
+
+\mbox{\Hypertarget{commonFunction_8hpp_file_abe9c932ea8b057edd452b431990dc1ca}\label{commonFunction_8hpp_file_abe9c932ea8b057edd452b431990dc1ca}} 
+\index{common\+Function.\+hpp@{common\+Function.\+hpp}!RR@{RR}}
+\index{RR@{RR}!common\+Function.\+hpp@{common\+Function.\+hpp}}
+\subsubsection{\texorpdfstring{RR}{RR}}
+{\footnotesize\ttfamily constexpr size\+\_\+t quadruped\+::\+RR = 3}
+
+右后腿索引 
+
+参考自 quadruped\+::\+Leg\+State\+Estimate\+::\+Leg\+State\+Estimate(), quadruped\+::\+Robot\+Model\+::\+Robot\+Model(), quadruped\+::\+Robot\+Model\+::\+Updata\+Model() , 以及 quadruped\+::\+W\+B\+C\+\_\+\+Ctrl\+::\+W\+B\+C\+\_\+\+Ctrl().
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Actiger: locomotionController.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Actiger
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">locomotionController.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="locomotionController_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef LOCOMOTION_CONTROLLER_HPP</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define LOCOMOTION_CONTROLLER_HPP</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="parameters_8hpp.html">parameters.hpp</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="legControl_8hpp.html">legControl.hpp</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mpc_8hpp.html">mpc.hpp</a>&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cppTypes_8h.html">cppTypes.h</a>&quot;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacequadruped.html">quadruped</a></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classquadruped_1_1LocomotionCtrl.html">   25</a></span>&#160;    <span class="keyword">class  </span><a class="code" href="classquadruped_1_1LocomotionCtrl.html">LocomotionCtrl</a></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">protected</span>:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classquadruped_1_1LocomotionCtrl.html#a233d4539571e8970451e1bf800a5eeb8">LocomotionCtrl</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classquadruped_1_1LocomotionCtrl.html#a94ec7af0dc2d159e91bdc541c00e34fd">~LocomotionCtrl</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classquadruped_1_1LocomotionCtrl.html#ae1ea49db9859d92fb33a4959dadfeeee">RobotControl</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classquadruped_1_1LocomotionCtrl.html#af2e5cc2d85c00e73c580aebf5b6db19f">   38</a></span>&#160;        <a class="code" href="classquadruped_1_1Mpc.html">Mpc</a>* <a class="code" href="classquadruped_1_1LocomotionCtrl.html#af2e5cc2d85c00e73c580aebf5b6db19f">mpc</a>;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classquadruped_1_1LocomotionCtrl.html#afb4fdfa9aeafca4990b964be1760a291">   40</a></span>&#160;        <a class="code" href="classquadruped_1_1RobotModel.html">RobotModel</a>* <a class="code" href="classquadruped_1_1LocomotionCtrl.html#afb4fdfa9aeafca4990b964be1760a291">robotModel</a>;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classquadruped_1_1LocomotionCtrl.html#a77f83342b1327735db2ce184d032b697">   42</a></span>&#160;        <a class="code" href="classquadruped_1_1Parameters.html">Parameters</a>* <a class="code" href="classquadruped_1_1LocomotionCtrl.html#a77f83342b1327735db2ce184d032b697">para</a>;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classquadruped_1_1LocomotionCtrl.html#a27b80b6c14c2153e3c3ad367d4411805">   44</a></span>&#160;        <a class="code" href="classquadruped_1_1MotionPlan.html">MotionPlan</a>* <a class="code" href="classquadruped_1_1LocomotionCtrl.html#a27b80b6c14c2153e3c3ad367d4411805">motionPlan</a>;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classquadruped_1_1LocomotionCtrl.html#a46951dff3fd3eb4b0d050bf831b05a4e">   46</a></span>&#160;        <a class="code" href="classquadruped_1_1LegControl.html">LegControl</a>* <a class="code" href="classquadruped_1_1LocomotionCtrl.html#a46951dff3fd3eb4b0d050bf831b05a4e">legControl</a>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="cppTypes_8h.html#a87f228860242acc66da2e58086d18cec">Vec12&lt;double&gt;</a> mpc_pre_force = <a class="code" href="cppTypes_8h.html#a87f228860242acc66da2e58086d18cec">Vec12&lt;double&gt;::Zero</a>();</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="cppTypes_8h.html#a87f228860242acc66da2e58086d18cec">Vec12&lt;double&gt;</a> mpc_pre_pre_force = <a class="code" href="cppTypes_8h.html#a87f228860242acc66da2e58086d18cec">Vec12&lt;double&gt;::Zero</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif // !LOCOMOTION_CONTROLLER_HPP</span></div><div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_afb4fdfa9aeafca4990b964be1760a291"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#afb4fdfa9aeafca4990b964be1760a291">quadruped::LocomotionCtrl::robotModel</a></div><div class="ttdeci">RobotModel * robotModel</div><div class="ttdoc">RobotModel类的实例化对象，存储机器人模型信息 </div><div class="ttdef"><b>Definition:</b> locomotionController.hpp:40</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_a27b80b6c14c2153e3c3ad367d4411805"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#a27b80b6c14c2153e3c3ad367d4411805">quadruped::LocomotionCtrl::motionPlan</a></div><div class="ttdeci">MotionPlan * motionPlan</div><div class="ttdoc">MotionPlan类的实例化对象，Actiger规划器 </div><div class="ttdef"><b>Definition:</b> locomotionController.hpp:44</div></div>
+<div class="ttc" id="classquadruped_1_1Mpc_html"><div class="ttname"><a href="classquadruped_1_1Mpc.html">quadruped::Mpc</a></div><div class="ttdoc">Actiger模型预测控制器 </div><div class="ttdef"><b>Definition:</b> mpc.hpp:30</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_a94ec7af0dc2d159e91bdc541c00e34fd"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#a94ec7af0dc2d159e91bdc541c00e34fd">quadruped::LocomotionCtrl::~LocomotionCtrl</a></div><div class="ttdeci">virtual ~LocomotionCtrl(void)</div><div class="ttdoc">LocomotionCtrl类的析构函数，释放申请的内存 </div><div class="ttdef"><b>Definition:</b> locomotionController.cpp:34</div></div>
+<div class="ttc" id="namespacequadruped_html"><div class="ttname"><a href="namespacequadruped.html">quadruped</a></div><div class="ttdef"><b>Definition:</b> commonFunction.hpp:44</div></div>
+<div class="ttc" id="cppTypes_8h_html"><div class="ttname"><a href="cppTypes_8h.html">cppTypes.h</a></div><div class="ttdoc">Actiger工程中的多维变量类型模板的定义 </div></div>
+<div class="ttc" id="classquadruped_1_1Parameters_html"><div class="ttname"><a href="classquadruped_1_1Parameters.html">quadruped::Parameters</a></div><div class="ttdoc">Actiger参数类 </div><div class="ttdef"><b>Definition:</b> parameters.hpp:33</div></div>
+<div class="ttc" id="cppTypes_8h_html_a87f228860242acc66da2e58086d18cec"><div class="ttname"><a href="cppTypes_8h.html#a87f228860242acc66da2e58086d18cec">Vec12</a></div><div class="ttdeci">Eigen::Matrix&lt; T, 12, 1 &gt; Vec12</div><div class="ttdoc">12 x 1 向量 </div><div class="ttdef"><b>Definition:</b> cppTypes.h:57</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_a233d4539571e8970451e1bf800a5eeb8"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#a233d4539571e8970451e1bf800a5eeb8">quadruped::LocomotionCtrl::LocomotionCtrl</a></div><div class="ttdeci">LocomotionCtrl(void)</div><div class="ttdoc">LocomotionCtrl类的构造函数，完成所有对象成员的内存分配 </div><div class="ttdef"><b>Definition:</b> locomotionController.cpp:20</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_ae1ea49db9859d92fb33a4959dadfeeee"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#ae1ea49db9859d92fb33a4959dadfeeee">quadruped::LocomotionCtrl::RobotControl</a></div><div class="ttdeci">void RobotControl(void)</div><div class="ttdoc">机器人控制函数 </div><div class="ttdef"><b>Definition:</b> locomotionController.cpp:46</div></div>
+<div class="ttc" id="classquadruped_1_1LegControl_html"><div class="ttname"><a href="classquadruped_1_1LegControl.html">quadruped::LegControl</a></div><div class="ttdoc">Actiger腿部控制器 </div><div class="ttdef"><b>Definition:</b> legControl.hpp:31</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_a77f83342b1327735db2ce184d032b697"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#a77f83342b1327735db2ce184d032b697">quadruped::LocomotionCtrl::para</a></div><div class="ttdeci">Parameters * para</div><div class="ttdoc">Parameters类的实例化对象，存储一些被频繁使用的参数 </div><div class="ttdef"><b>Definition:</b> locomotionController.hpp:42</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_af2e5cc2d85c00e73c580aebf5b6db19f"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#af2e5cc2d85c00e73c580aebf5b6db19f">quadruped::LocomotionCtrl::mpc</a></div><div class="ttdeci">Mpc * mpc</div><div class="ttdoc">Mpc类的实例化对象，Actiger模型预测控制器 </div><div class="ttdef"><b>Definition:</b> locomotionController.hpp:38</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html">quadruped::LocomotionCtrl</a></div><div class="ttdoc">Actiger运动控制类 </div><div class="ttdef"><b>Definition:</b> locomotionController.hpp:25</div></div>
+<div class="ttc" id="classquadruped_1_1LocomotionCtrl_html_a46951dff3fd3eb4b0d050bf831b05a4e"><div class="ttname"><a href="classquadruped_1_1LocomotionCtrl.html#a46951dff3fd3eb4b0d050bf831b05a4e">quadruped::LocomotionCtrl::legControl</a></div><div class="ttdeci">LegControl * legControl</div><div class="ttdoc">LegControl类的实例化对象，Actiger腿部控制器 </div><div class="ttdef"><b>Definition:</b> locomotionController.hpp:46</div></div>
+<div class="ttc" id="classquadruped_1_1RobotModel_html"><div class="ttname"><a href="classquadruped_1_1RobotModel.html">quadruped::RobotModel</a></div><div class="ttdoc">Actiger机体模型类 </div><div class="ttdef"><b>Definition:</b> robotModel.hpp:33</div></div>
+<div class="ttc" id="mpc_8hpp_html"><div class="ttname"><a href="mpc_8hpp.html">mpc.hpp</a></div><div class="ttdoc">Actiger模型预测控制器头文件 </div></div>
+<div class="ttc" id="classquadruped_1_1MotionPlan_html"><div class="ttname"><a href="classquadruped_1_1MotionPlan.html">quadruped::MotionPlan</a></div><div class="ttdoc">Actiger规划器 </div><div class="ttdef"><b>Definition:</b> motionPlan.hpp:34</div></div>
+<div class="ttc" id="parameters_8hpp_html"><div class="ttname"><a href="parameters_8hpp.html">parameters.hpp</a></div><div class="ttdoc">Actiger参数类Parameters头文件 </div></div>
+<div class="ttc" id="legControl_8hpp_html"><div class="ttname"><a href="legControl_8hpp.html">legControl.hpp</a></div><div class="ttdoc">Actiger腿部控制器头文件 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

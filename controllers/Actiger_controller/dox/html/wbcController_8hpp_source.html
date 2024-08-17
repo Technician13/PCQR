@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Actiger: controller/wbc/wbcController.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Actiger
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d3bff1ab3a40b4e5d0775c67ace1b0da.html">controller</a></li><li class="navelem"><a class="el" href="dir_1dc753cddc1519d06d2f955ed40e814e.html">wbc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">wbcController.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef WBC_CONTROLLER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define WBC_CONTROLLER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="parameters_8hpp.html">parameters.hpp</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;taskSet/bodyPosTask.hpp&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;taskSet/bodyOriTask.hpp&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;taskSet/linkPosTask.hpp&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;contact/singleContact.hpp&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;WBIC/kinWBC.hpp&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;WBIC/dynWBC.hpp&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mpc_8hpp.html">mpc.hpp</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="robotModel_8hpp.html">robotModel.hpp</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="motionPlan_8hpp.html">motionPlan.hpp</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacequadruped.html">quadruped</a></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classquadruped_1_1WBC__Ctrl.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classquadruped_1_1WBC__Ctrl.html">WBC_Ctrl</a> {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">int</span> cnt = 20;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classquadruped_1_1BodyPosTask.html">BodyPosTask</a>* body_pos_task;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classquadruped_1_1BodyOriTask.html">BodyOriTask</a>* body_ori_task;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classquadruped_1_1LinkPosTask.html">LinkPosTask</a>* link_task[4];</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classquadruped_1_1ContactSpec.html">ContactSpec</a>* foot_contact[4];</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classquadruped_1_1RobotModel.html">RobotModel</a>* robotModel;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classquadruped_1_1MotionPlan.html">MotionPlan</a>* ref;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classquadruped_1_1LegControl.html">LegControl</a>* legControl; </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classquadruped_1_1KinWBC.html">KinWBC</a>* kin_wbc;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classquadruped_1_1DynWBC.html">DynWBC</a>* dyn_wbc;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classquadruped_1_1Parameters.html">Parameters</a>* para;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::vector&lt;ContactSpec* &gt; contact_list;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::vector&lt;Task* &gt; task_list;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> full_config;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> torque_ff;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> des_jpos;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec&lt;double&gt;</a> des_jvel;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;             </div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#a32eb7d955bcce24ec6846d9542efc949">WBC_Ctrl</a>(<a class="code" href="classquadruped_1_1RobotModel.html">RobotModel</a>* p_robotModel, <a class="code" href="classquadruped_1_1MotionPlan.html">MotionPlan</a>* p_ref, <a class="code" href="classquadruped_1_1Parameters.html">Parameters</a>* p_para, <a class="code" href="classquadruped_1_1LegControl.html">LegControl</a>* p_legControl);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#a7bf29ff5650d0ef88ef61f5766edc425">~WBC_Ctrl</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#ab27e13c54c86f5115e6807e18fd6d144">Run</a>(<a class="code" href="cppTypes_8h.html#a87f228860242acc66da2e58086d18cec">Vec12&lt;double&gt;</a> &amp; p_mpc_force);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#a0e0f118c16781a623a77286d20b5ced0">ParameterSetup</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#a2ec34349523dc12b29bf0a19ff5e6e53">UpdateLegCMD</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#a62a3b0540468fe71fc60e7347437ff91">CleanUp</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#ac486930d16b7d44f10b86ad67ef76770">UpdatTask</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classquadruped_1_1WBC__Ctrl.html#a32ecf21e6375af82593f87f75e2405e4">ComputeWBC</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="cppTypes_8h_html_adad69baca3c77d5f991be5d3c063fea7"><div class="ttname"><a href="cppTypes_8h.html#adad69baca3c77d5f991be5d3c063fea7">DVec</a></div><div class="ttdeci">Eigen::Matrix&lt; T, Eigen::Dynamic, 1 &gt; DVec</div><div class="ttdoc">动态向量 </div><div class="ttdef"><b>Definition:</b> cppTypes.h:89</div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_a0e0f118c16781a623a77286d20b5ced0"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#a0e0f118c16781a623a77286d20b5ced0">quadruped::WBC_Ctrl::ParameterSetup</a></div><div class="ttdeci">void ParameterSetup(void)</div><div class="ttdoc">������ز��� </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:95</div></div>
+<div class="ttc" id="classquadruped_1_1DynWBC_html"><div class="ttname"><a href="classquadruped_1_1DynWBC.html">quadruped::DynWBC</a></div><div class="ttdef"><b>Definition:</b> dynWBC.hpp:13</div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_a2ec34349523dc12b29bf0a19ff5e6e53"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#a2ec34349523dc12b29bf0a19ff5e6e53">quadruped::WBC_Ctrl::UpdateLegCMD</a></div><div class="ttdeci">void UpdateLegCMD(void)</div><div class="ttdoc">�����Ȳ����� </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:124</div></div>
+<div class="ttc" id="namespacequadruped_html"><div class="ttname"><a href="namespacequadruped.html">quadruped</a></div><div class="ttdef"><b>Definition:</b> commonFunction.hpp:44</div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_a7bf29ff5650d0ef88ef61f5766edc425"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#a7bf29ff5650d0ef88ef61f5766edc425">quadruped::WBC_Ctrl::~WBC_Ctrl</a></div><div class="ttdeci">virtual ~WBC_Ctrl(void)</div><div class="ttdoc">WBC_Ctrl����������� </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:60</div></div>
+<div class="ttc" id="classquadruped_1_1Parameters_html"><div class="ttname"><a href="classquadruped_1_1Parameters.html">quadruped::Parameters</a></div><div class="ttdoc">Actiger参数类 </div><div class="ttdef"><b>Definition:</b> parameters.hpp:33</div></div>
+<div class="ttc" id="cppTypes_8h_html_a87f228860242acc66da2e58086d18cec"><div class="ttname"><a href="cppTypes_8h.html#a87f228860242acc66da2e58086d18cec">Vec12</a></div><div class="ttdeci">Eigen::Matrix&lt; T, 12, 1 &gt; Vec12</div><div class="ttdoc">12 x 1 向量 </div><div class="ttdef"><b>Definition:</b> cppTypes.h:57</div></div>
+<div class="ttc" id="classquadruped_1_1ContactSpec_html"><div class="ttname"><a href="classquadruped_1_1ContactSpec.html">quadruped::ContactSpec</a></div><div class="ttdef"><b>Definition:</b> contactSpec.hpp:9</div></div>
+<div class="ttc" id="classquadruped_1_1KinWBC_html"><div class="ttname"><a href="classquadruped_1_1KinWBC.html">quadruped::KinWBC</a></div><div class="ttdef"><b>Definition:</b> kinWBC.hpp:12</div></div>
+<div class="ttc" id="classquadruped_1_1LinkPosTask_html"><div class="ttname"><a href="classquadruped_1_1LinkPosTask.html">quadruped::LinkPosTask</a></div><div class="ttdef"><b>Definition:</b> linkPosTask.hpp:12</div></div>
+<div class="ttc" id="classquadruped_1_1LegControl_html"><div class="ttname"><a href="classquadruped_1_1LegControl.html">quadruped::LegControl</a></div><div class="ttdoc">Actiger腿部控制器 </div><div class="ttdef"><b>Definition:</b> legControl.hpp:31</div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_ac486930d16b7d44f10b86ad67ef76770"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#ac486930d16b7d44f10b86ad67ef76770">quadruped::WBC_Ctrl::UpdatTask</a></div><div class="ttdeci">void UpdatTask(void)</div><div class="ttdoc">���¸����������ֵ </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:186</div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html">quadruped::WBC_Ctrl</a></div><div class="ttdef"><b>Definition:</b> wbcController.hpp:20</div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_ab27e13c54c86f5115e6807e18fd6d144"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#ab27e13c54c86f5115e6807e18fd6d144">quadruped::WBC_Ctrl::Run</a></div><div class="ttdeci">void Run(Vec12&lt; double &gt; &amp;p_mpc_force)</div><div class="ttdoc">WBC������ </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:250</div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_a32ecf21e6375af82593f87f75e2405e4"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#a32ecf21e6375af82593f87f75e2405e4">quadruped::WBC_Ctrl::ComputeWBC</a></div><div class="ttdeci">void ComputeWBC()</div><div class="ttdoc">����WBC </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:227</div></div>
+<div class="ttc" id="classquadruped_1_1BodyOriTask_html"><div class="ttname"><a href="classquadruped_1_1BodyOriTask.html">quadruped::BodyOriTask</a></div><div class="ttdef"><b>Definition:</b> bodyOriTask.hpp:10</div></div>
+<div class="ttc" id="robotModel_8hpp_html"><div class="ttname"><a href="robotModel_8hpp.html">robotModel.hpp</a></div><div class="ttdoc">Actiger机体模型类RobotModel头文件 </div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_a32eb7d955bcce24ec6846d9542efc949"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#a32eb7d955bcce24ec6846d9542efc949">quadruped::WBC_Ctrl::WBC_Ctrl</a></div><div class="ttdeci">WBC_Ctrl(RobotModel *p_robotModel, MotionPlan *p_ref, Parameters *p_para, LegControl *p_legControl)</div><div class="ttdoc">WBC_Ctrl��Ĺ��캯�� </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:27</div></div>
+<div class="ttc" id="classquadruped_1_1BodyPosTask_html"><div class="ttname"><a href="classquadruped_1_1BodyPosTask.html">quadruped::BodyPosTask</a></div><div class="ttdef"><b>Definition:</b> bodyPosTask.hpp:11</div></div>
+<div class="ttc" id="classquadruped_1_1RobotModel_html"><div class="ttname"><a href="classquadruped_1_1RobotModel.html">quadruped::RobotModel</a></div><div class="ttdoc">Actiger机体模型类 </div><div class="ttdef"><b>Definition:</b> robotModel.hpp:33</div></div>
+<div class="ttc" id="motionPlan_8hpp_html"><div class="ttname"><a href="motionPlan_8hpp.html">motionPlan.hpp</a></div><div class="ttdoc">Actiger规划器Motionlan头文件 </div></div>
+<div class="ttc" id="classquadruped_1_1WBC__Ctrl_html_a62a3b0540468fe71fc60e7347437ff91"><div class="ttname"><a href="classquadruped_1_1WBC__Ctrl.html#a62a3b0540468fe71fc60e7347437ff91">quadruped::WBC_Ctrl::CleanUp</a></div><div class="ttdeci">void CleanUp(void)</div><div class="ttdoc">��� </div><div class="ttdef"><b>Definition:</b> wbcController.cpp:174</div></div>
+<div class="ttc" id="mpc_8hpp_html"><div class="ttname"><a href="mpc_8hpp.html">mpc.hpp</a></div><div class="ttdoc">Actiger模型预测控制器头文件 </div></div>
+<div class="ttc" id="classquadruped_1_1MotionPlan_html"><div class="ttname"><a href="classquadruped_1_1MotionPlan.html">quadruped::MotionPlan</a></div><div class="ttdoc">Actiger规划器 </div><div class="ttdef"><b>Definition:</b> motionPlan.hpp:34</div></div>
+<div class="ttc" id="parameters_8hpp_html"><div class="ttname"><a href="parameters_8hpp.html">parameters.hpp</a></div><div class="ttdoc">Actiger参数类Parameters头文件 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

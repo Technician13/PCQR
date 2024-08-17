@@ -1,0 +1,146 @@
+\hypertarget{classKalmanFilterForVE}{}\section{Kalman\+Filter\+For\+V\+E类 参考}
+\label{classKalmanFilterForVE}\index{Kalman\+Filter\+For\+VE@{Kalman\+Filter\+For\+VE}}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a483a5fbe53a03b1ac833276073c5c5e3}\label{classKalmanFilterForVE_a483a5fbe53a03b1ac833276073c5c5e3}} 
+{\bfseries Kalman\+Filter\+For\+VE} (double mass\+\_\+input, double period\+\_\+input)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a7e07280c92f48046446b5631704b635e}\label{classKalmanFilterForVE_a7e07280c92f48046446b5631704b635e}} 
+void {\bfseries Cal\+Stddev\+Xdot} (std\+::vector$<$ bool $>$ contactlist\+\_\+input, int contact\+\_\+num\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+lf\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+lr\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+rf\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+rr\+\_\+input)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a267337aec97d41f3c722aac5d14b09b4}\label{classKalmanFilterForVE_a267337aec97d41f3c722aac5d14b09b4}} 
+void {\bfseries Cal\+Fz\+Average} (std\+::vector$<$ bool $>$ contactlist\+\_\+input, int contact\+\_\+num\+\_\+input)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_abd2df23b17b1284474afad42cfa137eb}\label{classKalmanFilterForVE_abd2df23b17b1284474afad42cfa137eb}} 
+void {\bfseries Make\+MatrixF} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a7524faa6cd36f64edd3ff16d6da21851}\label{classKalmanFilterForVE_a7524faa6cd36f64edd3ff16d6da21851}} 
+void {\bfseries Make\+VectorU} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_af5a75eae96ecc2216c73391c6d1bc51d}\label{classKalmanFilterForVE_af5a75eae96ecc2216c73391c6d1bc51d}} 
+void {\bfseries State\+Predict} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_aac4cbc05791d48ce4db5c0792543b6ca}\label{classKalmanFilterForVE_aac4cbc05791d48ce4db5c0792543b6ca}} 
+void {\bfseries Cov\+Predict} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_aeba0220a16a77d7242fd46fdac46a12c}\label{classKalmanFilterForVE_aeba0220a16a77d7242fd46fdac46a12c}} 
+void {\bfseries Get\+Measurement\+Error} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_ab5f0573c67c441e4ab6601bc5b39a847}\label{classKalmanFilterForVE_ab5f0573c67c441e4ab6601bc5b39a847}} 
+void {\bfseries GetK} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_ae0236f9ddaf1b50238629b625c12a710}\label{classKalmanFilterForVE_ae0236f9ddaf1b50238629b625c12a710}} 
+void {\bfseries State\+Update} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a4ac37ed6256c1a50a466dbd7e77001b1}\label{classKalmanFilterForVE_a4ac37ed6256c1a50a466dbd7e77001b1}} 
+void {\bfseries Cov\+Update} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a22c13294c1e43ed52ff9a48ee1398243}\label{classKalmanFilterForVE_a22c13294c1e43ed52ff9a48ee1398243}} 
+void {\bfseries Init} (\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ v\+\_\+k\+\_\+1\+\_\+input, \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ f\+\_\+k\+\_\+input, \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ f\+\_\+k\+\_\+1\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ xdot\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+k\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+k\+\_\+1\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ a\+\_\+k\+\_\+1\+\_\+input)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_ac09058040d34c1dbe0832b377e9181d5}\label{classKalmanFilterForVE_ac09058040d34c1dbe0832b377e9181d5}} 
+void {\bfseries Ready} (std\+::vector$<$ bool $>$ contactlist\+\_\+input, int contact\+\_\+num\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+lf\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+lr\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+rf\+\_\+input, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ b\+\_\+xdot\+\_\+rr\+\_\+input)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a7c65734f15b3d548cc1dded4955a3dce}\label{classKalmanFilterForVE_a7c65734f15b3d548cc1dded4955a3dce}} 
+void {\bfseries Filter} ()
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a0cbaff2c7a4c8b5f8ab62e44c96c3275}\label{classKalmanFilterForVE_a0cbaff2c7a4c8b5f8ab62e44c96c3275}} 
+\hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$ double $>$ {\bfseries Result} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a13f36667fd13adc9df140afc721b2471}\label{classKalmanFilterForVE_a13f36667fd13adc9df140afc721b2471}} 
+double {\bfseries alpha\+\_\+1}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a940483cf6d541154c5a75766eeb3e4f9}\label{classKalmanFilterForVE_a940483cf6d541154c5a75766eeb3e4f9}} 
+double {\bfseries alpha\+\_\+2}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_ae5aee1d62ed0103ea0f14ae60cd149bb}\label{classKalmanFilterForVE_ae5aee1d62ed0103ea0f14ae60cd149bb}} 
+double {\bfseries std\+\_\+velocity\+\_\+contribution\+\_\+x}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_af4eb61437404079e177cfc65e2031efb}\label{classKalmanFilterForVE_af4eb61437404079e177cfc65e2031efb}} 
+double {\bfseries std\+\_\+velocity\+\_\+contribution\+\_\+y}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a1ca261dbf3a3ef0d6800e0226a3e4625}\label{classKalmanFilterForVE_a1ca261dbf3a3ef0d6800e0226a3e4625}} 
+double {\bfseries std\+\_\+velocity\+\_\+contribution\+\_\+z}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_acd7508d05dc989a70c0157bb5784d782}\label{classKalmanFilterForVE_acd7508d05dc989a70c0157bb5784d782}} 
+double {\bfseries Q\+\_\+pos\+\_\+x}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a33e297573da7d7ad4081a14bc7711239}\label{classKalmanFilterForVE_a33e297573da7d7ad4081a14bc7711239}} 
+double {\bfseries Q\+\_\+pos\+\_\+y}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_afbc45d59caf3fbdc3e5cb2f754014db4}\label{classKalmanFilterForVE_afbc45d59caf3fbdc3e5cb2f754014db4}} 
+double {\bfseries Q\+\_\+pos\+\_\+z}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a92ef545ae33155598cd27fb0d0337fab}\label{classKalmanFilterForVE_a92ef545ae33155598cd27fb0d0337fab}} 
+double {\bfseries mass}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a68abba388cb8e515b4aa4b91ee0841c9}\label{classKalmanFilterForVE_a68abba388cb8e515b4aa4b91ee0841c9}} 
+double {\bfseries period}
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a4f1ab6feac1bc9f017f94e907c8b3fad}\label{classKalmanFilterForVE_a4f1ab6feac1bc9f017f94e907c8b3fad}} 
+\hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$ double $>$ {\bfseries matrix\+\_\+F} = \hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$double$>$\+::Zero(6, 6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a8a34b544f3c79a2cae72c4897979c649}\label{classKalmanFilterForVE_a8a34b544f3c79a2cae72c4897979c649}} 
+\hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$ double $>$ {\bfseries vector\+\_\+u} = \hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$double$>$\+::Zero(6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a694bcd19e95a5933f4ca7fc4cf6c172d}\label{classKalmanFilterForVE_a694bcd19e95a5933f4ca7fc4cf6c172d}} 
+\hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$ double $>$ {\bfseries matrix\+\_\+Q} = \hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$double$>$\+::Zero(6, 6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_ad55439555a2f07da9d76346e99e5ae9f}\label{classKalmanFilterForVE_ad55439555a2f07da9d76346e99e5ae9f}} 
+\hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$ double $>$ {\bfseries matrix\+\_\+P} = \hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$double$>$\+::Zero(6, 6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a986368c804a29a23e091928591623187}\label{classKalmanFilterForVE_a986368c804a29a23e091928591623187}} 
+\hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$ double $>$ {\bfseries matrix\+\_\+\+P\+\_\+predict} = \hyperlink{cppTypes_8h_a7275f6cb9931f180383d67c9a0571cbd}{Mat6}$<$double$>$\+::Zero(6, 6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a35ed95b3b71547c976c85b8ef145637d}\label{classKalmanFilterForVE_a35ed95b3b71547c976c85b8ef145637d}} 
+\hyperlink{cppTypes_8h_ae4f3e528a1f070e79134fc99d26063be}{Mat3x6}$<$ double $>$ {\bfseries matrix\+\_\+H} = \hyperlink{cppTypes_8h_ae4f3e528a1f070e79134fc99d26063be}{Mat3x6}$<$double$>$\+::Zero(3, 6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a78256f0937c8f23210029f33046ff55c}\label{classKalmanFilterForVE_a78256f0937c8f23210029f33046ff55c}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries vector\+\_\+y} = \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$double$>$\+::Zero(3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_af18807184da4f5304c123ddab39d0098}\label{classKalmanFilterForVE_af18807184da4f5304c123ddab39d0098}} 
+\hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ {\bfseries matrix\+\_\+R} = \hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$double$>$\+::Zero(3, 3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a4577618b47007352e3c17d186f0e444d}\label{classKalmanFilterForVE_a4577618b47007352e3c17d186f0e444d}} 
+\hyperlink{cppTypes_8h_a5109dfa19eb815668354264e79302180}{Mat6x3}$<$ double $>$ {\bfseries matrix\+\_\+K} = \hyperlink{cppTypes_8h_a5109dfa19eb815668354264e79302180}{Mat6x3}$<$double$>$\+::Zero(6, 3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_ac1f7ba633b15334fa3231582989502ce}\label{classKalmanFilterForVE_ac1f7ba633b15334fa3231582989502ce}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries v\+\_\+k\+\_\+1} = \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$double$>$\+::Zero(3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_aecfb480b9cd0e7f126edbf359e9bacbe}\label{classKalmanFilterForVE_aecfb480b9cd0e7f126edbf359e9bacbe}} 
+\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ {\bfseries f\+\_\+k} = \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$double$>$\+::Zero(12)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a64b56ea68b798e52c17344d747b3aae3}\label{classKalmanFilterForVE_a64b56ea68b798e52c17344d747b3aae3}} 
+\hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$ double $>$ {\bfseries f\+\_\+k\+\_\+1} = \hyperlink{cppTypes_8h_adad69baca3c77d5f991be5d3c063fea7}{D\+Vec}$<$double$>$\+::Zero(12)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a1fbdc6d2e99e8305d46cb53ff78a6d35}\label{classKalmanFilterForVE_a1fbdc6d2e99e8305d46cb53ff78a6d35}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries p\+\_\+k\+\_\+1} = \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$double$>$\+::Zero(3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a12a727495efd690f29de29a28f741645}\label{classKalmanFilterForVE_a12a727495efd690f29de29a28f741645}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries p\+\_\+k} = \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$double$>$\+::Zero(3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a54ab47a8ad5673382cc87399b746926b}\label{classKalmanFilterForVE_a54ab47a8ad5673382cc87399b746926b}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries a\+\_\+k\+\_\+1} = \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$double$>$\+::Zero(3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a6735a26dbd71a26f73538480ba758338}\label{classKalmanFilterForVE_a6735a26dbd71a26f73538480ba758338}} 
+\hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$ double $>$ {\bfseries x} = \hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$double$>$\+::Zero(6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a244eecbced9acafdc07e22bb6c377522}\label{classKalmanFilterForVE_a244eecbced9acafdc07e22bb6c377522}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries xdot} = \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$double$>$\+::Zero(3)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a669a227f55d8991908411270fa5ab8fa}\label{classKalmanFilterForVE_a669a227f55d8991908411270fa5ab8fa}} 
+\hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$ double $>$ {\bfseries x\+\_\+predict} = \hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$double$>$\+::Zero(6)
+\item 
+\mbox{\Hypertarget{classKalmanFilterForVE_a1f8d20e72ead480aac5c52f39c7acc13}\label{classKalmanFilterForVE_a1f8d20e72ead480aac5c52f39c7acc13}} 
+double {\bfseries f\+\_\+z\+\_\+average}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/model/Kalman\+Filter\+For\+V\+E.\+hpp\item 
+controller/model/Kalman\+Filter\+For\+V\+E.\+cpp\end{DoxyCompactItemize}

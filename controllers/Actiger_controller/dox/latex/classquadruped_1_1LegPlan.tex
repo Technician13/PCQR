@@ -1,0 +1,47 @@
+\hypertarget{classquadruped_1_1LegPlan}{}\section{quadruped\+:\+:Leg\+Plan类 参考}
+\label{classquadruped_1_1LegPlan}\index{quadruped\+::\+Leg\+Plan@{quadruped\+::\+Leg\+Plan}}
+
+
+Actiger腿部规划结果类  
+
+
+
+
+{\ttfamily \#include $<$leg\+Plan.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LegPlan_a9ec36b11571572979408c6c5d97c13c5}\label{classquadruped_1_1LegPlan_a9ec36b11571572979408c6c5d97c13c5}} 
+\hyperlink{classquadruped_1_1LegPlan_a9ec36b11571572979408c6c5d97c13c5}{Leg\+Plan} (void)
+\begin{DoxyCompactList}\small\item\em Leg\+Plan的构造函数，完成所有对象成员的内存分配及数据成员的初值装载 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegPlan_a12f579eed696c2bec5c5e647835ba7ca}\label{classquadruped_1_1LegPlan_a12f579eed696c2bec5c5e647835ba7ca}} 
+virtual \hyperlink{classquadruped_1_1LegPlan_a12f579eed696c2bec5c5e647835ba7ca}{$\sim$\+Leg\+Plan} (void)
+\begin{DoxyCompactList}\small\item\em Leg\+Plan类的析构函数，释放申请的内存 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1LegPlan_a5f79241f88ccfbfe3ba5c6550006bdde}\label{classquadruped_1_1LegPlan_a5f79241f88ccfbfe3ba5c6550006bdde}} 
+uint32\+\_\+t \hyperlink{classquadruped_1_1LegPlan_a5f79241f88ccfbfe3ba5c6550006bdde}{horizon}
+\begin{DoxyCompactList}\small\item\em 所有环形队列成员各自的容量 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegPlan_a63a8d5892caa225073ab52280664b4c0}\label{classquadruped_1_1LegPlan_a63a8d5892caa225073ab52280664b4c0}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{classquadruped_1_1LegPlan_a63a8d5892caa225073ab52280664b4c0}{fr\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 期望的地面反作用力\mbox{[}G\+RF\mbox{]} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegPlan_a279f5dec717a95dca5db78ef5649a2e8}\label{classquadruped_1_1LegPlan_a279f5dec717a95dca5db78ef5649a2e8}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1LegPlan_a279f5dec717a95dca5db78ef5649a2e8}{p\+Foot\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 装载期望的机体坐标系下的足端位置的环形队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegPlan_a558521fd909524c327778ef5bb493113}\label{classquadruped_1_1LegPlan_a558521fd909524c327778ef5bb493113}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1LegPlan_a558521fd909524c327778ef5bb493113}{v\+Foot\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 装载期望的机体坐标系下的足端速度的环形队列 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1LegPlan_a4f2ea09a5ce3d6fd46dad767f38b275e}\label{classquadruped_1_1LegPlan_a4f2ea09a5ce3d6fd46dad767f38b275e}} 
+\hyperlink{classquadruped_1_1Queue}{Queue} $\ast$ \hyperlink{classquadruped_1_1LegPlan_a4f2ea09a5ce3d6fd46dad767f38b275e}{a\+Foot\+\_\+des}
+\begin{DoxyCompactList}\small\item\em 装载期望的机体坐标系下的足端加速度的环形队列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger腿部规划结果类 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/motion\+Plan/\hyperlink{legPlan_8hpp}{leg\+Plan.\+hpp}\item 
+controller/motion\+Plan/\hyperlink{legPlan_8cpp}{leg\+Plan.\+cpp}\end{DoxyCompactItemize}

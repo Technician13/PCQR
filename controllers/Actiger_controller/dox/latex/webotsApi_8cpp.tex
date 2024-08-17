@@ -1,0 +1,543 @@
+\hypertarget{webotsApi_8cpp}{}\section{webots/webots\+Api.cpp 文件参考}
+\label{webotsApi_8cpp}\index{webots/webots\+Api.\+cpp@{webots/webots\+Api.\+cpp}}
+
+
+webots仿真环境中的相关函数封装  
+
+
+{\ttfamily \#include \char`\"{}webots\+Api.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a7ce0a14b6e7779fbb2d9a05333792c41}\label{webotsApi_8cpp_a7ce0a14b6e7779fbb2d9a05333792c41}} 
+void \hyperlink{webotsApi_8cpp_a7ce0a14b6e7779fbb2d9a05333792c41}{Init} (void)
+\begin{DoxyCompactList}\small\item\em 初始化函数，使能webots中的传感器和电机 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ab8626c336624cdf5f774eff3e3e7582d}\label{webotsApi_8cpp_ab8626c336624cdf5f774eff3e3e7582d}} 
+void \hyperlink{webotsApi_8cpp_ab8626c336624cdf5f774eff3e3e7582d}{Webots\+Api} (void)
+\begin{DoxyCompactList}\small\item\em 空函数 \end{DoxyCompactList}\item 
+\hyperlink{structimu__t}{imu\+\_\+t} \hyperlink{webotsApi_8cpp_a06d7256d8cdc7873558030640ab343d5}{Get\+Robot\+Euler} (void)
+\begin{DoxyCompactList}\small\item\em 调用webots接口函数获取机器人角度和角速度 \end{DoxyCompactList}\item 
+void \hyperlink{webotsApi_8cpp_ad527a935204b4fddf2925ba589cb20ff}{Get\+Robot\+Body\+Vel} (\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \&p\+\_\+body\+\_\+pos, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \&p\+\_\+body\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em 调用webots接口函数获取机器人位置和速度 \end{DoxyCompactList}\item 
+\hyperlink{structrobotLegMsg__t}{robot\+Leg\+Msg\+\_\+t} \hyperlink{webotsApi_8cpp_a8fa44401a3c4e7cda0ad641a579d8393}{Get\+Robot\+Joint\+Msg} (void)
+\begin{DoxyCompactList}\small\item\em 获取机器人整体腿部状态信息 \end{DoxyCompactList}\item 
+void \hyperlink{webotsApi_8cpp_a6769a0f89e0d9e03736d564c435f91ea}{Set\+Robot\+Joint\+Torque} (\hyperlink{structrobotLegTorque__t}{robot\+Leg\+Torque\+\_\+t} leg\+Torque)
+\begin{DoxyCompactList}\small\item\em 输出扭矩 \end{DoxyCompactList}\item 
+bool \hyperlink{webotsApi_8cpp_a0c0edbb4ea238cbbf3fa13697277cfc3}{Get\+Time\+Flag} (void)
+\begin{DoxyCompactList}\small\item\em Motion\+Plan以及\+M\+P\+C标志位计数以及触发 \end{DoxyCompactList}\item 
+bool \hyperlink{webotsApi_8cpp_aabc0c6adc9bdff48b83d934b42716853}{Get\+Time\+Flag\+Mpc} (void)
+\begin{DoxyCompactList}\small\item\em 获取\+M\+P\+C标志位状态 \end{DoxyCompactList}\item 
+bool \hyperlink{webotsApi_8cpp_ac64462ca349c1bd289ac91d746fd06c6}{Get\+Time\+Flag\+Motion\+Plan} (void)
+\begin{DoxyCompactList}\small\item\em 获取\+Motion\+Plan标志位状态 \end{DoxyCompactList}\item 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \hyperlink{webotsApi_8cpp_a8d7b88252a9e6992574e9e82be70758b}{Get\+Obstacle\+Pos} (std\+::string p\+\_\+obstacle\+Name)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的障碍的位置 \end{DoxyCompactList}\item 
+double \hyperlink{webotsApi_8cpp_ab17d03521926370d73fc48cd3c5aea4c}{Get\+Slope\+First\+Edge} (void)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的坡面障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 \end{DoxyCompactList}\item 
+double \hyperlink{webotsApi_8cpp_a59a7b37362e78ab36f06fe64fece2e62}{Get\+Stage\+First\+Edge} (void)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的平台障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 \end{DoxyCompactList}\item 
+double \hyperlink{webotsApi_8cpp_a6d2d02d75884c7f358855704c769830f}{Get\+Sill\+First\+Edge} (void)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的门槛障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 \end{DoxyCompactList}\item 
+double \hyperlink{webotsApi_8cpp_acf3faf8fe1a9da8d619f7a99246351b8}{Get\+Calandria\+First\+Edge} (void)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的排管障碍中第一根排管轴线在webots中\+Z坐标轴上的位置 \end{DoxyCompactList}\item 
+double \hyperlink{webotsApi_8cpp_a36af8c3dbed3911251d579037b0356bd}{Get\+Stairs\+First\+Edge} (void)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的阶梯障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 \end{DoxyCompactList}\item 
+double \hyperlink{webotsApi_8cpp_a5288c95395520fd26fd93485f0ce6809}{Get\+Seesaw\+First\+Edge} (void)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的跷跷板障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 \end{DoxyCompactList}\item 
+double \hyperlink{webotsApi_8cpp_a2f13e6322f4bba05ab6f4922c76db60a}{Get\+Bridge\+First\+Edge} (void)
+\begin{DoxyCompactList}\small\item\em 获取webots仿真环境中的双木桥障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_acdf0e0d6c98f158acd6adeaaa6a612d8}\label{webotsApi_8cpp_acdf0e0d6c98f158acd6adeaaa6a612d8}} 
+void \hyperlink{webotsApi_8cpp_acdf0e0d6c98f158acd6adeaaa6a612d8}{Body\+Traj\+Set} (void)
+\begin{DoxyCompactList}\small\item\em 机体轨迹可视化设置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a70ebb0a8f03fcb40813f74ac27ceef05}\label{webotsApi_8cpp_a70ebb0a8f03fcb40813f74ac27ceef05}} 
+void \hyperlink{webotsApi_8cpp_a70ebb0a8f03fcb40813f74ac27ceef05}{L\+F\+Traj\+Set} (void)
+\begin{DoxyCompactList}\small\item\em 左前腿足端轨迹可视化设置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a29f5d75fa2129a4ce98577542e73a0ba}\label{webotsApi_8cpp_a29f5d75fa2129a4ce98577542e73a0ba}} 
+void \hyperlink{webotsApi_8cpp_a29f5d75fa2129a4ce98577542e73a0ba}{L\+R\+Traj\+Set} (void)
+\begin{DoxyCompactList}\small\item\em 左后腿足端轨迹可视化设置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a11d99f8c309efa01b26263b119c2a9aa}\label{webotsApi_8cpp_a11d99f8c309efa01b26263b119c2a9aa}} 
+void \hyperlink{webotsApi_8cpp_a11d99f8c309efa01b26263b119c2a9aa}{R\+F\+Traj\+Set} (void)
+\begin{DoxyCompactList}\small\item\em 右前腿足端轨迹可视化设置 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ab0c2eecbe474c39951871d82fb4c15c9}\label{webotsApi_8cpp_ab0c2eecbe474c39951871d82fb4c15c9}} 
+void \hyperlink{webotsApi_8cpp_ab0c2eecbe474c39951871d82fb4c15c9}{R\+R\+Traj\+Set} (void)
+\begin{DoxyCompactList}\small\item\em 右后腿足端轨迹可视化设置 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ad23593f5aaf18ffa315b3ba7bc626315}\label{webotsApi_8cpp_ad23593f5aaf18ffa315b3ba7bc626315}} 
+uint8\+\_\+t \hyperlink{webotsApi_8cpp_ad23593f5aaf18ffa315b3ba7bc626315}{mpc\+Time\+Flag} = 0
+\begin{DoxyCompactList}\small\item\em 判断是否运行\+Actiger模型预测控制器的标志位 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a0455dc8972274c769df393e9c6b4ca16}\label{webotsApi_8cpp_a0455dc8972274c769df393e9c6b4ca16}} 
+uint8\+\_\+t \hyperlink{webotsApi_8cpp_a0455dc8972274c769df393e9c6b4ca16}{motion\+Plan\+Time\+Flag} = 0
+\begin{DoxyCompactList}\small\item\em 判断是否运行\+Actiger规划器的标志位 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a8b679a53ebd2d8ff75ff74fbbc52f92c}\label{webotsApi_8cpp_a8b679a53ebd2d8ff75ff74fbbc52f92c}} 
+uint8\+\_\+t \hyperlink{webotsApi_8cpp_a8b679a53ebd2d8ff75ff74fbbc52f92c}{mpc\+\_\+cnt} = \hyperlink{commonFunction_8hpp_aba86b0c0d0f5628498506ee46b74536b}{M\+P\+C\+\_\+\+P\+E\+R\+I\+OD}
+\begin{DoxyCompactList}\small\item\em Actiger模型预测控制器的运行周期 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a8353b92b1ea448715d440d836958811e}\label{webotsApi_8cpp_a8353b92b1ea448715d440d836958811e}} 
+std\+::string {\bfseries obstacle} \mbox{[}7\mbox{]} = \{\char`\"{}slope\char`\"{}, \char`\"{}stage\char`\"{}, \char`\"{}sill\char`\"{}, \char`\"{}calandria\char`\"{}, \char`\"{}stairs\char`\"{}, \char`\"{}seesaw\+\_\+support\char`\"{}, \char`\"{}bridge\char`\"{}\}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ae54b9fb4e7dc3febf0d0a5c09d1f5067}\label{webotsApi_8cpp_ae54b9fb4e7dc3febf0d0a5c09d1f5067}} 
+Supervisor $\ast$ {\bfseries supervisor} = new Supervisor()
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aebe00cd2e96ac842d9c440485aa675e4}\label{webotsApi_8cpp_aebe00cd2e96ac842d9c440485aa675e4}} 
+Node $\ast$ {\bfseries Root\+\_\+node} = supervisor-\/$>$get\+Root()
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a1a208fa057881679ebe4d3589745bc35}\label{webotsApi_8cpp_a1a208fa057881679ebe4d3589745bc35}} 
+Node $\ast$ {\bfseries Robot\+\_\+node} = supervisor-\/$>$get\+From\+Def(\char`\"{}quadruped\char`\"{})
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aad668f387b54a81a73909f01b2b97ec2}\label{webotsApi_8cpp_aad668f387b54a81a73909f01b2b97ec2}} 
+Field $\ast$ {\bfseries root\+Children\+Field} = Root\+\_\+node-\/$>$get\+Field(\char`\"{}children\char`\"{})
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aae800af8591b7570601f4c38de5d77f7}\label{webotsApi_8cpp_aae800af8591b7570601f4c38de5d77f7}} 
+Node $\ast$ {\bfseries existing\+Body\+Traj}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a590ba65c079e46846c8488413cbbadea}\label{webotsApi_8cpp_a590ba65c079e46846c8488413cbbadea}} 
+Node $\ast$ {\bfseries body\+Traj\+Line\+Set\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a5b512cd5a0aae83505e2d662411daead}\label{webotsApi_8cpp_a5b512cd5a0aae83505e2d662411daead}} 
+Node $\ast$ {\bfseries body\+Traj\+Coordinates\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a52b37473c5026b3b74f0e07252de1d58}\label{webotsApi_8cpp_a52b37473c5026b3b74f0e07252de1d58}} 
+Field $\ast$ {\bfseries body\+Traj\+Point\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a3edbbe11ebe57bd34dcdd74c6582b487}\label{webotsApi_8cpp_a3edbbe11ebe57bd34dcdd74c6582b487}} 
+Field $\ast$ {\bfseries body\+Traj\+Coord\+Index\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a2789882dbfafd7e97e57407e3b3d1d09}\label{webotsApi_8cpp_a2789882dbfafd7e97e57407e3b3d1d09}} 
+int {\bfseries body\+Traj\+Index}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ad09bc94978fa7006529deef127ecfd30}\label{webotsApi_8cpp_ad09bc94978fa7006529deef127ecfd30}} 
+bool {\bfseries body\+Traj\+First\+Step}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ab2bf41c7b6b210fae1ed1b38d9ff5120}\label{webotsApi_8cpp_ab2bf41c7b6b210fae1ed1b38d9ff5120}} 
+webots\+::\+Node $\ast$ {\bfseries existing\+L\+F\+Traj}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a90c2e9fb3559b93390deaeb38d8bfc90}\label{webotsApi_8cpp_a90c2e9fb3559b93390deaeb38d8bfc90}} 
+webots\+::\+Node $\ast$ {\bfseries lf\+Traj\+Line\+Set\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aa4956558158c7d0663f29fe15a1a2a0f}\label{webotsApi_8cpp_aa4956558158c7d0663f29fe15a1a2a0f}} 
+webots\+::\+Node $\ast$ {\bfseries lf\+Traj\+Coordinates\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a7b8f646f4c97453bcdb3bb276dd98ecf}\label{webotsApi_8cpp_a7b8f646f4c97453bcdb3bb276dd98ecf}} 
+webots\+::\+Field $\ast$ {\bfseries lf\+Traj\+Point\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aa56fbc8e77010e4f95514bbf1e0447db}\label{webotsApi_8cpp_aa56fbc8e77010e4f95514bbf1e0447db}} 
+webots\+::\+Field $\ast$ {\bfseries lf\+Traj\+Coord\+Index\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a0b3394dc34fc4823fda7a157d7bfbffb}\label{webotsApi_8cpp_a0b3394dc34fc4823fda7a157d7bfbffb}} 
+int {\bfseries lf\+Traj\+Index}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a679ac1199551ae31d4cfbdd086e1b04f}\label{webotsApi_8cpp_a679ac1199551ae31d4cfbdd086e1b04f}} 
+bool {\bfseries lf\+Traj\+First\+Step}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a1d1880f1a7438bd153db23d0ab7d5ef3}\label{webotsApi_8cpp_a1d1880f1a7438bd153db23d0ab7d5ef3}} 
+webots\+::\+Node $\ast$ {\bfseries existing\+L\+R\+Traj}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a950f7a828cd90b6ec2b70fdb795b08f3}\label{webotsApi_8cpp_a950f7a828cd90b6ec2b70fdb795b08f3}} 
+webots\+::\+Node $\ast$ {\bfseries lr\+Traj\+Line\+Set\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a496c0d3d60a8fa18fade40a7614711d3}\label{webotsApi_8cpp_a496c0d3d60a8fa18fade40a7614711d3}} 
+webots\+::\+Node $\ast$ {\bfseries lr\+Traj\+Coordinates\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a2bfa313c38a64ff5bbe624b3510d731f}\label{webotsApi_8cpp_a2bfa313c38a64ff5bbe624b3510d731f}} 
+webots\+::\+Field $\ast$ {\bfseries lr\+Traj\+Point\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a045d81369cc1f1340816644453d3b2df}\label{webotsApi_8cpp_a045d81369cc1f1340816644453d3b2df}} 
+webots\+::\+Field $\ast$ {\bfseries lr\+Traj\+Coord\+Index\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a07b159b25fa3cde81be53d64e21bcbfc}\label{webotsApi_8cpp_a07b159b25fa3cde81be53d64e21bcbfc}} 
+int {\bfseries lr\+Traj\+Index}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_adac571e28a0e56096c7943c09a55560c}\label{webotsApi_8cpp_adac571e28a0e56096c7943c09a55560c}} 
+bool {\bfseries lr\+Traj\+First\+Step}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a343c335931747a34687743cfd1b5018d}\label{webotsApi_8cpp_a343c335931747a34687743cfd1b5018d}} 
+webots\+::\+Node $\ast$ {\bfseries existing\+R\+F\+Traj}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ab20ff7b37daf167e66df8739e9922968}\label{webotsApi_8cpp_ab20ff7b37daf167e66df8739e9922968}} 
+webots\+::\+Node $\ast$ {\bfseries rf\+Traj\+Line\+Set\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ac02788ce4b82a1275a1cd0091224aa72}\label{webotsApi_8cpp_ac02788ce4b82a1275a1cd0091224aa72}} 
+webots\+::\+Node $\ast$ {\bfseries rf\+Traj\+Coordinates\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aab2188742a274b130db38a3e58ad09c9}\label{webotsApi_8cpp_aab2188742a274b130db38a3e58ad09c9}} 
+webots\+::\+Field $\ast$ {\bfseries rf\+Traj\+Point\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aadd2ce33326c187cfc6d7837aa08667e}\label{webotsApi_8cpp_aadd2ce33326c187cfc6d7837aa08667e}} 
+webots\+::\+Field $\ast$ {\bfseries rf\+Traj\+Coord\+Index\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a6a57d6b9d43a2bc8e82f7a6e7206d0c7}\label{webotsApi_8cpp_a6a57d6b9d43a2bc8e82f7a6e7206d0c7}} 
+int {\bfseries rf\+Traj\+Index}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ab44c4286bd70a83eb90605082c66314c}\label{webotsApi_8cpp_ab44c4286bd70a83eb90605082c66314c}} 
+bool {\bfseries rf\+Traj\+First\+Step}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a77615a783faf51b65f85404d2a96b328}\label{webotsApi_8cpp_a77615a783faf51b65f85404d2a96b328}} 
+webots\+::\+Node $\ast$ {\bfseries existing\+R\+R\+Traj}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a4ce7587dbd97b70ce05601a489b84327}\label{webotsApi_8cpp_a4ce7587dbd97b70ce05601a489b84327}} 
+webots\+::\+Node $\ast$ {\bfseries rr\+Traj\+Line\+Set\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aaf54fa29dda0c8db33bd0d71dd010e41}\label{webotsApi_8cpp_aaf54fa29dda0c8db33bd0d71dd010e41}} 
+webots\+::\+Node $\ast$ {\bfseries rr\+Traj\+Coordinates\+Node}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a8c15199174c1d088322a4656df0b15c0}\label{webotsApi_8cpp_a8c15199174c1d088322a4656df0b15c0}} 
+webots\+::\+Field $\ast$ {\bfseries rr\+Traj\+Point\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a8b9fe0f875ef9c5b4426de1996cfe691}\label{webotsApi_8cpp_a8b9fe0f875ef9c5b4426de1996cfe691}} 
+webots\+::\+Field $\ast$ {\bfseries rr\+Traj\+Coord\+Index\+Field}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aa287742aba19d6c5b6c97f59bf9a4cdc}\label{webotsApi_8cpp_aa287742aba19d6c5b6c97f59bf9a4cdc}} 
+int {\bfseries rr\+Traj\+Index}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ac44c75a9fb2d1f2f0f9044fad4d11411}\label{webotsApi_8cpp_ac44c75a9fb2d1f2f0f9044fad4d11411}} 
+bool {\bfseries rr\+Traj\+First\+Step}
+\item 
+\mbox{\Hypertarget{webotsApi_8cpp_ad640b4ccc30860c59f6e1c86a70e0250}\label{webotsApi_8cpp_ad640b4ccc30860c59f6e1c86a70e0250}} 
+std\+::string \hyperlink{webotsApi_8cpp_ad640b4ccc30860c59f6e1c86a70e0250}{sensor\+\_\+lf} \mbox{[}4\mbox{]} = \{\char`\"{}touch\+\_\+4\char`\"{}, \char`\"{}L\+F\+\_\+pos\+\_\+1\char`\"{}, \char`\"{}L\+F\+\_\+pos\+\_\+2\char`\"{}, \char`\"{}L\+F\+\_\+pos\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 左前腿传感器集合：\+L\+F足端触地传感器 $\vert$ L\+F肩关节角度传感器 $\vert$ L\+F髋关节角度传感器 $\vert$ L\+F膝关节角度传感器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_aac297a84f8452e940adb49323bea0340}\label{webotsApi_8cpp_aac297a84f8452e940adb49323bea0340}} 
+std\+::string \hyperlink{webotsApi_8cpp_aac297a84f8452e940adb49323bea0340}{sensor\+\_\+lr} \mbox{[}4\mbox{]} = \{\char`\"{}touch\+\_\+3\char`\"{}, \char`\"{}L\+R\+\_\+pos\+\_\+1\char`\"{}, \char`\"{}L\+R\+\_\+pos\+\_\+2\char`\"{}, \char`\"{}L\+R\+\_\+pos\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 左后腿传感器集合：\+L\+R足端触地传感器 $\vert$ L\+R肩关节角度传感器 $\vert$ L\+R髋关节角度传感器 $\vert$ L\+R膝关节角度传感器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_acd8158f147f2d504009939e5a8c14c40}\label{webotsApi_8cpp_acd8158f147f2d504009939e5a8c14c40}} 
+std\+::string \hyperlink{webotsApi_8cpp_acd8158f147f2d504009939e5a8c14c40}{sensor\+\_\+rf} \mbox{[}4\mbox{]} = \{\char`\"{}touch\+\_\+2\char`\"{}, \char`\"{}R\+F\+\_\+pos\+\_\+1\char`\"{}, \char`\"{}R\+F\+\_\+pos\+\_\+2\char`\"{}, \char`\"{}R\+F\+\_\+pos\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 右前腿传感器集合：\+R\+F足端触地传感器 $\vert$ R\+F肩关节角度传感器 $\vert$ R\+F髋关节角度传感器 $\vert$ R\+F膝关节角度传感器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a3a16b14edb84e7cf31244ed93fbc7759}\label{webotsApi_8cpp_a3a16b14edb84e7cf31244ed93fbc7759}} 
+std\+::string \hyperlink{webotsApi_8cpp_a3a16b14edb84e7cf31244ed93fbc7759}{sensor\+\_\+rr} \mbox{[}4\mbox{]} = \{\char`\"{}touch\+\_\+1\char`\"{}, \char`\"{}R\+R\+\_\+pos\+\_\+1\char`\"{}, \char`\"{}R\+R\+\_\+pos\+\_\+2\char`\"{}, \char`\"{}R\+R\+\_\+pos\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 右后腿传感器集合：\+R\+R足端触地传感器 $\vert$ R\+R肩关节角度传感器 $\vert$ R\+R髋关节角度传感器 $\vert$ R\+R膝关节角度传感器 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a2b7b25489f412fd20f0586dda0a69aae}\label{webotsApi_8cpp_a2b7b25489f412fd20f0586dda0a69aae}} 
+std\+::string \hyperlink{webotsApi_8cpp_a2b7b25489f412fd20f0586dda0a69aae}{mototr\+\_\+lf} \mbox{[}3\mbox{]} = \{\char`\"{}L\+F\+\_\+motor\+\_\+1\char`\"{}, \char`\"{}L\+F\+\_\+motor\+\_\+2\char`\"{}, \char`\"{}L\+F\+\_\+motor\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 左前腿电机集合：\+L\+F肩关节电机 $\vert$ L\+F髋关节电机 $\vert$ L\+F膝关节电机 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a10764c57a6ca17e7746b3e3f3885ae82}\label{webotsApi_8cpp_a10764c57a6ca17e7746b3e3f3885ae82}} 
+std\+::string \hyperlink{webotsApi_8cpp_a10764c57a6ca17e7746b3e3f3885ae82}{mototr\+\_\+lr} \mbox{[}3\mbox{]} = \{\char`\"{}L\+R\+\_\+motor\+\_\+1\char`\"{}, \char`\"{}L\+R\+\_\+motor\+\_\+2\char`\"{}, \char`\"{}L\+R\+\_\+motor\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 左后腿电机集合：\+L\+R肩关节电机 $\vert$ L\+R髋关节电机 $\vert$ L\+R膝关节电机 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a0440ae05be25484e04590cc63d023c2a}\label{webotsApi_8cpp_a0440ae05be25484e04590cc63d023c2a}} 
+std\+::string \hyperlink{webotsApi_8cpp_a0440ae05be25484e04590cc63d023c2a}{mototr\+\_\+rf} \mbox{[}3\mbox{]} = \{\char`\"{}R\+F\+\_\+motor\+\_\+1\char`\"{}, \char`\"{}R\+F\+\_\+motor\+\_\+2\char`\"{}, \char`\"{}R\+F\+\_\+motor\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 右前腿电机集合：\+R\+F肩关节电机 $\vert$ R\+F髋关节电机 $\vert$ R\+F膝关节电机 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{webotsApi_8cpp_a2d563935f49ffcc4b8fe85fe28d98492}\label{webotsApi_8cpp_a2d563935f49ffcc4b8fe85fe28d98492}} 
+std\+::string \hyperlink{webotsApi_8cpp_a2d563935f49ffcc4b8fe85fe28d98492}{mototr\+\_\+rr} \mbox{[}3\mbox{]} = \{\char`\"{}R\+R\+\_\+motor\+\_\+1\char`\"{}, \char`\"{}R\+R\+\_\+motor\+\_\+2\char`\"{}, \char`\"{}R\+R\+\_\+motor\+\_\+3\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em 右后腿电机集合：\+R\+R肩关节电机 $\vert$ R\+R髋关节电机 $\vert$ R\+R膝关节电机 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+webots仿真环境中的相关函数封装 
+
+\begin{DoxyAuthor}{作者}
+Bin \& Tech13 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2021-\/08-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2021 Action 
+\end{DoxyCopyright}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{webotsApi_8cpp_a2f13e6322f4bba05ab6f4922c76db60a}\label{webotsApi_8cpp_a2f13e6322f4bba05ab6f4922c76db60a}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Bridge\+First\+Edge@{Get\+Bridge\+First\+Edge}}
+\index{Get\+Bridge\+First\+Edge@{Get\+Bridge\+First\+Edge}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Bridge\+First\+Edge()}{GetBridgeFirstEdge()}}
+{\footnotesize\ttfamily double Get\+Bridge\+First\+Edge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的双木桥障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 
+
+\begin{DoxyReturn}{返回}
+double 
+\end{DoxyReturn}
+
+
+参考 Get\+Obstacle\+Pos().
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{webotsApi_8cpp_acf3faf8fe1a9da8d619f7a99246351b8}\label{webotsApi_8cpp_acf3faf8fe1a9da8d619f7a99246351b8}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Calandria\+First\+Edge@{Get\+Calandria\+First\+Edge}}
+\index{Get\+Calandria\+First\+Edge@{Get\+Calandria\+First\+Edge}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Calandria\+First\+Edge()}{GetCalandriaFirstEdge()}}
+{\footnotesize\ttfamily double Get\+Calandria\+First\+Edge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的排管障碍中第一根排管轴线在webots中\+Z坐标轴上的位置 
+
+\begin{DoxyReturn}{返回}
+double 
+\end{DoxyReturn}
+
+
+参考 Get\+Obstacle\+Pos().
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a8d7b88252a9e6992574e9e82be70758b}\label{webotsApi_8cpp_a8d7b88252a9e6992574e9e82be70758b}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Obstacle\+Pos@{Get\+Obstacle\+Pos}}
+\index{Get\+Obstacle\+Pos@{Get\+Obstacle\+Pos}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Obstacle\+Pos()}{GetObstaclePos()}}
+{\footnotesize\ttfamily \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$double$>$ Get\+Obstacle\+Pos (\begin{DoxyParamCaption}\item[{std\+::string}]{p\+\_\+obstacle\+Name }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的障碍的位置 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+obstacle\+Name} & webots环境中待获取位置的障碍名称 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Vec3$<$double$>$ 
+\end{DoxyReturn}
+
+
+参考自 Get\+Bridge\+First\+Edge(), Get\+Calandria\+First\+Edge(), Get\+Seesaw\+First\+Edge(), Get\+Sill\+First\+Edge(), Get\+Slope\+First\+Edge(), Get\+Stage\+First\+Edge() , 以及 Get\+Stairs\+First\+Edge().
+
+\mbox{\Hypertarget{webotsApi_8cpp_ad527a935204b4fddf2925ba589cb20ff}\label{webotsApi_8cpp_ad527a935204b4fddf2925ba589cb20ff}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Robot\+Body\+Vel@{Get\+Robot\+Body\+Vel}}
+\index{Get\+Robot\+Body\+Vel@{Get\+Robot\+Body\+Vel}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Robot\+Body\+Vel()}{GetRobotBodyVel()}}
+{\footnotesize\ttfamily void Get\+Robot\+Body\+Vel (\begin{DoxyParamCaption}\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \&}]{p\+\_\+body\+\_\+pos,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ \&}]{p\+\_\+body\+\_\+vel }\end{DoxyParamCaption})}
+
+
+
+调用webots接口函数获取机器人位置和速度 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+body\+\_\+pos} & 存储\+Actiger在全局坐标系下的位置的向量，按引用传递 \\
+\hline
+{\em p\+\_\+body\+\_\+vel} & 存储\+Actiger在全局坐标系下的速度的向量，按引用传递 \\
+\hline
+\end{DoxyParams}
+
+
+参考自 quadruped\+::\+Robot\+Model\+::\+Updata\+Model().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a06d7256d8cdc7873558030640ab343d5}\label{webotsApi_8cpp_a06d7256d8cdc7873558030640ab343d5}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Robot\+Euler@{Get\+Robot\+Euler}}
+\index{Get\+Robot\+Euler@{Get\+Robot\+Euler}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Robot\+Euler()}{GetRobotEuler()}}
+{\footnotesize\ttfamily \hyperlink{structimu__t}{imu\+\_\+t} Get\+Robot\+Euler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+调用webots接口函数获取机器人角度和角速度 
+
+\begin{DoxyReturn}{返回}
+\hyperlink{structimu__t}{imu\+\_\+t} 
+\end{DoxyReturn}
+
+
+参考自 quadruped\+::\+Body\+State\+Estimate\+::$\sim$\+Body\+State\+Estimate().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a8fa44401a3c4e7cda0ad641a579d8393}\label{webotsApi_8cpp_a8fa44401a3c4e7cda0ad641a579d8393}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Robot\+Joint\+Msg@{Get\+Robot\+Joint\+Msg}}
+\index{Get\+Robot\+Joint\+Msg@{Get\+Robot\+Joint\+Msg}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Robot\+Joint\+Msg()}{GetRobotJointMsg()}}
+{\footnotesize\ttfamily \hyperlink{structrobotLegMsg__t}{robot\+Leg\+Msg\+\_\+t} Get\+Robot\+Joint\+Msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取机器人整体腿部状态信息 
+
+\begin{DoxyReturn}{返回}
+\hyperlink{structrobotLegMsg__t}{robot\+Leg\+Msg\+\_\+t} 
+\end{DoxyReturn}
+
+
+参考自 quadruped\+::\+Robot\+Model\+::\+Updata\+Model().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a5288c95395520fd26fd93485f0ce6809}\label{webotsApi_8cpp_a5288c95395520fd26fd93485f0ce6809}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Seesaw\+First\+Edge@{Get\+Seesaw\+First\+Edge}}
+\index{Get\+Seesaw\+First\+Edge@{Get\+Seesaw\+First\+Edge}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Seesaw\+First\+Edge()}{GetSeesawFirstEdge()}}
+{\footnotesize\ttfamily double Get\+Seesaw\+First\+Edge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的跷跷板障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 
+
+\begin{DoxyReturn}{返回}
+double 
+\end{DoxyReturn}
+
+
+参考 Get\+Obstacle\+Pos().
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a6d2d02d75884c7f358855704c769830f}\label{webotsApi_8cpp_a6d2d02d75884c7f358855704c769830f}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Sill\+First\+Edge@{Get\+Sill\+First\+Edge}}
+\index{Get\+Sill\+First\+Edge@{Get\+Sill\+First\+Edge}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Sill\+First\+Edge()}{GetSillFirstEdge()}}
+{\footnotesize\ttfamily double Get\+Sill\+First\+Edge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的门槛障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 
+
+\begin{DoxyReturn}{返回}
+double 
+\end{DoxyReturn}
+
+
+参考 Get\+Obstacle\+Pos().
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{webotsApi_8cpp_ab17d03521926370d73fc48cd3c5aea4c}\label{webotsApi_8cpp_ab17d03521926370d73fc48cd3c5aea4c}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Slope\+First\+Edge@{Get\+Slope\+First\+Edge}}
+\index{Get\+Slope\+First\+Edge@{Get\+Slope\+First\+Edge}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Slope\+First\+Edge()}{GetSlopeFirstEdge()}}
+{\footnotesize\ttfamily double Get\+Slope\+First\+Edge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的坡面障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 
+
+\begin{DoxyReturn}{返回}
+double 
+\end{DoxyReturn}
+
+
+参考 Get\+Obstacle\+Pos().
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a59a7b37362e78ab36f06fe64fece2e62}\label{webotsApi_8cpp_a59a7b37362e78ab36f06fe64fece2e62}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Stage\+First\+Edge@{Get\+Stage\+First\+Edge}}
+\index{Get\+Stage\+First\+Edge@{Get\+Stage\+First\+Edge}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Stage\+First\+Edge()}{GetStageFirstEdge()}}
+{\footnotesize\ttfamily double Get\+Stage\+First\+Edge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的平台障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 
+
+\begin{DoxyReturn}{返回}
+double 
+\end{DoxyReturn}
+
+
+参考 Get\+Obstacle\+Pos().
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a36af8c3dbed3911251d579037b0356bd}\label{webotsApi_8cpp_a36af8c3dbed3911251d579037b0356bd}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Stairs\+First\+Edge@{Get\+Stairs\+First\+Edge}}
+\index{Get\+Stairs\+First\+Edge@{Get\+Stairs\+First\+Edge}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Stairs\+First\+Edge()}{GetStairsFirstEdge()}}
+{\footnotesize\ttfamily double Get\+Stairs\+First\+Edge (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取webots仿真环境中的阶梯障碍与地面的第一根交线在webots中\+Z坐标轴上的位置 
+
+\begin{DoxyReturn}{返回}
+double 
+\end{DoxyReturn}
+
+
+参考 Get\+Obstacle\+Pos().
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+updata\+Info\+::\+Update\+Info().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a0c0edbb4ea238cbbf3fa13697277cfc3}\label{webotsApi_8cpp_a0c0edbb4ea238cbbf3fa13697277cfc3}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Time\+Flag@{Get\+Time\+Flag}}
+\index{Get\+Time\+Flag@{Get\+Time\+Flag}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Time\+Flag()}{GetTimeFlag()}}
+{\footnotesize\ttfamily bool Get\+Time\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Motion\+Plan以及\+M\+P\+C标志位计数以及触发 
+
+\begin{DoxyReturn}{返回}
+true 程序正常运行 
+
+false 程序崩溃 
+\end{DoxyReturn}
+\mbox{\Hypertarget{webotsApi_8cpp_ac64462ca349c1bd289ac91d746fd06c6}\label{webotsApi_8cpp_ac64462ca349c1bd289ac91d746fd06c6}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Time\+Flag\+Motion\+Plan@{Get\+Time\+Flag\+Motion\+Plan}}
+\index{Get\+Time\+Flag\+Motion\+Plan@{Get\+Time\+Flag\+Motion\+Plan}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Time\+Flag\+Motion\+Plan()}{GetTimeFlagMotionPlan()}}
+{\footnotesize\ttfamily bool Get\+Time\+Flag\+Motion\+Plan (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取\+Motion\+Plan标志位状态 
+
+\begin{DoxyReturn}{返回}
+true Motion\+Plan标志位为1且将其置0 
+
+false Motion\+Plan标志位为0 
+\end{DoxyReturn}
+
+
+参考 motion\+Plan\+Time\+Flag.
+
+
+
+参考自 Motion\+Plan\+Run().
+
+\mbox{\Hypertarget{webotsApi_8cpp_aabc0c6adc9bdff48b83d934b42716853}\label{webotsApi_8cpp_aabc0c6adc9bdff48b83d934b42716853}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Get\+Time\+Flag\+Mpc@{Get\+Time\+Flag\+Mpc}}
+\index{Get\+Time\+Flag\+Mpc@{Get\+Time\+Flag\+Mpc}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Get\+Time\+Flag\+Mpc()}{GetTimeFlagMpc()}}
+{\footnotesize\ttfamily bool Get\+Time\+Flag\+Mpc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+获取\+M\+P\+C标志位状态 
+
+\begin{DoxyReturn}{返回}
+true M\+P\+C标志位为1且将其置0 
+
+false M\+P\+C标志位为0 
+\end{DoxyReturn}
+
+
+参考 mpc\+Time\+Flag.
+
+
+
+参考自 Mpc\+Run().
+
+\mbox{\Hypertarget{webotsApi_8cpp_a6769a0f89e0d9e03736d564c435f91ea}\label{webotsApi_8cpp_a6769a0f89e0d9e03736d564c435f91ea}} 
+\index{webots\+Api.\+cpp@{webots\+Api.\+cpp}!Set\+Robot\+Joint\+Torque@{Set\+Robot\+Joint\+Torque}}
+\index{Set\+Robot\+Joint\+Torque@{Set\+Robot\+Joint\+Torque}!webots\+Api.\+cpp@{webots\+Api.\+cpp}}
+\subsubsection{\texorpdfstring{Set\+Robot\+Joint\+Torque()}{SetRobotJointTorque()}}
+{\footnotesize\ttfamily void Set\+Robot\+Joint\+Torque (\begin{DoxyParamCaption}\item[{\hyperlink{structrobotLegTorque__t}{robot\+Leg\+Torque\+\_\+t}}]{leg\+Torque }\end{DoxyParamCaption})}
+
+
+
+输出扭矩 
+
+
+\begin{DoxyParams}{参数}
+{\em leg\+Torque} & 计算后输出的\+Actiger扭矩集合 \\
+\hline
+\end{DoxyParams}
+
+
+参考自 quadruped\+::\+Leg\+Control\+::\+Leg\+Joint\+Control().
+

@@ -1,0 +1,69 @@
+\hypertarget{mpc_8cpp}{}\section{controller/mpc/mpc.cpp 文件参考}
+\label{mpc_8cpp}\index{controller/mpc/mpc.\+cpp@{controller/mpc/mpc.\+cpp}}
+
+
+���������ģ��Ԥ�������(\+M\+P\+C)��غ��������ļ�  
+
+
+{\ttfamily \#include \char`\"{}mpc.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{mpc_8cpp_a0e6eb1e3f7b14350d249b28982d5c446}{Mpc\+Run} (void $\ast$p\+\_\+mpc)
+\begin{DoxyCompactList}\small\item\em Actiger模型预测控制器运行函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+���������ģ��Ԥ�������(\+M\+P\+C)��غ��������ļ� 
+
+Actiger模型预测控制器
+
+\begin{DoxyAuthor}{作者}
+Bin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+V1.\+0.\+1  29-\/\+March-\/2021 
+\end{DoxyVersion}
+\begin{DoxyAttention}{注意}
+input\+:vel\+Cmd vel\+Cur ed\+\_\+now is\+\_\+lf\+\_\+rr\+\_\+stand
+\end{DoxyAttention}
+output\+:
+
+\begin{DoxyAuthor}{作者}
+Bin \& Tech13 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{版本}
+1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{日期}
+2021-\/08-\/20
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2021 Action 
+\end{DoxyCopyright}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{mpc_8cpp_a0e6eb1e3f7b14350d249b28982d5c446}\label{mpc_8cpp_a0e6eb1e3f7b14350d249b28982d5c446}} 
+\index{mpc.\+cpp@{mpc.\+cpp}!Mpc\+Run@{Mpc\+Run}}
+\index{Mpc\+Run@{Mpc\+Run}!mpc.\+cpp@{mpc.\+cpp}}
+\subsubsection{\texorpdfstring{Mpc\+Run()}{MpcRun()}}
+{\footnotesize\ttfamily void$\ast$ Mpc\+Run (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+\_\+mpc }\end{DoxyParamCaption})}
+
+
+
+Actiger模型预测控制器运行函数 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+mpc} & 准备运行的机器人模型预测控制器 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void$\ast$ 
+\end{DoxyReturn}
+
+
+参考 quadruped\+::\+Mpc\+::\+Get\+React\+Force() , 以及 Get\+Time\+Flag\+Mpc().
+

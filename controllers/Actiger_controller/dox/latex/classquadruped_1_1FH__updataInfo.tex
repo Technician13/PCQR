@@ -1,0 +1,236 @@
+\hypertarget{classquadruped_1_1FH__updataInfo}{}\section{quadruped\+:\+:F\+H\+\_\+updata\+Info类 参考}
+\label{classquadruped_1_1FH__updataInfo}\index{quadruped\+::\+F\+H\+\_\+updata\+Info@{quadruped\+::\+F\+H\+\_\+updata\+Info}}
+
+
+Actiger落足点规划信息更新类  
+
+
+
+
+{\ttfamily \#include $<$f\+H\+\_\+updata\+Info.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a02285dcf0fbee8e7fe0b632648b9e8e9}\label{classquadruped_1_1FH__updataInfo_a02285dcf0fbee8e7fe0b632648b9e8e9}} 
+{\bfseries F\+H\+\_\+updata\+Info} (\hyperlink{classquadruped_1_1Parameters}{Parameters} $\ast$p\+\_\+para, \hyperlink{classquadruped_1_1Terrain}{Terrain} $\ast$p\+\_\+terrain\+\_\+now)
+\item 
+void \hyperlink{classquadruped_1_1FH__updataInfo_a1ef2f860fc18a7176f6b9ffc694778ee}{Get\+X\+Bound} (double $\ast$ub, double $\ast$lb)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a8c3842af225ae629a1db0fe201c3cabc}\label{classquadruped_1_1FH__updataInfo_a8c3842af225ae629a1db0fe201c3cabc}} 
+void {\bfseries Set\+Terrain} (uint8\+\_\+t p\+\_\+terrain\+Type)
+\item 
+void \hyperlink{classquadruped_1_1FH__updataInfo_a75b04f959df3aee0f49e0c8627754792}{Get\+X\+Inital} (double $\ast$x)
+\item 
+void \hyperlink{classquadruped_1_1FH__updataInfo_a4f87f044f37ed293b1e86802cf41345f}{Update\+Info} (int p\+\_\+is\+\_\+lf\+\_\+rr\+\_\+stand, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+cur\+Euler, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+cur\+Pos, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+cur\+Velocity, double p\+\_\+desire\+\_\+yaw, double p\+\_\+desire\+\_\+z, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+endfoot\+\_\+now\+\_\+front, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+endfoot\+\_\+now\+\_\+rear, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+stance\+\_\+now\+\_\+front, \hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+stance\+\_\+now\+\_\+rear)
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a49f9573bc207819187f35080fc098c9e}\label{classquadruped_1_1FH__updataInfo_a49f9573bc207819187f35080fc098c9e}} 
+bool \hyperlink{classquadruped_1_1FH__updataInfo_a49f9573bc207819187f35080fc098c9e}{is\+\_\+lf\+\_\+rr\+\_\+stand}
+\begin{DoxyCompactList}\small\item\em 当前的支撑腿组合标志位 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_af22df9a440b401aceb06055054ef385e}\label{classquadruped_1_1FH__updataInfo_af22df9a440b401aceb06055054ef385e}} 
+double \hyperlink{classquadruped_1_1FH__updataInfo_af22df9a440b401aceb06055054ef385e}{desire\+\_\+z}
+\begin{DoxyCompactList}\small\item\em Actiger期望的机体高度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ac34eaa41e1f6cb0e3ddbc6ffa608e157}\label{classquadruped_1_1FH__updataInfo_ac34eaa41e1f6cb0e3ddbc6ffa608e157}} 
+double \hyperlink{classquadruped_1_1FH__updataInfo_ac34eaa41e1f6cb0e3ddbc6ffa608e157}{desire\+\_\+yaw}
+\begin{DoxyCompactList}\small\item\em Actiger期望的机体高度 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ab1c5aaff85dc956883ae6336f327d49f}\label{classquadruped_1_1FH__updataInfo_ab1c5aaff85dc956883ae6336f327d49f}} 
+double {\bfseries desire\+\_\+hight}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a70ab4c64d1af0bd7bddcc37378324380}\label{classquadruped_1_1FH__updataInfo_a70ab4c64d1af0bd7bddcc37378324380}} 
+double {\bfseries des\+Endfoot\+\_\+pos\+\_\+z\+\_\+front}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_acaf9672ba88be96c5871b1e366b73542}\label{classquadruped_1_1FH__updataInfo_acaf9672ba88be96c5871b1e366b73542}} 
+double {\bfseries des\+Endfoot\+\_\+pos\+\_\+z\+\_\+rear}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a33689880d3dda1f5a5021913433abf6d}\label{classquadruped_1_1FH__updataInfo_a33689880d3dda1f5a5021913433abf6d}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries cmd\+Velocity}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a1e400165216fd290b6b792a5c88797b8}\label{classquadruped_1_1FH__updataInfo_a1e400165216fd290b6b792a5c88797b8}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries des\+Velocity}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_aed247377d5ad5f622ea2a8b1163f8b9d}\label{classquadruped_1_1FH__updataInfo_aed247377d5ad5f622ea2a8b1163f8b9d}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries des\+Omega}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_aa67e71cdea575a57b111904071d2d10b}\label{classquadruped_1_1FH__updataInfo_aa67e71cdea575a57b111904071d2d10b}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries des\+Euler}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a0f4eac9bb4220364bcbf16d9cc41f48f}\label{classquadruped_1_1FH__updataInfo_a0f4eac9bb4220364bcbf16d9cc41f48f}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries cur\+Pos}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a0e6b7472adec0a3be775bfdb83d90258}\label{classquadruped_1_1FH__updataInfo_a0e6b7472adec0a3be775bfdb83d90258}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries cur\+Euler}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a80b0a81421e7a1c29f5494a77f5fc2b3}\label{classquadruped_1_1FH__updataInfo_a80b0a81421e7a1c29f5494a77f5fc2b3}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries cur\+Velocity}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a6c28594f6924b51c70c5a320e464fb79}\label{classquadruped_1_1FH__updataInfo_a6c28594f6924b51c70c5a320e464fb79}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries body\+Pos\+\_\+desire}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a3fb2708c9e8ee09efbb40354e692bfee}\label{classquadruped_1_1FH__updataInfo_a3fb2708c9e8ee09efbb40354e692bfee}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries endfoot\+\_\+now\+\_\+front}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a25bb037f942e458bde9f53095a7bbcae}\label{classquadruped_1_1FH__updataInfo_a25bb037f942e458bde9f53095a7bbcae}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries endfoot\+\_\+desire\+\_\+front}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a0d706c45d632aee4e7412afb64b60abc}\label{classquadruped_1_1FH__updataInfo_a0d706c45d632aee4e7412afb64b60abc}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries foothold\+\_\+front\+\_\+min}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a58c5797c7bce7f4ed51b56aa877eabcc}\label{classquadruped_1_1FH__updataInfo_a58c5797c7bce7f4ed51b56aa877eabcc}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries foothold\+\_\+front\+\_\+max}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a1ccae3e3285ccc9aa9b09b03a3b65fb0}\label{classquadruped_1_1FH__updataInfo_a1ccae3e3285ccc9aa9b09b03a3b65fb0}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries endfoot\+\_\+now\+\_\+rear}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a8f2b0ee92524c5402f04f7004b04c61e}\label{classquadruped_1_1FH__updataInfo_a8f2b0ee92524c5402f04f7004b04c61e}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries endfoot\+\_\+desire\+\_\+rear}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a9edff2ef2b865628d69543965b79664b}\label{classquadruped_1_1FH__updataInfo_a9edff2ef2b865628d69543965b79664b}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries foothold\+\_\+rear\+\_\+min}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a3e0ad49ac6f0a41100a0be93443e278b}\label{classquadruped_1_1FH__updataInfo_a3e0ad49ac6f0a41100a0be93443e278b}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries foothold\+\_\+rear\+\_\+max}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ae55cf1ca302eebfab28171fd9945552f}\label{classquadruped_1_1FH__updataInfo_ae55cf1ca302eebfab28171fd9945552f}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries stance\+\_\+front\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ae5c5f31d3eabd61ff2cccd0ccba4b501}\label{classquadruped_1_1FH__updataInfo_ae5c5f31d3eabd61ff2cccd0ccba4b501}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries stance\+\_\+rear\+\_\+pos}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a58bd8b51eb75ed84de0e676dc9d22086}\label{classquadruped_1_1FH__updataInfo_a58bd8b51eb75ed84de0e676dc9d22086}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries hip\+\_\+2\+\_\+body\+\_\+front}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a7341323288bfd1bf94f57c9edf5db1b7}\label{classquadruped_1_1FH__updataInfo_a7341323288bfd1bf94f57c9edf5db1b7}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries hip\+\_\+2\+\_\+body\+\_\+rear}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a36affd5f8b07dfa83241aa5760d070c4}\label{classquadruped_1_1FH__updataInfo_a36affd5f8b07dfa83241aa5760d070c4}} 
+double {\bfseries body\+\_\+length}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a53630e42511df6e5f3348ea3d3a71fa1}\label{classquadruped_1_1FH__updataInfo_a53630e42511df6e5f3348ea3d3a71fa1}} 
+double {\bfseries body\+\_\+width}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ab2d716cfa3e309ab263228c2a559d1b3}\label{classquadruped_1_1FH__updataInfo_ab2d716cfa3e309ab263228c2a559d1b3}} 
+double {\bfseries Ts}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_aeba358aad0639518539d26c067c23d43}\label{classquadruped_1_1FH__updataInfo_aeba358aad0639518539d26c067c23d43}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries k\+\_\+v}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a90de73f2f5ef3ba21ab9e6ef1c29db79}\label{classquadruped_1_1FH__updataInfo_a90de73f2f5ef3ba21ab9e6ef1c29db79}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries k\+\_\+swing}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a6dff91f68b749705cf3422acf16cfe01}\label{classquadruped_1_1FH__updataInfo_a6dff91f68b749705cf3422acf16cfe01}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries foothold\+\_\+Q}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a962cdcb0f12051b84a1945d64cdc755f}\label{classquadruped_1_1FH__updataInfo_a962cdcb0f12051b84a1945d64cdc755f}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries foothold\+\_\+R}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a4dd0f80b256a4da4d77372b520012e4c}\label{classquadruped_1_1FH__updataInfo_a4dd0f80b256a4da4d77372b520012e4c}} 
+\hyperlink{cppTypes_8h_a685282630cf228cbde6112c5e6f713c3}{Vec2}$<$ double $>$ {\bfseries endfoot\+\_\+max}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a506962ee73ca653e26010bc233b2bbbf}\label{classquadruped_1_1FH__updataInfo_a506962ee73ca653e26010bc233b2bbbf}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries lf\+\_\+hip\+\_\+pos\+\_\+body}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ac26fdffb619d0b0d289173ba6c3358d1}\label{classquadruped_1_1FH__updataInfo_ac26fdffb619d0b0d289173ba6c3358d1}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries lr\+\_\+hip\+\_\+pos\+\_\+body}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_aeb372b9df0e7c8e7837f03f455f0859e}\label{classquadruped_1_1FH__updataInfo_aeb372b9df0e7c8e7837f03f455f0859e}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries rf\+\_\+hip\+\_\+pos\+\_\+body}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a508ac0a77bc74bf4e1479a41baf30f8c}\label{classquadruped_1_1FH__updataInfo_a508ac0a77bc74bf4e1479a41baf30f8c}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries rr\+\_\+hip\+\_\+pos\+\_\+body}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ab3749142f66b5289469bba0f2b086db0}\label{classquadruped_1_1FH__updataInfo_ab3749142f66b5289469bba0f2b086db0}} 
+\hyperlink{classquadruped_1_1Terrain}{Terrain} $\ast$ {\bfseries terrain\+\_\+now}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a36c0f428aa02b1536b135c0ade1c0ad9}\label{classquadruped_1_1FH__updataInfo_a36c0f428aa02b1536b135c0ade1c0ad9}} 
+\hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$ double $>$ {\bfseries return\+\_\+spatial\+\_\+dot\+\_\+desire}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_ac845a4d5a050349209bc0da905eec60f}\label{classquadruped_1_1FH__updataInfo_ac845a4d5a050349209bc0da905eec60f}} 
+\hyperlink{cppTypes_8h_a27bb8a600520708a5928332e4e52a92e}{Vec6}$<$ double $>$ {\bfseries return\+\_\+spatial\+\_\+desire}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_abec95bccb97e123a3d9dae4854d5d63e}\label{classquadruped_1_1FH__updataInfo_abec95bccb97e123a3d9dae4854d5d63e}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries return\+\_\+des\+Endfoot\+\_\+pos\+\_\+front}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a0e66f8fffc6fd0471bd8a438e29d64c6}\label{classquadruped_1_1FH__updataInfo_a0e66f8fffc6fd0471bd8a438e29d64c6}} 
+\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ {\bfseries return\+\_\+des\+Endfoot\+\_\+pos\+\_\+rear}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a4fd0187b50a927dcc3a3b99e6c9fe311}\label{classquadruped_1_1FH__updataInfo_a4fd0187b50a927dcc3a3b99e6c9fe311}} 
+double {\bfseries H}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a312e51983c171fde47a0cc35f4bdbbc0}\label{classquadruped_1_1FH__updataInfo_a312e51983c171fde47a0cc35f4bdbbc0}} 
+bool {\bfseries get\+Edge\+Flg}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger落足点规划信息更新类 
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a1ef2f860fc18a7176f6b9ffc694778ee}\label{classquadruped_1_1FH__updataInfo_a1ef2f860fc18a7176f6b9ffc694778ee}} 
+\index{quadruped\+::\+F\+H\+\_\+updata\+Info@{quadruped\+::\+F\+H\+\_\+updata\+Info}!Get\+X\+Bound@{Get\+X\+Bound}}
+\index{Get\+X\+Bound@{Get\+X\+Bound}!quadruped\+::\+F\+H\+\_\+updata\+Info@{quadruped\+::\+F\+H\+\_\+updata\+Info}}
+\subsubsection{\texorpdfstring{Get\+X\+Bound()}{GetXBound()}}
+{\footnotesize\ttfamily void F\+H\+\_\+updata\+Info\+::\+Get\+X\+Bound (\begin{DoxyParamCaption}\item[{double $\ast$}]{ub,  }\item[{double $\ast$}]{lb }\end{DoxyParamCaption})}
+
+\+: 决策变量边界 
+\begin{DoxyParams}{参数}
+{\em \{double$\ast$\}} & ub \\
+\hline
+{\em \{double$\ast$\}} & lb \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考自 quadruped\+::\+F\+H\+\_\+nlp\+::get\+\_\+bounds\+\_\+info().
+
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a75b04f959df3aee0f49e0c8627754792}\label{classquadruped_1_1FH__updataInfo_a75b04f959df3aee0f49e0c8627754792}} 
+\index{quadruped\+::\+F\+H\+\_\+updata\+Info@{quadruped\+::\+F\+H\+\_\+updata\+Info}!Get\+X\+Inital@{Get\+X\+Inital}}
+\index{Get\+X\+Inital@{Get\+X\+Inital}!quadruped\+::\+F\+H\+\_\+updata\+Info@{quadruped\+::\+F\+H\+\_\+updata\+Info}}
+\subsubsection{\texorpdfstring{Get\+X\+Inital()}{GetXInital()}}
+{\footnotesize\ttfamily void F\+H\+\_\+updata\+Info\+::\+Get\+X\+Inital (\begin{DoxyParamCaption}\item[{double $\ast$}]{x }\end{DoxyParamCaption})}
+
+\+: 配置初始点 
+\begin{DoxyParams}{参数}
+{\em \{double$\ast$\}} & x \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考 desire\+\_\+z.
+
+
+
+参考自 quadruped\+::\+F\+H\+\_\+nlp\+::get\+\_\+starting\+\_\+point().
+
+\mbox{\Hypertarget{classquadruped_1_1FH__updataInfo_a4f87f044f37ed293b1e86802cf41345f}\label{classquadruped_1_1FH__updataInfo_a4f87f044f37ed293b1e86802cf41345f}} 
+\index{quadruped\+::\+F\+H\+\_\+updata\+Info@{quadruped\+::\+F\+H\+\_\+updata\+Info}!Update\+Info@{Update\+Info}}
+\index{Update\+Info@{Update\+Info}!quadruped\+::\+F\+H\+\_\+updata\+Info@{quadruped\+::\+F\+H\+\_\+updata\+Info}}
+\subsubsection{\texorpdfstring{Update\+Info()}{UpdateInfo()}}
+{\footnotesize\ttfamily void F\+H\+\_\+updata\+Info\+::\+Update\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+is\+\_\+lf\+\_\+rr\+\_\+stand,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+cur\+Euler,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+cur\+Pos,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+cur\+Velocity,  }\item[{double}]{p\+\_\+desire\+\_\+yaw,  }\item[{double}]{p\+\_\+desire\+\_\+z,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+endfoot\+\_\+now\+\_\+front,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+endfoot\+\_\+now\+\_\+rear,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+stance\+\_\+now\+\_\+front,  }\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+stance\+\_\+now\+\_\+rear }\end{DoxyParamCaption})}
+
+\+: 更新落足点规划器的信息 
+\begin{DoxyParams}{参数}
+{\em \{$\ast$\}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+\{$\ast$\} 
+\end{DoxyReturn}
+
+
+参考 B\+R\+I\+D\+GE, C\+A\+L\+A\+N\+D\+R\+IA, desire\+\_\+yaw, desire\+\_\+z, F\+L\+AT, Get\+Bridge\+First\+Edge(), Get\+Calandria\+First\+Edge(), Get\+Seesaw\+First\+Edge(), Get\+Sill\+First\+Edge(), Get\+Slope\+First\+Edge(), Get\+Stage\+First\+Edge(), Get\+Stairs\+First\+Edge(), G\+R\+A\+V\+I\+TY, handle, is\+\_\+lf\+\_\+rr\+\_\+stand, M\+A\+X\+\_\+\+A\+C\+C\+\_\+X, M\+A\+X\+\_\+\+A\+C\+C\+\_\+Y, M\+A\+X\+\_\+\+A\+C\+C\+\_\+Z, S\+E\+E\+S\+AW, S\+I\+LL, S\+L\+O\+PE, S\+T\+A\+GE, S\+T\+A\+I\+RS, quadruped\+::\+Terrain\+::terrain\+\_\+id, Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+B\+R\+I\+D\+GE, Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+C\+A\+L\+A\+N\+D\+R\+IA, Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+E\+E\+S\+AW, Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+I\+L\+L\+\_\+\+S\+T\+A\+GE, Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+L\+O\+PE , 以及 Z\+O\+O\+M\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+S\+T\+A\+I\+RS.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/motion\+Plan/foothold/\hyperlink{fH__updataInfo_8hpp}{f\+H\+\_\+updata\+Info.\+hpp}\item 
+controller/motion\+Plan/foothold/f\+H\+\_\+updata\+Info.\+cpp\end{DoxyCompactItemize}

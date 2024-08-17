@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="actiger_model">
+  <link
+    name="body">
+    <inertial>
+      <origin xyz="0.044333 -0.000013 -0.003927" rpy="0 0 0" />
+      <mass value="13.79499" />
+      <inertia ixx="0.083488" ixy="0.000084" ixz="0.005343" iyy="0.810973" iyz="0.000058" izz="0.819166" />
+    </inertial>
+  </link>
+
+<!--************************************ LF LEG ******************************************-->
+  <joint name="LF_SHOULDER" type="revolute">
+    <origin xyz="0.33 0.07 -0.0075" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="LF_J" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.38397" upper="0.38397" effort="100" velocity="5" />
+  </joint>
+
+  <link name="LF_J">
+    <inertial>
+      <origin xyz="0.001039 0.021840 0.000159" rpy="0 0 0" />
+      <mass value="1.6373" />
+      <inertia ixx="0.002035" ixy="0.000046" ixz="0.000003" iyy="0.001724" iyz="0.000010" izz="0.002153" />
+    </inertial>
+  </link>
+
+  <joint name="LF_HIP" type="revolute">
+    <origin xyz="0 0.096 0" rpy="0 0 0" />
+    <parent link="LF_J" />
+    <child link="LF_THIGH" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.52959" upper="2.618" effort="100" velocity="5" />
+  </joint>
+
+  <link name="LF_THIGH">
+    <inertial>
+      <origin xyz="-0.012576 -0.003753 -0.151302" rpy="0 0 0" />
+      <mass value="1.7261" />
+      <inertia ixx="0.016353" ixy="0.016897" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+  
+  <joint name="LF_KNEE" type="revolute">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="LF_THIGH" />
+    <child link="LF_CALF" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.618" upper="-0.69813" effort="100" velocity="5" />
+  </joint>
+  
+  <link name="LF_CALF">
+    <inertial>
+      <origin xyz="0.006814 0.000153 -0.124686" rpy="0 0 0" />
+      <mass value="0.53184" />
+      <inertia ixx="0.016353" ixy="0.000035" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+
+  <joint name="LF_END" type="fixed">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="LF_CALF"/>
+    <child link="LF_FOOT"/>
+  </joint>
+  
+  <link name="LF_FOOT">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0001"/>
+      <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.0000001" />
+    </inertial>
+  </link>
+
+<!--************************************ LR LEG ******************************************-->
+  <joint name="LR_SHOULDER" type="revolute">
+    <origin xyz="-0.33 0.055 -0.0075" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="LR_J" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.38397" upper="0.38397" effort="100" velocity="5" />
+  </joint>
+
+
+  <link name="LR_J">
+    <inertial>
+      <origin xyz="0.001039 0.021840 0.000159" rpy="0 0 0" />
+      <mass value="1.6373" />
+      <inertia ixx="0.002035" ixy="0.000046" ixz="0.000003" iyy="0.001724" iyz="0.000010" izz="0.002153"/>
+    </inertial>
+  </link>
+
+  <joint name="LR_HIP" type="revolute">
+    <origin xyz="0 0.096 0" rpy="0 0 0" />
+    <parent link="LR_J" />
+    <child link="LR_THIGH" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.52959" upper="2.618" effort="100" velocity="5" />
+  </joint>
+
+  <link name="LR_THIGH">
+    <inertial>
+      <origin xyz="-0.012576 -0.003753 -0.151302" rpy="0 0 0" />
+      <mass value="1.7261" />
+      <inertia ixx="0.016353" ixy="0.016897" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+
+  
+  <joint name="LR_KNEE" type="revolute">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="LR_THIGH" />
+    <child link="LR_CALF" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.618" upper="-0.69813" effort="100" velocity="5" />
+  </joint>
+
+  <link name="LR_CALF">
+    <inertial>
+      <origin xyz="0.006814 0.000153 -0.124686" rpy="0 0 0" />
+      <mass value="0.53184" />
+      <inertia ixx="0.016353" ixy="0.000035" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+
+  <joint name="LR_END" type="fixed">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="LR_CALF"/>
+    <child link="LR_FOOT"/>
+  </joint>
+  
+  <link name="LR_FOOT">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0001"/>
+      <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.0000001" />
+    </inertial>
+  </link>
+
+<!--************************************ RF LEG ******************************************-->
+  <joint name="RF_SHOULDER" type="revolute">
+    <origin xyz="0.33 -0.07 -0.0075" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="RF_J" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.38397" upper="0.38397" effort="100" velocity="5" />
+  </joint>
+
+  <link name="RF_J">
+    <inertial>
+      <origin xyz="0.001039 -0.021840 0.000159" rpy="0 0 0" />
+      <mass value="1.6373" />
+      <inertia ixx="0.002035" ixy="0.000046" ixz="0.000003" iyy="0.001724" iyz="0.000010" izz="0.002153" />
+    </inertial>
+  </link>
+
+  <joint name="RF_HIP" type="revolute">
+    <origin xyz="0 -0.096 0" rpy="0 0 0" />
+    <parent link="RF_J" />
+    <child link="RF_THIGH" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.52959" upper="2.618" effort="100" velocity="5" />
+  </joint>
+
+  <link name="RF_THIGH">
+    <inertial>
+      <origin xyz="-0.012576 0.003753 -0.151302" rpy="0 0 0" />
+      <mass value="1.7261" />
+      <inertia ixx="0.016353" ixy="0.016897" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+
+  <joint name="RF_KNEE" type="revolute">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="RF_THIGH" />
+    <child link="RF_CALF" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.618" upper="-0.69813" effort="100" velocity="5" />
+  </joint>
+
+  <link name="RF_CALF">
+    <inertial>
+      <origin xyz="0.006814 -0.000153 -0.124686" rpy="0 0 0" />
+      <mass value="0.53184" />
+      <inertia ixx="0.016353" ixy="0.000035" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+
+  <joint name="RF_END" type="fixed">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="RF_CALF"/>
+    <child link="RF_FOOT"/>
+  </joint>
+  
+  <link name="RF_FOOT">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0001"/>
+      <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.0000001" />
+    </inertial>
+  </link>
+
+<!--************************************ RR LEG ******************************************-->
+  <joint name="RR_SHOULDER" type="revolute">
+    <origin xyz="-0.33 -0.055 -0.0075" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="RR_J" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.38397" upper="0.38397" effort="100" velocity="5" />
+  </joint>
+
+  <link name="RR_J">
+    <inertial>
+      <origin xyz="0.001039 -0.021840 0.000159" rpy="0 0 0" />
+      <mass value="1.6373" />
+      <inertia ixx="0.002035" ixy="0.000046" ixz="0.000003" iyy="0.001724" iyz="0.000010" izz="0.002153" />
+    </inertial>
+  </link>
+
+  <joint name="RR_HIP" type="revolute">
+    <origin xyz="0 -0.096 0" rpy="0 0 0" />
+    <parent link="RR_J" />
+    <child link="RR_THIGH" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.52959" upper="2.618" effort="100" velocity="5" />
+  </joint>
+
+  <link name="RR_THIGH">
+    <inertial>
+      <origin xyz="-0.012576 0.003753 -0.151302" rpy="0 0 0" />
+      <mass value="1.7261" />
+      <inertia ixx="0.016353" ixy="0.016897" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+
+  <joint name="RR_KNEE" type="revolute">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="RR_THIGH" />
+    <child link="RR_CALF" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.618" upper="-0.69813" effort="100" velocity="5" />
+  </joint>
+
+  <link name="RR_CALF">
+    <inertial>
+      <origin xyz="0.006814 -0.000153 -0.124686" rpy="0 0 0" />
+      <mass value="0.53184" />
+      <inertia ixx="0.016353" ixy="0.000035" ixz="0.001031" iyy="0.016897" iyz="0.000386" izz="0.001690" />
+    </inertial>
+  </link>
+
+  <joint name="RR_END" type="fixed">
+    <origin xyz="0 0 -0.34" rpy="0 0 0" />
+    <parent link="RR_CALF"/>
+    <child link="RR_FOOT"/>
+  </joint>
+  
+  <link name="RR_FOOT">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0001"/>
+      <inertia ixx="0.0000001" ixy="0.0" ixz="0.0" iyy="0.0000001" iyz="0.0" izz="0.0000001"/>
+    </inertial>
+  </link>
+  
+</robot>

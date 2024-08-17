@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Actiger: quadruped::FloatingBaseModel类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Actiger
+   &#160;<span id="projectnumber">1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>quadruped</b></li><li class="navelem"><a class="el" href="classquadruped_1_1FloatingBaseModel.html">FloatingBaseModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classquadruped_1_1FloatingBaseModel-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">quadruped::FloatingBaseModel类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5f5f04261e961fae57f84aaf80f65f4f"><td class="memItemLeft" align="right" valign="top"><a id="a5f5f04261e961fae57f84aaf80f65f4f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getMassInertia</b> (dynacore::Matrix &amp;A) const</td></tr>
+<tr class="separator:a5f5f04261e961fae57f84aaf80f65f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7955bced1fbfb11965de500d31900d3d"><td class="memItemLeft" align="right" valign="top"><a id="a7955bced1fbfb11965de500d31900d3d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getInverseMassInertia</b> (dynacore::Matrix &amp;Ainv) const</td></tr>
+<tr class="separator:a7955bced1fbfb11965de500d31900d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f337459898a613548efb4af536f64e1"><td class="memItemLeft" align="right" valign="top"><a id="a8f337459898a613548efb4af536f64e1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getGravity</b> (dynacore::Vector &amp;grav) const</td></tr>
+<tr class="separator:a8f337459898a613548efb4af536f64e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5345ee06da415df56a17623a100addfe"><td class="memItemLeft" align="right" valign="top"><a id="a5345ee06da415df56a17623a100addfe"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>getCoriolis</b> (dynacore::Vector &amp;coriolis) const</td></tr>
+<tr class="separator:a5345ee06da415df56a17623a100addfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb96803e722a8d0565f1a43327935b27"><td class="memItemLeft" align="right" valign="top"><a id="afb96803e722a8d0565f1a43327935b27"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getCentroidJacobian</b> (dynacore::Matrix &amp;Jcent) const</td></tr>
+<tr class="separator:afb96803e722a8d0565f1a43327935b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16dcc8e6ed6984a0996d2d7648b0a351"><td class="memItemLeft" align="right" valign="top"><a id="a16dcc8e6ed6984a0996d2d7648b0a351"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getCentroidInertia</b> (dynacore::Matrix &amp;Icent) const</td></tr>
+<tr class="separator:a16dcc8e6ed6984a0996d2d7648b0a351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38322065e6fa0c7381b3a82874854e0"><td class="memItemLeft" align="right" valign="top"><a id="aa38322065e6fa0c7381b3a82874854e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getCoMPosition</b> (dynacore::Vect3 &amp;com_pos) const</td></tr>
+<tr class="separator:aa38322065e6fa0c7381b3a82874854e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10349bcc5d2bf90b5587773efab8cc44"><td class="memItemLeft" align="right" valign="top"><a id="a10349bcc5d2bf90b5587773efab8cc44"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getCoMVelocity</b> (dynacore::Vect3 &amp;com_vel) const</td></tr>
+<tr class="separator:a10349bcc5d2bf90b5587773efab8cc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7a003cb230a5ec8696c46a2047a6c0"><td class="memItemLeft" align="right" valign="top"><a id="a6e7a003cb230a5ec8696c46a2047a6c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getPos</b> (int link_id, dynacore::Vect3 &amp;pos) const</td></tr>
+<tr class="separator:a6e7a003cb230a5ec8696c46a2047a6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66894859661648f90a2218a43ad0b01"><td class="memItemLeft" align="right" valign="top"><a id="ab66894859661648f90a2218a43ad0b01"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getOri</b> (int link_id, dynacore::Vect3 &amp;rpy) const</td></tr>
+<tr class="separator:ab66894859661648f90a2218a43ad0b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400825b773081cdd886383624d53b542"><td class="memItemLeft" align="right" valign="top"><a id="a400825b773081cdd886383624d53b542"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getLinearVel</b> (int link_id, dynacore::Vect3 &amp;lin_vel) const</td></tr>
+<tr class="separator:a400825b773081cdd886383624d53b542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48efc47609ab056a82d0cc8bd882bf04"><td class="memItemLeft" align="right" valign="top"><a id="a48efc47609ab056a82d0cc8bd882bf04"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getAngularVel</b> (int link_id, dynacore::Vect3 &amp;ang_vel) const</td></tr>
+<tr class="separator:a48efc47609ab056a82d0cc8bd882bf04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94400de545c66a32020c4d3671ccff0"><td class="memItemLeft" align="right" valign="top"><a id="ac94400de545c66a32020c4d3671ccff0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getCentroidVelocity</b> (dynacore::Vector &amp;centroid_vel) const</td></tr>
+<tr class="separator:ac94400de545c66a32020c4d3671ccff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0c2f3c829e2544edb507a5934411f6"><td class="memItemLeft" align="right" valign="top"><a id="a1b0c2f3c829e2544edb507a5934411f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getCoMJacobian</b> (dynacore::Matrix &amp;J) const</td></tr>
+<tr class="separator:a1b0c2f3c829e2544edb507a5934411f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4076657aec4909dc3e2cda3dd57ba701"><td class="memItemLeft" align="right" valign="top"><a id="a4076657aec4909dc3e2cda3dd57ba701"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getFullJacobian</b> (int link_id, dynacore::Matrix &amp;J) const</td></tr>
+<tr class="separator:a4076657aec4909dc3e2cda3dd57ba701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a1208545b05039a0e5ced7dfa90a9ae"><td class="memItemLeft" align="right" valign="top"><a id="a0a1208545b05039a0e5ced7dfa90a9ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getFullJDotQdot</b> (int link_id, dynacore::Vector &amp;JDotQdot) const</td></tr>
+<tr class="separator:a0a1208545b05039a0e5ced7dfa90a9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cddd67f824106ba6701543cac5aa59"><td class="memItemLeft" align="right" valign="top"><a id="a69cddd67f824106ba6701543cac5aa59"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getWorld2BodyMatrix</b> (<a class="el" href="cppTypes_8h.html#adb7d462b35d31f0b2583b3e230a2a2c3">dynacore::Mat3</a> &amp;_World2Body)</td></tr>
+<tr class="separator:a69cddd67f824106ba6701543cac5aa59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb288572af74c8f33301278db6457df6"><td class="memItemLeft" align="right" valign="top"><a id="aeb288572af74c8f33301278db6457df6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateSystem</b> (const dynacore::Vector &amp;q, const dynacore::Vector &amp;qdot)</td></tr>
+<tr class="separator:aeb288572af74c8f33301278db6457df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64aa3de0bde270639f9d8ae15e14a6da"><td class="memItemLeft" align="right" valign="top"><a id="a64aa3de0bde270639f9d8ae15e14a6da"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PrintLinkList</b> ()</td></tr>
+<tr class="separator:a64aa3de0bde270639f9d8ae15e14a6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528aa7164d4ddae2023d42ee800d0daa"><td class="memItemLeft" align="right" valign="top"><a id="a528aa7164d4ddae2023d42ee800d0daa"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>FindLinkId</b> (const char *link_name)</td></tr>
+<tr class="separator:a528aa7164d4ddae2023d42ee800d0daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac660e406ae345554214e1fb8a4ae306c"><td class="memItemLeft" align="right" valign="top"><a id="ac660e406ae345554214e1fb8a4ae306c"></a>
+RigidBodyDynamics::Model *&#160;</td><td class="memItemRight" valign="bottom"><b>model_</b></td></tr>
+<tr class="separator:ac660e406ae345554214e1fb8a4ae306c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ad202e2949cc99f2db21a96e23018fdc3"><td class="memItemLeft" align="right" valign="top"><a id="ad202e2949cc99f2db21a96e23018fdc3"></a>
+<a class="el" href="classquadruped_1_1DynModel.html">DynModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dyn_model_</b></td></tr>
+<tr class="separator:ad202e2949cc99f2db21a96e23018fdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1baa9dc5905af1e90b0c86bc9b88bc76"><td class="memItemLeft" align="right" valign="top"><a id="a1baa9dc5905af1e90b0c86bc9b88bc76"></a>
+<a class="el" href="classquadruped_1_1KinModel.html">KinModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>kin_model_</b></td></tr>
+<tr class="separator:a1baa9dc5905af1e90b0c86bc9b88bc76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>controller/model/<a class="el" href="floatingBaseModel_8hpp_source.html">floatingBaseModel.hpp</a></li>
+<li>controller/model/floatingBaseModel.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,86 @@
+\hypertarget{classquadruped_1_1FloatingBaseModel}{}\section{quadruped\+:\+:Floating\+Base\+Model类 参考}
+\label{classquadruped_1_1FloatingBaseModel}\index{quadruped\+::\+Floating\+Base\+Model@{quadruped\+::\+Floating\+Base\+Model}}
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a5f5f04261e961fae57f84aaf80f65f4f}\label{classquadruped_1_1FloatingBaseModel_a5f5f04261e961fae57f84aaf80f65f4f}} 
+bool {\bfseries get\+Mass\+Inertia} (dynacore\+::\+Matrix \&A) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a7955bced1fbfb11965de500d31900d3d}\label{classquadruped_1_1FloatingBaseModel_a7955bced1fbfb11965de500d31900d3d}} 
+bool {\bfseries get\+Inverse\+Mass\+Inertia} (dynacore\+::\+Matrix \&Ainv) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a8f337459898a613548efb4af536f64e1}\label{classquadruped_1_1FloatingBaseModel_a8f337459898a613548efb4af536f64e1}} 
+bool {\bfseries get\+Gravity} (dynacore\+::\+Vector \&grav) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a5345ee06da415df56a17623a100addfe}\label{classquadruped_1_1FloatingBaseModel_a5345ee06da415df56a17623a100addfe}} 
+bool {\bfseries get\+Coriolis} (dynacore\+::\+Vector \&coriolis) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_afb96803e722a8d0565f1a43327935b27}\label{classquadruped_1_1FloatingBaseModel_afb96803e722a8d0565f1a43327935b27}} 
+void {\bfseries get\+Centroid\+Jacobian} (dynacore\+::\+Matrix \&Jcent) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a16dcc8e6ed6984a0996d2d7648b0a351}\label{classquadruped_1_1FloatingBaseModel_a16dcc8e6ed6984a0996d2d7648b0a351}} 
+void {\bfseries get\+Centroid\+Inertia} (dynacore\+::\+Matrix \&Icent) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_aa38322065e6fa0c7381b3a82874854e0}\label{classquadruped_1_1FloatingBaseModel_aa38322065e6fa0c7381b3a82874854e0}} 
+void {\bfseries get\+Co\+M\+Position} (dynacore\+::\+Vect3 \&com\+\_\+pos) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a10349bcc5d2bf90b5587773efab8cc44}\label{classquadruped_1_1FloatingBaseModel_a10349bcc5d2bf90b5587773efab8cc44}} 
+void {\bfseries get\+Co\+M\+Velocity} (dynacore\+::\+Vect3 \&com\+\_\+vel) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a6e7a003cb230a5ec8696c46a2047a6c0}\label{classquadruped_1_1FloatingBaseModel_a6e7a003cb230a5ec8696c46a2047a6c0}} 
+void {\bfseries get\+Pos} (int link\+\_\+id, dynacore\+::\+Vect3 \&pos) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_ab66894859661648f90a2218a43ad0b01}\label{classquadruped_1_1FloatingBaseModel_ab66894859661648f90a2218a43ad0b01}} 
+void {\bfseries get\+Ori} (int link\+\_\+id, dynacore\+::\+Vect3 \&rpy) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a400825b773081cdd886383624d53b542}\label{classquadruped_1_1FloatingBaseModel_a400825b773081cdd886383624d53b542}} 
+void {\bfseries get\+Linear\+Vel} (int link\+\_\+id, dynacore\+::\+Vect3 \&lin\+\_\+vel) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a48efc47609ab056a82d0cc8bd882bf04}\label{classquadruped_1_1FloatingBaseModel_a48efc47609ab056a82d0cc8bd882bf04}} 
+void {\bfseries get\+Angular\+Vel} (int link\+\_\+id, dynacore\+::\+Vect3 \&ang\+\_\+vel) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_ac94400de545c66a32020c4d3671ccff0}\label{classquadruped_1_1FloatingBaseModel_ac94400de545c66a32020c4d3671ccff0}} 
+void {\bfseries get\+Centroid\+Velocity} (dynacore\+::\+Vector \&centroid\+\_\+vel) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a1b0c2f3c829e2544edb507a5934411f6}\label{classquadruped_1_1FloatingBaseModel_a1b0c2f3c829e2544edb507a5934411f6}} 
+void {\bfseries get\+Co\+M\+Jacobian} (dynacore\+::\+Matrix \&J) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a4076657aec4909dc3e2cda3dd57ba701}\label{classquadruped_1_1FloatingBaseModel_a4076657aec4909dc3e2cda3dd57ba701}} 
+void {\bfseries get\+Full\+Jacobian} (int link\+\_\+id, dynacore\+::\+Matrix \&J) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a0a1208545b05039a0e5ced7dfa90a9ae}\label{classquadruped_1_1FloatingBaseModel_a0a1208545b05039a0e5ced7dfa90a9ae}} 
+void {\bfseries get\+Full\+J\+Dot\+Qdot} (int link\+\_\+id, dynacore\+::\+Vector \&J\+Dot\+Qdot) const
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a69cddd67f824106ba6701543cac5aa59}\label{classquadruped_1_1FloatingBaseModel_a69cddd67f824106ba6701543cac5aa59}} 
+void {\bfseries get\+World2\+Body\+Matrix} (\hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{dynacore\+::\+Mat3} \&\+\_\+\+World2\+Body)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_aeb288572af74c8f33301278db6457df6}\label{classquadruped_1_1FloatingBaseModel_aeb288572af74c8f33301278db6457df6}} 
+void {\bfseries Update\+System} (const dynacore\+::\+Vector \&q, const dynacore\+::\+Vector \&qdot)
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a64aa3de0bde270639f9d8ae15e14a6da}\label{classquadruped_1_1FloatingBaseModel_a64aa3de0bde270639f9d8ae15e14a6da}} 
+void {\bfseries Print\+Link\+List} ()
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a528aa7164d4ddae2023d42ee800d0daa}\label{classquadruped_1_1FloatingBaseModel_a528aa7164d4ddae2023d42ee800d0daa}} 
+unsigned int {\bfseries Find\+Link\+Id} (const char $\ast$link\+\_\+name)
+\end{DoxyCompactItemize}
+\subsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_ac660e406ae345554214e1fb8a4ae306c}\label{classquadruped_1_1FloatingBaseModel_ac660e406ae345554214e1fb8a4ae306c}} 
+Rigid\+Body\+Dynamics\+::\+Model $\ast$ {\bfseries model\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_ad202e2949cc99f2db21a96e23018fdc3}\label{classquadruped_1_1FloatingBaseModel_ad202e2949cc99f2db21a96e23018fdc3}} 
+\hyperlink{classquadruped_1_1DynModel}{Dyn\+Model} $\ast$ {\bfseries dyn\+\_\+model\+\_\+}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1FloatingBaseModel_a1baa9dc5905af1e90b0c86bc9b88bc76}\label{classquadruped_1_1FloatingBaseModel_a1baa9dc5905af1e90b0c86bc9b88bc76}} 
+\hyperlink{classquadruped_1_1KinModel}{Kin\+Model} $\ast$ {\bfseries kin\+\_\+model\+\_\+}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+controller/model/floating\+Base\+Model.\+hpp\item 
+controller/model/floating\+Base\+Model.\+cpp\end{DoxyCompactItemize}

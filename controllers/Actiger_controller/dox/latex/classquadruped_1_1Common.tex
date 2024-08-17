@@ -1,0 +1,149 @@
+\hypertarget{classquadruped_1_1Common}{}\section{quadruped\+:\+:Common类 参考}
+\label{classquadruped_1_1Common}\index{quadruped\+::\+Common@{quadruped\+::\+Common}}
+
+
+Actiger通用函数类  
+
+
+
+
+{\ttfamily \#include $<$common\+Function.\+hpp$>$}
+
+\subsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classquadruped_1_1Common_a238749d318a2208574129c4aa5477cda}\label{classquadruped_1_1Common_a238749d318a2208574129c4aa5477cda}} 
+\hyperlink{classquadruped_1_1Common_a238749d318a2208574129c4aa5477cda}{Common} (void)
+\begin{DoxyCompactList}\small\item\em Common类的构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classquadruped_1_1Common_ae5929aa0ce32558ecb76f9593d8e0e15}\label{classquadruped_1_1Common_ae5929aa0ce32558ecb76f9593d8e0e15}} 
+virtual \hyperlink{classquadruped_1_1Common_ae5929aa0ce32558ecb76f9593d8e0e15}{$\sim$\+Common} (void)
+\begin{DoxyCompactList}\small\item\em Common类的析构函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ \hyperlink{classquadruped_1_1Common_a471c7074d56b4a2c856ff21e680e67a8}{Rotation\+Matrix} (\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ p\+\_\+actul\+\_\+body\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em 构建三维旋转矩阵\mbox{[}World -\/$>$ Body $\vert$ roll + pitch + yaw\mbox{]} \end{DoxyCompactList}\item 
+static \hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ \hyperlink{classquadruped_1_1Common_aa0a116c7c23dea6de2cd2dcd28b644b6}{Rotation\+Of\+Z\+Matrix} (double yaw)
+\begin{DoxyCompactList}\small\item\em 构建三维旋转矩阵\mbox{[}World -\/$>$ Body $\vert$ yaw\mbox{]} \end{DoxyCompactList}\item 
+static \hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ \hyperlink{classquadruped_1_1Common_a8b05a953662bcadd1cd3bf7dd17ae866}{Get\+Skew\+Symmetric\+Matrix} (\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$ vector)
+\begin{DoxyCompactList}\small\item\em 将向量转化为叉乘矩阵 \end{DoxyCompactList}\item 
+static \hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ \hyperlink{classquadruped_1_1Common_a972d5fc8430f5aa57706d0a7f0cc267e}{Pinv} (\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ matrix)
+\begin{DoxyCompactList}\small\item\em 矩阵求伪逆 \end{DoxyCompactList}\item 
+static \hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ \hyperlink{classquadruped_1_1Common_a0b5411a1c977d54a3f2cf88ab7662c1c}{Weighted\+Inverse} (\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ J, \hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ Winv)
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Actiger通用函数类 
+
+\subsection{成员函数说明}
+\mbox{\Hypertarget{classquadruped_1_1Common_a8b05a953662bcadd1cd3bf7dd17ae866}\label{classquadruped_1_1Common_a8b05a953662bcadd1cd3bf7dd17ae866}} 
+\index{quadruped\+::\+Common@{quadruped\+::\+Common}!Get\+Skew\+Symmetric\+Matrix@{Get\+Skew\+Symmetric\+Matrix}}
+\index{Get\+Skew\+Symmetric\+Matrix@{Get\+Skew\+Symmetric\+Matrix}!quadruped\+::\+Common@{quadruped\+::\+Common}}
+\subsubsection{\texorpdfstring{Get\+Skew\+Symmetric\+Matrix()}{GetSkewSymmetricMatrix()}}
+{\footnotesize\ttfamily \hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ Common\+::\+Get\+Skew\+Symmetric\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+将向量转化为叉乘矩阵 
+
+
+\begin{DoxyParams}{参数}
+{\em vector} & 待转化的向量 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Mat3$<$double$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classquadruped_1_1Common_a972d5fc8430f5aa57706d0a7f0cc267e}\label{classquadruped_1_1Common_a972d5fc8430f5aa57706d0a7f0cc267e}} 
+\index{quadruped\+::\+Common@{quadruped\+::\+Common}!Pinv@{Pinv}}
+\index{Pinv@{Pinv}!quadruped\+::\+Common@{quadruped\+::\+Common}}
+\subsubsection{\texorpdfstring{Pinv()}{Pinv()}}
+{\footnotesize\ttfamily \hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ Common\+::\+Pinv (\begin{DoxyParamCaption}\item[{\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+矩阵求伪逆 
+
+
+\begin{DoxyParams}{参数}
+{\em matrix} & 待求伪逆矩阵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+D\+Mat$<$double$>$ 
+\end{DoxyReturn}
+
+
+参考自 Weighted\+Inverse().
+
+\mbox{\Hypertarget{classquadruped_1_1Common_a471c7074d56b4a2c856ff21e680e67a8}\label{classquadruped_1_1Common_a471c7074d56b4a2c856ff21e680e67a8}} 
+\index{quadruped\+::\+Common@{quadruped\+::\+Common}!Rotation\+Matrix@{Rotation\+Matrix}}
+\index{Rotation\+Matrix@{Rotation\+Matrix}!quadruped\+::\+Common@{quadruped\+::\+Common}}
+\subsubsection{\texorpdfstring{Rotation\+Matrix()}{RotationMatrix()}}
+{\footnotesize\ttfamily \hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ Common\+::\+Rotation\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{cppTypes_8h_a65c27bf97693676535dd0b30ea0ad399}{Vec3}$<$ double $>$}]{p\+\_\+actul\+\_\+body\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+构建三维旋转矩阵\mbox{[}World -\/$>$ Body $\vert$ roll + pitch + yaw\mbox{]} 
+
+
+\begin{DoxyParams}{参数}
+{\em p\+\_\+actul\+\_\+body\+\_\+angle} & Actiger实际的欧拉角 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Mat3$<$double$>$ 
+\end{DoxyReturn}
+
+
+参考自 quadruped\+::\+Body\+State\+Estimate\+::$\sim$\+Body\+State\+Estimate().
+
+\mbox{\Hypertarget{classquadruped_1_1Common_aa0a116c7c23dea6de2cd2dcd28b644b6}\label{classquadruped_1_1Common_aa0a116c7c23dea6de2cd2dcd28b644b6}} 
+\index{quadruped\+::\+Common@{quadruped\+::\+Common}!Rotation\+Of\+Z\+Matrix@{Rotation\+Of\+Z\+Matrix}}
+\index{Rotation\+Of\+Z\+Matrix@{Rotation\+Of\+Z\+Matrix}!quadruped\+::\+Common@{quadruped\+::\+Common}}
+\subsubsection{\texorpdfstring{Rotation\+Of\+Z\+Matrix()}{RotationOfZMatrix()}}
+{\footnotesize\ttfamily \hyperlink{cppTypes_8h_adb7d462b35d31f0b2583b3e230a2a2c3}{Mat3}$<$ double $>$ Common\+::\+Rotation\+Of\+Z\+Matrix (\begin{DoxyParamCaption}\item[{double}]{yaw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+构建三维旋转矩阵\mbox{[}World -\/$>$ Body $\vert$ yaw\mbox{]} 
+
+
+\begin{DoxyParams}{参数}
+{\em yaw} & Actiger实际的偏航角 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Mat3$<$double$>$ 
+\end{DoxyReturn}
+
+
+参考自 quadruped\+::\+F\+H\+\_\+constraints\+::\+Get\+Kinematics\+Cst() , 以及 quadruped\+::\+F\+H\+\_\+constraints\+::\+Get\+Other\+Cst().
+
+\mbox{\Hypertarget{classquadruped_1_1Common_a0b5411a1c977d54a3f2cf88ab7662c1c}\label{classquadruped_1_1Common_a0b5411a1c977d54a3f2cf88ab7662c1c}} 
+\index{quadruped\+::\+Common@{quadruped\+::\+Common}!Weighted\+Inverse@{Weighted\+Inverse}}
+\index{Weighted\+Inverse@{Weighted\+Inverse}!quadruped\+::\+Common@{quadruped\+::\+Common}}
+\subsubsection{\texorpdfstring{Weighted\+Inverse()}{WeightedInverse()}}
+{\footnotesize\ttfamily \hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$ Common\+::\+Weighted\+Inverse (\begin{DoxyParamCaption}\item[{\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$}]{J,  }\item[{\hyperlink{cppTypes_8h_a5db6bfb25afa103db1fb6bb6287ae9d7}{D\+Mat}$<$ double $>$}]{Winv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{参数}
+{\em J} & \\
+\hline
+{\em Winv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+D\+Mat$<$double$>$ 
+\end{DoxyReturn}
+
+
+参考 Pinv().
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commonFunction_8hpp}{common\+Function.\+hpp}\item 
+\hyperlink{commonFunction_8cpp}{common\+Function.\+cpp}\end{DoxyCompactItemize}

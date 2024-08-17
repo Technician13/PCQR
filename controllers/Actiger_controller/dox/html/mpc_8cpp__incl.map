@@ -1,0 +1,26 @@
+<map id="controller/mpc/mpc.cpp" name="controller/mpc/mpc.cpp">
+<area shape="rect" id="node2" href="$mpc_8hpp_source.html" title="mpc.hpp" alt="" coords="1536,80,1608,107"/>
+<area shape="rect" id="node6" href="$parameters_8hpp_source.html" title="parameters.hpp" alt="" coords="1732,752,1844,779"/>
+<area shape="rect" id="node7" href="$cppTypes_8h_source.html" title="cppTypes.h" alt="" coords="979,976,1069,1003"/>
+<area shape="rect" id="node22" href="$motionPlan_8hpp_source.html" title="motionPlan.hpp" alt="" coords="1123,229,1235,256"/>
+<area shape="rect" id="node40" href="$robotModel_8hpp_source.html" title="robotModel.hpp" alt="" coords="906,453,1017,480"/>
+<area shape="rect" id="node48" href="$qpSolver_8hpp_source.html" title="qpSolver.hpp" alt="" coords="1479,155,1577,181"/>
+<area shape="rect" id="node49" href="$legControl_8hpp_source.html" title="legControl.hpp" alt="" coords="1148,155,1255,181"/>
+<area shape="rect" id="node10" href="$commonFunction_8hpp_source.html" title="commonFunction.hpp" alt="" coords="1467,827,1613,853"/>
+<area shape="rect" id="node11" href="$cppStruct_8h_source.html" title="cppStruct.h" alt="" coords="1334,901,1423,928"/>
+<area shape="rect" id="node23" href="$queue_8hpp_source.html" title="queue.hpp" alt="" coords="440,453,523,480"/>
+<area shape="rect" id="node24" href="$gamepad_8hpp_source.html" title="gamepad.hpp" alt="" coords="2231,677,2331,704"/>
+<area shape="rect" id="node33" href="$stateMachine_8hpp_source.html" title="stateMachine.hpp" alt="" coords="347,827,472,853"/>
+<area shape="rect" id="node34" href="$bodyTrajectory_8hpp_source.html" title="bodyTrajectory.hpp" alt="" coords="1448,304,1581,331"/>
+<area shape="rect" id="node35" href="$endfootTrajectory_8hpp_source.html" title="endfootTrajectory.hpp" alt="" coords="1606,603,1754,629"/>
+<area shape="rect" id="node37" href="$foothold_8hpp_source.html" title="foothold.hpp" alt="" coords="1132,304,1225,331"/>
+<area shape="rect" id="node47" href="$legPlan_8hpp_source.html" title="legPlan.hpp" alt="" coords="533,379,624,405"/>
+<area shape="rect" id="node36" href="$terrain_8hpp_source.html" title="terrain.hpp" alt="" coords="1571,677,1653,704"/>
+<area shape="rect" id="node38" href="$fH__nlp_8hpp_source.html" title="fH_nlp.hpp" alt="" coords="800,827,885,853"/>
+<area shape="rect" id="node39" href="$fH__updataInfo_8hpp_source.html" title="fH_updataInfo.hpp" alt="" coords="1401,379,1530,405"/>
+<area shape="rect" id="node41" href="$floatingBaseModel_8hpp_source.html" title="floatingBaseModel.hpp" alt="" coords="800,528,955,555"/>
+<area shape="rect" id="node43" href="$bodyStateEstimate_8hpp_source.html" title="bodyStateEstimate.hpp" alt="" coords="1081,528,1239,555"/>
+<area shape="rect" id="node44" href="$legStateEstimate_8hpp_source.html" title="legStateEstimate.hpp" alt="" coords="1181,603,1328,629"/>
+<area shape="rect" id="node45" href="$webotsApi_8hpp.html" title="webots仿真环境中的相关函数封装头文件 " alt="" coords="1185,677,1293,704"/>
+<area shape="rect" id="node50" href="$singleLegControl_8hpp_source.html" title="singleLegControl.hpp" alt="" coords="195,379,339,405"/>
+</map>
