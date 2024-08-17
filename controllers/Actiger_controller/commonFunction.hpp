@@ -99,7 +99,7 @@ namespace quadruped
 	#define MAX_ACC_X   			(1.0)						/**< 机体X方向最大加速度 */
 	#define MAX_ACC_Y   			(0.2)						/**< 机体Y方向最大加速度 */
 	#define MAX_ACC_Z   			(1.0)						/**< 机体Z方向最大加速度 */
-	#define MAX_CMD_VEL_X 			(0.1)						/**< 机体X方向最大速度 */
+	#define MAX_CMD_VEL_X 			(0.8)						/**< 机体X方向最大速度 */
 	#define MAX_CMD_VEL_Y 			(0.25)						/**< 机体Y方向最大速度 */
 	#define MAX_CMD_HEIGHT_Z 		(0.53)						/**< 机体Z方向最大高度 */
 	#define MIN_CMD_HEIGHT_Z 		(0.35)						/**< 机体X方向最小高度 */

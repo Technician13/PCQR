@@ -12,131 +12,22 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.29699707047501617 0.9412145576426723 0.1609593011005163 1.0448802992791286
-  position 7.120721743608723 3.191838088468767 9.007392898713352
-  follow "floor"
+  orientation 0.02932467085578661 0.9954113961361521 0.09108356669276926 3.761866720802169
+  position -23.406214900572483 9.288118630367846 -16.289866932280546
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
-Floor {
-  size 500 500
-  tileSize 2 2
-  appearance Parquetry {
-    type "light strip"
-  }
-}
-DEF seesaw_support Solid {
-  translation -9 0 105
-  rotation 1 0 0 0.785398
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-          diffuseColor 0.3 0.3 0.3
-        }
-      }
-      geometry Box {
-        size 0.9 0.4242 0.4242
-      }
-    }
-  ]
-  name "seesaw_support"
-  boundingObject Shape {
-    geometry Box {
-      size 0.9 0.4242 0.4242
-    }
-  }
-}
-DEF seesaw_board Solid {
-  translation -7.57 0.35 104.99
-  rotation 1 0 0 -0.2
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-          diffuseColor 0.3 0.3 0.3
-        }
-      }
-      geometry Box {
-        size 0.9 0.01 2.4
-      }
-    }
-  ]
-  name "seesaw_board"
-  boundingObject Shape {
-    appearance Appearance {
-      material Material {
-        diffuseColor 0.3 0.3 0.3
-      }
-    }
-    geometry Box {
-      size 0.9 0.01 2.4
-    }
-  }
-  physics Physics {
-  }
-}
-DEF hurdles Solid {
-  translation -12.45 0.300041 103
-  rotation 0 0 -1 1.5708
-  children [
-    DEF hurdles Group {
-      children [
-        Transform {
-          translation 0.15 0.4 0
-          rotation 0 0 1 -1.5707953071795862
-          children [
-            Shape {
-              appearance Appearance {
-                material Material {
-                  diffuseColor 0.3 0.3 0.3
-                }
-              }
-              geometry Cylinder {
-                height 0.3
-                radius 0.01
-              }
-            }
-          ]
-        }
-        Transform {
-          translation 0.15 -0.4 0
-          rotation 0 0 1 -1.5707953071795862
-          children [
-            Shape {
-              appearance Appearance {
-                material Material {
-                  diffuseColor 0.3 0.3 0.3
-                }
-              }
-              geometry Cylinder {
-                height 0.3
-                radius 0.01
-              }
-            }
-          ]
-        }
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0.3 0.3 0.3
-            }
-          }
-          geometry Cylinder {
-            height 1
-            radius 0.025
-          }
-        }
-      ]
-    }
-  ]
-  name "hurdles"
-  boundingObject USE hurdles
+RectangleArena {
+  translation 0 0 19
+  name "floor(1)"
+  floorSize 10 50
+  floorTileSize 5 5
+  wallHeight 0.6
 }
 DEF sill Solid {
-  translation 12.23 0.025 4
+  translation 0 0.025 18
   children [
     Shape {
       appearance Appearance {
@@ -159,161 +50,8 @@ DEF sill Solid {
     }
   }
 }
-DEF logo Solid {
-  translation 25.45 1.6 0
-  children [
-    Group {
-      children [
-        DEF logoboard1_4 AdvertisingBoard {
-          translation 0 0 12
-          rotation 0 1 0 1.5708
-          name "advertising board(4)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824203355044.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-        DEF logoboard2_4 AdvertisingBoard {
-          translation 0 0 28
-          rotation 0 1 0 1.5708
-          name "advertising board(8)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824203355044.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-        DEF logoboard1_3 AdvertisingBoard {
-          translation 0 0 8
-          rotation 0 1 0 1.5708
-          name "advertising board(3)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824202829537.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-        DEF logoboard2_3 AdvertisingBoard {
-          translation 0 0 24
-          rotation 0 1 0 1.5708
-          name "advertising board(7)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824202829537.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-        DEF logoboard1_2 AdvertisingBoard {
-          translation 0 0 4
-          rotation 0 1 0 1.5708
-          name "advertising board(2)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824211103077.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-        DEF logoboard2_2 AdvertisingBoard {
-          translation 0 0 20
-          rotation 0 1 0 1.5708
-          name "advertising board(6)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824211103077.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-        DEF logoboard1_1 AdvertisingBoard {
-          rotation 0 1 0 1.5708
-          name "advertising board(1)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824210818312.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-        DEF logoboard2_1 AdvertisingBoard {
-          translation 0 0 16
-          rotation 0 1 0 1.5708
-          name "advertising board(5)"
-          frontTexture [
-            "/home/action/程序/Actiger/controllers/Actiger_controller/logo/360截图20210824210818312.jpg"
-          ]
-          backTexture [
-            "textures/metal.jpg"
-          ]
-          displayWidth 3
-          frameThickness 0.2
-          frameColor 0 0 0
-          poleType "box"
-          poleHeight 2
-          poleThickness 0.8
-          baseRatio 1
-        }
-      ]
-    }
-  ]
-  name "logo"
-}
 DEF calandria Solid {
-  translation 14.83 0.0229779 4.2
+  translation 0 0.0229779 22
   rotation 0 0 1 1.5707
   children [
     DEF pipe Group {
@@ -1209,7 +947,7 @@ DEF quadruped Robot {
       ]
       endPoint Solid {
         translation -0.054587594411212366 1.6913945120093643e-05 -0.278
-        rotation -0.0795300977475652 0.9968324651375735 1.0552012795204929e-07 3.141590008405338
+        rotation -0.0795300977475652 0.9968324651375735 1.0552012795205098e-07 3.141590008405338
         children [
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -4271,7 +4009,7 @@ DEF quadruped Robot {
       ]
       endPoint Solid {
         translation 0.054998786711696335 1.1150032443024028e-05 -0.27799937632927474
-        rotation -0.05420437831450243 0.9985298611019399 4.3119356964832725e-05 3.1400040012408446
+        rotation -0.05420437831450243 0.9985298611019399 4.311935696483164e-05 3.1400040012408446
         children [
           HingeJoint {
             jointParameters HingeJointParameters {
@@ -8047,44 +7785,8 @@ DEF quadruped Robot {
   controller "Actiger_controller"
   supervisor TRUE
 }
-DEF bridge Solid {
-  translation -14.13 0.05 104
-  children [
-    DEF bridge Group {
-      children [
-        Transform {
-          translation 0.4 0 0
-          children [
-            Shape {
-              appearance Appearance {
-                material Material {
-                  diffuseColor 0.3 0.3 0.3
-                }
-              }
-              geometry Box {
-                size 0.2 0.1 2.5
-              }
-            }
-          ]
-        }
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0.3 0.3 0.3
-            }
-          }
-          geometry Box {
-            size 0.2 0.1 2.5
-          }
-        }
-      ]
-    }
-  ]
-  name "bridge"
-  boundingObject USE bridge
-}
 DEF stage Solid {
-  translation 11.96 0.05 6
+  translation 0 0.05 12
   rotation -1 0 0 0
   children [
     Shape {
@@ -8110,7 +7812,7 @@ DEF stage Solid {
   }
 }
 DEF slope Solid {
-  translation 19.66 0.300091 6
+  translation 0 0.300091 32
   rotation 1 0 0 4.07987e-06
   children [
     DEF slope Group {
