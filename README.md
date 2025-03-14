@@ -51,7 +51,10 @@ cd build
 cmake ..
 make -j
 ```
-Set up the controller in Webots and run it.
+Set up the controller in Webots and run it. The remote control is used to control robot behavior.
+<div align="center">
+    <img src="img/FigRC.png", width="800">
+</div>
 
 
 ## Citation 
