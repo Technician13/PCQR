@@ -15,16 +15,14 @@
 
 <div align="center">
 <h3><strong>The paper is submitted to <a href='https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036' target='_blank'>TCYB 2024</a></strong></h3>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Ubuntu-passing-009E2F">  
-  <img alt="Static Badge" src="https://img.shields.io/badge/video-009E2F?style=plastic&link=https%3A%2F%2Fwww.youtube.com%2F">
-
-</p>
-
 </div>
 
+<div align="center">    
+  
+[![Video Badge](https://img.shields.io/badge/-video-009E2F)](https://www.youtube.com/)
+![Static Badge](https://img.shields.io/badge/Ubuntu-passing-2C448B)     
 
+</div>
 
 ## Introduction
 In this work, we propose an integrated framework, designated PCQR (motion planning and control for quadruped robots). This framework consists of two components for motion planning and for motion control. We propose whole-body planning and state estimation algorithms in the former to together achieve motion planning for all degrees of freedom of the quadruped robot. In the whole-body planning algorithm, we divide a humongous motion planning task into three subtasks for foothold selection, swing leg trajectory generation, and body trajectory generation to reduce computational complexity and improve the real-time performance of motion planning. We implement a two-stage controller in the latter, including a main controller based on model predictive control and single-leg controllers to compute joint torque commands. Experimental results confirm the effectiveness of PCQR, as well as its superiority in locomotion stability, terrain adaptability, and real-time performance compared to some popular baselines.
