@@ -1,13 +1,3 @@
-### 操作
-* 启动 `lo & ro`            
-* 解锁 `l & r`          
-* sill `X`          
-* stage `A`                 
-* slope `B`           
-* pipes `Y`             
-* stairs `+`           
-* flat `-`              
-
 &nbsp;
 <div align=center>
   <img src="https://github.com/Technician13/PCQR/blob/master/img/LOGO/PCQR.svg?sanitize=true" width="300px">
@@ -34,22 +24,18 @@
 
 ## Introduction
 In this work, we propose an integrated framework, designated PCQR (motion planning and control for quadruped robots). This framework consists of two components for motion planning and for motion control. We propose whole-body planning and state estimation algorithms in the former to together achieve motion planning for all degrees of freedom of the quadruped robot. In the whole-body planning algorithm, we divide a humongous motion planning task into three subtasks for foothold selection, swing leg trajectory generation, and body trajectory generation to reduce computational complexity and improve the real-time performance of motion planning. We implement a two-stage controller in the latter, including a main controller based on model predictive control and single-leg controllers to compute joint torque commands. Experimental results confirm the effectiveness of PCQR, as well as its superiority in locomotion stability, terrain adaptability, and real-time performance compared to some popular baselines.
-
-
-
-
-
-
-
 <div align="center">
-    <img src="img/FigOverall.png", width="618">
+    <img src="img/FigWorkflow.png", width="800">
 </div>
 
 
 ## Setup
-### Installation
 Major dependency: 
-* [pygame 2.6.0](https://www.pygame.org)
+* [Ipopt 3.12.7](https://www.coin-or.org/download/source/Ipopt/)
+* [OSQP 0.4.1](https://osqp.org/)
+* [RBDL](https://rbdl.github.io/)
+* [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
+* [Webots 2021a](https://www.cyberbotics.com/doc/blog/Webots-2021-a-release)
 
 Download   
 ```
@@ -58,14 +44,14 @@ git clone https://github.com/Technician13/PF-GBP-python
 
 
 ## Running
-You can run the project with the default configuration in the `config.json`. 
+You can run the project with the default configuration in the `controllers/Actiger_controller/commonFunction.hpp`. 
 ```
-python ./main.py
+mkdir build
+cd build
+cmake ..
+make -j
 ```
-The following figure illustrates the result of the experiment that involved 8 robots and 1 obstacle.     
-<div align=center>
-  <img src="img/RESULT/Result.png" width="300">
-</div>
+Set up the controller in Webots and run it.
 
 
 ## Citation 
