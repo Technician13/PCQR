@@ -17,9 +17,13 @@
 <h3><strong>The paper is submitted to <a href='https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036' target='_blank'>TCYB 2024</a></strong></h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Ubuntu-passing-009E2F">     
+  <img src="https://img.shields.io/badge/Ubuntu-passing-009E2F">  
+  <img alt="Static Badge" src="https://img.shields.io/badge/video-009E2F?style=plastic&link=https%3A%2F%2Fwww.youtube.com%2F">
+
 </p>
+
 </div>
+
 
 
 ## Introduction
