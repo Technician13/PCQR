@@ -41,7 +41,7 @@ Major dependency:
 
 Download   
 ```
-git clone https://github.com/Technician13/PF-GBP-python
+git clone https://github.com/Technician13/PCQR.git
 ```
 
 
