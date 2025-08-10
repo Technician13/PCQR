@@ -13,4 +13,4 @@
 
 
 
-
+[点击这里观看视频](https://github.com/Technician13/PCQR/blob/master/img/annoymous.mp4)
