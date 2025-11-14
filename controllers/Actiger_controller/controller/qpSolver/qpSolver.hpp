@@ -1,14 +1,3 @@
-/**
- * @file qpSolver.hpp
- * @brief Actiger二次规划求解器QpSolver头文件
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-20
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #ifndef QPSOLVER_HPP
 #define QPSOLVER_HPP
 
@@ -20,9 +9,6 @@
 
 namespace quadruped
 {
-    /**
-     * @brief Actiger二次规划求解器
-     */
     class QpSolver
     {
     private:

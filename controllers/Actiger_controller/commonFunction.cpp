@@ -1,33 +1,14 @@
-/**
- * @file commonFunction.cpp
- * @brief Actiger通用函数类Common
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-19
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "commonFunction.hpp"
 
 using namespace quadruped;
 
-/**
- * @brief Common类的构造函数
- */
+
 Common::Common(void) {}
 
-/**
- * @brief Common类的析构函数
- */
+
 Common::~Common(void) {}
 
-/**
- * @brief 构建三维旋转矩阵[World -> Body | roll + pitch + yaw]，需要右乘一个World坐标系下的位置向量，得到一个Body坐标系下的位置向量
- * @param  p_actul_body_angle  Actiger实际的欧拉角
- * @return Mat3<double> 
- */
+
 Mat3<double> Common::RotationMatrix(Vec3<double> p_actul_body_angle)
 {
 	double roll = p_actul_body_angle(0);
@@ -49,11 +30,7 @@ Mat3<double> Common::RotationMatrix(Vec3<double> p_actul_body_angle)
 	return rotation;
 }
 
-/**
- * @brief 构建三维旋转矩阵[World -> Body | yaw]，需要右乘一个World坐标系下的位置向量，得到一个Body坐标系下的位置向量
- * @param  yaw  Actiger实际的偏航角           
- * @return Mat3<double> 
- */
+
 Mat3<double> Common::RotationOfZMatrix(double yaw)
 {
 	Mat3<double> rotation;
@@ -71,11 +48,7 @@ Mat3<double> Common::RotationOfZMatrix(double yaw)
 	return rotation;
 }
 
-/**
- * @brief 将向量转化为叉乘矩阵
- * @param  vector  待转化的向量        
- * @return Mat3<double> 
- */
+
 Mat3<double> Common::GetSkewSymmetricMatrix(Vec3<double> vector)
 {
 	Mat3<double> returnMatrix = Mat3<double>::Zero(3, 3);
@@ -90,11 +63,7 @@ Mat3<double> Common::GetSkewSymmetricMatrix(Vec3<double> vector)
 	return returnMatrix;
 }
 
-/**
- * @brief 矩阵求伪逆
- * @param  matrix 待求伪逆矩阵         
- * @return DMat<double> 
- */
+
 DMat<double> Common::Pinv(DMat<double> matrix)
 {
 	Eigen::JacobiSVD<DMat<double>> svd(matrix, Eigen::ComputeFullU | Eigen::ComputeFullV);
@@ -121,12 +90,7 @@ DMat<double> Common::Pinv(DMat<double> matrix)
 	return X;
 }
 
-/**
- * @brief 
- * @param  J                
- * @param  Winv             
- * @return DMat<double> 
- */
+
 DMat<double> Common::WeightedInverse(DMat<double> J, DMat<double> Winv)
 {
 	DMat<double> Jinv;

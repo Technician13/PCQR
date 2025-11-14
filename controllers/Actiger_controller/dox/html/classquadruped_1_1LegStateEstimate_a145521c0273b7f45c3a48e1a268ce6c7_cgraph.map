@@ -1,6 +1,0 @@
-<map id="quadruped::LegStateEstimate::GetLegMsg" name="quadruped::LegStateEstimate::GetLegMsg">
-<area shape="rect" id="node2" href="$classquadruped_1_1LegStateEstimate.html#a52454c0e1a587e73e1bab0187e925c35" title="quadruped::LegStateEstimate\l::CaluEndfootMsg" alt="" coords="248,5,443,47"/>
-<area shape="rect" id="node3" href="$classquadruped_1_1LegStateEstimate.html#ae5d15d8588c3b2aa7e5b8c40d17be99a" title="quadruped::LegStateEstimate\l::GetJacobian" alt="" coords="248,71,443,112"/>
-<area shape="rect" id="node4" href="$classquadruped_1_1LegStateEstimate.html#ab6c64146d3ea706ed1556b1896c6fa05" title="quadruped::LegStateEstimate\l::GetJointMsg" alt="" coords="248,136,443,177"/>
-<area shape="rect" id="node5" href="$classquadruped_1_1LegStateEstimate.html#acb65dbf36f5042cd5e257fec9264075f" title="quadruped::LegStateEstimate\l::Resize" alt="" coords="248,201,443,243"/>
-</map>

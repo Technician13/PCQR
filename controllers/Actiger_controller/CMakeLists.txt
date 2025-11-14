@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.4.1)
 set(PROJ_NAME Actiger_controller)
 project(${PROJ_NAME})
 
-# 加入一个配置头文件，用于处理 CMake 对源码的设置
 configure_file (
   "${PROJECT_SOURCE_DIR}/config.h.in"
   "${PROJECT_SOURCE_DIR}/config.h"
@@ -13,13 +12,10 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -O3")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -O3")
 
-# 是否使用实际机器人
 option (ROBOT "Use Real Robot" OFF)
 
-# 打印消息
 MESSAGE(STATUS "Use Real Robot = ${ROBOT}")
 
-# 包含所有.cpp 和.hpp
 FILE(GLOB HEADER_LIST "${CMAKE_SOURCE_DIR}/controller/legController/*.hpp" 
 		                  "${CMAKE_SOURCE_DIR}/controller/model/*.hpp" 
                       "${CMAKE_SOURCE_DIR}/controller/motionPlan/bodyTrajectory/*.hpp" 
@@ -63,7 +59,6 @@ FILE(GLOB SOURCE_LIST "${CMAKE_SOURCE_DIR}/controller/legController/*.cpp"
                       "${CMAKE_SOURCE_DIR}/webots/*.cpp"
                       "${CMAKE_SOURCE_DIR}/modules/*.cpp")
 
-# 设置输出
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR})
 add_executable(${PROJ_NAME} ${SOURCE_LIST} ${HEADER_LIST})
 
@@ -116,7 +111,6 @@ link_directories(${RBDL_LIBRARY_DIRS})
 target_link_libraries(${PROJ_NAME}  rbdl_urdfreader)
 
 
-# 是否需要引入webots
 if (ROBOT) 
   target_link_libraries(${PROJ_NAME} /home/bean/code/Actiger_controller/embedded/lib/libGinkgo_Driver.so)
   target_link_libraries(${PROJ_NAME} /home/bean/code/Actiger_controller/embedded/lib/libusb.so)

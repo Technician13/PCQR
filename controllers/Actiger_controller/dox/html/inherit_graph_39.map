@@ -1,6 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classquadruped_1_1Task.html" title="quadruped::Task" alt="" coords="5,56,124,83"/>
-<area shape="rect" id="node2" href="$classquadruped_1_1BodyOriTask.html" title="quadruped::BodyOriTask" alt="" coords="175,5,341,32"/>
-<area shape="rect" id="node3" href="$classquadruped_1_1BodyPosTask.html" title="quadruped::BodyPosTask" alt="" coords="172,56,344,83"/>
-<area shape="rect" id="node4" href="$classquadruped_1_1LinkPosTask.html" title="quadruped::LinkPosTask" alt="" coords="175,107,341,133"/>
-</map>

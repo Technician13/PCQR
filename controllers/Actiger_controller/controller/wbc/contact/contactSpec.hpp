@@ -9,7 +9,7 @@ namespace quadruped
     class ContactSpec {
     public:
         ContactSpec(size_t dim) : dim_contact(dim), b_set_contact(false) {
-            idx_Fz = dim - 1;  // because normally (tau_x,y,z , linear_x,y,z)
+            idx_Fz = dim - 1;  
             fr_des = DVec<double>::Zero(dim);
         }
         virtual ~ContactSpec() {}

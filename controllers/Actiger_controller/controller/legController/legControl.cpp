@@ -1,25 +1,8 @@
-/**
- * @file legControl.cpp
- * @brief Actiger腿部控制器 
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-20
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "legControl.hpp"
 #include <iostream>
 
 using namespace quadruped;
 
-/**
- * @brief Actiger腿部控制器构造函数，完成所有对象成员的初始化
- * @param  p_robotModel  RobotModel类的实例化对象，存储机器人模型信息，用来初始化对象成员robotModel    
- * @param  p_motionPlan  MotionPlan类的实例化对象，Actiger规划器，用来初始化对象成员motionPlan      
- * @param  p_para  Parameters类的实例化对象，存储一些被频繁使用的参数，用来初始化对象成员lf_leg、lr_leg、rf_leg以及rr_leg         
- */
 LegControl::LegControl(RobotModel *p_robotModel, MotionPlan *p_motionPlan, Parameters *p_para)
 {
 	lf_leg = new SingleLeg(p_robotModel->lf_state, p_para);
@@ -33,9 +16,7 @@ LegControl::LegControl(RobotModel *p_robotModel, MotionPlan *p_motionPlan, Param
 	std::cout << "legControl Init" << std::endl;
 }
 
-/**
- * @brief Actiger腿部控制器析构函数，释放申请的内存
- */
+
 LegControl::~LegControl()
 {
 	delete lf_leg;
@@ -44,9 +25,7 @@ LegControl::~LegControl()
 	delete rr_leg;
 }
 
-/**
- * @brief 腿部控制函数，计算输出的关节扭矩指令
- */
+
 void LegControl::LegJointControl(void)
 {
 	robotLegTorque_t torque = {0};
@@ -74,7 +53,6 @@ void LegControl::LegJointControl(void)
 
 	pthread_mutex_unlock(&ref_mutex);
 
-	/* 输出关节扭矩指令 */
 	if (handle.start == 1)
 		SetRobotJointTorque(torque);
 }

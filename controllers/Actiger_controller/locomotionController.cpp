@@ -1,22 +1,8 @@
-/**
- * @file locomotionController.cpp
- * @brief Actiger运动控制类LocomotionCtrl
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-18
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "locomotionController.hpp"
 #include <iostream>
 
 using namespace quadruped;
 
-/**
- * @brief LocomotionCtrl类的构造函数，完成所有对象成员的内存分配
- */
 LocomotionCtrl::LocomotionCtrl(void)
 {
 	para = new Parameters();
@@ -28,9 +14,7 @@ LocomotionCtrl::LocomotionCtrl(void)
 	std::cout << "LocomotionCtrl Init" << std::endl;
 }
 
-/**
- * @brief LocomotionCtrl类的析构函数，释放申请的内存
- */
+
 LocomotionCtrl::~LocomotionCtrl(void)
 {
 	delete para;
@@ -40,9 +24,7 @@ LocomotionCtrl::~LocomotionCtrl(void)
 	delete mpc;
 }
 
-/**
- * @brief 机器人控制函数
- */
+
 void LocomotionCtrl::RobotControl(void)
 {
 	robotModel->UpdataModel(mpc_pre_force, mpc_pre_pre_force);

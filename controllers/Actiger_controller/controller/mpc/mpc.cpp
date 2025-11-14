@@ -1,26 +1,10 @@
-/**
- * @file mpc.cpp
- * @brief Actiger模型预测控制器
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-20
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "mpc.hpp"
 #include <iostream>
 
 using namespace std;
 using namespace quadruped;
 
-/**
- * @brief Actiger模型预测控制器的构造函数，完成对象成员以及部分数据成员的初始化
- * @param  p_robotModel  RobotModel类的实例化对象，存储机器人模型信息，用来初始化对象成员robotModel
- * @param  p_ref  MotionPlan类的实例化对象，Actiger规划器，用来初始化对象成员ref           
- * @param  p_para  Parameters类的实例化对象，存储一些被频繁使用的参数，用来初始化对象成员para          
- */
+
 Mpc::Mpc(RobotModel *p_robotModel, MotionPlan *p_ref, Parameters *p_para)
 {
     robotModel = p_robotModel;
@@ -35,17 +19,13 @@ Mpc::Mpc(RobotModel *p_robotModel, MotionPlan *p_ref, Parameters *p_para)
     cout << "Mpc Init" << endl;
 }
 
-/**
- * @brief Actiger模型预测控制器的析构函数
- */
+
 Mpc::~Mpc(void)
 {
     delete qpSolver;
 }
 
-/**
- * @brief 设定约束的上下界[摩擦锥]
- */
+
 void Mpc::GetLimit(void)
 {
     Vec5<double> ieq_vec_l;
@@ -82,12 +62,9 @@ void Mpc::GetLimit(void)
     }
 }
 
-/**
- * @brief 设置Actiger模型预测控制器的期望状态向量
- */
+
 void Mpc::SetStateRef()
 {
-    //std::cout << "====================================== MPC参考 ======================================" << std::endl;
     for (int i = 0; i < horizon; i++)
     {
         x_ref.block(i * 13, 0, 3, 1) = ref->pBody_euler_des->GetQueueValue(i);
@@ -95,45 +72,18 @@ void Mpc::SetStateRef()
         x_ref.block(i * 13 + 6, 0, 3, 1) = ref->vBody_euler_des->GetQueueValue(i);
         x_ref.block(i * 13 + 9, 0, 3, 1) = ref->vBody_des->GetQueueValue(i);
         x_ref(i * 13 + 12) = 1.0;
-
-        //x_ref(i * 13 + 2) = PI / 2.0;
-        //std::cout << x_ref(i * 13 + 1) << std::endl;
-
-        // x_ref.block(i * 13, 0, 3, 1)<<0.0,0.0,0.0;
-        // x_ref.block(i * 13 + 3, 0, 2, 1)<<0.0,0.0;
-        // x_ref.block(i * 13 + 6, 0, 3, 1)<<0.0,0.0,0.0;
-        // x_ref.block(i * 13 + 9, 0, 3, 1)<<0.0,0.0,0.0;
-
-        // std::cout<<"--------------------------------------------------------------------des "<<i<<" --------------------------------------------------------------------"<<std::endl;
-        // std::cout<<(ref->pBody_euler_des->GetQueueValue(i))[0]<<"       "<<(ref->pBody_euler_des->GetQueueValue(i))[1]<<"       "<<(ref->pBody_euler_des->GetQueueValue(i))[2]<<"       "
-        //                   <<(ref->pBody_des->GetQueueValue(i))[0]<<"        "<<(ref->pBody_des->GetQueueValue(i))[1]<<"        "<<(ref->pBody_des->GetQueueValue(i))[2]<<"        "
-        //                 //   <<(ref->vBody_euler_des->GetQueueValue(i)+adjust.block(0,0,3,1))[0]<<"        "<<(ref->vBody_euler_des->GetQueueValue(i)+adjust.block(0,0,3,1))[1]<<"        "<<(ref->vBody_euler_des->GetQueueValue(i)+adjust.block(0,0,3,1))[2]<<"        "
-        //                 //   <<(ref->vBody_des->GetQueueValue(i)+adjust.block(3,0,3,1))[0]<<"       "<<(ref->vBody_des->GetQueueValue(i)+adjust.block(3,0,3,1))[1]<<"       "<<(ref->vBody_des->GetQueueValue(i)+adjust.block(3,0,3,1))[2]<<"       "
-        //                   <<(ref->vBody_euler_des->GetQueueValue(i)+adjust.block(0,0,3,1))<<"       "
-        //                   <<(ref->vBody_des->GetQueueValue(i)+adjust.block(3,0,3,1))
-        //                   <<std::endl;
-
-        //std::cout<<x_ref(i * 13 + 10 , 0)<<std::endl;
     }
-    //std::cout<<std::endl;
 
     ref->pBody_euler_des->Pop();
     ref->pBody_des->Pop();
     ref->vBody_euler_des->Pop();
     ref->vBody_des->Pop();
-
-    // std::cout<<"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MPC_REF ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"<<std::endl
-    //          <<x_ref.block(0, 0, 13, 1)<<std::endl;
 }
 
-/**
- * @brief 空函数  |  预留接口  |  设置机体期望状态限幅
- */
+
 void Mpc::IntegralAdjuest(void) {}
 
-/**
- * @brief Actiger模型预测控制器的初始状态
- */
+
 void Mpc::SetState(void)
 {
     x_initial.block(0, 0, 3, 1) = robotModel->bodyEuler;
@@ -143,9 +93,7 @@ void Mpc::SetState(void)
     x_initial(12) = 1.0;
 }
 
-/**
- * @brief 中间变量的重置
- */
+
 void Mpc::ResizeQpMats(void)
 {
     matrix_A.resize(13 * horizon, 13);
@@ -175,9 +123,7 @@ void Mpc::ResizeQpMats(void)
     Rf_Desire.setZero();
 }
 
-/**
- * @brief 构建Actiger模型预测控制器
- */
+
 void Mpc::GetMPCModel(void)
 {
     int contactLegNum = 0;
@@ -186,7 +132,6 @@ void Mpc::GetMPCModel(void)
         if (robotModel->legState[i]->contact_state == 1)
             contactLegNum++;
     }
-    /* MPC权重系数 */
     if (contactLegNum > 3)
     {
         alpha = 1e-7;
@@ -234,34 +179,22 @@ void Mpc::GetMPCModel(void)
         matrix_q(11, 11) = 0.5;
 
         matrix_q(12, 12) = 0.0;
-
-        // std::cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
-        // std::cout << matrix_q(9, 9) << std::endl;
     }
 
     double leg_contact = 0.;
     double period = (double)0.005;
     Mat3<double> skewSymmetricMatrix;
 
-    // cout<<"-----------------------bodyEuler-----------------------------" <<endl;
-    // cout<<robotModel->bodyEuler <<endl;
-    // cout<<"-----------------------bodyPosition-----------------------------" <<endl;
-    // cout<<robotModel->bodyPosition <<endl;
-    // cout<<"-----------------------com-----------------------------" <<endl;
-    // cout<<robotModel->com <<endl;
     Mat3<double> rotation = dynacore::RotZ_Matrix(robotModel->bodyEuler[2]);
     Mat3<double> inertia_world = robotModel->body2WorldRotation * robotModel->cenInertia.block(3, 3, 3, 3);
-    // cout<<"-----------------------inertia_world-----------------------------" <<endl;
-    // cout<<inertia_world <<endl;
-    //��ȡ״̬����A
+
     matrix_a.block(0, 6, 3, 3) = Mat3<double>::Identity(3, 3) * period;
     matrix_a.block(3, 9, 3, 3) = Mat3<double>::Identity(3, 3) * period;
     matrix_a(11, 12) = -period * GRAVITY;
     for (int i = 0; i < dim_leg; ++i)
     {
         Vec3<double> endPos = robotModel->linkEndPos_world[i] - robotModel->bodyPosition;
-        // cout<<"-----------------------endPos-----------------------------" <<endl;
-        // cout<<robotModel->linkEndPos_world[i] <<endl;
+
         skewSymmetricMatrix = Common::GetSkewSymmetricMatrix(endPos);
         if (robotModel->legState[i]->contact_state == 1)
             leg_contact = (double)1.0;
@@ -271,16 +204,9 @@ void Mpc::GetMPCModel(void)
             Mat3<double>::Identity(3, 3) * period / (double)BODY_MASS * leg_contact;
         leg_contact = (double)0.0;
     }
-    // cout<<"-----------------------matrix_a-----------------------------" <<endl;
-    // cout<<matrix_a <<endl;
-
-    // cout<<"-----------------------matrix_b-----------------------------" <<endl;
-    // cout<<matrix_b <<endl;
 }
 
-/**
- * @brief 生成二次规划问题的中间变量
- */
+
 void Mpc::CalculateQPData(void)
 {
     Mat13<double> powerMats[21];
@@ -292,14 +218,12 @@ void Mpc::CalculateQPData(void)
     for (int i = 1; i < horizon + 1; i++)
     {
         powerMats[i] = matrix_a * powerMats[i - 1];
-        //cout << "powerMats" << endl;
-        //cout << powerMats[i] << endl;
     }
     for (uint16_t r = 0; r < horizon; r++)
     {
         matrix_Q.block(13 * r, 13 * r, 13, 13) = matrix_q;
 
-        matrix_A.block(13 * r, 0, 13, 13) = powerMats[r + 1]; //Adt.pow(r+1);
+        matrix_A.block(13 * r, 0, 13, 13) = powerMats[r + 1]; 
         for (uint16_t c = 0; c < horizon; c++)
         {
             if (r >= c)
@@ -310,8 +234,7 @@ void Mpc::CalculateQPData(void)
         }
     }
 
-    // cout<< "--------------matrix_q------------------------"<<endl;
-    // cout<<matrix_q <<endl;
+
     qp_H = 2.0 * (matrix_B.transpose() * matrix_Q * matrix_B + alpha * eye_12h);
     qp_G = 2.0 * matrix_B.transpose() * matrix_Q * (matrix_A * x_initial - x_ref);
 
@@ -334,9 +257,7 @@ void Mpc::CalculateQPData(void)
     }
 }
 
-/**
- * @brief 构建模型预测控制器，求解二次问题，得到足端力等成员函数的封装
- */
+
 void Mpc::GetReactForce(void)
 {
     Vec12<double> return_force = Vec12<double>::Zero();
@@ -351,7 +272,6 @@ void Mpc::GetReactForce(void)
     pthread_mutex_unlock(&model_mutex);
     CalculateQPData();
 
-    /* OSQP求解器求解二次规划问题 */
     Rf_Desire = qpSolver->Solve(qp_H, qp_G, qp_A, qp_L, qp_U);
     for (int i(0); i < 12 * horizon; i++)
     {
@@ -373,11 +293,7 @@ void Mpc::GetReactForce(void)
     pthread_mutex_unlock(&f_des_mutex);
 }
 
-/**
- * @brief Actiger模型预测控制器运行函数
- * @param  p_mpc  准备运行的机器人模型预测控制器          
- * @return void* 
- */
+
 void *MpcRun(void *p_mpc)
 {
     Mpc *mpc = (Mpc *)p_mpc;

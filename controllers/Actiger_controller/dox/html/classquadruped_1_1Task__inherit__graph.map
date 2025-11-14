@@ -1,5 +1,0 @@
-<map id="quadruped::Task" name="quadruped::Task">
-<area shape="rect" id="node2" href="$classquadruped_1_1BodyOriTask.html" title="quadruped::BodyOriTask" alt="" coords="5,80,172,107"/>
-<area shape="rect" id="node3" href="$classquadruped_1_1BodyPosTask.html" title="quadruped::BodyPosTask" alt="" coords="196,80,368,107"/>
-<area shape="rect" id="node4" href="$classquadruped_1_1LinkPosTask.html" title="quadruped::LinkPosTask" alt="" coords="392,80,559,107"/>
-</map>

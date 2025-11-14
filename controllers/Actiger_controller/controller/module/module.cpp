@@ -26,8 +26,6 @@ void Module::ResetLeg(void)
 void Module::SwingTest(Vec3<double> p_pos_des,Vec3<double> p_vel_des)
 {
     Vec3<double> torque = Vec3<double>::Zero();
-    // torque = para->swing_kp * (p_pos_des-p_robotModel->legState[0]->endfoot_hip)+para->swing_kd*(p_vel_des-p_robotModel->legState[0]->endfoot_vel_hip);
-
 }
 
 

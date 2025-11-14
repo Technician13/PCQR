@@ -34,7 +34,6 @@ namespace dynacore {
         img_vec[0] = from.x();
         img_vec[1] = from.y();
         img_vec[2] = from.z();
-        // double theta = 2.0*acos(w);
         double theta = 2.0*asin(sqrt(img_vec[0] * img_vec[0] +
                                      img_vec[1] * img_vec[1] +
                                      img_vec[2] * img_vec[2]) );
@@ -44,14 +43,6 @@ namespace dynacore {
             return ;
         }
         to = img_vec/sin(theta/2.0);
-        // printf("quaternion (theta, w, x, y, z): %f, %f, %f, %f, %f\n", theta, w, to[0], to[1], to[2]);
-        
-        // if(theta > M_PI){
-        //     theta -= 2*M_PI;
-        // }
-        // if(theta < -M_PI){
-        //     theta += 2*M_PI;
-        // }
         to = to * theta;
     }
 
@@ -73,7 +64,6 @@ namespace dynacore {
         }
     }
 
-  // Note: when QuatMultiply is used to rotate a vector, set bound_pi to false.
   Quaternion QuatMultiply(const Quaternion & q1, const Quaternion & q2, bool bound_pi){
         Quaternion ret_q(
             q1.w()*q2.w() - q1.x()*q2.x() - q1.y()*q2.y() - q1.z()*q2.z(),
@@ -91,7 +81,6 @@ namespace dynacore {
         return ret_q;
     }
 
-    // -pi/2 ~ pi/2
     void convert(const dynacore::Quaternion & from, double & yaw, double & pitch, double & roll){
         Quaternion Qfrom = from;
         Qfrom.normalize();
@@ -100,15 +89,6 @@ namespace dynacore {
         yaw = ea[0];
         pitch = ea[1];
         roll = ea[2];
-
-        // Vector ea =  mat.eulerAngles(0, 1, 2);
-        // roll = ea[0];
-        // pitch = ea[1];
-        // yaw = ea[2];
-
-        // yaw = _bind_half_pi(yaw);
-        // pitch = _bind_half_pi(pitch);
-        // roll = _bind_half_pi(roll);
     }
 
     double _bind_half_pi(double ang){
@@ -121,18 +101,6 @@ namespace dynacore {
         return ang;
     }
     void convert(double yaw, double pitch, double roll, dynacore::Quaternion& to){
-        // double c1 = cos(yaw);
-        // double s1 = sin(yaw);
-        // double c2 = cos(pitch);
-        // double s2 = sin(pitch);
-        // double c3 = cos(roll);
-        // double s3 = sin(roll);
-        // double w = sqrt(1.0 + c1 * c2 + c1*c3 - s1 * s2 * s3 + c2*c3) / 2.0;
-        // double w4 = (4.0 * w);
-        // double x = (c2 * s3 + c1 * s3 + s1 * s2 * c3) / w4 ;
-        // double y = (s1 * c2 + s1 * c3 + c1 * s2 * s3) / w4 ;
-        // double z = (-s1 * s3 + c1 * s2 * c3 +s2) / w4 ;
-        // to = dynacore::Quaternion(w, x, y, z);
         Quaternion Qyaw(cos(0.5*yaw), 0, 0, sin(0.5*yaw) );
         Quaternion Qpitch(cos(0.5*pitch), 0, sin(0.5*pitch), 0) ;
         Quaternion Qroll(cos(0.5*roll), sin(0.5*roll), 0, 0);

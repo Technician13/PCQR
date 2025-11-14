@@ -1,14 +1,3 @@
-/**
- * @file fH_updataInfo.hpp
- * @brief Actiger落足点规划信息更新类FH_updataInfo头文件
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-20
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #ifndef FH_UPDATAINFO_HPP
 #define FH_UPDATAINFO_HPP
 
@@ -20,9 +9,6 @@
 
 namespace quadruped
 {
-    /**
-     * @brief Actiger落足点规划信息更新类
-     */
     class FH_updataInfo
     {
     private:
@@ -41,12 +27,9 @@ namespace quadruped
                         Vec3<double> p_endfoot_now_front,Vec3<double> p_endfoot_now_rear,\
                         Vec3<double> p_stance_now_front,Vec3<double> p_stance_now_rear);
 
-        /** @brief 当前的支撑腿组合标志位 */
         bool is_lf_rr_stand;
 
-        /** @brief Actiger期望的机体高度 */
         double desire_z;
-        /** @brief Actiger期望的机体高度 */
         double desire_yaw;
         
         double desire_hight;
@@ -102,9 +85,7 @@ namespace quadruped
         Vec3<double> return_desEndfoot_pos_front;
         Vec3<double> return_desEndfoot_pos_rear;
 
-        //TODOpitchexpect:根据刚刚转化的支撑腿估计pitch******************************************************
 	    double H;
-        //***********************************************************************************************
         bool getEdgeFlg;
     };
 }

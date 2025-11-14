@@ -12,7 +12,6 @@ namespace quadruped
     public:
         KinModel(RigidBodyDynamics::Model* model);
         ~KinModel(void);
-        //in world frame
         void getPos(int link_id, dynacore::Vect3 & pos);
         void getOri(int link_id, dynacore::Vect3 & rpy);
         void getLinearVel(int link_id, dynacore::Vect3 & vel);
@@ -25,11 +24,8 @@ namespace quadruped
         void getCentroidInertia(dynacore::Matrix & Icent){ Icent = Ig_; }
         void getCentroidJacobian(dynacore::Matrix & Jcent){ Jcent = Jg_; }
         void getCentroidVelocity(dynacore::Vector & centroid_vel);
-        //matrix from world frame to body frame
         void getWorldToBodyMatrix(dynacore::Mat3 & BodyMatrix); 
-
         void UpdateKinematics(const dynacore::Vector & q, const dynacore::Vector & qdot);
-
         unsigned int _find_body_idx(int id) const;
         unsigned int find_body_id(const char* link_name) const;
         void displaylinks();

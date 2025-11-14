@@ -1,9 +1,3 @@
-/*
- * @Description: 落足点规划的约束
- * @Version: 
- * @Autor: Bin
- * @LastEditors: Tech13
- */
 #include "fH_constraints.hpp"
 
 using namespace quadruped;
@@ -15,11 +9,7 @@ FH_constraints::FH_constraints(FH_updataInfo *p_fH_updataInfo)
 
 FH_constraints::~FH_constraints(void) {}
 
-/**
- * @description: 落足点规划的运动学约束，即落足点与期望机体位置之间的运动学关系不超出机械尺寸
- * @param {Vec18<double>* p_cst,Vec3<double> p_bodyPos,Vec3<double> p_bodyVel,Vec3<double> p_foothold_front,Vec3<double>} p_foothold_rear
- * @return {*}
- */
+
 void FH_constraints::GetKinematicsCst(Vec18<double> *p_cst, Vec3<double> p_bodyPos, Vec3<double> p_bodyVel, Vec3<double> p_foothold_front, Vec3<double> p_foothold_rear)
 {
 	Vec3<double> stance_front_pos_hip = Vec3<double>::Zero();
@@ -28,7 +18,6 @@ void FH_constraints::GetKinematicsCst(Vec18<double> *p_cst, Vec3<double> p_bodyP
 	Vec3<double> front_pos_hip = Vec3<double>::Zero();
 	Vec3<double> rear_pos_hip = Vec3<double>::Zero();
 
-	/* 待规划的机体位置 */
 	Vec3<double> pos = p_bodyPos;
 
 	Mat3<double> rotation = Common::RotationOfZMatrix(updataInfo->desire_yaw);
@@ -56,7 +45,7 @@ void FH_constraints::GetKinematicsCst(Vec18<double> *p_cst, Vec3<double> p_bodyP
 	}
 
 	(*p_cst).setZero();
-	//摆动腿
+
 	(*p_cst)(0) = front_pos_hip(0);
 
 	(*p_cst)(1) = front_pos_hip(1) + 3.556 * front_pos_hip(2);
@@ -74,7 +63,6 @@ void FH_constraints::GetKinematicsCst(Vec18<double> *p_cst, Vec3<double> p_bodyP
 	(*p_cst)(8) = front_pos_body(0) - rear_pos_body(0);
 	(*p_cst)(9) = front_pos_body(1) - rear_pos_body(1);
 
-	//ǰ֧�����˶�ѧԼ��
 	(*p_cst)(10) = stance_front_pos_hip(0);
 
 	(*p_cst)(11) = stance_front_pos_hip(1) + 3.556 * stance_front_pos_hip(2);
@@ -82,7 +70,6 @@ void FH_constraints::GetKinematicsCst(Vec18<double> *p_cst, Vec3<double> p_bodyP
 
 	(*p_cst)(13) = stance_front_pos_hip(2);
 
-	//��֧�����˶�ѧԼ��cc
 	(*p_cst)(14) = stance_rear_pos_hip(0);
 
 	(*p_cst)(15) = stance_rear_pos_hip(1) + 3.556 * stance_rear_pos_hip(2);
@@ -91,12 +78,7 @@ void FH_constraints::GetKinematicsCst(Vec18<double> *p_cst, Vec3<double> p_bodyP
 	(*p_cst)(17) = stance_rear_pos_hip(2);
 }
 
-/**
- * @description: 运动学约束边界
- * @param {double*} ub
- * @param {double*} lb
- * @return {*}
- */
+
 void FH_constraints::GetKinematicsCstBound(double *ub, double *lb)
 {
 
@@ -128,7 +110,6 @@ void FH_constraints::GetKinematicsCstBound(double *ub, double *lb)
 
 	if (updataInfo->is_lf_rr_stand)
 	{
-		//摆动腿
 		ub[1] = -0.096;
 		lb[1] = -100000.0;
 
@@ -143,7 +124,6 @@ void FH_constraints::GetKinematicsCstBound(double *ub, double *lb)
 	}
 	else
 	{
-		//摆动腿
 		ub[1] = 0.096;
 		lb[1] = -100000.0;
 
@@ -157,7 +137,6 @@ void FH_constraints::GetKinematicsCstBound(double *ub, double *lb)
 		lb[6] = -100000.0;
 	}
 
-	//stance
 	for (int i = 0; i < 2; i++)
 	{
 		ub[i * 4 + 10] = 0.35;
@@ -375,11 +354,7 @@ void FH_constraints::GetKinematicsCstJacobianPos(Mat18x13<double> *p_cst_jacobia
 	(*p_cst_jacobian_pos)(6, 11) = 1.0;
 }
 
-/**
- * @description: 落足点规划的其他约束
- * @param {Vec11<double>* p_cst,Vec3<double> p_bodyPos,Vec3<double> p_bodyVel,Vec3<double> p_foothold_front,Vec3<double>} p_foothold_rear
- * @return {*}
- */
+
 void FH_constraints::GetOtherCst(Vec23<double> *p_cst, Vec3<double> p_bodyPos, Vec3<double> p_bodyVel, Vec3<double> p_foothold_front, Vec3<double> p_foothold_rear)
 {
 	double desOmega_yaw = 0.0;
@@ -390,8 +365,6 @@ void FH_constraints::GetOtherCst(Vec23<double> *p_cst, Vec3<double> p_bodyPos, V
 
 	Mat3<double> rotation = Common::RotationOfZMatrix(updataInfo->desire_yaw);
 	Vec3<double> distance = rotation * (p_foothold_front - p_foothold_rear);
-
-	//double desHeight = updataInfo->desire_hight;
 
 	desOmega_yaw = (updataInfo->desire_yaw - updataInfo->curEuler(2)) / Ts;
 
@@ -405,14 +378,6 @@ void FH_constraints::GetOtherCst(Vec23<double> *p_cst, Vec3<double> p_bodyPos, V
 	(*p_cst)(5) = p_foothold_rear(0) - updataInfo->endfoot_desire_rear(0);
 	(*p_cst)(6) = p_foothold_rear(1) - updataInfo->endfoot_desire_rear(1);
 	(*p_cst)(7) = p_foothold_rear(2) - updataInfo->endfoot_desire_rear(2);
-
-	// (*p_cst)(8) = -(p_foothold_front(0) + p_foothold_rear(0)) / 2.0 + Ts * curVel(0) / 2.0 + \
-	// 			  updataInfo->k_v(0) * (curVel(0) - desVel(0)) + \
-	// 			  0.5 * sqrt(desHeight / GRAVITY) * curVel(1) * desOmega_yaw + pos(0);
-
-	// (*p_cst)(9) = -(p_foothold_front(1) + p_foothold_rear(1)) / 2.0 + Ts * curVel(1) / 2.0 + \
-	// 			  updataInfo->k_v(1) * (curVel(1) - desVel(1)) + \
-	// 			  0.5 * sqrt(desHeight / GRAVITY) * (-curVel(0)*desOmega_yaw) + pos(1);
 
 	(*p_cst)(8) = -(p_foothold_front(0) + p_foothold_rear(0)) / 2.0 + Ts * desVel(0) / 2.0 +
 				  updataInfo->k_v(0) * (curVel(0) - desVel(0)) +
@@ -438,34 +403,9 @@ void FH_constraints::GetOtherCst(Vec23<double> *p_cst, Vec3<double> p_bodyPos, V
 	(*p_cst)(20) = pow(p_foothold_rear(0) - updataInfo->terrain_now->split[3] , 2);
 	(*p_cst)(21) = pow(p_foothold_rear(0) - updataInfo->terrain_now->split[4] , 2);
 	(*p_cst)(22) = pow(p_foothold_rear(0) - updataInfo->terrain_now->split[5] , 2);
-
-	// std::cout<<"==============================================================================================================="<<std::endl;
-	// std::cout<<"[ split ] "<<updataInfo->terrain_now->split[0]<<" "
-	// 					   <<updataInfo->terrain_now->split[1]<<" "
-	// 					   <<updataInfo->terrain_now->split[2]<<" "
-	// 					   <<updataInfo->terrain_now->split[3]<<" "
-	// 					   <<updataInfo->terrain_now->split[4]<<" "
-	// 					   <<updataInfo->terrain_now->split[5]<<" "<<std::endl;
-	// std::cout<<"[ safeArea ] "<<updataInfo->terrain_now->safeArea[0].first<<" "
-	// 						  <<updataInfo->terrain_now->safeArea[0].second<<"    "
-	// 						  <<updataInfo->terrain_now->safeArea[1].first<<" "
-	// 					      <<updataInfo->terrain_now->safeArea[1].second<<"    "
-	// 						  <<updataInfo->terrain_now->safeArea[2].first<<" "
-	// 						  <<updataInfo->terrain_now->safeArea[2].second<<"    "
-	// 						  <<updataInfo->terrain_now->safeArea[3].first<<" "
-	// 						  <<updataInfo->terrain_now->safeArea[3].second<<"    "
-	// 						  <<updataInfo->terrain_now->safeArea[4].first<<" "
-	// 						  <<updataInfo->terrain_now->safeArea[4].second<<"    "
-	// 						  <<updataInfo->terrain_now->safeArea[5].first<<" "
-	// 						  <<updataInfo->terrain_now->safeArea[5].second<<std::endl;
 }
 
-/**
- * @description: 其他约束边界
- * @param {double*} ub 上界
- * @param {double*} lb 下界
- * @return {*}
- */
+
 void FH_constraints::GetOtherCstBound(double *ub, double *lb)
 {
 	ub[0] = 0.0;

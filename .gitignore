@@ -2,3 +2,8 @@ controllers/Actiger_controller/build/
 
 /worlds/*
 !/worlds/quadruped.wbt
+
+.vscode/
+embedded/
+dox/
+

@@ -1,15 +1,3 @@
-/**
- * @file     bodyPosTask.cpp
- * @author   Bin
- * @version  V1.0.1
- * @data     29-March-2021
- * @brief    ���������λ������
- ******************************************************************************************
- * @attention
- *
- *
-**/
-
 #include "bodyPosTask.hpp"
 #include <iostream>
 
@@ -43,7 +31,6 @@ bool BodyPosTask::UpdateCommand(const DVec<double>& p_pos_des, const DVec<double
 	Vec3<double> curr_vel = robotModel->bodyVelocity;
 
 	Vec3<double> vel_err = Task::vel_des - curr_vel;
-	// X, Y, Z
 	for (int i(0); i < 3; ++i) {
 		Task::pos_err[i] = kp_kin[i] * (pos_ref[i] - body_pos[i]);
 		Task::vel_des[i] = p_vel_des[i];
@@ -58,16 +45,12 @@ bool BodyPosTask::UpdateCommand(const DVec<double>& p_pos_des, const DVec<double
 
 bool BodyPosTask::UpdateTaskJacobian(void)
 {
-	//Mat3<double> rot = robotModel->bodyRotation;
-
-	//Task::Jt.block(0, 3, 3, 3) = rot;
 	return true;
 }
 
 
 bool BodyPosTask::UpdateTaskJDotQdot(void)
 {
-
 	return true;
 }
 

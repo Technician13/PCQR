@@ -1,19 +1,6 @@
-/**
- * @file     singleContact.cpp
- * @author   Bin
- * @version  V1.0.1
- * @data     29-March-2021
- * @brief    ��������˵����Ӵ�����غ����ļ�
- ******************************************************************************************
- * @attention
- *
- *
-**/
-
 #include "singleContact.hpp"
 
 using namespace quadruped;
-// [ Fx, Fy, Fz ]
 
 SingleContact::SingleContact(RobotModel* p_robotModel, const int p_linkId)
 	:ContactSpec(3), contact_id(p_linkId), dim_cstr(5), robotModel(p_robotModel)

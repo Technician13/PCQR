@@ -1,14 +1,3 @@
-/**
- * @file miniSnap.hpp
- * @brief MinimumuSnap轨迹规划方法的头文件
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-11-01
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #ifndef MINISNAP_HPP
 #define MINISNAP_HPP
 
@@ -22,9 +11,6 @@
 
 namespace quadruped
 {   
-    /**
-     * @brief 基于OSQP完成MinimumuSnap轨迹规划方法的实现
-     */
     class MiniSnap
     {
         private:

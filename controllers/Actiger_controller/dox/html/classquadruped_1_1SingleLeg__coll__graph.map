@@ -1,4 +1,0 @@
-<map id="quadruped::SingleLeg" name="quadruped::SingleLeg">
-<area shape="rect" id="node2" href="$classquadruped_1_1Parameters.html" title="quadruped::Parameters" alt="" coords="5,5,163,32"/>
-<area shape="rect" id="node3" href="$classquadruped_1_1LegStateEstimate.html" title="quadruped::LegStateEstimate" alt="" coords="187,5,381,32"/>
-</map>

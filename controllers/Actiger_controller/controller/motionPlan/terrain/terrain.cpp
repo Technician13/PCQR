@@ -1,26 +1,10 @@
-/**
- * @file terrain.cpp
- * @brief 地形类
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-25
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "terrain.hpp"
 
 using namespace quadruped;
 
-/**
- * @brief 地形类的构造函数
- */
 Terrain::Terrain(void) {}
 
-/**
- * @brief 地形类的析构函数
- */
+
 Terrain::~Terrain(void) {}
 
 
@@ -57,35 +41,21 @@ double Terrain::GetSecondDerivativeOfHeightWrt(Dim2D p_dim1, Dim2D p_dim2,double
     
 }
 
-/****************************************************************** 平地类 ******************************************************************/
 
-/**
- * @brief FlatGround类的构造函数，完成地形标识符以及地形分割线的初始化
- */
 FlatGround::FlatGround(void)
 {
     Terrain::terrain_id = FLAT;
     numSplit = 0;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double FlatGround::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height = 0.0;
     return height;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的法向量
- * @param  p_x  当前点在世界坐标系位置坐标的X值              
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return Vec3<double> 
- */
+
 Vec3<double> FlatGround::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -93,23 +63,14 @@ Vec3<double> FlatGround::GetNormalVector(double p_x,double p_y)
     return normalVector;
 }
 
-/****************************************************************** 坡面类 ******************************************************************/
 
-/**
- * @brief Slope类的构造函数，完成地形标识符以及地形分割线的初始化
- */
 Slope::Slope(void)
 {
     Terrain::terrain_id = SLOPE;
     numSplit = 0;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double Slope::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height;
@@ -143,23 +104,14 @@ double Slope::GetHight(double p_x,double p_y,double p_curBodyPitch)
     return height;
 }
 
-/**
- * @brief 获取坡面与地面的交线中点在世界坐标系下的位置
- * @param  p_first_edge_D_x  当前点在世界坐标系位置坐标的X值
- * @param  p_first_edge_D_y  当前点在世界坐标系位置坐标的Y值
- */
+
 void Slope::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
 {
     first_edge_D_x = p_first_edge_D_x;
     first_edge_D_y = p_first_edge_D_y;
 }
 
-/**
- * @brief 预留接口 | 获取坡面某一点处的法向量
- * @param  p_x              
- * @param  p_y              
- * @return Vec3<double> 
- */
+
 Vec3<double> Slope::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -167,11 +119,7 @@ Vec3<double> Slope::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/****************************************************************** 平台类 ******************************************************************/
 
-/**
- * @brief Stage类的构造函数，完成地形标识符以及地形分割线的初始化
- */
 Stage::Stage(void)
 {
     Terrain::terrain_id = STAGE;
@@ -179,12 +127,7 @@ Stage::Stage(void)
     averageDangerArea = STAGE_HEIGHT;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double Stage::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height;
@@ -210,11 +153,7 @@ double Stage::GetHight(double p_x,double p_y,double p_curBodyPitch)
     return height;
 }
 
-/**
- * @brief 获取平台与地面的交线中点在世界坐标系下的位置以及分割线和危险区的设置
- * @param  p_first_edge_D_x  当前点在世界坐标系位置坐标的X值
- * @param  p_first_edge_D_y  当前点在世界坐标系位置坐标的Y值
- */
+
 void Stage::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
 {
     first_edge_D_x = p_first_edge_D_x;
@@ -239,12 +178,7 @@ void Stage::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
     }
 }
 
-/**
- * @brief 预留接口 | 获取平台某一点处的法向量
- * @param  p_x              
- * @param  p_y              
- * @return Vec3<double> 
- */
+
 Vec3<double> Stage::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -252,11 +186,7 @@ Vec3<double> Stage::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/****************************************************************** 门槛类 ******************************************************************/
 
-/**
- * @brief Sill类的构造函数，完成地形标识符以及地形分割线的初始化
- */
 Sill::Sill(void)
 {
     Terrain::terrain_id = SILL;
@@ -264,12 +194,7 @@ Sill::Sill(void)
     averageDangerArea = 3.0 * SILL_HEIGHT;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double Sill::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height;
@@ -283,11 +208,7 @@ double Sill::GetHight(double p_x,double p_y,double p_curBodyPitch)
     return height;
 }
 
-/**
- * @brief 获取门槛轴线中点在世界坐标系下的位置以及分割线和危险区的设置
- * @param  p_first_edge_D_x  当前点在世界坐标系位置坐标的X值
- * @param  p_first_edge_D_y  当前点在世界坐标系位置坐标的Y值
- */
+
 void Sill::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
 {
     first_edge_D_x = p_first_edge_D_x;
@@ -303,12 +224,7 @@ void Sill::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
     }
 }
 
-/**
- * @brief 预留接口 | 获取门槛某一点处的法向量
- * @param  p_x              
- * @param  p_y              
- * @return Vec3<double> 
- */
+
 Vec3<double> Sill::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -316,11 +232,7 @@ Vec3<double> Sill::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/****************************************************************** 排管类 ******************************************************************/
 
-/**
- * @brief Calandria类的构造函数，完成地形标识符以及地形分割线的初始化
- */
 Calandria::Calandria(void)
 {
     Terrain::terrain_id = CALANDRIA;
@@ -328,12 +240,7 @@ Calandria::Calandria(void)
     averageDangerArea = 3.0 * CALANDRIA_HEIGHT;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double Calandria::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height;
@@ -347,11 +254,7 @@ double Calandria::GetHight(double p_x,double p_y,double p_curBodyPitch)
     return height;
 }
 
-/**
- * @brief 获取每根排管轴线中点在世界坐标系下的位置以及分割线和危险区的设置
- * @param  p_first_edge_D_x  当前点在世界坐标系位置坐标的X值
- * @param  p_first_edge_D_y  当前点在世界坐标系位置坐标的Y值
- */
+
 void Calandria::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
 {
     first_edge_D_x = p_first_edge_D_x;
@@ -371,12 +274,7 @@ void Calandria::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
     }
 }
 
-/**
- * @brief 预留接口 | 获取排管某一点处的法向量
- * @param  p_x              
- * @param  p_y              
- * @return Vec3<double> 
- */
+
 Vec3<double> Calandria::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -384,11 +282,7 @@ Vec3<double> Calandria::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/****************************************************************** 阶梯类 ******************************************************************/
 
-/**
- * @brief Stairs类的构造函数，完成地形标识符以及地形分割线的初始化
- */
 Stairs::Stairs(void)
 {
     Terrain::terrain_id = STAIRS;
@@ -396,12 +290,7 @@ Stairs::Stairs(void)
     averageDangerArea = STAIRS_HEIGHT;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double Stairs::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height;
@@ -443,11 +332,7 @@ double Stairs::GetHight(double p_x,double p_y,double p_curBodyPitch)
     return height;
 }
 
-/**
- * @brief 获取阶梯与地面的交线中点在世界坐标系下的位置以及分割线和危险区的设置
- * @param  p_first_edge_D_x  当前点在世界坐标系位置坐标的X值
- * @param  p_first_edge_D_y  当前点在世界坐标系位置坐标的Y值
- */
+
 void Stairs::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
 {
     first_edge_D_x = p_first_edge_D_x;
@@ -480,12 +365,7 @@ void Stairs::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
     }
 }
 
-/**
- * @brief 预留接口 | 获取阶梯某一点处的法向量
- * @param  p_x              
- * @param  p_y              
- * @return Vec3<double> 
- */
+
 Vec3<double> Stairs::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -493,23 +373,14 @@ Vec3<double> Stairs::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/****************************************************************** 跷跷板类 ******************************************************************/
 
-/**
- * @brief Seesaw类的构造函数，完成地形标识符的初始化
- */
 Seesaw::Seesaw(void)
 {
     Terrain::terrain_id = SEESAW;
     numSplit = 0;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double Seesaw::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height;
@@ -543,23 +414,14 @@ double Seesaw::GetHight(double p_x,double p_y,double p_curBodyPitch)
     return height;
 }
 
-/**
- * @brief 获取跷跷板与地面的交线中点在世界坐标系下的位置
- * @param  p_first_edge_D_x  当前点在世界坐标系位置坐标的X值
- * @param  p_first_edge_D_y  当前点在世界坐标系位置坐标的Y值
- */
+
 void Seesaw::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
 {
     first_edge_D_x = p_first_edge_D_x;
     first_edge_D_y = p_first_edge_D_y;
 }
 
-/**
- * @brief 预留接口 | 获取跷跷板某一点处的法向量
- * @param  p_x              
- * @param  p_y              
- * @return Vec3<double> 
- */
+
 Vec3<double> Seesaw::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -567,11 +429,7 @@ Vec3<double> Seesaw::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/****************************************************************** 双木桥类 ******************************************************************/
 
-/**
- * @brief Bridge类的构造函数，完成地形标识符以及地形分割线的初始化
- */
 Bridge::Bridge(void)
 {
     Terrain::terrain_id = BRIDGE;
@@ -579,12 +437,7 @@ Bridge::Bridge(void)
     averageDangerArea = BRIDGE_HEIGHT;
 }
 
-/**
- * @brief 获取当前地形在世界坐标系下的高度
- * @param  p_x  当前点在世界坐标系位置坐标的X值            
- * @param  p_y  当前点在世界坐标系位置坐标的Y值          
- * @return double 
- */
+
 double Bridge::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height;
@@ -610,11 +463,7 @@ double Bridge::GetHight(double p_x,double p_y,double p_curBodyPitch)
     return height;
 }
 
-/**
- * @brief 获取双木桥与地面的交线中点在世界坐标系下的位置以及分割线和危险区的设置
- * @param  p_first_edge_D_x  当前点在世界坐标系位置坐标的X值
- * @param  p_first_edge_D_y  当前点在世界坐标系位置坐标的Y值
- */
+
 void Bridge::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
 {
     first_edge_D_x = p_first_edge_D_x;
@@ -639,12 +488,7 @@ void Bridge::UpdataEdge(double p_first_edge_D_x,double p_first_edge_D_y)
     }
 }
 
-/**
- * @brief 预留接口 | 获取双木桥某一点处的法向量
- * @param  p_x              
- * @param  p_y              
- * @return Vec3<double> 
- */
+
 Vec3<double> Bridge::GetNormalVector(double p_x,double p_y)
 {
     Vec3<double> normalVector;
@@ -653,121 +497,6 @@ Vec3<double> Bridge::GetNormalVector(double p_x,double p_y)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/******************************************************************/
-/******************************************************************/
-/******************************************************************/
 double Hurdles::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height = 0;  
@@ -791,7 +520,7 @@ Vec3<double> Hurdles::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/******************************************************************/
+
 double Ballpool::GetHight(double p_x,double p_y,double p_curBodyPitch)
 {
     double height = 0;
@@ -816,4 +545,3 @@ Vec3<double> Ballpool::GetNormalVector(double p_x,double p_y)
     return normalVector;  
 }
 
-/******************************************************************/

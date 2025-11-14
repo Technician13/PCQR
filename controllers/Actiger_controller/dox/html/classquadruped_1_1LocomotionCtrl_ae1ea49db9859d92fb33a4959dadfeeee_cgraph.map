@@ -1,5 +1,0 @@
-<map id="quadruped::LocomotionCtrl::RobotControl" name="quadruped::LocomotionCtrl::RobotControl">
-<area shape="rect" id="node2" href="$classquadruped_1_1Mpc.html#a3f15737db0a0c201de83d5733d1f20f3" title="quadruped::Mpc::GetReact\lForce" alt="" coords="232,5,411,47"/>
-<area shape="rect" id="node3" href="$classquadruped_1_1LegControl.html#ae330698af9fc8f7fc2451d76171a18ca" title="quadruped::LegControl\l::LegJointControl" alt="" coords="245,71,398,112"/>
-<area shape="rect" id="node4" href="$classquadruped_1_1RobotModel.html#ab9102ec0f630d1623764b383784669c4" title="quadruped::RobotModel\l::UpdataModel" alt="" coords="241,136,401,177"/>
-</map>

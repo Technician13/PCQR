@@ -32,8 +32,7 @@ void KinModel::UpdateKinematics(const dynacore::Vector & q,
         const dynacore::Vector & qdot){
     _UpdateCentroidFrame(q, qdot);
 }
-/********mainly reference to "Dynamic behaviors on the NAO robot_dim with closed-loop 
-         whole body operational space control" by Donghyun Kim**************************/
+
 void KinModel::_UpdateCentroidFrame(const dynacore::Vector & q,
         const dynacore::Vector & qdot){
     double mass;
@@ -71,7 +70,6 @@ void KinModel::_UpdateCentroidFrame(const dynacore::Vector & q,
         mass = model_->mBodies[i].mMass;
         I.setZero();
         cm = model_->mBodies[i].mCenterOfMass;
-        //cout << "m: " << mass << " mass center: " << cm.transpose() << "\n\n";
         cmm <<
             0.0, -cm[2], cm[1],
             cm[2], 0.0, -cm[0],
@@ -133,7 +131,6 @@ void KinModel::getCoMPos(dynacore::Vect3 & CoM_pos)const {
     for (int i(start_idx); i< model_->mBodies.size() ; ++i){
         mass = model_->mBodies[i].mMass;
 
-        // CoM position Update
         link_pos = CalcBodyToBaseCoordinates ( *model_, q, i, 
                 model_->mBodies[i].mCenterOfMass, false);
         CoM_pos += mass * link_pos;
@@ -154,7 +151,6 @@ void KinModel::getCoMVel(dynacore::Vect3 & CoM_vel) const {
     for (int i(start_idx); i< model_->mBodies.size() ; ++i){
         mass = model_->mBodies[i].mMass;
 
-        // CoM velocity Update
         link_vel = CalcPointVelocity ( *model_, q, qdot, i, model_->mBodies[i].mCenterOfMass, false);
         CoM_vel += mass * link_vel;
         tot_mass += mass;
@@ -176,9 +172,6 @@ void KinModel::getPos(int link_id, dynacore::Vect3 & pos){
     }
 
     pos = CalcBodyToBaseCoordinates(*model_, q, _find_body_idx(link_id), zero, false);
-    // R = CalcBodyWorldOrientation( *model_, q, _find_body_idx(link_id), false);
-    // pos = R * pos;
-
 }
 
 void KinModel::getOri(int link_id, dynacore::Vect3 & rpy){
@@ -245,16 +238,6 @@ void KinModel::getJacobian(int link_id, dynacore::Matrix &J){
                 model_->mBodies[bodyid].mCenterOfMass,
                 J, false);
     }
-    /*************this will transform the jacobian from world frame to body frame********/
-
-    // Eigen::Matrix<double, 6, 6> World2Body6D;
-    // Eigen::Matrix3d World2Body;
-    // World2Body6D.setZero(); World2Body.setZero();
-    // World2Body = CalcBodyWorldOrientation( *model_, q, _find_body_idx(link_id), false);
-    // World2Body6D.block(0,0,3,3) = World2Body;
-    // World2Body6D.block(3,3,3,3) = World2Body;
-    
-    // J = World2Body6D * J;
 }
 
 void KinModel::getJDotQdot(int link_id, dynacore::Vector & JDotQdot){
@@ -303,7 +286,7 @@ unsigned int KinModel::find_body_id(const char* link_name) const{
 
     return body_id;
 }
-//according to this function, to know the number of each joint
+
 void KinModel::displaylinks() {
     int linklist_len;
     linklist_len = sizeof(link_name)/sizeof(link_name[0]);

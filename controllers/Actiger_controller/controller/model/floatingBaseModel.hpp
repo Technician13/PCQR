@@ -16,7 +16,6 @@ namespace quadruped
         bool getInverseMassInertia(dynacore::Matrix & Ainv) const; 
         bool getGravity(dynacore::Vector & grav) const;
         bool getCoriolis(dynacore::Vector & coriolis) const;
-        //in world frame
         void getCentroidJacobian(dynacore::Matrix & Jcent) const;
         void getCentroidInertia(dynacore::Matrix & Icent) const;
         void getCoMPosition(dynacore::Vect3 & com_pos) const;
@@ -29,11 +28,9 @@ namespace quadruped
         void getCoMJacobian(dynacore::Matrix & J) const;
         void getFullJacobian(int link_id, dynacore::Matrix & J) const;
         void getFullJDotQdot(int link_id, dynacore::Vector & JDotQdot) const;
-        //matrix from world frame to body frame
         void getWorld2BodyMatrix(dynacore::Mat3 & _World2Body);
 
         void UpdateSystem(const dynacore::Vector & q, const dynacore::Vector & qdot);
-        //according to this function, to know the number of each joint
         void PrintLinkList();
         unsigned int FindLinkId(const char* link_name);
         RigidBodyDynamics::Model* model_;

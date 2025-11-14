@@ -1,28 +1,7 @@
-/**
- * @file     wbcController.cpp
- * @author   Bin
- * @version  V1.0.1
- * @data     29-March-2021
- * @brief    ���������ȫ��������(WBC)��غ��������ļ�
- ******************************************************************************************
- * @attention
- *
- *
-**/
-
 #include "wbcController.hpp"
 #include <iostream>
 
 using namespace quadruped;
-
-/**
-* @brief    WBC_Ctrl��Ĺ��캯��
-* @param    p_robotModel��������ģ��
-* @param    p_cmd���ϲ�ָ�����λ�á��Ƕȡ��ٶȵȣ�
-* @param    p_para������
-* @retval   None
-* @note
-**/
 
 WBC_Ctrl::WBC_Ctrl(RobotModel* p_robotModel, MotionPlan* p_ref, Parameters* p_para, LegControl* p_legControl)
 {
@@ -50,12 +29,6 @@ WBC_Ctrl::WBC_Ctrl(RobotModel* p_robotModel, MotionPlan* p_ref, Parameters* p_pa
 	std::cout << "WBC_Ctrl Init" << std::endl;
 }
 
-/**
-* @brief    WBC_Ctrl�����������
-* @param    None
-* @retval   None
-* @note
-**/
 
 WBC_Ctrl::~WBC_Ctrl(void)
 {
@@ -85,12 +58,6 @@ WBC_Ctrl::~WBC_Ctrl(void)
 	contact_list.clear();
 }
 
-/**
-* @brief    ������ز���
-* @param    None
-* @retval   None
-* @note
-**/
 
 void WBC_Ctrl::ParameterSetup(void)
 {
@@ -114,16 +81,9 @@ void WBC_Ctrl::ParameterSetup(void)
 	
 }
 
-/**
-* @brief    �����Ȳ�����
-* @param    None
-* @retval   None
-* @note		���������Լ�λ�á��ٶȡ����ٶ�����
-**/
 
 void WBC_Ctrl::UpdateLegCMD()
 {
-	//LF
 	for(int i=0;i<num_leg_joint;i++)
 		legControl->lf_leg->torqueFeedForward(i)=torque_ff(i);
 
@@ -133,7 +93,6 @@ void WBC_Ctrl::UpdateLegCMD()
 	for(int i=0;i<num_leg_joint;i++)
 		legControl->lf_leg->qdDes(i)=des_jvel(i);
 
-	//LR
 	for(int i=0;i<num_leg_joint;i++)
 		legControl->lr_leg->torqueFeedForward(i)=torque_ff(3*1+i);
 
@@ -143,7 +102,6 @@ void WBC_Ctrl::UpdateLegCMD()
 	for(int i=0;i<num_leg_joint;i++)
 		legControl->lr_leg->qdDes(i)=des_jvel(3*1+i);
 
-	//RF
 	for(int i=0;i<num_leg_joint;i++)
 		legControl->rf_leg->torqueFeedForward(i)=torque_ff(3*2+i);
 
@@ -153,7 +111,6 @@ void WBC_Ctrl::UpdateLegCMD()
 	for(int i=0;i<num_leg_joint;i++)
 		legControl->rf_leg->qdDes(i)=des_jvel(3*2+i);
 
-	//RR
 	for(int i=0;i<num_leg_joint;i++)
 		legControl->rr_leg->torqueFeedForward(i)=torque_ff(3*3+i);
 
@@ -164,28 +121,15 @@ void WBC_Ctrl::UpdateLegCMD()
 		legControl->rr_leg->qdDes(i)=des_jvel(3*3+i);
 }
 
-/**
-* @brief    ���
-* @param    None
-* @retval   None
-* @note
-**/
 
 void WBC_Ctrl::CleanUp() {
 	contact_list.clear();
 	task_list.clear();
 }
 
-/**
-* @brief    ���¸����������ֵ
-* @param    None
-* @retval   None
-* @note
-**/
 
 void WBC_Ctrl::UpdatTask(void)
 {
-	// Wash out the previous setup
 	CleanUp();
 
 	Vec3<double> zero_vec3= Vec3<double>::Zero();
@@ -200,29 +144,19 @@ void WBC_Ctrl::UpdatTask(void)
 
 	for (size_t leg(0); leg < 4; ++leg) 
 	{
-		//std::cout << cmd->legCmd[leg]->fr_des <<std::endl;
-
 		if(robotModel->legState[leg]->contact_state == 1) 
 		{ 
-			// Contact (stance)
 			foot_contact[leg]->SetRFDesired(ref->legPlan[leg]->fr_des);
 			foot_contact[leg]->UpdateContactSpec();
 			contact_list.push_back(foot_contact[leg]);
 		}
 		else { 
-			// No Contact (swing)
 			link_task[leg]->UpdateTask((ref->legPlan[leg]->pFoot_des->Pop()), ref->legPlan[leg]->vFoot_des->Pop(), ref->legPlan[leg]->aFoot_des->Pop());
 			task_list.push_back(link_task[leg]);
 		}
 	}	
 }
 
-/**
-* @brief    ����WBC
-* @param    None
-* @retval   None
-* @note
-**/
 
 void WBC_Ctrl::ComputeWBC(void)
 {
@@ -235,17 +169,10 @@ void WBC_Ctrl::ComputeWBC(void)
 	kin_wbc->FindConfiguration(full_config, task_list, contact_list,
 		&des_jpos, &des_jvel);
 
-	// WBIC
 	dyn_wbc->UpdateSetting(robotModel->A, robotModel->Ainv, robotModel->coriolis, robotModel->grav);
 	torque_ff=dyn_wbc->MakeTorque();
 }
 
-/**
-* @brief    WBC������
-* @param    None
-* @retval   None
-* @note
-**/
 
 void WBC_Ctrl::Run(Vec12<double> & p_mpc_force)
 {
@@ -254,16 +181,12 @@ void WBC_Ctrl::Run(Vec12<double> & p_mpc_force)
 	{
 		p_mpc_force.block( leg*3, 0, 3, 1)=ref->legPlan[leg]->fr_des;
 	}
-	// Task & Contact Update
 	UpdatTask();
 	pthread_mutex_unlock(&f_des_mutex);
  	
-	// WBC Computation
 	ComputeWBC();
 
-	// Update Leg Command
 	UpdateLegCMD();
-
 
 }
 

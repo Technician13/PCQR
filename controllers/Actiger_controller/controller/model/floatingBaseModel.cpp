@@ -2,7 +2,6 @@
 #include <rbdl/addons/urdfreader/urdfreader.h>
 #include <stdio.h>
 
-// #define THIS_COM "/home/action/程序/Actiger/controllers/Actiger_controller/controller/model/urdf/"
 #define THIS_COM "/home/chen/Actiger/controllers/Actiger_controller/controller/model/urdf/"
 
 
@@ -76,8 +75,7 @@ bool FloatingBaseModel::getCoriolis(dynacore::Vector & coriolis) const {
 }
 
 void FloatingBaseModel::getFullJacobian(int link_id, dynacore::Matrix & J) const {
-  //J = dynacore::Matrix::Zero(6, mercury::num_qdot);
-  kin_model_->getJacobian(link_id, J);
+    kin_model_->getJacobian(link_id, J);
 }
 
 void FloatingBaseModel::getFullJDotQdot(int link_id, dynacore::Vector & JDotQdot) const{

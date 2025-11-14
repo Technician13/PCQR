@@ -1,14 +1,3 @@
-/**
- * @file motionPlan.cpp
- * @brief Actiger规划器Motionlan
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-19
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "motionPlan.hpp"
 #include "commonFunction.hpp"
 #include <cstdlib>
@@ -16,12 +5,6 @@
 
 using namespace quadruped;
 
-
-/**
- * @brief MotionPlan类的构造函数，完成所有对象成员的内存分配及数据成员的初值装载
- * @param  p_robotModel  RobotModel类的实例化对象，存储机器人模型信息，用来初始化对象成员robotModel   
- * @param  p_para  Parameters类的实例化对象，存储一些被频繁使用的参数，用来初始化对象成员para       
- */
 MotionPlan::MotionPlan(RobotModel *p_robotModel, Parameters *p_para) : robotModel(p_robotModel),para(p_para)
 {
 	gamepad = new Gamepad();
@@ -75,9 +58,7 @@ MotionPlan::MotionPlan(RobotModel *p_robotModel, Parameters *p_para) : robotMode
 	std::cout << "MotionPlan Init" << std::endl;
 }
 
-/**
- * @brief MotionPlan类的析构函数，释放申请的内存
- */
+
 MotionPlan::~MotionPlan(void)
 {
 	delete gamepad;
@@ -103,9 +84,7 @@ MotionPlan::~MotionPlan(void)
 	delete rr;
 }
 
-/**
- * @brief 部分数据成员重置
- */
+
 void MotionPlan::Resize(void)
 {
 	pBody_euler_des->Clear();
@@ -131,14 +110,10 @@ void MotionPlan::Resize(void)
 	rr->aFoot_des->Clear();
 }
 
-/**
- * @brief 空函数  |  预留接口  |  当前Actiger步态
- */
+
 void MotionPlan::Gait(void) {}
 
-/**
- * @brief 通过求解优化问题完成Actiger规划
- */
+
 void MotionPlan::MotionOptimize(void)
 {
 	static int cnt = 0;
@@ -153,19 +128,14 @@ void MotionPlan::MotionOptimize(void)
 		yaw = yaw + handle.yaw_omega * 0.2;
 		desire_yaw = yaw;
 
-		//std::cout << "======================== desire yaw: " << desire_yaw << std::endl;
-
-		/* 落足点规划 */
 		foothold->updataInfo->UpdateInfo(is_lf_rr_stand, robotModel->bodyEuler, robotModel->bodyPosition,
 										 curVelocity, desire_yaw, desire_z, gaitNow, 
 										 swing_front, swing_rear, stance_front, stance_rear);
 		foothold->GetFootHold();
 
-		/* 由于在摆动腿落足点的X方向上采取了相对宽松的策略[GetOtherCst中的(2)和(5)]，因此重新计算Z方向的值 */
 		foothold->updataInfo->return_desEndfoot_pos_front[2] = terrain_now->GetHight(foothold->updataInfo->return_desEndfoot_pos_front[0] , 0.0, robotModel->bodyEuler[1]);
 		foothold->updataInfo->return_desEndfoot_pos_rear[2] = terrain_now->GetHight(foothold->updataInfo->return_desEndfoot_pos_rear[0] , 0.0, robotModel->bodyEuler[1]);
 
-		/* 由于上一步重新计算了落足点的Z方向的值，因此这里有必要对期望的机体俯仰角进行重新计算 */
 		if(abs(foothold->updataInfo->return_desEndfoot_pos_front[2] - foothold->updataInfo->return_desEndfoot_pos_rear[2]) <= 0.01)
 		{
 			foothold->updataInfo->desEuler[1] = 0.0;
@@ -176,10 +146,8 @@ void MotionPlan::MotionOptimize(void)
 																	(double)(foothold->updataInfo->return_desEndfoot_pos_front[0] - foothold->updataInfo->return_desEndfoot_pos_rear[0]));
 		}
 
-		/* 保守 or 激进？ */
 		for(int i = 0 ; i < terrain_now->numSplit ; i++)
 		{
-			/* 一旦求解失败，保证前摆动腿落足点位于安全区范围 */
 			if(foothold->updataInfo->return_desEndfoot_pos_front[0] >= (terrain_now->split[i] - terrain_now->averageDangerArea) && 
 			   foothold->updataInfo->return_desEndfoot_pos_front[0] < terrain_now->split[i])
 			{
@@ -191,7 +159,6 @@ void MotionPlan::MotionOptimize(void)
 				foothold->updataInfo->return_desEndfoot_pos_front[0] = terrain_now->split[i] + terrain_now->averageDangerArea;
 			}
 
-			/* 一旦求解失败，保证后摆动腿落足点位于安全区范围 */
 			if(foothold->updataInfo->return_desEndfoot_pos_rear[0] >= (terrain_now->split[i] - terrain_now->averageDangerArea) && 
 			   foothold->updataInfo->return_desEndfoot_pos_rear[0] < terrain_now->split[i])
 			{
@@ -210,23 +177,18 @@ void MotionPlan::MotionOptimize(void)
 		Vec6<double> spatial_dot = Vec6<double>::Zero();
 		Vec6<double> spatial_dot_des = Vec6<double>::Zero();
 
-		//**********************************************************************************************
 		spatial_des[5] = foothold->updataInfo->H;
-		//***********************************************************************************************
 
 		spatial_dot.block(0, 0, 3, 1) = robotModel->bodyEulerAngularVel;
 		spatial_dot.block(3, 0, 3, 1) = curVelocity;
 		//spatial_dot_des.block(0,0,3,1) = foothold->updataInfo->desOmega;
 		spatial_dot_des.block(3, 0, 3, 1) = foothold->updataInfo->desVelocity;
 
-		/* 机体轨迹规划 */
 		bodyTrajectory->UpdateInfo(is_lf_rr_stand, Ts, spcial, spatial_dot, spatial_des, spatial_dot_des);
-		/* TODO8.14 */
 		bodyTrajectory->GetBodyTrajectory();
 
 		grid = bodyTrajectory->grid;
 
-		/* 摆动腿足端轨迹规划 */
 		endfootTrajectory->GetEndfootTrajectory(grid, swing_front, swing_rear,
 												foothold->updataInfo->return_desEndfoot_pos_front,
 												foothold->updataInfo->return_desEndfoot_pos_rear,
@@ -238,14 +200,6 @@ void MotionPlan::MotionOptimize(void)
 		swingRearEnd =foothold->updataInfo->return_desEndfoot_pos_rear;
 		stanceFrontEnd = stance_front;
 		stanceRearEnd = stance_rear;
-
-		// std::cout<<"++++++++++++++++++++++++++++++++++++++++++++++++++++++++ opt result ++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<std::endl;
-		// std::cout<<"[ Euler ] "<<desEulerEnd[0]<<"    "<<desEulerEnd[1]<<"    "<<desEulerEnd[2]<<std::endl;
-		// std::cout<<"[ Pos ]"<<desPosEnd[0]<<"    "<<desPosEnd[1]<<"    "<<desPosEnd[2]<<std::endl;
-		// std::cout<<"[ Swing Front ]"<<swingFrontEnd[0]<<"    "<<swingFrontEnd[1]<<"    "<<swingFrontEnd[2]<<std::endl;
-		// std::cout<<"[ Swing Rear ]"<<swingRearEnd[0]<<"    "<<swingRearEnd[1]<<"    "<<swingRearEnd[2]<<std::endl;
-		// std::cout<<"[ Stance Front ]"<<stanceFrontEnd[0]<<"    "<<stanceFrontEnd[1]<<"    "<<stanceFrontEnd[2]<<std::endl;
-		// std::cout<<"[ Stance Rear ]"<<stanceRearEnd[0]<<"    "<<stanceRearEnd[1]<<"    "<<stanceRearEnd[2]<<std::endl;
 
 		if(is_lf_rr_stand)
 		{
@@ -266,9 +220,7 @@ void MotionPlan::MotionOptimize(void)
 	}
 }
 
-/**
- * @brief Actiger核心规划函数
- */
+
 void MotionPlan::RobotMotionPlan(void)
 {
 	planFlag = 0;
@@ -277,12 +229,9 @@ void MotionPlan::RobotMotionPlan(void)
 	SetCmd();
 }
 
-/**
- * @brief Actiger规划标志位处理函数
- */
+
 void MotionPlan::Start(void)
 {
-	/* 设置地形 */
 	SetTerrain(handle.terrain);
 	static int cnt = 20;
 	if (cnt >= 20)
@@ -294,14 +243,12 @@ void MotionPlan::Start(void)
 		cnt++;
 
 	pthread_mutex_lock(&model_mutex);
-	/* 四个足端同时触地时规划一次 */
 	if (robotModel->legState[0]->contact_state == 1 && robotModel->legState[1]->contact_state == 1 &&
 		robotModel->legState[2]->contact_state == 1 && robotModel->legState[3]->contact_state == 1 && cnt >= 10)
 	{
 		planFlag = 1;
 		cnt = 0;
 	}
-	/* 站立完成标志位转换 */
 	if (handle.standReady == 0 && robotModel->bodyPosition(2) >= 0.9 * INIT_HEIGHT)
 	{
 		handle.standReady = 1;
@@ -309,119 +256,74 @@ void MotionPlan::Start(void)
 	pthread_mutex_unlock(&model_mutex);
 }
 
-/**
- * @brief 根据形参p_terrainType设置当前地形
- * @param  p_terrainType  当前地形，配合感知得到 
- */
+
 void MotionPlan::SetTerrain(uint8_t p_terrainType)
 {
 	switch (p_terrainType)
 	{
 	case FLAT:
-		// std::cout<<"[ terrain now ]  FLAT"<<std::endl;
 		terrain_now = flatGround;
 		foothold->updataInfo->terrain_now = flatGround;
 		endfootTrajectory->terrain_now = flatGround;
 		break;
 
 	case SLOPE:
-		// std::cout<<"[ terrain now ]  SLOPE"<<std::endl;
 		terrain_now = slope;
 		foothold->updataInfo->terrain_now = slope;
 		endfootTrajectory->terrain_now = slope;
 		break;
 
 	case STAGE:
-		// std::cout<<"[ terrain now ]  STAGE"<<std::endl;
 		terrain_now = stage;
 		foothold->updataInfo->terrain_now = stage;
 		endfootTrajectory->terrain_now = stage;
 		break;
 
 	case SILL:
-		// std::cout<<"[ terrain now ]  SILL"<<std::endl;
 		terrain_now = sill;
 		foothold->updataInfo->terrain_now = sill;
 		endfootTrajectory->terrain_now = sill;
 		break;
 
 	case CALANDRIA:
-		// std::cout<<"[ terrain now ]  CALANDRIA"<<std::endl;
 		terrain_now = calandria;
 		foothold->updataInfo->terrain_now = calandria;
 		endfootTrajectory->terrain_now = calandria;
 		break;
 
 	case STAIRS:
-		// std::cout<<"[ terrain now ]  STAIRS"<<std::endl;
 		terrain_now = stairs;
 		foothold->updataInfo->terrain_now = stairs;
 		endfootTrajectory->terrain_now = stairs;
 		break;
 
 	case SEESAW:
-		// std::cout<<"[ terrain now ]  SEESAW"<<std::endl;
 		terrain_now = seesaw;
 		foothold->updataInfo->terrain_now = seesaw;
 		endfootTrajectory->terrain_now = seesaw;
 		break;
 
 	case BRIDGE:
-		// std::cout<<"[ terrain now ]  BRIDGE"<<std::endl;
 		terrain_now = bridge;
 		foothold->updataInfo->terrain_now = bridge;
 		// endfootTrajectory->terrain_now = bridge;
 		break;
 
-
-
-
-
-
-
-
-
-
-
-
-	
-
 	case HURDLES:
-		// std::cout<<"[ terrain now ]  HURDLES"<<std::endl;		
 		terrain_now = hurdles;
-		//foothold->updataInfo->terrain_now = hurdles;
-		// endfootTrajectory->terrain_now = hurdles;
 		break;
 
 	case BALL_POOL:
-		// std::cout<<"[ terrain now ]  BALL_POOL"<<std::endl;
 		terrain_now = ballpool;
-		//foothold->updataInfo->terrain_now = ballpool;
-		// endfootTrajectory->terrain_now = ballpool;
 		break;
-
-	
 	}
 }
 
-/**
- * @brief 更新Actiger规划信息
- */
+
 void MotionPlan::UpdataInfo(void)
 {
 	desire_z = handle.z_height;
-	// desire_yaw = handle.yaw_omega*0.3;
-
-	// cmdVelocity(0) = handle.x_speed;
-	// cmdVelocity(1) = handle.y_speed;
-
-	// if (handle.unlock == 1)
-	// {
-	// 	gaitNow = TROT;
-	// }
-
-	// std::cout<<"######################################################################  "<<(int)(gaitNow)<<std::endl;
-
+	
 	if (gaitNow == TROT || gaitNow == STOP)
 	{
 		is_lf_rr_stand = !is_lf_rr_stand;
@@ -435,7 +337,6 @@ void MotionPlan::UpdataInfo(void)
 
 	pthread_mutex_lock(&model_mutex);
 	curVelocity = robotModel->bodyVelocity;
-	/* 根据支撑腿组合的不同定义前后的摆动腿和支撑腿 */
 	if (is_lf_rr_stand)
 	{
 		swing_front = robotModel->linkEndPos_world[2];
@@ -451,17 +352,13 @@ void MotionPlan::UpdataInfo(void)
 		stance_rear = robotModel->linkEndPos_world[1];
 	}
 
-	/* 向量spcial中装载值 */
 	spcial.block(0, 0, 3, 1) = robotModel->bodyEuler;
 	spcial.block(3, 0, 3, 1) = robotModel->bodyPosition;
 	pthread_mutex_unlock(&model_mutex);
 
-	// SetTerrain(handle.terrain);
 }
 
-/**
- * @brief 将Actiger规划器求得的期望序列写入队列
- */
+
 void MotionPlan::SetCmd(void)
 {
 	Vec3<double> zero = Vec3<double>::Zero();
@@ -490,7 +387,6 @@ void MotionPlan::SetCmd(void)
 
 				if (is_lf_rr_stand)
 				{
-					/* 摆动腿 */
 					pFoot = endfootTrajectory->endfoot_pos_front_list.block(0, i, 3, 1) - dPos;
 					vFoot = endfootTrajectory->endfoot_vel_front_list.block(0, i, 3, 1) - dPosDot;
 
@@ -498,9 +394,7 @@ void MotionPlan::SetCmd(void)
 					rf->vFoot_des->Push(vFoot);
 					rf->aFoot_des->Push(zero);
 
-					// std::cout<<"************************************************************************************************************************"<<std::endl;
-					// std::cout<<pFoot(0)<<"	"<<pFoot(1)<<"	"<<pFoot(2)<<"	"<<dPos(0)<<" "<<dPos(1)<<" "<<dPos(2)<<std::endl;
-
+					
 					pFoot = endfootTrajectory->endfoot_pos_rear_list.block(0, i, 3, 1) - dPos;
 					vFoot = endfootTrajectory->endfoot_vel_rear_list.block(0, i, 3, 1) - dPosDot;
 
@@ -508,7 +402,6 @@ void MotionPlan::SetCmd(void)
 					lr->vFoot_des->Push(vFoot);
 					lr->aFoot_des->Push(zero);
 
-					/* 支撑腿 */
 					lf->pFoot_des->Push(robotModel->linkEndPos_world[0] - dPos);
 					lf->vFoot_des->Push(zero);
 					lf->aFoot_des->Push(zero);
@@ -519,7 +412,6 @@ void MotionPlan::SetCmd(void)
 				}
 				else
 				{
-					/* 摆动腿 */
 					pFoot = endfootTrajectory->endfoot_pos_front_list.block(0, i, 3, 1) - dPos;
 					vFoot = endfootTrajectory->endfoot_vel_front_list.block(0, i, 3, 1) - dPosDot;
 
@@ -534,7 +426,6 @@ void MotionPlan::SetCmd(void)
 					rr->vFoot_des->Push(vFoot);
 					rr->aFoot_des->Push(zero);
 
-					/* 支撑腿 */
 					rf->pFoot_des->Push(robotModel->linkEndPos_world[2] - dPos);
 					rf->vFoot_des->Push(zero);
 					rf->aFoot_des->Push(zero);
@@ -551,7 +442,6 @@ void MotionPlan::SetCmd(void)
 				dPos = bodyTrajectory->return_spatial_list.block(3, grid - 1, 3, 1);
 				dPosDot = bodyTrajectory->return_spatial_dot_list.block(3, grid - 1, 3, 1);
 
-				/* 加入延迟触地应对机制 */
 				double length = 250.0 - (double)grid;
 				Vec3<double> delayContactTargetFront = endfootTrajectory->endfoot_pos_front_list.block(0, grid - 1, 3, 1);
 				Vec3<double> delayContactTargetRear = endfootTrajectory->endfoot_pos_rear_list.block(0, grid - 1, 3, 1);
@@ -560,8 +450,6 @@ void MotionPlan::SetCmd(void)
 
 				if (is_lf_rr_stand)
 				{
-					/* 摆动腿 */
-					//pFoot = endfootTrajectory->endfoot_pos_front_list.block(0, grid - 1, 3, 1) - dPos;
 					pFoot = delayContactTargetFront - dPos;
 					vFoot = endfootTrajectory->endfoot_pos_front_list.block(0, grid - 1, 3, 1) - dPosDot;
 
@@ -569,7 +457,6 @@ void MotionPlan::SetCmd(void)
 					rf->vFoot_des->Push(vFoot);
 					rf->aFoot_des->Push(zero);
 
-					//pFoot = endfootTrajectory->endfoot_pos_rear_list.block(0, grid - 1, 3, 1) - dPos;
 					pFoot = delayContactTargetRear - dPos;
 					vFoot = endfootTrajectory->endfoot_pos_rear_list.block(0, grid - 1, 3, 1) - dPosDot;
 
@@ -577,7 +464,6 @@ void MotionPlan::SetCmd(void)
 					lr->vFoot_des->Push(vFoot);
 					lr->aFoot_des->Push(zero);
 
-					/* 支撑腿 */
 					lf->pFoot_des->Push(robotModel->linkEndPos_world[0] - dPos);
 					lf->vFoot_des->Push(zero);
 					lf->aFoot_des->Push(zero);
@@ -588,8 +474,6 @@ void MotionPlan::SetCmd(void)
 				}
 				else
 				{
-					/* 摆动腿 */
-					//pFoot = endfootTrajectory->endfoot_pos_front_list.block(0, grid - 1, 3, 1) - dPos;
 					pFoot = delayContactTargetFront - dPos;
 					vFoot = endfootTrajectory->endfoot_pos_front_list.block(0, grid - 1, 3, 1) - dPosDot;
 
@@ -597,7 +481,6 @@ void MotionPlan::SetCmd(void)
 					lf->vFoot_des->Push(vFoot);
 					lf->aFoot_des->Push(zero);
 
-					//pFoot = endfootTrajectory->endfoot_pos_rear_list.block(0, grid - 1, 3, 1) - dPos;
 					pFoot = delayContactTargetRear - dPos;
 					vFoot = endfootTrajectory->endfoot_pos_rear_list.block(0, grid - 1, 3, 1) - dPosDot;
 
@@ -605,7 +488,6 @@ void MotionPlan::SetCmd(void)
 					rr->vFoot_des->Push(vFoot);
 					rr->aFoot_des->Push(zero);
 
-					/* 支撑腿 */
 					rf->pFoot_des->Push(robotModel->linkEndPos_world[2] - dPos);
 					rf->vFoot_des->Push(zero);
 					rf->aFoot_des->Push(zero);
@@ -666,17 +548,12 @@ void MotionPlan::SetCmd(void)
 	pthread_mutex_unlock(&ref_mutex);
 }
 
-/**
- * @brief Actiger规划器运行函数
- * @param  p_motionPlan  准备运行的机器人规划器   
- * @return void* 
- */
+
 void *MotionPlanRun(void *p_motionPlan)
 {
 	MotionPlan *motionPlan = (MotionPlan *)p_motionPlan;
 	while (1)
 	{
-		/* 5ms进一次，也就是主循环迭代一次进一次 */
 		if (GetTimeFlagMotionPlan())
 		{
 			motionPlan->gamepad->GetKey(&(motionPlan->gaitNow));
@@ -708,9 +585,6 @@ void *MotionPlanRun(void *p_motionPlan)
 }
 
 #ifndef ROBOT
-	/**
-	 * @brief 机体轨迹可视化
-	 */
 	void MotionPlan::DisplayBodyTraj(void)
 	{
 		const double body_translation[3] = {robotModel->bodyState->actul_body_pos(1),
@@ -735,9 +609,7 @@ void *MotionPlanRun(void *p_motionPlan)
 		bodyTrajIndex = bodyTrajIndex % MAX_NUM_DISPLAY_DOT;
 	}
 
-	/**
-	 * @brief 左前腿足端轨迹可视化
-	 */
+
 	void MotionPlan::DisplayLFTraj(void)
 	{
 		const double lf_translation[3] = {robotModel->linkEndPos_world[0](1),
@@ -762,9 +634,7 @@ void *MotionPlanRun(void *p_motionPlan)
 		lfTrajIndex = lfTrajIndex % MAX_NUM_DISPLAY_DOT;
 	}
 
-	/**
-	 * @brief 左后腿足端轨迹可视化
-	 */
+
 	void MotionPlan::DisplayLRTraj(void)
 	{
 		const double lr_translation[3] = {robotModel->linkEndPos_world[1](1),
@@ -789,9 +659,7 @@ void *MotionPlanRun(void *p_motionPlan)
 		lrTrajIndex = lrTrajIndex % MAX_NUM_DISPLAY_DOT;
 	}
 
-	/**
-	 * @brief 右前腿足端轨迹可视化
-	 */
+
 	void MotionPlan::DisplayRFTraj(void)
 	{
 		const double rf_translation[3] = {robotModel->linkEndPos_world[2](1),
@@ -816,9 +684,7 @@ void *MotionPlanRun(void *p_motionPlan)
 		rfTrajIndex = rfTrajIndex % MAX_NUM_DISPLAY_DOT;
 	}
 
-	/**
-	 * @brief 右后腿足端轨迹可视化
-	 */
+
 	void MotionPlan::DisplayRRTraj(void)
 	{
 		const double rr_translation[3] = {robotModel->linkEndPos_world[3](1),

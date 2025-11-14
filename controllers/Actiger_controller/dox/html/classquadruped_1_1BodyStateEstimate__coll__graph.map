@@ -1,4 +1,0 @@
-<map id="quadruped::BodyStateEstimate" name="quadruped::BodyStateEstimate">
-<area shape="rect" id="node2" href="$classVelocityEstimate.html" title="VelocityEstimate" alt="" coords="46,95,167,121"/>
-<area shape="rect" id="node3" href="$classKalmanFilterForVE.html" title="KalmanFilterForVE" alt="" coords="41,5,173,32"/>
-</map>

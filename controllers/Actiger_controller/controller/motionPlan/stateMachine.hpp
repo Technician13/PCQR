@@ -3,7 +3,6 @@
 #define STATEMACHINE_HPP
 
 #include <vector>
-// #include "robotModel.hpp"
 #include "cppTypes.h"
 
 namespace quadruped {

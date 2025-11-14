@@ -1,15 +1,3 @@
-/**
- * @file     bodyOriTask.cpp
- * @author   Bin
- * @version  V1.0.1
- * @data     29-March-2021
- * @brief    �����������ת����
- ******************************************************************************************
- * @attention
- *
- *
-**/
-
 #include "bodyOriTask.hpp"
 #include <iostream>
 
@@ -43,7 +31,6 @@ bool BodyOriTask::UpdateCommand(const DVec<double>& p_pos_des, const DVec<double
 
 	Vec3<double> vel_err = (Task::vel_des - curr_vel);
 
-	// Rx, Ry, Rz
 	for (int i(0); i < 3; ++i) {
 		Task::pos_err(i) = kp_kin(i) * (ori_ref(i) - ori_pos(i));
 		Task::vel_des(i) = p_vel_des(i);
@@ -58,16 +45,12 @@ bool BodyOriTask::UpdateCommand(const DVec<double>& p_pos_des, const DVec<double
 
 bool BodyOriTask::UpdateTaskJacobian(void)
 {
-	//Mat3<double> rot = robotModel->bodyRotation;
-
-	//Task::Jt.block(0, 0, 3, 3) = rot;
 	return true;
 }
 
 
 bool BodyOriTask::UpdateTaskJDotQdot(void)
 {
-
   	return true;
 }
 

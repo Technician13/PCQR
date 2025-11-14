@@ -1,23 +1,9 @@
-/**
- * @file legStateEstimate.cpp
- * @brief Actiger单腿状态信息类LegStateEstimate
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-20
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "legStateEstimate.hpp"
 #include <iostream>
  
 using namespace quadruped;
 
-/**
- * @brief LegStateEstimate类的构造函数，完成所有数据成员的初始化
- * @param  p_legNum         
- */
+
 LegStateEstimate::LegStateEstimate(int p_legNum)
 {
 	legNum = p_legNum;
@@ -53,15 +39,10 @@ LegStateEstimate::LegStateEstimate(int p_legNum)
 	std::cout << "legStateEstimate Init" << std::endl;
 }
 
-/**
- * @brief LegStateEstimate类的析构函数
- */
+
 LegStateEstimate::~LegStateEstimate(void) {}
 
-/**
- * @brief 利用形参中的数据完成腿部状态信息的计算[雅可比、足端运动学信息]
- * @param  p_legMsg  单腿信息结构体       
- */
+
 void LegStateEstimate::GetLegMsg(legMsg_t p_legMsg)
 {
 	Resize();
@@ -70,9 +51,7 @@ void LegStateEstimate::GetLegMsg(legMsg_t p_legMsg)
 	CaluEndfootMsg();
 }
 
-/**
- * @brief 所有中间变量置零
- */
+
 void LegStateEstimate::Resize(void)
 {
 	endfoot_hip.setZero();
@@ -81,9 +60,7 @@ void LegStateEstimate::Resize(void)
 	joint_anglularVel.setZero();
 }
 
-/**
- * @brief 计算雅可比矩阵
- */
+
 void LegStateEstimate::GetJacobian(void)
 {
 	jacobian(0, 0) = 0.0;
@@ -99,9 +76,7 @@ void LegStateEstimate::GetJacobian(void)
 	jacobian(2, 2) = (L2 * sin(joint_angle(1) + joint_angle(2)) * cos(joint_angle(0)));
 }
 
-/**
- * @brief 计算足端相对于髋关节根部的位置和速度
- */
+
 void LegStateEstimate::CaluEndfootMsg(void)
 {
 	endfoot_hip(0) = (-(L1 * sin(joint_angle(1)) + L2 * sin(joint_angle(1) + joint_angle(2))));
@@ -111,10 +86,7 @@ void LegStateEstimate::CaluEndfootMsg(void)
 	endfoot_vel_hip = jacobian * joint_anglularVel;
 }
 
-/**
- * @brief 获取所有关节信息和足端触地信息
- * @param  p_legMsg  单腿信息结构体       
- */
+
 void LegStateEstimate::GetJointMsg(legMsg_t p_legMsg)
 {
 	joint_angle(0) = (p_legMsg.shoulder_pos);
@@ -141,9 +113,7 @@ void LegStateEstimate::GetJointMsg(legMsg_t p_legMsg)
 		contact_state = 1;
 }
 
-/**
- * @brief WBC预留接口
- */
+
 void LegStateEstimate::GetJdot(void)
 {
 	Mat3<double> jacobian_dot = Mat3<double>::Zero();

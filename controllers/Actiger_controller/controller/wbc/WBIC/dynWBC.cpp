@@ -1,15 +1,3 @@
-/**
- * @file     dynWBC.cpp
- * @author   Bin
- * @version  V1.0.1
- * @data     29-March-2021
- * @brief    ���������WBC����ѧ���㲿��
- ******************************************************************************************
- * @attention
- *
- *
-**/
-
 #include "dynWBC.hpp"
 #include <iostream>
 
@@ -40,14 +28,12 @@ DVec<double> DynWBC::MakeTorque(void)
     if (!b_updatesetting) {
         printf("[Wanning] WBIC setting is not done\n");
     }
-    // resize G0, g0, CE, ce0, CI, ci0
     SetOptimizationSize();
 
     DVec<double> qddot_pre;
     DMat<double> JcBar;
     DMat<double> Npre;
     if (dim_rf > 0) {
-        // Contact Setting
         ContactBuilding();
         JcBar = Common::WeightedInverse(Jc, Ainv);
         qddot_pre = JcBar * (-JcDotQdot);
@@ -57,13 +43,7 @@ DVec<double> DynWBC::MakeTorque(void)
         qddot_pre = DVec<double>::Zero(num_qdot);
         Npre = eye;
     }
-    //std::cout << "JcDotQdot" << std::endl;
-    //std::cout << JcDotQdot << std::endl;
 
-    //std::cout << "JcBar" << std::endl;
-    //std::cout << JcBar << std::endl;
-
-    // Task
     Task* task;
     DMat<double> Jt, JtBar, JtPre;
     DVec<double> JtDotQdot, xddot;
@@ -80,20 +60,10 @@ DVec<double> DynWBC::MakeTorque(void)
         Npre = Npre * (eye - JtBar * JtPre);
 
     }
-    //std::cout << "qddot_pre" << std::endl;
-    //std::cout << qddot_pre << std::endl;
     CalculateQPData(qddot_pre);
 
-    //std::cout << "grav" << std::endl;
-    //std::cout << grav << std::endl;
     DVec<double> add;
     add = qpSolver->Solve(qp_H, qp_G, qp_A, qp_L, qp_U);
-    
-    //std::cout<<"add " ;
-    //for(int i(0);i<12;i++)
-    //    std::cout << add(6+i) << " ";
-
-    //std::cout << endl;
 
     DVec<double> cmd_leg;
     cmd_leg = GetSolution(qddot_pre, add);
@@ -142,7 +112,6 @@ void DynWBC::ContactBuilding()
     DMat<double> Uf_block;
     DVec<double> Uf_ieq_vec_l_block;
     DVec<double> Uf_ieq_vec_u_block;
-    // Initial
     DMat<double> Jc_block;
     DVec<double> JcDotQdot_block;
     size_t dim_accumul_rf, dim_accumul_uf;
@@ -172,24 +141,19 @@ void DynWBC::ContactBuilding()
         dim_new_rf = (*contact_list)[i]->GetDim();
         dim_new_uf = (*contact_list)[i]->GetDimRFConstraint();
 
-        // Jc append
         Jc.block(dim_accumul_rf, 0, dim_new_rf, num_qdot) = Jc_block;
 
-        // JcDotQdot append
         JcDotQdot.segment(dim_accumul_rf, dim_new_rf) = JcDotQdot_block;
 
-        // Uf
         Uf_block = (*contact_list)[i]->GetRFConstraintMtx();
         cstrMtx.block(dim_accumul_uf, dim_accumul_rf, dim_new_uf, dim_new_rf) = Uf_block;
 
-        // Uf inequality vector
         Uf_ieq_vec_l_block =(*contact_list)[i]->GetRFConstraintVecL();
         cstr_ieq_vec_l.segment(dim_accumul_uf, dim_new_uf) = Uf_ieq_vec_l_block;
 
         Uf_ieq_vec_u_block = (*contact_list)[i]->GetRFConstraintVecU();
         cstr_ieq_vec_u.segment(dim_accumul_uf, dim_new_uf) = Uf_ieq_vec_u_block;
 
-        // Fr desired
         Fr_des.segment(dim_accumul_rf, dim_new_rf) =
             (*contact_list)[i]->GetRFDesired();
         dim_accumul_rf += dim_new_rf;
@@ -209,7 +173,6 @@ DVec<double> DynWBC::GetSolution(const DVec<double>& p_qddot, DVec<double> p_add
         qddot.block(0, 0, dim_floating, 1) + p_add.block(0, 0, dim_floating, 1);
     if (dim_rf > 0) {
         Fr = DVec<double>::Zero(dim_rf);
-        // get Reaction forces
         for (size_t i(0); i < dim_rf; ++i)
             Fr[i] = p_add[i + dim_floating] + Fr_des[i];
         tot_tau =
@@ -221,20 +184,6 @@ DVec<double> DynWBC::GetSolution(const DVec<double>& p_qddot, DVec<double> p_add
     }
     
     cmd_leg = tot_tau.tail(num_act_joint);
-
-    //std::cout << "A" << std::endl;
-    //std::cout << A* qddot << std::endl;
-
-
-
-
-    //std::cout << "Jc.transpose()" << std::endl;
-    //std::cout << Jc.transpose() << std::endl;
-    //std::cout << "grav" << std::endl;
-    //std::cout << grav << std::endl;
-
-    //std::cout<<"tot_tau" <<std::endl;
-    //std::cout << tot_tau << std::endl;
     return cmd_leg;
 }
 
@@ -251,9 +200,8 @@ void DynWBC::UpdateSetting(const DMat<double>& p_A, const DMat<double>& p_Ainv,
 
 void DynWBC::SetOptimizationSize() 
 {
-    // Dimension
     dim_rf = 0;
-    dim_cstrMtx = 0;  // Dimension of inequality constraint
+    dim_cstrMtx = 0;  
     for (size_t i(0); i < (*contact_list).size(); ++i) {
         dim_rf += (*contact_list)[i]->GetDim();
         dim_cstrMtx += (*contact_list)[i]->GetDimRFConstraint();
@@ -261,7 +209,6 @@ void DynWBC::SetOptimizationSize()
 
     dim_opt = dim_floating + dim_rf;
 
-    // Matrix Setting
     qp_H.resize(dim_opt, dim_opt);
     qp_G.resize(dim_opt);
    

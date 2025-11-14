@@ -1,15 +1,3 @@
-/**
- * @file     kinWBC.cpp
- * @author   Bin
- * @version  V1.0.1
- * @data     29-March-2021
- * @brief    ���������WBC�˶�ѧ���㲿��
- ******************************************************************************************
- * @attention
- *
- *
-**/
-
 #include "kinWBC.hpp"
 #include <iostream>
 
@@ -33,7 +21,6 @@ bool KinWBC::FindConfiguration(const DVec<double>& p_curr_config,
 	const std::vector<ContactSpec*>& p_contact_list,
     DVec<double>* p_jpos_cmd, DVec<double>* p_jvel_cmd)
 {
-    // Contact Jacobian Setup
     DMat<double> Nc(num_qdot, num_qdot); 
     Nc.setIdentity();
     if (p_contact_list.size() > 0) {
@@ -51,10 +38,8 @@ bool KinWBC::FindConfiguration(const DVec<double>& p_curr_config,
             Jc.block(num_rows, 0, num_new_rows, num_qdot) = Jc_i;
             num_rows += num_new_rows;
         }
-        // Projection Matrix
         BuildProjectionMatrix(Jc, Nc);
     }
-    // First Task
     DVec<double> delta_q, qdot;
     DMat<double> Jt, JtPre, JtPre_pinv, N_nx, N_pre;
      
@@ -78,7 +63,6 @@ bool KinWBC::FindConfiguration(const DVec<double>& p_curr_config,
         delta_q =
             prev_delta_q + JtPre_pinv * (task->GetPosError() - Jt * prev_delta_q);
         qdot = prev_qdot + JtPre_pinv * (task->GetDesVel() - Jt * prev_qdot);
-        // For the next task
         BuildProjectionMatrix(JtPre, N_nx);
         N_pre *= N_nx;
         prev_delta_q = delta_q;
@@ -88,10 +72,6 @@ bool KinWBC::FindConfiguration(const DVec<double>& p_curr_config,
     for (size_t i(0); i < num_act_joint; ++i) {
         (*p_jpos_cmd)(i) = p_curr_config(i + 6) + delta_q(i + 6);
         (*p_jvel_cmd)(i) = qdot(i + 6);
-        //std::cout << curr_config_(i+6) << " ";
-        //std::cout << (*jpos_cmd_)(i) << " ";
-        //std::cout << (*jvel_cmd_)(i) << " ";
-        //std::cout << std::endl;
     }
 
     

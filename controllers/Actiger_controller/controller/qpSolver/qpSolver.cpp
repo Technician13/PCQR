@@ -1,46 +1,25 @@
-/**
- * @file qpSolver.cpp
- * @brief Actiger二次规划求解器QpSolver
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-20
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "qpSolver.hpp"
 #include <iostream>
 
 using namespace std;
 using namespace quadruped;
 
-/**
- * @brief 判断输入的参数是否可以认为约等于0
- * @param  val  待判断参数            
- * @return uint8_t 
- */
+
 uint8_t NearZero(double val)
 {
     return (val < 1e-10 && val > -1e-10);
 }
  
-/**
- * @brief QpSolver类的构造函数
- */
+
 QpSolver::QpSolver(void)
 {
     cout << "QpSolver Init" << endl;
 }
 
-/**
- * @brief QpSolver类的析构函数
- */
+
 QpSolver::~QpSolver(void) {}
 
-/**
- * @brief OSQP接口函数
- */
+
 void QpSolver::Free(void)
 {
     c_free(h_data);
@@ -54,17 +33,12 @@ void QpSolver::Free(void)
     c_free(u_data);
 }
 
-/**
- * @brief OSQP接口函数
- * @param  H_matrix         
- */
+
 void QpSolver::CalculateDataH(DMat<double> H_matrix)
 {
     std::vector<c_float> H_data;
     std::vector<c_int> H_indices;
     std::vector<c_int> H_indptr;
-    //cout << "qp_H" << endl;
-    //cout << qp_H << endl;
 
     int ind_h = 0;
     for (int i = 0; i < H_matrix.cols(); i++)
@@ -87,56 +61,38 @@ void QpSolver::CalculateDataH(DMat<double> H_matrix)
     h_indptr = (c_int*)c_malloc(sizeof(c_int) * H_indptr.size());
 
     size_H = H_data.size();
-    //cout << "h_data" << endl;
     for (int i = 0; i < H_data.size(); i++)
     {
         h_data[i] = H_data[i];
-        //cout << h_data[i] << endl;
     }
-    //cout << "h_indices" << endl;
     for (int i = 0; i < H_indices.size(); i++)
     {
         h_indices[i] = H_indices[i];
-        //cout << h_indices[i] << endl;
     }
-    //cout << "h_indptr" << endl;
     for (int i = 0; i < H_indptr.size(); i++)
     {
         h_indptr[i] = H_indptr[i];
-        //cout << h_indptr[i] << endl;
     }
        
 }
 
-/**
- * @brief OSQP接口函数
- * @param  G_vector         
- */
 void QpSolver::CalculateDataG(DVec<double> G_vector)
 {
     q_data = (c_float*)c_malloc(sizeof(c_float) * G_vector.size());
 
-    //cout << "q_data" << endl;
     for (int i = 0; i < G_vector.size(); i++)
     {
         q_data[i] = G_vector(i);
-       //cout << q_data[i] << endl;
     }
        
 }
 
-/**
- * @brief OSQP接口函数
- * @param  A_matrix         
- */
+
 void QpSolver::CalculateDataA(DMat<double> A_matrix)
 {
     std::vector<c_float> A_data;
     std::vector<c_int> A_indices;
     std::vector<c_int> A_indptr;
-
-    //cout << "qp_A" << endl;
-    //cout << qp_A << endl;
 
     int ind_a = 0;
     for (int i = 0; i < A_matrix.cols(); i++)
@@ -159,61 +115,38 @@ void QpSolver::CalculateDataA(DMat<double> A_matrix)
     a_indptr = (c_int*)c_malloc(sizeof(c_int) * A_indptr.size());
 
     size_A = A_data.size();
-    //cout << "a_data" << endl;
     for (int i = 0; i < A_data.size(); i++)
     {
         a_data[i] = A_data[i];
-        //cout << a_data[i] << endl;
     }
-    //cout << "a_indices" << endl;
     for (int i = 0; i < A_indices.size(); i++)
     {
         a_indices[i] = A_indices[i];
-       //cout << a_indices[i] << endl;
-
     }
-    //cout << "a_indptr" << endl;
     for (int i = 0; i < A_indptr.size(); i++)
     {
         a_indptr[i] = A_indptr[i];
-        //cout << a_indptr[i] << endl;
     }
 }
 
-/**
- * @brief OSQP接口函数
- * @param  L_vector         
- * @param  U_vector         
- */
+
 void QpSolver::CalculateDataLandU(DVec<double> L_vector, DVec<double> U_vector)
 {
     l_data = (c_float*)c_malloc(sizeof(c_float) * L_vector.size());
     u_data = (c_float*)c_malloc(sizeof(c_float) * U_vector.size());
 
-    //cout << "l_data" << endl;
     for (int i = 0; i < L_vector.size(); i++)
     {
         l_data[i] = L_vector(i);
-        //cout << l_data[i] << endl;
     }
-    //cout << "u_data" << endl;
     for (int i = 0; i < U_vector.size(); i++)
     {
         
         u_data[i] = U_vector(i);
-        //cout << u_data[i] << endl;
     }   
 }
 
-/**
- * @brief OSQP接口函数
- * @param  H_matrix         
- * @param  G_vector         
- * @param  A_matrix         
- * @param  L_vector         
- * @param  U_vector         
- * @return DVec<double> 
- */
+
 DVec<double> QpSolver::Solve(DMat<double> H_matrix, DVec<double> G_vector,
                            DMat<double> A_matrix, DVec<double> L_vector, DVec<double> U_vector)
 {
@@ -235,27 +168,6 @@ DVec<double> QpSolver::Solve(DMat<double> H_matrix, DVec<double> G_vector,
     CalculateDataLandU(L_vector, U_vector);
 
     return_data.resize(A_matrix.cols(),1);
-    
-    // std::cout<<A_matrix <<std::endl;
-    // std::cout<<"--------------------H_matrix-----------------------" <<std::endl;
-    // for(int i=0;i<H_matrix.rows();i++)
-    // {
-    //     for(int j=0;j<H_matrix.cols();j++)
-    //     {
-    //         std::cout<<H_matrix(i,j) <<" , ";
-    //     }
-    //     std::cout<<endl;
-    // }
-    
-        
-    // std::cout<<"-------------------------------------------" <<std::endl;
-    // std::cout<<L_vector <<std::endl;
-    // std::cout<<"-------------------------------------------" <<std::endl;
-    // std::cout<<U_vector <<std::endl;
-    // std::cout<<"-------------------------------------------" <<std::endl;
-
-    // std::cout<<G_vector <<std::endl;
-    // std::cout<<"-------------------------------------------" <<std::endl;
 
     c_int p_row = A_matrix.cols();
     c_int a_row = A_matrix.rows();
@@ -299,7 +211,6 @@ DVec<double> QpSolver::Solve(DMat<double> H_matrix, DVec<double> G_vector,
     }
 
     Free();
-    // Cleanup
     if (data) {
         if (data->A) c_free(data->A);
         if (data->P) c_free(data->P);
@@ -308,7 +219,5 @@ DVec<double> QpSolver::Solve(DMat<double> H_matrix, DVec<double> G_vector,
     if (settings) c_free(settings);
     c_free(work);
     
-    // std::cout<<return_data <<std::endl;
-    // std::cout<<"-------------------------------------------" <<std::endl;
     return return_data;
 }

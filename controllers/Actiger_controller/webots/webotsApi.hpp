@@ -1,14 +1,3 @@
-/**
- * @file webotsApi.hpp
- * @brief webots仿真环境中的相关函数封装头文件
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-18
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #include "parameters.hpp"
 
 #ifndef ROBOT
@@ -36,7 +25,6 @@
     #include </usr/local/webots/include/controller/cpp/webots/Camera.hpp>
     #include </usr/local/webots/include/controller/cpp/webots/Accelerometer.hpp>
 
-    /********************************************************* 机体轨迹可视化相关变量 *********************************************************/
     extern webots::Node *existingBodyTraj;
     extern webots::Node *bodyTrajLineSetNode;
     extern webots::Node *bodyTrajCoordinatesNode;
@@ -45,7 +33,6 @@
     extern int bodyTrajIndex;
     extern bool bodyTrajFirstStep;
 
-    /******************************************************* 左前腿足端轨迹可视化相关变量 *******************************************************/
     extern webots::Node *existingLFTraj;
     extern webots::Node *lfTrajLineSetNode;
     extern webots::Node *lfTrajCoordinatesNode;
@@ -54,7 +41,6 @@
     extern int lfTrajIndex;
     extern bool lfTrajFirstStep;
 
-    /******************************************************* 左后腿足端轨迹可视化相关变量 *******************************************************/
     extern webots::Node *existingLRTraj;
     extern webots::Node *lrTrajLineSetNode;
     extern webots::Node *lrTrajCoordinatesNode;
@@ -63,7 +49,6 @@
     extern int lrTrajIndex;
     extern bool lrTrajFirstStep;
 
-    /******************************************************* 右前腿足端轨迹可视化相关变量 *******************************************************/
     extern webots::Node *existingRFTraj;
     extern webots::Node *rfTrajLineSetNode;
     extern webots::Node *rfTrajCoordinatesNode;
@@ -72,7 +57,6 @@
     extern int rfTrajIndex;
     extern bool rfTrajFirstStep;
 
-    /******************************************************* 右后腿足端轨迹可视化相关变量 *******************************************************/
     extern webots::Node *existingRRTraj;
     extern webots::Node *rrTrajLineSetNode;
     extern webots::Node *rrTrajCoordinatesNode;

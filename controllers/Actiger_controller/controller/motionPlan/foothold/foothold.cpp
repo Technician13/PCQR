@@ -1,19 +1,7 @@
-/*
- * @Description: 落足点规划
- * @Version: 
- * @Autor: Bin
- * @LastEditors: Tech13
- */
 #include "foothold.hpp"
 #include <iostream>
 using namespace quadruped;
 
-/**
- * @description: 配置落足点规划中的ipopt求解器
- * @param {Parameters*} p_para
- * @param {Terrain*} p_terrain_now
- * @return {*}
- */
 Foothold::Foothold(Parameters* p_para,Terrain* p_terrain_now)
 {
 	updataInfo = new FH_updataInfo(p_para,p_terrain_now);
@@ -39,11 +27,7 @@ Foothold::Foothold(Parameters* p_para,Terrain* p_terrain_now)
 
 Foothold::~Foothold(void){}
 
-/**
- * @description: 通过求解非线性规划问题得到落足点
- * @param {*}
- * @return {*}
- */
+
 void Foothold::GetFootHold(void)
 {
 	status = app->OptimizeTNLP(fH_nlp);

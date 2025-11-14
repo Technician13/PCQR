@@ -40,14 +40,10 @@ namespace quadruped
         const DVec<double>& GetDesAcc() { return acc_des; }
 
     protected:
-        // Update acc_cmd
         virtual bool UpdateCommand(const DVec<double>& p_pos_des, const DVec<double>& p_vel_des,
             const DVec<double>& p_acc_des) = 0;
-        // Update Jt
         virtual bool UpdateTaskJacobian() = 0;
-        // Update JtDotQdot
         virtual bool UpdateTaskJDotQdot() = 0;
-        // Additional Update (defined in child classes)
         virtual bool AdditionalUpdate() = 0;
 
         bool b_set_task;

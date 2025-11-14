@@ -13,8 +13,6 @@ namespace quadruped
 	class DynWBC
 	{
 	public:
-		// Input
-		
 		DMat<double> w_floating;
 		DMat<double> w_rf;
 		const std::vector<ContactSpec*>* contact_list;
@@ -30,9 +28,9 @@ namespace quadruped
 
 
 	private:
-		size_t dim_opt;      // Contact pt delta, First task delta, reaction force
+		size_t dim_opt;      
 
-		size_t dim_rf;  // inequality constraints
+		size_t dim_rf;  
 		size_t dim_cstrMtx;
 
 		size_t dim_floating = 6;
@@ -53,7 +51,7 @@ namespace quadruped
 		size_t num_act_joint;
 		size_t num_qdot;
 
-		DMat<double> Sv;  // Virtual joint
+		DMat<double> Sv; 
 		
 		Mat18<double> eye;
 		DMat<double> eye_floating;

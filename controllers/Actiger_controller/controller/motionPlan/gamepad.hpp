@@ -1,14 +1,3 @@
-/**
- * @file gamepad.hpp
- * @brief Actiger遥控器类Gamepad头文件
- * @author Bin & Tech13
- * @version 1.1
- * @date 2021-08-19
- * 
- * @copyright  Copyright  (c)  2021  Action
- * 
- */
-
 #ifndef GAMEPAD_HPP
 #define GAMEPAD_HPP
 
@@ -26,9 +15,6 @@
 
 namespace quadruped
 {
-    /**
-     * @brief Actiger遥控器类
-     */
     class Gamepad
     {
     private:
@@ -47,7 +33,6 @@ namespace quadruped
         void xbox_close(int xbox_fd);
         void GetKey(uint8_t* p_gaitNow);
 
-        /** @brief 遥控器键值映射结构体成员 */
         xbox_map_t map;
     };
 }
