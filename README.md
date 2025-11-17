@@ -17,7 +17,6 @@ An Integrated Motion Planning and Control<br>
 Framework for Quadruped Robot Based on<br> 
 Trajectory Optimization and MPC
 </h1>
-This code accompanies the 2025 IEEE Transactions on Cybernetics (TCYB) paper.    
 <div align=center>
   <img src="https://github.com/Technician13/PCQR/blob/master/img/FigWorkflow.png" width="900px">
 </div>
