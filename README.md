@@ -1,27 +1,24 @@
 &nbsp;
 <div align=center>
-  <img src="https://github.com/Technician13/PCQR/blob/master/img/LOGO/PCQR.svg?sanitize=true" width="300px">
+  <img src="https://github.com/Technician13/PCQR/blob/master/img/PCQR.svg?sanitize=true" width="300px">
 </div>
+<br><br>
+<div align="center">
 
-
-<div align="center">    
-  
 [![Video Badge](https://img.shields.io/badge/-video-009E2F)](https://www.youtube.com/watch?v=ZMDBQEk5xmA&list=PLXErKRgqavXHpqcdmBlYukxGkZLB1CDw-)
-![Static Badge](https://img.shields.io/badge/Ubuntu-passed-2C448B)   
-
-</div>
-
-
+![Static Badge](https://img.shields.io/badge/Ubuntu-passed-2C448B)</div>
 <h1 align="center">
 An Integrated Motion Planning and Control<br> 
 Framework for Quadruped Robot Based on<br> 
 Trajectory Optimization and MPC
 </h1>
+
+## Pipeline
 <div align=center>
   <img src="https://github.com/Technician13/PCQR/blob/master/img/FigWorkflow.png" width="900px">
 </div>
 
-## Initial Setup（Linux）
+## Initial Setup（Ubuntu）
 * [Ipopt 3.12.7](https://www.coin-or.org/download/source/Ipopt/)
 * [OSQP 0.4.1](https://osqp.org/)
 * [RBDL](https://rbdl.github.io/)
@@ -40,7 +37,7 @@ cd build
 cmake ..
 make
 ```
-Select the controller `Actiger_controller` in Webots2021a and click Run.   
+Select the controller `Actiger_controller` in Webots2021a and click the button `Run`.   
 
 ## Configurations
 * You can use a gamepad as a remote controller. 
@@ -50,6 +47,5 @@ Otherwise, please modify the code accordingly.
   <img src="https://github.com/Technician13/PCQR/blob/master/img/FigRC.png" width="500px">
 </div>
 
-
-
 ## Cite us
+coming soon......
