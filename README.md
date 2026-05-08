@@ -22,12 +22,14 @@ PCQR (motion planning and control for quadruped robots) consists of two componen
 * [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
 * [Webots 2021a](https://www.cyberbotics.com/doc/blog/Webots-2021-a-release)
 
-## ✨ Run
+## Run
+### 1. Clone this repo
 ```bash
 git clone https://github.com/Technician13/PCQR.git     
 cd PCQR  
 ```
-Use CMAKE to set up the build environment and then run 'make':
+
+### 2. Run the package
 ```bash
 mkdir build
 cd build
