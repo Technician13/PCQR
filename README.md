@@ -47,7 +47,11 @@ Otherwise, please modify the code accordingly.
 </div>
 
 ## 🎥 Results
+<!--
 [![Video Badge](https://img.shields.io/badge/-video-009E2F)](https://www.youtube.com/watch?v=ZMDBQEk5xmA&list=PLXErKRgqavXHpqcdmBlYukxGkZLB1CDw-)
+-->
+
+The demonstration video is temporarily withheld during the anonymous review process to avoid disclosing identifying information.
 
 ## 🗞️ Cite us
 coming soon......
